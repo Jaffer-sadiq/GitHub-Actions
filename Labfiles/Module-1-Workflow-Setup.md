@@ -150,119 +150,74 @@ GitHub Actions workflows can be triggered by various events occurring within you
 
    ![](../media/successfullworkflow.png)
 
-## Task 3: Defining jobs and steps within workflows
+### Task 4: Defining jobs and steps within workflows
 
 In GitHub Actions workflows, you define jobs and steps to orchestrate the tasks you want to automate. Jobs represent the individual units of work that can run in parallel or sequentially, while steps are the individual tasks performed within a job. Let's dive deeper into defining jobs and steps within workflows:
 
-1. **Defining Jobs**: Jobs are defined within the `jobs` section of your workflow file. Each job consists of a series of steps that are executed sequentially by default. However, you can configure jobs to run in parallel by specifying dependencies between them. Here's how you define jobs within a workflow:
+**Defining Jobs**: Jobs are defined within the `jobs` section of your workflow file. Each job consists of a series of steps that are executed sequentially by default. However, you can configure jobs to run in parallel by specifying dependencies between them. Here's how you define jobs within a workflow:
+   
+**Defining Steps**: Steps are the individual tasks performed within a job. Each step represents a specific action or command that GitHub Actions executes as part of the workflow. Steps can include checking out code, installing dependencies, running tests, deploying applications, and more. Here's how you define steps within a job:
 
-    ```yaml
-    name: CI
+1. Navigate to the **Code** **(1)** and click on **.github/workflows** **(2)** folder.
+
+    ![](../media/editfolder.png)
+
+1. In the **.github/workflows** folder, select **cl.yml** **(1)** and click on **edit** **(2)**.
+
+    ![](../media/editfolder1.png)
+
+1. In the editor update the code with the below provided code and click on and click on **commit changes** **(2)**.
+
+    ```
+    name: My Workflow
 
     on:
     push:
         branches:
         - main
-
-    jobs:
-    build:
-        runs-on: ubuntu-latest
-
-        steps:
-        - name: Checkout Repository
-            uses: actions/checkout@v2
-
-        - name: Build and Test
-            run: |
-            npm install
-            npm run build
-            npm test
-
-    deploy:
-        runs-on: ubuntu-latest
-        needs: build
-
-        steps:
-        - name: Deploy to Production
-            uses: actions/aws/cli@v2
-            with:
-            args: s3 sync dist/ s3://example-bucket
-    ```
-    
-1. **Defining Steps**: Steps are the individual tasks performed within a job. Each step represents a specific action or command that GitHub Actions executes as part of the workflow. Steps can include checking out code, installing dependencies, running tests, deploying applications, and more. Here's how you define steps within a job:
-
-    ```yaml
-    name: CI
-
-    on: [push]
-
-    jobs:
-    build:
-        runs-on: ubuntu-latest
-
-        steps:
-        - uses: actions/checkout@v2
-
-        - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-            node-version: '14'
-
-        - name: Install dependencies
-        run: npm ci
-
-        - name: Run tests
-        run: npm test
-
-        - name: Build
-        run: npm run build
-    ```
-
-## Task 4: Setting up a basic CI workflow for testing code on every push
-
-Setting up a basic CI (Continuous Integration) workflow for testing code on every push is a common use case in software development. In this example, we'll create a GitHub Actions workflow that triggers on every push to the repository's main branch. The workflow will check out the code, install dependencies, and run tests to ensure the quality of the codebase.
-
-Here's how you can set up this basic CI workflow:
-
-1. **Create a Workflow File**: Create a new YAML file in the `.github/workflows` directory of your repository. You can name the file `ci.yml` or any other descriptive name.
-
-2. **Define Workflow Configuration**: Define the configuration for the CI workflow within the YAML file. Specify the events that trigger the workflow, the jobs to be executed, and the steps within each job.
-
-3. **Commit and Push Workflow File**: Once you've defined the workflow configuration, commit and push the workflow file to your repository. GitHub Actions will automatically detect the workflow and start executing it on every push event.
-
-    ```yaml
-    name: CI
-
-    on:
-    push:
+    pull_request:
         branches:
         - main
 
     jobs:
-    build:
+    job1:
         runs-on: ubuntu-latest
-
         steps:
-        - name: Checkout Repository
+        - name: Checkout code
             uses: actions/checkout@v2
 
-        - name: Install Dependencies
-            run: npm install
+        - name: Run a script
+            run: echo "Hello, world!"
 
-        - name: Run Tests
-            run: npm test
+    job2:
+        runs-on: ubuntu-latest
+        needs: job1
+        steps:
+        - name: Checkout code
+            uses: actions/checkout@v2
+
+        - name: Run another script
+            run: echo "Hello, again!"
     ```
 
-    In this example:
+    ![](../media/updatecode1.png)
 
-    - The workflow is named "CI".
-    - It is triggered on pushes to the `main` branch.
-    - The workflow defines a single job named "build" that runs on the latest version of Ubuntu.
-    - The job consists of three steps:
-        1. Checking out the repository using the `actions/checkout` action.
-        2. Installing dependencies using npm.
-        3. Running tests using npm.
+1. In the pop up windows of **Commit Changes** click on the **Commit changes**.
 
-Once you've added this workflow file to your repository and pushed it to GitHub, the CI workflow will automatically run on every push event to the `main` branch. It will check out the code, install dependencies, and run tests, providing feedback on the quality of the codebase with each push.
+   ![](../media/commit-changes.png)
 
-You can customize this workflow further by adding additional steps for tasks such as code linting, code coverage analysis, or deployment to staging environments. Experiment with different configurations to create a CI workflow that best suits the needs of your project.
+    - You can customize the events and branches for triggering the workflow according to your project's requirements. For example, you might want to trigger the workflow only on pushes to the `main` branch or on pull requests targeting the `main` branch.
+
+    - You can also add more jobs and steps to perform tasks like building, testing, deploying, or any other actions you need your workflow to perform.
+
+    - For more details on GitHub Actions syntax and available events, refer to the official documentation: [GitHub Actions - Workflow syntax for GitHub Actions](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions).
+
+1. Click on **Action** **(1)**, verifiy the workflow has been executed successfully once the workflow is succedded select the newly created workflow **updated cl.yml** **(2)**.
+
+   ![](../media/ex1-task4-step6.png)
+
+1. Verify the jobs and feel free to go throught the workflow.
+
+   ![](../media/ex1-task4-step7.png)
+
+1. Click on **Next** button for next Lab.
