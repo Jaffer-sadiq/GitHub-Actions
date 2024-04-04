@@ -2,9 +2,7 @@
 
 ### Task 1: Incorporating pre-built actions from the GitHub Marketplace
 
-GitHub Marketplace is a central location for you to find actions created by the GitHub community. These actions can be incorporated into your workflows to automate common tasks without having to write the code yourself.
-
-Here's how you can incorporate a pre-built action from the GitHub Marketplace:
+In this task, you will learn how to create a Docker repository and verify its successful creation. You will navigate through Docker Hub, create a new repository, and then cross-verify its creation.
 
 1. In the Egde browser add a new tab and navigate `https://login.docker.com/u/login` page if you already having an Docker hub account **enter Username or email address** **(1)** and click on **Continue** **(2)**.
 
@@ -70,11 +68,15 @@ Here's how you can incorporate a pre-built action from the GitHub Marketplace:
 
     ![](../media/ex2-task2-step18a.png)
 
-14. Now lets create a workflow to publish into Docker Hub using GitHub action. Navigate to the **Code** **(1)**, click on **Add File** **(2)** and click on **+ Create new file** **(3)**.
+14. In the **Commit changes** pop-up, click on **Commit changes** button.
+
+    ![](../media/docker-commit.png)
+
+15. Now lets create a workflow to publish into Docker Hub using GitHub action. Navigate to the **Code** **(1)**, click on **Add File** **(2)** and click on **+ Create new file** **(3)**.
     
     ![](../media/ex2-task2-step18.png)
 
-15. Provider file name as **index.html** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
+16. Provider file name as **index.html** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
 
     ```
     <!DOCTYPE html>
@@ -91,15 +93,19 @@ Here's how you can incorporate a pre-built action from the GitHub Marketplace:
 
     ![](../media/ex2-task2-step20.png)
 
-16. Navigate to the **Code** **(1)** and click on **.github/workflows** **(2)** folder.
+17. In the **Commit changes** pop-up, click on **Commit changes** button.
+
+    ![](../media/index-commit.png)
+
+18. Navigate to the **Code** **(1)** and click on **.github/workflows** **(2)** folder.
 
     ![](../media/editfolder.png)
 
-17. In the **.github/workflows** folder, select **cl.yml** **(1)** and click on **edit** **(2)**.
+19. In the **.github/workflows** folder, select **cl.yml** **(1)** and click on **edit** **(2)**.
 
     ![](../media/editfolder1.png)
 
-18. In the editor update the code with the below provided code and click on and click on **commit changes** **(1)**, replace **{DOCKERHUB_USERNAME}** **(2)** with you docker username in line number 17 and 29, and replace **{DOCKERHUB_TOKEN}** **(3)** with Docker PAT line number 18.
+20. In the editor update the code with the below provided code, replace **{DOCKERHUB_USERNAME}** **(2)** with you docker username in line number 17,replace **{DOCKERHUB_TOKEN}** **(3)** with Docker PAT line number 18, **{DOCKERHUB_USERNAME}** **(4)** with you docker username in line number 29 and click on **commit changes** **(5)**.
 
     ```
     name: ci
@@ -135,18 +141,176 @@ Here's how you can incorporate a pre-built action from the GitHub Marketplace:
 
     ![](../media/ex2-task2-step17.png)
 
-19. In the pop up windows of **Commit Changes** click on the **Commit changes**.
+21. In the pop up windows of **Commit Changes** click on the **Commit changes**.
 
     ![](../media/commit-changes.png)
 
-20. Click on **Action** **(1)**, verifiy the workflow has been executed successfully once the workflow is succedded select the newly created workflow **updated cl.yml** **(2)**.
+22. Click on **Action** **(1)**, verifiy the workflow has been executed successfully once the workflow is succedded select the newly created workflow **updated cl.yml** **(2)**.
 
     ![](../media/ex1-task4-step6.png)
 
-21. Naviagte back to the Docker Hub and click on **Repositories** and crossverify the Repositorie has been created **successfully**.
+23. Naviagte back to the Docker Hub and click on **Repositories** and crossverify the Repositorie has been created **successfully**.
 
     ![](../media/ex2-task2-step25.png)
 
 ### Task 2: Using a third-party action to deploy a Docker container to a Azure platform.
 
-1. 
+In this task, you will learn how to use a third-party action to deploy a Docker hub container to an Azure platform. This involves setting up the action, configuring it to work with your Docker container, and deploying it to Azure.
+
+1. Now lets create a workflow to publish into Docker Hub using GitHub action. Navigate to the **Code** **(1)**, click on **Add File** **(2)** and click on **+ Create new file** **(3)**.
+    
+    ![](../media/ex2-task2-step18.png)
+
+2. Provider file name as **deploy-webapp.ps1** **(1)**, in the editor **copy and paste** **(2)** the below script, and click on **commit changes** **(3)**.
+
+    ```
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory = $True)]
+        [string]
+        $azureSubscriptionName,
+
+        [string]
+        $resourceGroupNameRegion,
+
+        [string]
+        $serverName,
+
+        [string]
+        $adminLogin,
+    
+        [string]
+        $deploymentid,
+
+        [string]
+        $DOCKERHUB_PASSWORD,
+
+        [string]
+        $DOCKERHUB_USERNAME,
+
+        [string]
+        $Username,
+
+        [string]
+        $Password
+    )
+
+    $MY_WEBAPP_NAME = "webapplication" + $deploymentid 
+    $MY_RESOURCE_GROUP = "ODL-GitHub-Action-" + $deploymentid
+    $MY_DOCKERHUB_PASSWORD = $DOCKERHUB_PASSWORD
+    $MY_DOCKERHUB_USERNAME = $DOCKERHUB_USERNAME
+    $MY_APP_SERVICE_PLAN = "webapplication" + $deploymentid
+
+    Write-Output "Logging in to Azure with a service principal..."
+    az login -u $Username -p $Password
+    Write-Output "Done"
+    Write-Output ""
+    #endregion
+
+    #region Subscription
+    #This sets the subscription the resources will be created in
+
+    Write-Output "Setting default azure subscription..."
+    az account set `
+        --subscription "$azureSubscriptionName"
+    Write-Output "Done"
+    Write-Output ""
+    #endregion
+
+    az appservice plan create --name $MY_APP_SERVICE_PLAN --sku 'B1' --resource-group $MY_RESOURCE_GROUP --is-linux
+
+    az webapp create --resource-group $MY_RESOURCE_GROUP --plan $MY_APP_SERVICE_PLAN --name $MY_WEBAPP_NAME --deployment-container-image-name $MY_DOCKERHUB_USERNAME/clockbox:latest 
+
+    az webapp config appsettings set --resource-group $MY_RESOURCE_GROUP --name $MY_WEBAPP_NAME --settings "DOCKER_REGISTRY_SERVER_USERNAME=$MY_DOCKERHUB_USERNAME" "DOCKER_REGISTRY_SERVER_PASSWORD=$MY_DOCKERHUB_PASSWORD"
+
+    Write-Output "Done creating VM"
+    Write-Output 
+    ```
+
+    ![](../media/ex2-task3-step1.png)
+
+    > **Note**: This PowerShell script creates an Azure App Service plan, deploys a web app using a Docker image, and sets the Docker registry server username and password as app settings.
+
+3. In the **Commit changes** pop-up, click on **Commit changes** button.
+
+    ![](../media/ex2-task3-step2.png)
+
+4. Navigate to the **Code** **(1)** and click on **.github/workflows** **(2)** folder.
+
+    ![](../media/editfolder.png)
+
+5. In the **.github/workflows** folder, select **cl.yml** **(1)** and click on **edit** **(2)**.
+
+    ![](../media/editfolder1.png)
+
+6. Replace the fallowing code with below code.
+
+    ```
+    name: Deploying Azure Webapp
+
+    env:
+    OUTPUT_PATH: ${{ github.workspace }}
+    DeploymentID: {Deployment_ID}
+    RESOURCE_GROUP_REGION: eastus
+    SERVER_NAME: gihtubactions
+    ADMIN_LOGIN: {GitHub_Username}
+    Username: {Azure_Login_ID}
+    Password: {Azure_Login_Password}
+    AZURE_SUBSCRIPTION_ID: {Azure_Subscription_ID}
+    DOCKERHUB_USERNAME: {Dockerhub_Username}
+    DOCKERHUB_PASSWORD: {Dockerhub_PAT}
+
+    on:
+    workflow_dispatch:
+
+    jobs:
+        
+    # Deploy VM in Azure
+    DeployVM:
+        runs-on: windows-latest
+
+        steps:
+        # checkout code from repo
+        - name: checkout repo
+        uses: actions/checkout@v1
+
+        - name: look for ps1 file
+        run: |
+            ls '${{ env.OUTPUT_PATH }}'
+        - name: Deployment of App Service
+        run: >
+            powershell -command "& '${{ env.OUTPUT_PATH }}/deploy-webapp.ps1'"  
+            -azureSubscriptionName ${{ env.AZURE_SUBSCRIPTION_ID }}
+            -resourceGroupNameRegion ${{ env.RESOURCE_GROUP_REGION }}
+            -serverName ${{ env.SERVER_NAME }} 
+            -adminLogin ${{ env.ADMIN_LOGIN }}
+            -deploymentid ${{ env.DeploymentID }}
+            -DOCKERHUB_PASSWORD ${{ env.DOCKERHUB_PASSWORD }}
+            -DOCKERHUB_USERNAME ${{ env.DOCKERHUB_USERNAME }}
+            -Username ${{ env.Username }}
+            -Password ${{ env.Password }}
+    ```
+
+    ![](../media/ex2-task3-step6.png)
+
+7. Replace the value and click on **commit changes** **(8)**.
+
+    - **{Deployment_ID}** **(1)** with <inject key="deploymentid">.
+    - **{GitHub_Username}** **(2)** with your GitHub username.
+    - **{Azure_Login_ID}** **(3)** with <inject key="AzureAdUserEmail"></inject>
+    - **{Azure_Login_Password}** **(4)** with <inject key="AzureAdUserPassword"></inject>
+    - **{Azure_Subscription_ID}** **(5)** with <inject key="Subscription-ID"></inject>
+    - **{Dockerhub_Username}** **(6)** with your Docker Hub Username.
+    - **{Dockerhub_PAT}** **(7)** with your Docket PAT which you coped on previous task.
+
+        ![](../media/ex2-task3-step7.png)
+
+        > **Note**: If you seena warning pop-up **Secret scanning found a Azure Active Directory Application Secret secret**, select **I'll will fix it later** **(1)**, click on **Allow Secret** **(2)** and click on **commit changes** **(3)**.
+
+        ![](../media/ex2-task3-step7a.png)    
+
+8. In the pop up windows of **Commit Changes** click on the **Commit changes**.
+
+    ![](../media/commit-changes.png)
+
+9. Click on **Action** **(1)**, verifiy the workflow has been executed successfully once the workflow is succedded select the newly created workflow **updated cl.yml** **(2)**.
