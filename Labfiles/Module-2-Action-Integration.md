@@ -146,41 +146,41 @@ In this task, you will learn how to create a Docker repository and verify its su
 
 20. In the editor update the code with the below provided code, replace **{DOCKERHUB_USERNAME}** **(2)** with you docker username in line number 17,replace **{DOCKERHUB_TOKEN}** **(3)** with Docker PAT line number 18, **{DOCKERHUB_USERNAME}** **(4)** with you docker username in line number 29 and click on **commit changes** **(5)**.
 
-```
-name: ci
+    ```
+    name: ci
+    
+    on:
+      push:
+        branches:
+          - "main"
+    
+    jobs:
+      build:
+        runs-on: ubuntu-latest
+        steps:
+          -
+            name: Checkout
+            uses: actions/checkout@v4
+          -
+            name: Login to Docker Hub
+            uses: docker/login-action@v3
+            with:
+              username: ${{ secrets.DOCKERHUB_USERNAME }}
+              password: ${{ secrets.DOCKERHUB_TOKEN }}
+          -
+            name: Set up Docker Buildx
+            uses: docker/setup-buildx-action@v3
+          -
+            name: Build and push
+            uses: docker/build-push-action@v5
+            with:
+              context: .
+              file: ./docker
+              push: true
+              tags: ${{ secrets.DOCKERHUB_USERNAME }}/clockbox:latest
+    ```
 
-on:
-  push:
-    branches:
-      - "main"
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      -
-        name: Checkout
-        uses: actions/checkout@v4
-      -
-        name: Login to Docker Hub
-        uses: docker/login-action@v3
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-      -
-        name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-      -
-        name: Build and push
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          file: ./docker
-          push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/clockbox:latest
-```
-
-![](../media/ex2-task2-step17.png)
+    ![](../media/ex2-task2-step17.png)
 
 21. In the pop up windows of **Commit Changes** click on the **Commit changes**.
 
@@ -284,54 +284,53 @@ In this task, you will learn how to use a third-party action to deploy a Docker 
 
     ![](../media/editfolder1.png)
 
-6. Replace the fallowing code with below code.
+6. Replace the following code with the below code.
 
     ```
     name: Deploying Azure Webapp
-
+    
     env:
-    OUTPUT_PATH: ${{ github.workspace }}
-    DeploymentID: 1285768
-    RESOURCE_GROUP_REGION: eastus
-    SERVER_NAME: gihtubactions
-    ADMIN_LOGIN: msshashank1997
-    Username: odl_user_1285768@msazurelabs.onmicrosoft.com
-    Password: xjna13VXN*Yr
-    ADMIN_PASSWORD: Ta8f4G6IaMjNgwo
-    AZURE_SUBSCRIPTION_ID: "463a6e35-8163-4cdd-8eb4-8998d1821ee5"
-    DOCKERHUB_USERNAME: demoteam88
-    DOCKERHUB_PASSWORD: "dckr_pat_-jji8vI-407VK48A7YUBmOgANKE"
-
+      OUTPUT_PATH: ${{ github.workspace }}
+      DeploymentID: {Deployment_ID}
+      RESOURCE_GROUP_REGION: eastus
+      SERVER_NAME: gihtubactions
+      ADMIN_LOGIN: {GitHub_Username}
+      Username: {Azure_Login_ID}
+      Password: {Azure_Login_Password}
+      AZURE_SUBSCRIPTION_ID: {Azure_Subscription_ID}
+      DOCKERHUB_USERNAME: {Dockerhub_Username}
+      DOCKERHUB_PASSWORD: {Dockerhub_PAT}
+    
     on:
-    workflow_dispatch:
-
+      workflow_dispatch:
+    
     jobs:
-        
-    # Deploying Azure Webapp
-    DeployVM:
+          
+      # Deploying Azure Webapp
+      DeployVM:
         runs-on: windows-latest
-
+    
         steps:
         # Deploying Azure Webapp
         - name: checkout repo
-        uses: actions/checkout@v1
-
+          uses: actions/checkout@v1
+    
         - name: look for ps1 file
-        run: |
+          run: |
             ls '${{ env.OUTPUT_PATH }}'
         - name: Deploying Azure Webapp
-        run: >
-            powershell -command "& '${{ env.OUTPUT_PATH }}/deploy-webapp.ps1'"  
-            -azureSubscriptionName ${{ env.AZURE_SUBSCRIPTION_ID }}
-            -resourceGroupNameRegion ${{ env.RESOURCE_GROUP_REGION }}
-            -serverName ${{ env.SERVER_NAME }} 
-            -adminLogin ${{ env.ADMIN_LOGIN }}
-            -adminPassword ${{ env.ADMIN_PASSWORD }}
-            -deploymentid ${{ env.DeploymentID }}
-            -DOCKERHUB_PASSWORD ${{ env.DOCKERHUB_PASSWORD }}
-            -DOCKERHUB_USERNAME ${{ env.DOCKERHUB_USERNAME }}
-            -Username ${{ env.Username }}
-            -Password ${{ env.Password }}
+          run: >
+              powershell -command "& '${{ env.OUTPUT_PATH }}/deploy-webapp.ps1'"  
+              -azureSubscriptionName ${{ env.AZURE_SUBSCRIPTION_ID }}
+              -resourceGroupNameRegion ${{ env.RESOURCE_GROUP_REGION }}
+              -serverName ${{ env.SERVER_NAME }} 
+              -adminLogin ${{ env.ADMIN_LOGIN }}
+              -adminPassword ${{ env.ADMIN_PASSWORD }}
+              -deploymentid ${{ env.DeploymentID }}
+              -DOCKERHUB_PASSWORD ${{ env.DOCKERHUB_PASSWORD }}
+              -DOCKERHUB_USERNAME ${{ env.DOCKERHUB_USERNAME }}
+              -Username ${{ env.Username }}
+              -Password ${{ env.Password }}
     ```
 
     ![](../media/ex2-task3-step6.png)
@@ -344,7 +343,7 @@ In this task, you will learn how to use a third-party action to deploy a Docker 
     - **{Azure_Login_Password}** **(4)** with <inject key="AzureAdUserPassword"></inject>
     - **{Azure_Subscription_ID}** **(5)** with <inject key="Subscription-ID"></inject>
     - **{Dockerhub_Username}** **(6)** with your Docker Hub Username.
-    - **{Dockerhub_PAT}** **(7)** with your Docket PAT which you coped on previous task.
+    - **{Dockerhub_PAT}** **(7)** with your Docket PAT which you coped on the previous task.
 
         ![](../media/ex2-task3-step7.png)
 
