@@ -4,15 +4,15 @@
 
 In this task, you will learn how to create a Docker repository and verify its successful creation. You will navigate through Docker Hub, create a new repository, and then cross-verify its creation.
 
-1. In the Egde browser add a new tab and navigate `https://login.docker.com/u/login` page if you already having an Docker hub account **enter Username or email address** **(1)** and click on **Continue** **(2)**.
+1. In the Egde browser add a new tab and navigate `https://login.docker.com/u/login` page if you already have an Docker hub account **enter Username or email address** **(1)** and click on **Continue** **(2)**.
 
     ![](../media/ex2-task2-step3.png)
 
-2. If you don't have account in the Docker Hub click on `sign up`.
+2. If you don't have an account in the Docker Hub click on `sign up`.
 
     ![](../media/ex2-task2-step3a.png)
 
-3. In the sign up page of Docker Hub enter you **personal email id** **(1)**, proivde a unique **Username** **(2)**, provide a **Password** **(3)**, click on check box for **Send me occasional product updates and announcements** **(4)**, and click on **Sign Up** **(5)**. Perform Step 3
+3. On the signup page of Docker Hub enter your **personal email id** **(1)**, provide a unique **Username** **(2)**, provide a **Password** **(3)**, click on the check box for **Send me occasional product updates and announcements** **(4)**, and click on **Sign Up** **(5)**. Perform Step 3
 
     ![](../media/ex2-task2-step5.png)
 
@@ -20,7 +20,7 @@ In this task, you will learn how to create a Docker repository and verify its su
 
     ![](../media/ex2-task2-step6.png)
 
-5. Login to the Personal Email and **Verify Email Address** send by docker.
+5. Login to the Personal Email and **Verify Email Address** sent by docker.
 
 6. In the Docker Hub tab click on **Profile** **(1)** and click on **My Account** **(2)**.
 
@@ -34,11 +34,11 @@ In this task, you will learn how to create a Docker repository and verify its su
 
     ![](../media/ex2-task2-step10.png)
 
-9. In **Copy Access Token** pop-up, click on **Copy and Close** button and paste the coped access token in a notepad for future.
+9. In the **Copy Access Token** pop-up, click on **Copy and Close** button and paste the copied access token in a notepad for the future.
 
     ![](../media/ex2-task2-step11.png)
 
-10. **Find an Action**: Browse the [GitHub](https://github.com/marketplace?type=actions) Marketplace to find an action that suits your needs. You can search by keywords, categories, or use filters to narrow down the results.
+10. **Find an Action**: Browse the [GitHub](https://github.com/marketplace?type=actions) Marketplace to find an action that suits your needs. You can search by keywords, and categories, or use filters to narrow down the results.
 
 11. In the **GitHub Marketplace**, in search bar search for **Build and push Docker images** **(1)** hit enter, select **Build and push Docker images** **(2)** and feel free to go throught the content.
 
@@ -46,7 +46,7 @@ In this task, you will learn how to create a Docker repository and verify its su
 
     ![](../media/ex2-task2-step16a.png)
 
-12. Now lets create a workflow to publish into Docker Hub using GitHub action. Navigate to the **Code** **(1)**, click on **Add File** **(2)** and click on **+ Create new file** **(3)**.
+12. Now let's create a workflow to publish into Docker Hub using GitHub action. Navigate to the **Code** **(1)**, click on **Add File** **(2)** and click on **+ Create new file** **(3)**.
     
     ![](../media/ex2-task2-step18.png)
 
@@ -72,7 +72,7 @@ In this task, you will learn how to create a Docker repository and verify its su
 
     ![](../media/docker-commit.png)
 
-15. Now lets create a workflow to publish into Docker Hub using GitHub action. Navigate to the **Code** **(1)**, click on **Add File** **(2)** and click on **+ Create new file** **(3)**.
+15. Now let's create a workflow to publish into Docker Hub using GitHub action. Navigate to the **Code** **(1)**, click on **Add File** **(2)** and click on **+ Create new file** **(3)**.
     
     ![](../media/ex2-task2-step18.png)
 
@@ -144,7 +144,7 @@ In this task, you will learn how to create a Docker repository and verify its su
 
     ![](../media/editfolder1.png)
 
-20. In the editor update the code with the below provided code, replace **{DOCKERHUB_USERNAME}** **(2)** with you docker username in line number 17,replace **{DOCKERHUB_TOKEN}** **(3)** with Docker PAT line number 18, **{DOCKERHUB_USERNAME}** **(4)** with you docker username in line number 29 and click on **commit changes** **(5)**.
+20. In the editor update the code with the below-provided code, replace **{DOCKERHUB_USERNAME}** **(2)** with you docker username in line number 17, replace **{DOCKERHUB_TOKEN}** **(3)** with Docker PAT line number 18, **{DOCKERHUB_USERNAME}** **(4)** with you docker username in line number 29 and click on **commit changes** **(5)**.
 
     ```
     name: ci
@@ -186,11 +186,11 @@ In this task, you will learn how to create a Docker repository and verify its su
 
     ![](../media/commit-changes.png)
 
-22. Click on **Action** **(1)**, verifiy the workflow has been executed successfully once the workflow is succedded select the newly created workflow **updated cl.yml** **(2)**.
+22. Click on **Action** **(1)**, verify the workflow has been executed successfully once the workflow is succedded select the newly created workflow **updated cl.yml** **(2)**.
 
     ![](../media/ex1-task4-step6.png)
 
-23. Naviagte back to the Docker Hub and click on **Repositories** and crossverify the Repositorie has been created **successfully**.
+23. Navigate back to the Docker Hub and click on **Repositories** and cross verify the Repositorie has been created **successfully**.
 
     ![](../media/ex2-task2-step25.png)
 
@@ -198,7 +198,7 @@ In this task, you will learn how to create a Docker repository and verify its su
 
 In this task, you will learn how to use a third-party action to deploy a Docker hub container to an Azure platform. This involves setting up the action, configuring it to work with your Docker container, and deploying it to Azure.
 
-1. Now lets create a workflow to publish into Docker Hub using GitHub action. Navigate to the **Code** **(1)**, click on **Add File** **(2)** and click on **+ Create new file** **(3)**.
+1. Now let's create a workflow to publish into Docker Hub using GitHub action. Navigate to the **Code** **(1)**, click on **Add File** **(2)** and click on **+ Create new file** **(3)**.
     
     ![](../media/ex2-task2-step18.png)
 
@@ -358,11 +358,11 @@ In this task, you will learn how to use a third-party action to deploy a Docker 
 
     ![](../media/ex3-task3-step9.png)
 
-10. Once the workfow got succeeded click **Deploying Azure Webapp** workflow.
+10. Once the workfow has succeeded click **Deploying Azure Webapp** workflow.
 
     ![](../media/ex2-task3-step10.png)
 
-11. Go throught the workflow one by one.
+11. Go through the workflow one by one.
 
     ![](../media/ex2-task3-step11.png)
 
@@ -378,7 +378,7 @@ In this task, you will learn how to use a third-party action to deploy a Docker 
 
     ![](../media/ex2-task3-step14.png)
 
-15. Now where able to lanch a Website uisng GitHub action and Docker Hub
+15. Now we are able to launch a Website using GitHub action and Docker Hub
 
     ![](../media/ex2-task3-step15.png)
 
