@@ -10,7 +10,7 @@ In this task, you will create an account in [GitHub](https://github.com) and use
 
    ![](../media/dev2.png) 
    
-1. For **Device Verification Code**, use the same credentials as in the previous step, open `http://outlook.office.com/` in a private window, and enter the same username and password used for GitHub Account login. Copy the verification code and Paste code it in Device verification.
+1. For **Device Verification Code**, use the same credentials as in the previous step, open `http://outlook.office.com/` in a private window, and enter the same username and password used for the GitHub Account login. Copy the verification code and Paste code it in Device verification.
 
    ![](../media/2dgn154.png) 
     
@@ -110,7 +110,7 @@ GitHub Actions workflows can be triggered by various events occurring within you
 
     ![](../media/editfolder1.png)
 
-1. In the editor update the code with the below provided code and click on and click on **commit changes** **(2)**.
+1. In the editor update the code with the below-provided code and click on and click on **commit changes** **(2)**.
 
     ```yaml
     name: My Workflow
@@ -166,7 +166,7 @@ In GitHub Actions workflows, you define jobs and steps to orchestrate the tasks 
 
     ![](../media/editfolder1.png)
 
-1. In the editor update the code with the below provided code and click on and click on **commit changes** **(2)**.
+1. In the editor update the code with the below-provided code and click on and click on **commit changes** **(2)**.
 
     ```
     name: My Workflow
@@ -212,11 +212,11 @@ In GitHub Actions workflows, you define jobs and steps to orchestrate the tasks 
 
     - For more details on GitHub Actions syntax and available events, refer to the official documentation: [GitHub Actions - Workflow syntax for GitHub Actions](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions).
 
-1. Click on **Action** **(1)**, verifiy the workflow has been executed successfully once the workflow is succedded select the newly created workflow **updated cl.yml** **(2)**.
+1. Click on **Action** **(1)**, verify the workflow has been executed successfully once the workflow is succedded select the newly created workflow **updated cl.yml** **(2)**.
 
    ![](../media/ex1-task4-step6.png)
 
-1. Verify the jobs and feel free to go throught the workflow.
+1. Verify the jobs and feel free to go through the workflow.
 
    ![](../media/ex1-task4-step7.png)
 
