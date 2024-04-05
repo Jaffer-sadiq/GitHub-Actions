@@ -82,16 +82,55 @@ In this task, you will learn how to create a Docker repository and verify its su
     <!DOCTYPE html>
     <html>
     <head>
-        <title>My Sample Page</title>
+        <title>GitHub Actions Workshop</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }
+            h1 {
+                color: #333;
+            }
+            h2 {
+                color: #666;
+                margin-top: 30px;
+            }
+            p {
+                margin-bottom: 20px;
+            }
+            ol {
+                margin-left: 20px;
+            }
+        </style>
     </head>
     <body>
-        <h1>Welcome to My Sample Page!</h1>
-        <p>This is a simple HTML file served from a Docker container.</p>
+        <h1>GitHub Actions Workshop</h1>
+        <p>Welcome to the GitHub Actions Workshop! This workshop is designed to help you understand and implement GitHub Actions effectively in your projects. Whether you're new to GitHub Actions or looking to enhance your existing knowledge, this workshop covers a range of topics to get you started and take your workflows to the next level.</p>
+
+        <h2>Table of Contents</h2>
+        <ol>
+            <li><a href="#workflow-setup">Workflow Setup</a></li>
+            <li><a href="#action-integration">Action Integration</a></li>
+            <li><a href="#best-practices-and-security">Best Practices and Security</a></li>
+            <li><a href="#advanced-usage-and-integration">Advanced Usage and Integration</a></li>
+        </ol>
+
+        <h2 id="workflow-setup">Workflow Setup</h2>
+        <p>In this module 1, you'll learn the fundamentals of GitHub Actions and workflow files. We'll cover how to trigger workflows with events like pushes and pull requests, define jobs and steps within workflows, and set up a basic CI workflow for testing code on every push.</p>
+
+        <h2 id="action-integration">Action Integration</h2>
+        <p>In Module 2 focuses on incorporating pre-built actions from the GitHub Marketplace and creating custom actions for reusable tasks. You'll learn how to leverage third-party actions to streamline your workflows, with a practical example of deploying a Docker container to a cloud platform.</p>
+
+        <h2 id="best-practices-and-security">Best Practices and Security</h2>
+        <p>In Module 3, we'll discuss guidelines for writing efficient and maintainable workflows, as well as securing sensitive data like API keys and credentials. You'll explore examples of optimizing workflow performance by caching dependencies to ensure smooth operations.</p>
+
+        <h2 id="advanced-usage-and-integration">Advanced Usage and Integration</h2>
+        <p>Module 4 dives into advanced features of GitHub Actions, including matrix builds and parallelism. You'll also learn how to integrate with GitHub features such as pull requests and issue tracking, with a hands-on example of setting up a matrix build to test across different operating systems and versions.</p>
     </body>
     </html>
     ```
 
-    ![](../media/ex2-task2-step20.png)
+    ![](../media/newupdate.png)
 
 17. In the **Commit changes** pop-up, click on **Commit changes** button.
 
@@ -107,39 +146,41 @@ In this task, you will learn how to create a Docker repository and verify its su
 
 20. In the editor update the code with the below provided code, replace **{DOCKERHUB_USERNAME}** **(2)** with you docker username in line number 17,replace **{DOCKERHUB_TOKEN}** **(3)** with Docker PAT line number 18, **{DOCKERHUB_USERNAME}** **(4)** with you docker username in line number 29 and click on **commit changes** **(5)**.
 
-    ```
-    name: ci
+```
+name: ci
 
-    on:
-      workflow_dispatch:
+on:
+  push:
+    branches:
+      - "main"
 
-    jobs:
-    build:
-        runs-on: ubuntu-latest
-        steps:
-        -
-            name: Checkout
-            uses: actions/checkout@v4
-        -
-            name: Login to Docker Hub
-            uses: docker/login-action@v3
-            with:
-            username: {DOCKERHUB_USERNAME}
-            password: {DOCKERHUB_TOKEN}
-        -
-            name: Set up Docker Buildx
-            uses: docker/setup-buildx-action@v3
-        -
-            name: Build and push
-            uses: docker/build-push-action@v5
-            with:
-            context: .
-            file: ./docker
-            push: true
-            tags: {DOCKERHUB_USERNAME}/clockbox:latest
-    ```
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v4
+      -
+        name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      -
+        name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+      -
+        name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./docker
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/clockbox:latest
+```
 
-    ![](../media/ex2-task2-step17.png)
+![](../media/ex2-task2-step17.png)
 
 21. In the pop up windows of **Commit Changes** click on the **Commit changes**.
 
@@ -250,40 +291,42 @@ In this task, you will learn how to use a third-party action to deploy a Docker 
 
     env:
     OUTPUT_PATH: ${{ github.workspace }}
-    DeploymentID: {Deployment_ID}
+    DeploymentID: 1285768
     RESOURCE_GROUP_REGION: eastus
     SERVER_NAME: gihtubactions
-    ADMIN_LOGIN: {GitHub_Username}
-    Username: {Azure_Login_ID}
-    Password: {Azure_Login_Password}
-    AZURE_SUBSCRIPTION_ID: {Azure_Subscription_ID}
-    DOCKERHUB_USERNAME: {Dockerhub_Username}
-    DOCKERHUB_PASSWORD: {Dockerhub_PAT}
+    ADMIN_LOGIN: msshashank1997
+    Username: odl_user_1285768@msazurelabs.onmicrosoft.com
+    Password: xjna13VXN*Yr
+    ADMIN_PASSWORD: Ta8f4G6IaMjNgwo
+    AZURE_SUBSCRIPTION_ID: "463a6e35-8163-4cdd-8eb4-8998d1821ee5"
+    DOCKERHUB_USERNAME: demoteam88
+    DOCKERHUB_PASSWORD: "dckr_pat_-jji8vI-407VK48A7YUBmOgANKE"
 
     on:
     workflow_dispatch:
 
     jobs:
         
-    # Deploy VM in Azure
+    # Deploying Azure Webapp
     DeployVM:
         runs-on: windows-latest
 
         steps:
-        # checkout code from repo
+        # Deploying Azure Webapp
         - name: checkout repo
         uses: actions/checkout@v1
 
         - name: look for ps1 file
         run: |
             ls '${{ env.OUTPUT_PATH }}'
-        - name: Deployment of App Service
+        - name: Deploying Azure Webapp
         run: >
             powershell -command "& '${{ env.OUTPUT_PATH }}/deploy-webapp.ps1'"  
             -azureSubscriptionName ${{ env.AZURE_SUBSCRIPTION_ID }}
             -resourceGroupNameRegion ${{ env.RESOURCE_GROUP_REGION }}
             -serverName ${{ env.SERVER_NAME }} 
             -adminLogin ${{ env.ADMIN_LOGIN }}
+            -adminPassword ${{ env.ADMIN_PASSWORD }}
             -deploymentid ${{ env.DeploymentID }}
             -DOCKERHUB_PASSWORD ${{ env.DOCKERHUB_PASSWORD }}
             -DOCKERHUB_USERNAME ${{ env.DOCKERHUB_USERNAME }}
@@ -313,4 +356,10 @@ In this task, you will learn how to use a third-party action to deploy a Docker 
 
     ![](../media/commit-changes.png)
 
-9. Click on **Action** **(1)**, verifiy the workflow has been executed successfully once the workflow is succedded select the newly created workflow **updated cl.yml** **(2)**.
+9. Click on **Action** **(1)**, under worklows select **Deploying Azure Webapp** **(2)**, select **Run Workflow** **(3)** drop-down and click on **Run Workflow** **(4)** button.
+
+    ![](../media/ex3-task3-step9.png)
+
+10. Once the workfow got succeeded click **Deploying Azure Webapp** workflow.
+
+11. Once you inside the workflow  
