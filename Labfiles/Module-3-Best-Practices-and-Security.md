@@ -1,6 +1,8 @@
-# Lab 2: Action Integration
+# Lab 3: Best Practices and Security 
 
-### Task 1: Incorporating pre-built actions from the GitHub Marketplace
+### Task 1: Guidelines for writing efficient and maintainable workflows
+
+### Task 2: Incorporating pre-built actions from the GitHub Marketplace
 
 GitHub Marketplace is a central location for you to find actions created by the GitHub community. These actions can be incorporated into your workflows to automate common tasks without having to write the code yourself.
 

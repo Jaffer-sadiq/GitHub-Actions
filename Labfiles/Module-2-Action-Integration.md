@@ -325,7 +325,6 @@ In this task, you will learn how to use a third-party action to deploy a Docker 
               -resourceGroupNameRegion ${{ env.RESOURCE_GROUP_REGION }}
               -serverName ${{ env.SERVER_NAME }} 
               -adminLogin ${{ env.ADMIN_LOGIN }}
-              -adminPassword ${{ env.ADMIN_PASSWORD }}
               -deploymentid ${{ env.DeploymentID }}
               -DOCKERHUB_PASSWORD ${{ env.DOCKERHUB_PASSWORD }}
               -DOCKERHUB_USERNAME ${{ env.DOCKERHUB_USERNAME }}
@@ -361,4 +360,26 @@ In this task, you will learn how to use a third-party action to deploy a Docker 
 
 10. Once the workfow got succeeded click **Deploying Azure Webapp** workflow.
 
-11. Once you inside the workflow  
+    ![](../media/ex2-task3-step10.png)
+
+11. Go throught the workflow one by one.
+
+    ![](../media/ex2-task3-step11.png)
+
+12. Naviagte back to the **Azure portal**, in the search bar search for **app service** (1) and select **App Services** **(2)**.
+    
+    ![](../media/ex2-task3-step12.png)
+
+13. In the **App Services** tab, select **webapplication<inject key="deploymentid">**.
+
+    ![](../media/ex2-task3-step13.png)
+
+14. In the **webapplication<inject key="deploymentid">** tab, click on the **Browse** button this will open an website a new table.
+
+    ![](../media/ex2-task3-step14.png)
+
+15. Now where able to lanch a Website uisng GitHub action and Docker Hub
+
+    ![](../media/ex2-task3-step15.png)
+
+16. Click on **Next** button for next Lab.
