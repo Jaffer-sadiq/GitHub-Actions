@@ -219,34 +219,34 @@ Guidelines for writing efficient and maintainable workflows help ensure that you
 
 3. Provider file name as **nodejs_ci.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
 
-```
-name: Node.js CI
+    ```
+    name: Node.js CI
+    
+    on:
+      push:
+        branches:
+          - master
+          - dev
+    jobs:
+      build:
+    
+        runs-on: ubuntu-latest
+    
+        strategy:
+          matrix:
+            node-version: [18.x]
+            # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+    
+        steps:
+        - uses: actions/checkout@v3
+        - name: Use Node.js ${{ matrix.node-version }}
+          uses: actions/setup-node@v3
+          with:
+            node-version: ${{ matrix.node-version }}
+            cache: 'npm'
+    ```
 
-on:
-  push:
-    branches:
-      - master
-      - dev
-jobs:
-  build:
-
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [18.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
-    steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-```
-
-   ![](../media/new-workflow.png)
+    ![](../media/new-workflow.png)
 
 4. In the **Commit changes** pop-up, click on **Commit changes** button.
 
