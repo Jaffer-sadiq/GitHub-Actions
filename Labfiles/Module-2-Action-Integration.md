@@ -194,7 +194,7 @@ In this task, you will learn how to create a Docker repository and verify its su
 
     ![](../media/ex2-task2-step25.png)
 
-### Task 2: Using a third-party action to deploy a Docker container to a Azure platform.
+### Task 2: Using a third-party action to deploy a Docker container to a Azure platform (Read-Only).
 
 In this task, you will learn how to use a third-party action to deploy a Docker hub container to an Azure platform. This involves setting up the action, configuring it to work with your Docker container, and deploying it to Azure.
 
