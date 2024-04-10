@@ -1,58 +1,6 @@
 # Lab 3: Best Practices and Security 
 
-### Task 1: Guidelines for writing efficient and maintainable workflows
-
-Guidelines for writing efficient and maintainable workflows help ensure that your workflows are optimized for performance and maintainability. This includes following best practices such as using parallel jobs, minimizing unnecessary steps, and organizing your workflow files effectively.
-
-1. Naviagte to the [sample-node-project](https://github.com/acemilyalcin/sample-node-project) repo and click on **Fork** **(2)**.
-
-
-2. Navigate to the **Action** **(1)** directory in your repository, in `Get started with GitHub Actions` click on set up a workflow yourself (2).
-
-    ![](../media/newaction.png)
-
-3. Provider file name as **nodejs_ci.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
-
-```
-name: Node.js CI
-
-on:
-  push:
-    branches:
-      - master
-      - dev
-jobs:
-  build:
-
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [18.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
-    steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-```
-
-   ![](../media/new-workflow.png)
-
-4. In the **Commit changes** pop-up, click on **Commit changes** button.
-
-    ![](../media/newcommit.png)
-
-5. Click on **Action** **(1)**, verify the workflow has been executed successfully once the workflow is succedded select the newly created workflow **Create nodejs_ci.yml** **(2)**.
-
-    ![](../media/new-succedded.png)
-
-    > Feel free to go throught the workflow
-
-### Task 2: Securing sensitive data like API keys and credentials
+### Task 1: Securing sensitive data like API keys and credentials
 
 Securing sensitive data like API keys and credentials is crucial to protect your workflows and prevent unauthorized access. This can be achieved by using secrets, which are encrypted variables that can be securely used in your workflows without exposing the actual values.
 
@@ -258,6 +206,61 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
     ![](../media/ex2-task3-step15.png)
 
-### Task 3: Using a third-party action to deploy a Docker container to a Azure platform.
+### Task 2: Guidelines for writing efficient and maintainable workflows
+
+Guidelines for writing efficient and maintainable workflows help ensure that your workflows are optimized for performance and maintainability. This includes following best practices such as using parallel jobs, minimizing unnecessary steps, and organizing your workflow files effectively.
+
+1. Naviagte to the [sample-node-project](https://github.com/acemilyalcin/sample-node-project) repo and click on **Fork** **(2)**.
+
+
+2. Navigate to the **Action** **(1)** directory in your repository, in `Get started with GitHub Actions` click on set up a workflow yourself (2).
+
+    ![](../media/newaction.png)
+
+3. Provider file name as **nodejs_ci.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
+
+```
+name: Node.js CI
+
+on:
+  push:
+    branches:
+      - master
+      - dev
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+```
+
+   ![](../media/new-workflow.png)
+
+4. In the **Commit changes** pop-up, click on **Commit changes** button.
+
+    ![](../media/newcommit.png)
+
+5. Click on **Action** **(1)**, verify the workflow has been executed successfully once the workflow is succedded select the newly created workflow **Create nodejs_ci.yml** **(2)**.
+
+    ![](../media/new-succedded.png)
+
+    > Feel free to go throught the workflow
+
+
+### Task 3: Optimizing workflow performance by caching dependencies
+
+Optimizing workflow performance by caching dependencies can significantly improve the execution time of your workflows. By caching dependencies, you can avoid unnecessary downloads and installations, resulting in faster and more efficient workflows.
 
 1. 
