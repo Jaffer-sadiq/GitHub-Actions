@@ -263,4 +263,10 @@ Guidelines for writing efficient and maintainable workflows help ensure that you
 
 Optimizing workflow performance by caching dependencies can significantly improve the execution time of your workflows. By caching dependencies, you can avoid unnecessary downloads and installations, resulting in faster and more efficient workflows.
 
+- **Identify Dependencies**: Determine which dependencies in your project take a long time to install.
+- **Add Cache Step**: In your GitHub Actions workflow file, add a step that uses the `actions/cache@v2` action.
+- **Configure Cache Key**: Set the `key` to an expression that uniquely identifies each set of dependencies. This typically includes the package manager's lock file.
+- **Specify Path**: Set the `path` to the directory where dependencies are installed.
+- **Restore Cache**: If a cache hit occurs, the action restores the cached dependencies.
+
 1. 
