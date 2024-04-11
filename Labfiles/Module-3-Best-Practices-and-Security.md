@@ -256,7 +256,7 @@ Guidelines for writing efficient and maintainable workflows help ensure that you
 
     ![](../media/new-succedded.png)
 
-    > Feel free to go throught the workflow
+    > Feel free to go through the workflow
 
 
 ### Task 3: Optimizing workflow performance by caching dependencies
