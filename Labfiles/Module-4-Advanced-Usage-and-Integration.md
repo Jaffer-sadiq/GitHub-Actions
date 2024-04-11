@@ -69,6 +69,16 @@ jobs:
 
 GitHub Actions can be integrated with GitHub's issue tracking to automate certain workflows. For instance, you can set up a workflow to automatically respond to new issues, label issues based on their content, or even close stale issues.
 
+1. Navigate back to the `github-action` repo, and click on **.github/workflows** **(2)** folder.
+
+    ![](../media/optimize1.png)
+
+2. In the **.github/workflows** folder, select **nodejs_ci.yml** **(1)** and click on **edit** **(2)**.
+
+    ![](../media/optimize2.png)
+
+3. Replace the following code with the below code.
+
 ```
 name: Issue Response
 
@@ -83,7 +93,7 @@ jobs:
     - name: Respond to issue
       uses: actions/github-script@v3
       with:
-        github-token: ${{secrets.GITHUB_TOKEN}}
+        github-token: ${{secrets.PAT_TOKEN}}
         script: |
           const issueComment = `Thank you for opening an issue. We will get back to you soon!`;
           github.issues.createComment({
@@ -94,5 +104,8 @@ jobs:
           });
 ```
 
+4. In the pop up windows of **Commit Changes** click on the **Commit changes**.
+
+    ![](../media/newcommit.png)
 
 ### Task 3: Setting up a matrix build to test across different operating systems and versions
