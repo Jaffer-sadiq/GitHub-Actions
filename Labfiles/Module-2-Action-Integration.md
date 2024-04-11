@@ -378,7 +378,7 @@ In this task, you will learn how to use a third-party action to deploy a Docker 
 
     ![](../media/ex2-task3-step14.png)
 
-15. Now we are able to launch a Website using GitHub action and Docker Hub
+15. Now we can launch a Website using GitHub action and Docker Hub
 
     ![](../media/ex2-task3-step15.png)
 
