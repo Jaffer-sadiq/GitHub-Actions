@@ -279,40 +279,40 @@ Optimizing workflow performance by caching dependencies can significantly improv
 
 3. Replace the following code with the below code.
 
-```
-name: Node.js CI
-
-env:
-  OUTPUT_PATH: ${{ github.workspace }}
-
-on:
-  push:
-    branches:
-      - master
-      - dev
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Cache Node.js dependencies
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('${{ env.OUTPUT_PATH }}/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      - name: Use Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18.x
-```
-
-![](../media/optimize3.png)
+    ```
+    name: Node.js CI
+    
+    env:
+      OUTPUT_PATH: ${{ github.workspace }}
+    
+    on:
+      push:
+        branches:
+          - master
+          - dev
+    
+    jobs:
+      build:
+        runs-on: ubuntu-latest
+    
+        steps:
+          - uses: actions/checkout@v3
+    
+          - name: Cache Node.js dependencies
+            uses: actions/cache@v2
+            with:
+              path: ~/.npm
+              key: ${{ runner.os }}-node-${{ hashFiles('${{ env.OUTPUT_PATH }}/package-lock.json') }}
+              restore-keys: |
+                ${{ runner.os }}-node-
+    
+          - name: Use Node.js
+            uses: actions/setup-node@v3
+            with:
+              node-version: 18.x
+    ```
+    
+    ![](../media/optimize3.png)
 
 4. In the pop up windows of **Commit Changes** click on the **Commit changes**.
 
