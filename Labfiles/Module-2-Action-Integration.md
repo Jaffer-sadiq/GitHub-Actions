@@ -370,11 +370,11 @@ In this task, you will learn how to use a third-party action to deploy a Docker 
     
     ![](../media/ex2-task3-step12.png)
 
-13. In the **App Services** tab, select **webapplication<inject key="deploymentid">**.
+13. In the **App Services** tab, select **webapplication<inject key="Deployment ID">**.
 
     ![](../media/ex2-task3-step13.png)
 
-14. In the **webapplication<inject key="deploymentid">** tab, click on the **Browse** button this will open an website a new table.
+14. In the **webapplication<inject key="Deployment ID">** tab, click on the **Browse** button this will open an website a new table.
 
     ![](../media/ex2-task3-step14.png)
 
