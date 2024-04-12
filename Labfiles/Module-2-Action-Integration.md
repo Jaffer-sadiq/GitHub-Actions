@@ -336,11 +336,11 @@ In this task, you will learn how to use a third-party action to deploy a Docker 
 
 7. Replace the value and click on **commit changes** **(8)**.
 
-    - **{Deployment_ID}** **(1)** with <inject key="deploymentid">.
+    - **{Deployment_ID}** **(1)** with <inject key="Deployment ID">.
     - **{GitHub_Username}** **(2)** with your GitHub username.
     - **{Azure_Login_ID}** **(3)** with <inject key="AzureAdUserEmail"></inject>
     - **{Azure_Login_Password}** **(4)** with <inject key="AzureAdUserPassword"></inject>
-    - **{Azure_Subscription_ID}** **(5)** with <inject key="Subscription-ID"></inject>
+    - **{Azure_Subscription_ID}** **(5)** with <inject key="SUBSCRIPTION_ID"></inject>
     - **{Dockerhub_Username}** **(6)** with your Docker Hub Username.
     - **{Dockerhub_PAT}** **(7)** with your Docket PAT which you coped on the previous task.
 
