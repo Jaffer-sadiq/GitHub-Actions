@@ -172,5 +172,3 @@ jobs:
 18. We can view the auto response to created issue.
 
     ![](../media/autoreplay.png)
-
-### Task 3: Setting up a matrix build to test across different operating systems and versions
