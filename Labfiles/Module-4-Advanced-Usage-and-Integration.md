@@ -69,15 +69,58 @@ jobs:
 
 GitHub Actions can be integrated with GitHub's issue tracking to automate certain workflows. For instance, you can set up a workflow to automatically respond to new issues, label issues based on their content, or even close stale issues.
 
-1. Navigate back to the `github-action` repo, and click on **.github/workflows** **(2)** folder.
+1. Navigate to your GitHub account, from the upper-right corner of the page, click your **profile** icon.
+
+   ![](../media/ex3-task1-task1.png)
+
+2. From the GitHub account settings pop-up click on **Setting**.
+   
+   ![](../media/setting.png)
+
+3. From the left menu scroll down and select the **Developer settings**.
+
+    ![](../media/ex3-task1-task2.png)
+
+4. In the **Developer settings** tab, expand **Personal access token** **(1)**, and click-on **Token (Classic)** **(2)**. In the **Personal access tokens (classic)**, click-on the **Generate new token** **(3)** drop-down and select **Generate new token (classic)** **(4)**.
+
+    ![](../media/ex3-task1-task3.png)
+
+5. In the **personal access token (classic)** tab enter the fallowing details and click on **Generate token** **(6)**.
+
+    - **Note**: enter the not as **pat** **(1)**.
+    - **Expiration**: From the drop-down select **7 days** **(2)**.
+    - **Select scopes**: check box the fallowing scope **repo** **(3)**, **delete:packages** **(4)** and **admin:org** **(5)**.
+
+      ![](../media/ex3-task1-task4.png)
+
+6. Copy the newly **generated personal access token(PAT)** into a notepad for future use.
+
+    ![](../media/ex3-task1-task5.png)
+
+7. Navigate back to the `github-action` repo, from the GitHub repository, and select the **Settings** tab from the lab files repository.
+
+    ![](../media/github-action.png)
+
+8. Under **Security**, expand **Secrets and variables** **(1)** by clicking the drop-down and select **Actions** **(2)** blade from the left navigation bar. Select the **New repository secret** **(3)** button.
+
+    ![](../media/add-sec1.png)
+
+9. Under **Actions Secrets/New secret page**, enter the below mentioned details and Click on **Add secret** **(3)**.
+
+    - Name : Enter **PAT_TOKEN** **(1)**
+    - Value : Enter the **personal access token** **(2)** which you coped the step 6.
+
+      ![](../media/ex3-task1-task6.png)
+
+10. Navigate to the **Code** **(1)**, and click on **.github/workflows** **(2)** folder.
 
     ![](../media/optimize1.png)
 
-2. In the **.github/workflows** folder, select **nodejs_ci.yml** **(1)** and click on **edit** **(2)**.
+11. In the **.github/workflows** folder, click on **Add file** **(1)** from the drop down select **+ Create new file** **(2)**.
 
-    ![](../media/optimize2.png)
+    ![](../media/add-file.png)
 
-3. Replace the following code with the below code.
+12. Enter the File name as **issue-repoted.yml** **(1)**, paste the fallowing code in the **codespace** **(2)** and click on **Commit changes** **(3)**.
 
 ```
 name: Issue Response
@@ -104,8 +147,30 @@ jobs:
           });
 ```
 
-4. In the pop up windows of **Commit Changes** click on the **Commit changes**.
+![](../media/issue-yml.png)
 
-    ![](../media/newcommit.png)
+13. In the pop up windows of **Commit Changes** click on the **Commit changes**.
+
+    ![](../media/issue-commit.png)
+
+14. Now lets create a issue to trigger the workflow. In the `github-action` repo click on **issues** **(1)** and click on **New issue** **(2)**.
+
+    ![](../media/issue-create.png)
+
+15. In the **Issue** tab, provide title as **docker push workflow is getting falied** **(1)**, discription as **docker push workflow is getting falied** **(2)**and click on **Submit new issue** **(3)**.
+
+    ![](../media/newissue.png)
+
+16. Naviagte back to the **Action** tab and review the workflow is getting succedded.
+
+    ![](../media/issueaction.png)
+
+17. Naviagte back to the **issues** tab and select the **recently created issue**.
+
+    ![](../media/checkissueresponse.png)
+
+18. We can view the auto response to created issue.
+
+    ![](../media/autoreplay.png)
 
 ### Task 3: Setting up a matrix build to test across different operating systems and versions
