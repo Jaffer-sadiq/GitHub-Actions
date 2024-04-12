@@ -18,42 +18,42 @@ Parallelism allows you to run jobs or steps concurrently, reducing the total exe
 
 3. Replace the following code with the below code.
 
-```
-name: Node.js CI
-
-env:
-  OUTPUT_PATH: ${{ github.workspace }}
-
-on:
-  push:
-    branches:
-      - master
-      - dev
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [18.x]
-
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Cache Node.js dependencies
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ matrix.node-version }}-${{ hashFiles('${{ env.OUTPUT_PATH }}/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-${{ matrix.node-version }}-
-
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-```
+    ```
+    name: Node.js CI
+    
+    env:
+      OUTPUT_PATH: ${{ github.workspace }}
+    
+    on:
+      push:
+        branches:
+          - master
+          - dev
+    
+    jobs:
+      build:
+        runs-on: ubuntu-latest
+    
+        strategy:
+          matrix:
+            node-version: [18.x]
+    
+        steps:
+          - uses: actions/checkout@v3
+    
+          - name: Cache Node.js dependencies
+            uses: actions/cache@v2
+            with:
+              path: ~/.npm
+              key: ${{ runner.os }}-node-${{ matrix.node-version }}-${{ hashFiles('${{ env.OUTPUT_PATH }}/package-lock.json') }}
+              restore-keys: |
+                ${{ runner.os }}-node-${{ matrix.node-version }}-
+    
+          - name: Use Node.js ${{ matrix.node-version }}
+            uses: actions/setup-node@v3
+            with:
+              node-version: ${{ matrix.node-version }}
+    ```
 
 4. In the pop up windows of **Commit Changes** click on the **Commit changes**.
 
@@ -122,30 +122,30 @@ GitHub Actions can be integrated with GitHub's issue tracking to automate certai
 
 12. Enter the File name as **issue-repoted.yml** **(1)**, paste the fallowing code in the **codespace** **(2)** and click on **Commit changes** **(3)**.
 
-```
-name: Issue Response
-
-on:
-  issues:
-    types: [opened]
-
-jobs:
-  respond:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Respond to issue
-      uses: actions/github-script@v3
-      with:
-        github-token: ${{secrets.PAT_TOKEN}}
-        script: |
-          const issueComment = `Thank you for opening an issue. We will get back to you soon!`;
-          github.issues.createComment({
-            issue_number: context.issue.number,
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            body: issueComment
-          });
-```
+    ```
+    name: Issue Response
+    
+    on:
+      issues:
+        types: [opened]
+    
+    jobs:
+      respond:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Respond to issue
+          uses: actions/github-script@v3
+          with:
+            github-token: ${{secrets.PAT_TOKEN}}
+            script: |
+              const issueComment = `Thank you for opening an issue. We will get back to you soon!`;
+              github.issues.createComment({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: issueComment
+              });
+    ```
 
 ![](../media/issue-yml.png)
 
