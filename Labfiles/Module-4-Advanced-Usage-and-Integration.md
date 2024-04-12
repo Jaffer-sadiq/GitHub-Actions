@@ -147,7 +147,7 @@ GitHub Actions can be integrated with GitHub's issue tracking to automate certai
               });
     ```
 
-![](../media/issue-yml.png)
+    ![](../media/issue-yml.png)
 
 13. In the pop up windows of **Commit Changes** click on the **Commit changes**.
 
