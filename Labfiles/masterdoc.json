@@ -1,0 +1,28 @@
+[
+  {
+    "Name": "Github Copilot Innovation Workshop",
+    "Language": "English",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Github-Copilot/main/Labfiles/Introduction-to-GitHub-Copilot.md",
+        "Order": 1
+      },
+       {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/GitHub-Actions/main/Labfiles/Module-1-Workflow-Setup.md",
+        "Order": 2
+      },
+      {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/GitHub-Actions/main/Labfiles/Module-2-Action-Integration.md",
+        "Order": 3
+      },
+      {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/GitHub-Actions/main/Labfiles/Module-3-Best-Practices-and-Security.md",
+        "Order": 4
+      },
+      {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/GitHub-Actions/main/Labfiles/Module-4-Advanced-Usage-and-Integration.md",
+        "Order": 5
+      }
+    ]
+  }
+]
