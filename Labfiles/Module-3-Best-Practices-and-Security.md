@@ -1,6 +1,6 @@
-# Lab 3: Best Practices and Security 
+# Lab 3: Advanced Workflows
 
-### Task 1: Securing sensitive data like API keys and credentials
+### Task 1: Using environment variables in workflows
 
 Securing sensitive data like API keys and credentials is crucial to protect your workflows and prevent unauthorized access. This can be achieved by using secrets, which are encrypted variables that can be securely used in your workflows without exposing the actual values.
 
@@ -206,60 +206,72 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
     ![](../media/ex2-task3-step15.png)
 
-### Task 2: Guidelines for writing efficient and maintainable workflows
+### Task 2: Explanation and usage of matrix builds
 
-Guidelines for writing efficient and maintainable workflows help ensure that your workflows are optimized for performance and maintainability. This includes following best practices such as using parallel jobs, minimizing unnecessary steps, and organizing your workflow files effectively.
+Matrix builds and parallelism are advanced features in GitHub Actions that allow you to run multiple jobs concurrently.
 
-1. Naviagte to the [sample-node-project](https://github.com/acemilyalcin/sample-node-project) repo and click on **Fork** **(2)**.
+Matrix builds let you test your code across multiple environments by creating a job matrix. This is a set of keys and values that create a combination of conditions and run a job for each one.
 
+Parallelism allows you to run jobs or steps concurrently, reducing the total execution time.
 
-2. Navigate to the **Action** **(1)** directory in your repository, in `Get started with GitHub Actions` click on set up a workflow yourself (2).
+1. Navigate to the **Code** **(1)** and click on **.github/workflows** **(2)** folder.
 
-    ![](../media/newaction.png)
+    ![](../media/optimize1.png)
 
-3. Provider file name as **nodejs_ci.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
+2. In the **.github/workflows** folder, select **nodejs_ci.yml** **(1)** and click on **edit** **(2)**.
+
+    ![](../media/optimize2.png)
+
+3. Replace the following code with the below code.
 
     ```
     name: Node.js CI
+    
+    env:
+      OUTPUT_PATH: ${{ github.workspace }}
     
     on:
       push:
         branches:
           - master
           - dev
+    
     jobs:
       build:
-    
         runs-on: ubuntu-latest
     
         strategy:
           matrix:
             node-version: [18.x]
-            # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
     
         steps:
-        - uses: actions/checkout@v3
-        - name: Use Node.js ${{ matrix.node-version }}
-          uses: actions/setup-node@v3
-          with:
-            node-version: ${{ matrix.node-version }}
-            cache: 'npm'
+          - uses: actions/checkout@v3
+    
+          - name: Cache Node.js dependencies
+            uses: actions/cache@v2
+            with:
+              path: ~/.npm
+              key: ${{ runner.os }}-node-${{ matrix.node-version }}-${{ hashFiles('${{ env.OUTPUT_PATH }}/package-lock.json') }}
+              restore-keys: |
+                ${{ runner.os }}-node-${{ matrix.node-version }}-
+    
+          - name: Use Node.js ${{ matrix.node-version }}
+            uses: actions/setup-node@v3
+            with:
+              node-version: ${{ matrix.node-version }}
     ```
 
-    ![](../media/new-workflow.png)
-
-4. In the **Commit changes** pop-up, click on **Commit changes** button.
+4. In the pop up windows of **Commit Changes** click on the **Commit changes**.
 
     ![](../media/newcommit.png)
 
 5. Click on **Action** **(1)**, verify the workflow has been executed successfully once the workflow is succedded select the newly created workflow **Create nodejs_ci.yml** **(2)**.
 
-    ![](../media/new-succedded.png)
+    ![](../media/optimize4.png)
 
     > Feel free to go through the workflow
 
-
-### Task 3: Optimizing workflow performance by caching dependencies
+### Task 3: Using artifacts and dependencies in workflows
 
 Optimizing workflow performance by caching dependencies can significantly improve the execution time of your workflows. By caching dependencies, you can avoid unnecessary downloads and installations, resulting in faster and more efficient workflows.
 
