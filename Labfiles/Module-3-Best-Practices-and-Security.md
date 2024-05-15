@@ -267,6 +267,8 @@ Parallelism allows you to run jobs or steps concurrently, reducing the total exe
               node-version: ${{ matrix.node-version }}
     ```
 
+    ![](../media/new-workflow.png)
+
 5. In the pop up windows of **Commit Changes** click on the **Commit changes**.
 
     ![](../media/newcommit.png)

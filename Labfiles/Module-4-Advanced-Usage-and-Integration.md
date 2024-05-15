@@ -81,4 +81,8 @@ OpenID Connect (OIDC) allows your GitHub Actions workflows to access resources i
               Get-AzContext
     ```
 
+9. Click on **Action** **(1)**, verifiy the workflow has been executed successfully.
+
+   ![](../media/workflow-oidc.png)
+
 ### Task 2: Agent infrastructure
