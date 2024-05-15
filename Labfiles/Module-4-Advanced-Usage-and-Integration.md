@@ -8,13 +8,13 @@ OpenID Connect (OIDC) allows your GitHub Actions workflows to access resources i
 
     ![](../media/github-action.png)
 
-2. Under **Security**, expand **Secrets and variables** **(1)** by clicking the drop-down and select **Actions** **(2)** blade from the left navigation bar. Select the **New repository secret** **(3)** button.
+2. Under **Security**, expand **Secrets and variables** **(1)** by clicking the drop-down and select **Actions** **(2)** blade from the left navigation bar.
 
-    ![](../media/add-sec1.png)
+   ![](../media/add-sec1.png)
 
 3. Under **Actions Secrets/New secret page**, enter the below mentioned details and Click on **Add secret** **(3)**.
 
-    ![](../media/editfolder.png)
+   ![](../media/ex2-task2-step13.png)
 
 4. Navigate to **Environment Details** **(1)**, click on **Service Principal Details** **(2)** and copy the **Subscription ID**, **Tenant Id (Directory ID)**, **Application Id(Client Id)** and **Secret Key (Client Secret)**.
 
@@ -22,22 +22,31 @@ OpenID Connect (OIDC) allows your GitHub Actions workflows to access resources i
    
    - Replace the values that you copied in below Json. You will be using them in this step.
    
-   ```json
-   {
-      "clientSecret": "******",
-      "subscriptionId": "******",
-      "tenantId": "******",
-      "clientId": "******"
-   }
-   ```
+      ```json
+      {
+        "clientSecret": "******",
+        "subscriptionId": "******",
+        "tenantId": "******",
+        "clientId": "******"
+      }
+      ```
 
-5. Navigate to the **Code** **(1)** and click on **.github/workflows** **(2)** folder.
+5. Under Actions Secrets/New secret page, enter the below mentioned details and Click on Add secret (3).
 
-6. In the **.github/workflows** folder, click on .
+   - Name : Enter **AZURE_CREDENTIALS** (1)
+   - Value : Paste the service principal details in json format (2)
 
-    ![](../media/editfolder1.png)
+     ![](../media/add-sec-oidc.png)
 
-7. Provider file name as **OIDC_action.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
+6. Navigate to the **Code** **(1)** and click on **.github/workflows** **(2)** folder.
+
+   ![](../media/4th-oidc-click.png)
+
+7. In the **.github/workflows** folder, click on **Add files** **(1)**, and click on **+ Create new file** **(2)**.
+
+   ![](../media/4th-oidc.png)
+
+8. Provider file name as **OIDC_action.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
 
     ```
     # File: .github/workflows/workflow.yml 

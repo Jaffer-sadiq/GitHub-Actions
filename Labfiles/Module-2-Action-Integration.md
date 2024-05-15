@@ -140,11 +140,16 @@ In this task, you will learn how to create a Docker repository and verify its su
 
     ![](../media/editfolder.png)
 
-19. In the **.github/workflows** folder, select **cl.yml** **(1)** and click on **edit** **(2)**.
+19. Navigate to the **Code** **(1)** and click on **.github/workflows** **(2)** folder.
 
-    ![](../media/editfolder1.png)
+    ![](../media/editfolder.png)
 
-20. In the editor update the code with the below-provided code, replace **{DOCKERHUB_USERNAME}** **(2)** with you docker username in line number 17, replace **{DOCKERHUB_TOKEN}** **(3)** with Docker PAT line number 18, **{DOCKERHUB_USERNAME}** **(4)** with you docker username in line number 29 and click on **commit changes** **(5)**.
+20. In the **.github/workflows** folder, click on **Add files** **(1)**, and click on **+ Create new file** **(2)**.
+
+    ![](../media/4th-oidc.png)
+
+
+21. In the editor update the code with the below-provided code, replace **{DOCKERHUB_USERNAME}** **(2)** with you docker username in line number 17, replace **{DOCKERHUB_TOKEN}** **(3)** with Docker PAT line number 18, **{DOCKERHUB_USERNAME}** **(4)** with you docker username in line number 29 and click on **commit changes** **(5)**.
 
     ```
     name: ci
@@ -182,16 +187,18 @@ In this task, you will learn how to create a Docker repository and verify its su
 
     ![](../media/ex2-task2-step17.png)
 
-21. In the pop up windows of **Commit Changes** click on the **Commit changes**.
+22. Provider file name as **docker.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
+
+23. In the pop up windows of **Commit Changes** click on the **Commit changes**.
 
     ![](../media/commit-changes.png)
 
-22. Click on **Action** **(1)**, verify the workflow has been executed successfully once the workflow is succedded select the newly created workflow **updated cl.yml** **(2)**.
+24. Click on **Action** **(1)**, verify the workflow has been executed successfully once the workflow is succedded select the newly created workflow **updated cl.yml** **(2)**.
 
     ![](../media/ex1-task4-step6.png)
 
-23. Navigate back to the Docker Hub and click on **Repositories** and cross verify the Repositorie has been created **successfully**.
+25. Navigate back to the Docker Hub and click on **Repositories** and cross verify the Repositorie has been created **successfully**.
 
     ![](../media/ex2-task2-step25.png)
 
-24. Click on **Next** button for next Lab.
+26. Click on **Next** button for next Lab.

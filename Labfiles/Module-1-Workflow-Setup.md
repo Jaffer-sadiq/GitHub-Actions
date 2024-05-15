@@ -64,7 +64,7 @@ GitHub Actions is a powerful automation tool provided by GitHub, allowing you to
 
     ![](../media/cl-action.png)
 
-1. In the workspace rename the file it to **cl.yml** **(1)**, paste the below code in the **edit** **(2)**, and click on **commit changes** **(3)**.
+1. In the workspace rename the file it to **hello-action.yml** **(1)**, paste the below code in the **edit** **(2)**, and click on **commit changes** **(3)**.
 
     ```yaml
     name: My First Workflow
@@ -86,11 +86,11 @@ GitHub Actions is a powerful automation tool provided by GitHub, allowing you to
 
    ![](../media/commit-changes.png)
 
-1. Click on **Action** **(1)**, once the workflow got succedded click on Workflow **cl.yml** **(2)**.
+1. Click on **Action** **(1)**, once the workflow got succedded click on Workflow **hello-action.yml** **(2)**.
 
    ![](../media/workflow1.png)
 
-1. In the `cl.yml` workflow, click on **build** **(1)**, expand the **Print the greeting** and view the result. 
+1. In the `hello-action.yml` workflow, click on **build** **(1)**, expand the **Print the greeting** and view the result. 
 
    ![](../media/workflow2.png)
 
@@ -106,11 +106,11 @@ GitHub Actions workflows can be triggered by various events occurring within you
 
     ![](../media/editfolder.png)
 
-1. In the **.github/workflows** folder, select **cl.yml** **(1)** and click on **edit** **(2)**.
+1. In the **.github/workflows** folder, click on **Add files** **(1)**, and click on **+ Create new file** **(2)**.
 
-    ![](../media/editfolder1.png)
+    ![](../media/4th-oidc.png)
 
-1. In the editor update the code with the below-provided code and click on and click on **commit changes** **(2)**.
+1. Provider file name as **cl.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
 
     ```yaml
     name: My Workflow
@@ -162,11 +162,11 @@ In GitHub Actions workflows, you define jobs and steps to orchestrate the tasks 
 
     ![](../media/editfolder.png)
 
-1. In the **.github/workflows** folder, select **cl.yml** **(1)** and click on **edit** **(2)**.
+1. In the **.github/workflows** folder, click on **Add files** **(1)**, and click on **+ Create new file** **(2)**.
 
-    ![](../media/editfolder1.png)
+    ![](../media/4th-oidc.png)
 
-1. In the editor update the code with the below-provided code and click on and click on **commit changes** **(2)**.
+1. Provider file name as **jobs.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
 
     ```
     name: My Workflow

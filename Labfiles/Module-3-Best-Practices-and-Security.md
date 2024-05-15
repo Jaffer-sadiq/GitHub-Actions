@@ -50,56 +50,11 @@ Securing sensitive data like API keys and credentials is crucial to protect your
     - Name : Enter **Password** **(1)**
     - Secret : Enter the Azure Password **<inject key="AzureAdUserPassword"></inject>** **(2)**.
 
-10. In the **.github/workflows** folder, select **cl.yml** **(1)** and click on **edit** **(2)**.
-
-    ![](../media/editfolder1.png)
-
-11. Replace the following code with the below code.
-
-    ```
-    name: Deploying Azure Webapp
-    
-    env:
-      OUTPUT_PATH: ${{ github.workspace }}
-      RESOURCE_GROUP_REGION: eastus
-      SERVER_NAME: gihtubactions
-
-    on:
-      workflow_dispatch:
-    
-    jobs:
-          
-      # Deploying Azure Webapp
-      DeployVM:
-        runs-on: windows-latest
-    
-        steps:
-        # Deploying Azure Webapp
-        - name: checkout repo
-          uses: actions/checkout@v1
-    
-        - name: look for ps1 file
-          run: |
-            ls '${{ env.OUTPUT_PATH }}'
-        - name: Deploying Azure Webapp
-          run: >
-              powershell -command "& '${{ env.OUTPUT_PATH }}/deploy-webapp.ps1'"  
-              -azureSubscriptionName ${{ secret.AZURE_SUBSCRIPTION_ID }}
-              -resourceGroupNameRegion ${{ env.RESOURCE_GROUP_REGION }}
-              -serverName ${{ env.SERVER_NAME }} 
-              -adminLogin ${{ secret.ADMIN_LOGIN }}
-              -deploymentid ${{ secret.DeploymentID }}
-              -DOCKERHUB_PASSWORD ${{ secret.DOCKERHUB_PASSWORD }}
-              -DOCKERHUB_USERNAME ${{ secret.DOCKERHUB_USERNAME }}
-              -Username ${{ secret.Username }}
-              -Password ${{ secret.Password }}
-    ```
-
-12. Now let's create a workflow to publish into Docker Hub using GitHub action. Navigate to the **Code** **(1)**, click on **Add File** **(2)** and click on **+ Create new file** **(3)**.
+10. Now let's create a workflow to publish into Docker Hub using GitHub action. Navigate to the **Code** **(1)**, click on **Add File** **(2)** and click on **+ Create new file** **(3)**.
     
     ![](../media/ex2-task2-step18.png)
 
-13. Provider file name as **deploy-webapp.ps1** **(1)**, in the editor **copy and paste** **(2)** the below script, and click on **commit changes** **(3)**.
+11. Provider file name as **deploy-webapp.ps1** **(1)**, in the editor **copy and paste** **(2)** the below script, and click on **commit changes** **(3)**.
 
     ```
     [CmdletBinding()]
@@ -169,40 +124,86 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
     > **Note**: This PowerShell script creates an Azure App Service plan, deploys a web app using a Docker image, and sets the Docker registry server username and password as app settings.
 
-14. In the **Commit changes** pop-up, click on **Commit changes** button.
+12. In the **Commit changes** pop-up, click on **Commit changes** button.
 
     ![](../media/ex2-task3-step2.png)
 
-15. Navigate to the **Code** **(1)** and click on **.github/workflows** **(2)** folder.
+13. Navigate to the **Code** **(1)** and click on **.github/workflows** **(2)** folder.
 
     ![](../media/editfolder.png)
 
+14. In the **.github/workflows** folder, click on **Add files** **(1)**, and click on **+ Create new file** **(2)**.
 
-16. Click on **Action** **(1)**, under worklows select **Deploying Azure Webapp** **(2)**, select **Run Workflow** **(3)** drop-down and click on **Run Workflow** **(4)** button.
+    ![](../media/4th-oidc.png)
+
+15. Provider file name as **deploy_to_azure.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
+
+16. Replace the following code with the below code.
+
+    ```
+    name: Deploying Azure Webapp
+    
+    env:
+      OUTPUT_PATH: ${{ github.workspace }}
+      RESOURCE_GROUP_REGION: eastus
+      SERVER_NAME: gihtubactions
+
+    on:
+      workflow_dispatch:
+    
+    jobs:
+          
+      # Deploying Azure Webapp
+      DeployVM:
+        runs-on: windows-latest
+    
+        steps:
+        # Deploying Azure Webapp
+        - name: checkout repo
+          uses: actions/checkout@v1
+    
+        - name: look for ps1 file
+          run: |
+            ls '${{ env.OUTPUT_PATH }}'
+        - name: Deploying Azure Webapp
+          run: >
+              powershell -command "& '${{ env.OUTPUT_PATH }}/deploy-webapp.ps1'"  
+              -azureSubscriptionName ${{ secret.AZURE_SUBSCRIPTION_ID }}
+              -resourceGroupNameRegion ${{ env.RESOURCE_GROUP_REGION }}
+              -serverName ${{ env.SERVER_NAME }} 
+              -adminLogin ${{ secret.ADMIN_LOGIN }}
+              -deploymentid ${{ secret.DeploymentID }}
+              -DOCKERHUB_PASSWORD ${{ secret.DOCKERHUB_PASSWORD }}
+              -DOCKERHUB_USERNAME ${{ secret.DOCKERHUB_USERNAME }}
+              -Username ${{ secret.Username }}
+              -Password ${{ secret.Password }}
+    ```
+
+17. Click on **Action** **(1)**, under worklows select **Deploying Azure Webapp** **(2)**, select **Run Workflow** **(3)** drop-down and click on **Run Workflow** **(4)** button.
 
     ![](../media/ex3-task3-step9.png)
 
-17. Once the workfow has succeeded click **Deploying Azure Webapp** workflow.
+18. Once the workfow has succeeded click **Deploying Azure Webapp** workflow.
 
     ![](../media/ex2-task3-step10.png)
 
-18. Go through the workflow one by one.
+19. Go through the workflow one by one.
 
     ![](../media/ex2-task3-step11.png)
 
-19. Naviagte back to the **Azure portal**, in the search bar search for **app service** (1) and select **App Services** **(2)**.
+20. Naviagte back to the **Azure portal**, in the search bar search for **app service** (1) and select **App Services** **(2)**.
     
     ![](../media/ex2-task3-step12.png)
 
-20. In the **App Services** tab, select **webapplication<inject key="Deployment ID">**.
+21. In the **App Services** tab, select **webapplication<inject key="Deployment ID">**.
 
     ![](../media/ex2-task3-step13.png)
 
-21. In the **webapplication<inject key="Deployment ID">** tab, click on the **Browse** button this will open an website a new table.
+22. In the **webapplication<inject key="Deployment ID">** tab, click on the **Browse** button this will open an website a new table.
 
     ![](../media/ex2-task3-step14.png)
 
-22. Now we are able to launch a Website using GitHub action and Docker Hub
+23. Now we are able to launch a Website using GitHub action and Docker Hub
 
     ![](../media/ex2-task3-step15.png)
 
@@ -214,15 +215,20 @@ Matrix builds let you test your code across multiple environments by creating a 
 
 Parallelism allows you to run jobs or steps concurrently, reducing the total execution time.
 
-1. Navigate to the **Code** **(1)** and click on **.github/workflows** **(2)** folder.
+1. Naviagte to the [sample-node-project](https://github.com/acemilyalcin/sample-node-project) repo and click on **Fork** **(2)**.
+
+
+2. Navigate to the **Action** **(1)** directory in your repository, in `Get started with GitHub Actions` click on set up a workflow yourself (2).
+
+    ![](../media/newaction.png)
+
+3. Navigate to the **Code** **(1)** and click on **.github/workflows** **(2)** folder.
 
     ![](../media/optimize1.png)
 
-2. In the **.github/workflows** folder, select **nodejs_ci.yml** **(1)** and click on **edit** **(2)**.
+4. Provider file name as **nodejs_ci.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
 
     ![](../media/optimize2.png)
-
-3. Replace the following code with the below code.
 
     ```
     name: Node.js CI
@@ -261,11 +267,11 @@ Parallelism allows you to run jobs or steps concurrently, reducing the total exe
               node-version: ${{ matrix.node-version }}
     ```
 
-4. In the pop up windows of **Commit Changes** click on the **Commit changes**.
+5. In the pop up windows of **Commit Changes** click on the **Commit changes**.
 
     ![](../media/newcommit.png)
 
-5. Click on **Action** **(1)**, verify the workflow has been executed successfully once the workflow is succedded select the newly created workflow **Create nodejs_ci.yml** **(2)**.
+6. Click on **Action** **(1)**, verify the workflow has been executed successfully once the workflow is succedded select the newly created workflow **Create nodejs_ci.yml** **(2)**.
 
     ![](../media/optimize4.png)
 
