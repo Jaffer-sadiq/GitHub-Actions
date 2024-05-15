@@ -165,8 +165,8 @@ In this task, you will learn how to create a Docker repository and verify its su
             name: Login to Docker Hub
             uses: docker/login-action@v3
             with:
-              username: ${{ secrets.DOCKERHUB_USERNAME }}
-              password: ${{ secrets.DOCKERHUB_TOKEN }}
+              username: "{DOCKERHUB_USERNAME}"
+              password: "{DOCKERHUB_TOKEN}"
           -
             name: Set up Docker Buildx
             uses: docker/setup-buildx-action@v3
@@ -177,7 +177,7 @@ In this task, you will learn how to create a Docker repository and verify its su
               context: .
               file: ./docker
               push: true
-              tags: ${{ secrets.DOCKERHUB_USERNAME }}/clockbox:latest
+              tags: {DOCKERHUB_USERNAME}/clockbox:latest
     ```
 
     ![](../media/ex2-task2-step17.png)
