@@ -86,3 +86,5 @@ OpenID Connect (OIDC) allows your GitHub Actions workflows to access resources i
    ![](../media/workflow-oidc.png)
 
 ### Task 2: Agent infrastructure
+
+
