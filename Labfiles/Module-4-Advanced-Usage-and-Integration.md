@@ -1,4 +1,4 @@
-# Lab 4: Security and best practices
+# Lab 4: Security and Best practices
 
 ### Task 1: OIDC to securely connect to the cloud
 
