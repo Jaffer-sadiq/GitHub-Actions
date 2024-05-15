@@ -6,8 +6,8 @@ Welcome to the GitHub Actions Workshop! This workshop is designed to help you un
 
 1. [Workflow Setup](#workflow-setup)
 2. [Action Integration](#action-integration)
-3. [Best Practices and Security](#best-practices-and-security)
-4. [Advanced Usage and Integration](#advanced-usage-and-integration)
+3. [Advanced Workflows](#Advanced Workflows)
+4. [Security and Best practices](#Security and Best practices)
 
 ## Workflow Setup
 
@@ -17,10 +17,10 @@ In this, you'll learn the fundamentals of GitHub Actions and workflow files. We'
 
 In this, focuses on incorporating pre-built actions from the GitHub Marketplace and creating custom actions for reusable tasks. You'll learn how to leverage third-party actions to streamline your workflows, with a practical example of deploying a Docker container to a cloud platform.
 
-## Best Practices and Security
+## Advanced Workflows
 
 In this, we'll discuss guidelines for writing efficient and maintainable workflows, as well as securing sensitive data like API keys and credentials. You'll explore examples of optimizing workflow performance by caching dependencies to ensure smooth operations.
 
-## Advanced Usage and Integration
+## Security and Best practices
 
 In this, dives into advanced features of GitHub Actions, including matrix builds and parallelism. You'll also learn how to integrate with GitHub features such as pull requests and issue tracking, with a hands-on example of setting up a matrix build to test across different operating systems and versions.
