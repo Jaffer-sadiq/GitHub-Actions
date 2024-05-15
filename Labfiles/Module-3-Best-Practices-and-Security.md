@@ -1,6 +1,6 @@
 # Lab 3: Advanced Workflows
 
-### Task 1: Using environment variables in workflows
+### Task 1: Using Secrets and Environment Variables in Workflows
 
 Securing sensitive data like API keys and credentials is crucial to protect your workflows and prevent unauthorized access. This can be achieved by using secrets, which are encrypted variables that can be securely used in your workflows without exposing the actual values.
 
