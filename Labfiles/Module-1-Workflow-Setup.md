@@ -84,7 +84,7 @@ GitHub Actions is a powerful automation tool provided by GitHub, allowing you to
 
 1. In the pop up windows of **Commit Changes** click on the **Commit changes**.
 
-   ![](../media/commit-changes.png)
+   ![](../media/hello-action-commit.png)
 
 1. Click on **Action** **(1)**, once the workflow got succedded click on Workflow **hello-action.yml** **(2)**.
 
@@ -92,7 +92,7 @@ GitHub Actions is a powerful automation tool provided by GitHub, allowing you to
 
 1. In the `hello-action.yml` workflow, click on **build** **(1)**, expand the **Print the greeting** and view the result. 
 
-   ![](../media/workflow2.png)
+   ![](../media/hello-action-result.png)
 
 ### Task 3: Triggering workflows with events like pushes and pull requests.
 
@@ -112,27 +112,23 @@ GitHub Actions workflows can be triggered by various events occurring within you
 
 1. Provider file name as **cl.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
 
-    ```yaml
-    name: My Workflow
-
-    on:
-    push:
-        branches:
-        - main
-    pull_request:
-        branches:
-        - main
-
-    jobs:
-    build:
-        runs-on: ubuntu-latest
-
-        steps:
-        - name: Checkout code
-            uses: actions/checkout@v2
-
-        # Add your build and test steps here
-    ```
+   ```
+   name: My Workflow
+   on:
+     push:
+       branches:
+         - main
+     pull_request:
+       branches:
+         - main
+   jobs:
+     build:
+       runs-on: ubuntu-latest
+       steps:
+         - name: Checkout code
+           uses: actions/checkout@v2
+   
+   ```
 
    ![](../media/updatecode.png)
 
