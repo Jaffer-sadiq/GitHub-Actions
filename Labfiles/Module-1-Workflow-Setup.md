@@ -77,10 +77,10 @@ GitHub Actions is a powerful automation tool provided by GitHub, allowing you to
 
             steps:
             - name: Print a greeting
-            run: echo "Hello, GitHub Actions!"
+              run: echo "Hello, GitHub Actions!"
     ```
 
-    ![](../media/cl-code.png) 
+    ![](../media/hello-action.png) 
 
 1. In the pop up windows of **Commit Changes** click on the **Commit changes**.
 
@@ -88,7 +88,7 @@ GitHub Actions is a powerful automation tool provided by GitHub, allowing you to
 
 1. Click on **Action** **(1)**, once the workflow got succedded click on Workflow **hello-action.yml** **(2)**.
 
-   ![](../media/workflow1.png)
+   ![](../media/hello-action-trigger.png)
 
 1. In the `hello-action.yml` workflow, click on **build** **(1)**, expand the **Print the greeting** and view the result. 
 
