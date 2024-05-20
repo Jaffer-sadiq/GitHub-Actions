@@ -6,8 +6,8 @@ Welcome to the GitHub Actions Workshop! This workshop is designed to help you un
 
 1. [Workflow Setup](#workflow-setup)
 2. [Action Integration](#action-integration)
-3. [Advanced Workflows](#Advanced Workflows)
-4. [Security and Best practices](#Security and Best practices)
+3. [Advanced Workflows](#advanced-workflows)
+4. [Security and Best practices](#security-and-best-practices)
 
 ## Workflow Setup
 
@@ -19,8 +19,8 @@ In this, focuses on incorporating pre-built actions from the GitHub Marketplace 
 
 ## Advanced Workflows
 
-In this, we'll discuss guidelines for writing efficient and maintainable workflows, as well as securing sensitive data like API keys and credentials. You'll explore examples of optimizing workflow performance by caching dependencies to ensure smooth operations.
+In this topics like coding standards, secure coding practices, code review processes, version control systems, automated testing strategies, CI/CD practices, secure libraries and frameworks, handling sensitive data, error handling, logging, and security in the development environment. This document is essential for maintaining high-quality, secure code in your software project. All team members should understand and follow the guidelines it provides to ensure consistent and secure development practices.
 
 ## Security and Best practices
 
-In this, dives into advanced features of GitHub Actions, including matrix builds and parallelism. You'll also learn how to integrate with GitHub features such as pull requests and issue tracking, with a hands-on example of setting up a matrix build to test across different operating systems and versions.
+In this, lab introduces OpenID Connect (OIDC), a protocol that allows GitHub Actions workflows to securely access Azure resources without storing Azure credentials as long-lived GitHub secrets. The document guides the user through the process of configuring Azure to trust GitHub's OIDC as a federated identity.
