@@ -166,40 +166,39 @@ In GitHub Actions workflows, you define jobs and steps to orchestrate the tasks 
 
 1. Provider file name as **jobs.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
 
-```
-name: My Workflow
+   ```
+   name: My Workflow
+   
+   on:
+       push:
+           branches:
+           - main
+       pull_request:
+           branches:
+           - main
+   
+   jobs:
+       job1:
+           runs-on: ubuntu-latest
+           steps:
+           - name: Checkout code
+             uses: actions/checkout@v2
+       
+           - name: Run a script
+             run: echo "Hello, world!"
+       
+       job2:
+           runs-on: ubuntu-latest
+           needs: job1
+           steps:
+           - name: Checkout code
+             uses: actions/checkout@v2
+       
+           - name: Run another script
+             run: echo "Hello, again!"
+   ```
 
-on:
-    push:
-        branches:
-        - main
-    pull_request:
-        branches:
-        - main
-
-jobs:
-    job1:
-        runs-on: ubuntu-latest
-        steps:
-        - name: Checkout code
-          uses: actions/checkout@v2
-    
-        - name: Run a script
-          run: echo "Hello, world!"
-    
-    job2:
-        runs-on: ubuntu-latest
-        needs: job1
-        steps:
-        - name: Checkout code
-          uses: actions/checkout@v2
-    
-        - name: Run another script
-          run: echo "Hello, again!"
-
-```
-
-![](../media/jobs-action.png)
+   ![](../media/jobs-action.png)
 
 1. In the pop up windows of **Commit Changes** click on the **Commit changes**.
 
