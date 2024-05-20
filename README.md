@@ -15,11 +15,11 @@ In this, you'll learn the fundamentals of GitHub Actions and workflow files. We'
 
 ## Action Integration
 
-In this, focuses on incorporating pre-built actions from the GitHub Marketplace and creating custom actions for reusable tasks. You'll learn how to leverage third-party actions to streamline your workflows, with a practical example of deploying a Docker container to a cloud platform.
+In this, focuses on incorporating pre-built actions from the GitHub Marketplace and creating custom actions for reusable tasks. 
 
 ## Advanced Workflows
 
-In this topics like coding standards, secure coding practices, code review processes, version control systems, automated testing strategies, CI/CD practices, secure libraries and frameworks, handling sensitive data, error handling, logging, and security in the development environment. This document is essential for maintaining high-quality, secure code in your software project. All team members should understand and follow the guidelines it provides to ensure consistent and secure development practices.
+In this topics like coding standards, secure coding practices, code review processes, version control systems, automated testing strategies, CI/CD practices, secure libraries and frameworks, handling sensitive data, error handling, logging, and security in the development environment. This document is essential for maintaining high-quality, secure code in your software project. All team members should understand and follow the guidelines it provides to ensure consistent and secure development practices. 
 
 ## Security and Best practices
 
