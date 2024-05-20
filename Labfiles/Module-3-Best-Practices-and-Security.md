@@ -136,9 +136,7 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
     ![](../media/4th-oidc.png)
 
-15. Provider file name as **deploy_to_azure.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
-
-16. Replace the following code with the below code.
+15. Provider file name as **deploy-to-azure.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
 
     ```
     name: Deploying Azure Webapp
@@ -178,6 +176,12 @@ Securing sensitive data like API keys and credentials is crucial to protect your
               -Username ${{ secret.Username }}
               -Password ${{ secret.Password }}
     ```
+    
+    ![](../media/deploy-to-azure-create.png)
+
+16. In the **Commit changes** pop-up, click on **Commit changes** button.
+
+    ![](../media/deploy-to-azure-create-run.png)
 
 17. Click on **Action** **(1)**, under worklows select **Deploying Azure Webapp** **(2)**, select **Run Workflow** **(3)** drop-down and click on **Run Workflow** **(4)** button.
 
@@ -207,7 +211,7 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
     ![](../media/ex2-task3-step15.png)
 
-### Task 2: Explanation and usage of matrix builds
+### Task 2: Explanation and usage of Matrix builds
 
 Matrix builds and parallelism are advanced features in GitHub Actions that allow you to run multiple jobs concurrently.
 
@@ -343,3 +347,7 @@ Optimizing workflow performance by caching dependencies can significantly improv
     ![](../media/optimize4.png)
 
     > Feel free to go through the workflow
+
+### Summary
+
+In this, you learn how to securely store sensitive data such as API keys and passwords within a GitHub repository using secrets, ensuring that this data remains protected and separate from the codebase. The code details the process for creating and managing these secrets and how to reference them in workflows to maintain security. Matrix builds enhance workflows by allowing the same workflow to run across multiple configurations, such as different language versions or operating systems. The code demonstrates defining a configuration matrix to run jobs in parallel, which boosts testing efficiency and ensures compatibility across various environments. This comprehensive approach to handling secrets, matrix builds, and artifacts ensures robust security, efficient testing, and effective data management in GitHub workflows.

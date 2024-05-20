@@ -202,3 +202,7 @@ In this task, you will learn how to create a Docker repository and verify its su
     ![](../media/ex2-task2-step25.png)
 
 26. Click on **Next** button for next Lab.
+
+### Summary
+
+In this lab, you learned how to incorporate pre-built actions from the GitHub Marketplace. You created a Docker repository on Docker Hub and verified its successful creation. You also explored the GitHub Marketplace to find an action that suits your needs. Additionally, created a workflow to publish into Docker Hub using GitHub Actions. Finally, you verified the successful execution of the workflow and confirmed the creation of the repository on Docker Hub
