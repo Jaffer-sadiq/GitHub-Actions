@@ -221,3 +221,7 @@ In GitHub Actions workflows, you define jobs and steps to orchestrate the tasks 
    ![](../media/ex1-task4-step7.png)
 
 1. Click on **Next** button for next Lab.
+
+### Summary
+
+In this lab, you have successfully set up our workflow. You have created and executed a workflow, verified its successful execution, and familiarized ourselves with the jobs within it. This foundational knowledge will be instrumental as we progress through the subsequent labs.
