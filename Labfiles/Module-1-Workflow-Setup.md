@@ -127,14 +127,16 @@ GitHub Actions workflows can be triggered by various events occurring within you
        steps:
          - name: Checkout code
            uses: actions/checkout@v2
-   
+
+         - name: Run a script
+           run: echo "Hello, again!"   
    ```
 
-   ![](../media/updatecode.png)
+   ![](../media/cl-action1.png)
 
 1. In the pop up windows of **Commit Changes** click on the **Commit changes**.
 
-   ![](../media/commit-changes.png)
+   ![](../media/cl-action-commit.png)
 
     - You can customize the events and branches for triggering the workflow according to your project's requirements. For example, you might want to trigger the workflow only on pushes to the `main` branch or on pull requests targeting the `main` branch.
 
@@ -144,7 +146,7 @@ GitHub Actions workflows can be triggered by various events occurring within you
 
 1. Click on **Action** **(1)**, verifiy the workflow has been executed successfully.
 
-   ![](../media/successfullworkflow.png)
+   ![](../media/cl-action-trigger.png)
 
 ### Task 4: Defining jobs and steps within workflows
 
@@ -164,10 +166,10 @@ In GitHub Actions workflows, you define jobs and steps to orchestrate the tasks 
 
 1. Provider file name as **jobs.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
 
-    ```
-    name: My Workflow
+```
+name: My Workflow
 
-    on:
+on:
     push:
         branches:
         - main
@@ -175,32 +177,33 @@ In GitHub Actions workflows, you define jobs and steps to orchestrate the tasks 
         branches:
         - main
 
-    jobs:
+jobs:
     job1:
         runs-on: ubuntu-latest
         steps:
         - name: Checkout code
-            uses: actions/checkout@v2
-
+          uses: actions/checkout@v2
+    
         - name: Run a script
-            run: echo "Hello, world!"
-
+          run: echo "Hello, world!"
+    
     job2:
         runs-on: ubuntu-latest
         needs: job1
         steps:
         - name: Checkout code
-            uses: actions/checkout@v2
-
+          uses: actions/checkout@v2
+    
         - name: Run another script
-            run: echo "Hello, again!"
-    ```
+          run: echo "Hello, again!"
 
-    ![](../media/updatecode1.png)
+```
+
+![](../media/jobs-action.png)
 
 1. In the pop up windows of **Commit Changes** click on the **Commit changes**.
 
-   ![](../media/commit-changes.png)
+   ![](../media/jobs-action-commit.png)
 
     - You can customize the events and branches for triggering the workflow according to your project's requirements. For example, you might want to trigger the workflow only on pushes to the `main` branch or on pull requests targeting the `main` branch.
 
@@ -210,7 +213,7 @@ In GitHub Actions workflows, you define jobs and steps to orchestrate the tasks 
 
 1. Click on **Action** **(1)**, verify the workflow has been executed successfully once the workflow is succedded select the newly created workflow **updated cl.yml** **(2)**.
 
-   ![](../media/ex1-task4-step6.png)
+   ![](../media/jobs-action-action.png)
 
 1. Verify the jobs and feel free to go through the workflow.
 
