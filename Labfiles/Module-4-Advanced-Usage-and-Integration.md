@@ -180,5 +180,20 @@ GitHub Actions provides a powerful platform for automating software workflows, i
 
 #### Adding self-hosted runners
 
+Adding self-hosted runners to your GitHub repositories, organizations, or enterprises can significantly bolster your workflow automation capabilities. These dedicated computing resources execute GitHub Actions workflows, offering flexibility and control over your processes.
 
-* [Adding self-hosted runners](https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/adding-self-hosted-runners)
+Administrators at the organization or enterprise level benefit from adding self-hosted runners as it streamlines management and makes them accessible across multiple repositories. Centralized control allows for efficient resource allocation and monitoring.
+
+However, caution is advised, especially with public repositories. It's strongly recommended to primarily use self-hosted runners with private repositories due to the potential security risks. Public repositories, when forked, may execute malicious code on self-hosted runner machines triggered by pull requests.
+
+To optimize workflows and ensure security, automation can be set up to dynamically scale the number of self-hosted runners based on workload demands. GitHub's features like just-in-time runner registration for ephemeral runners add an extra layer of security by cleaning up temporary runners after a single job.
+
+Before adding self-hosted runners, ensure prerequisites are met, such as having access to the designated machine for hosting the runner.
+
+To add a self-hosted runner to a specific repository, follow GitHub's guidelines. Depending on the repository type (user or organization), appropriate permissions are required (repository owner for user repositories, organization owner or admin access for organization repositories).
+
+For advanced management, organization owners can control which repositories are allowed to create repository-level self-hosted runners, providing granular control over their use within the organization.
+
+Detailed instructions and further information are available in GitHub documentation, including REST API endpoints for self-hosted runners and guidance on disabling or limiting GitHub Actions for organizations. Overall, self-hosted runners offer a powerful way to customize and enhance GitHub Actions workflows, but careful consideration of security implications is crucial, especially in public repository environments.
+
+- For more infromation, go through [Adding self-hosted runners](https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/adding-self-hosted-runners)
