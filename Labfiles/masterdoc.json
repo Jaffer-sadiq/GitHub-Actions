@@ -4,25 +4,29 @@
     "Language": "English",
     "BaseURL": "https://github.com/CloudLabsAI-Azure/GitHub-Actions/tree/main",
     "Files": [
-       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/GitHub-Actions/main/README.md",
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/GitHub-Actions/main/Labfiles/gettingstarted.md",
         "Order": 1
       },
-      {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/GitHub-Actions/main/Labfiles/Module-1-Workflow-Setup.md",
+       {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/GitHub-Actions/main/README.md",
         "Order": 2
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/GitHub-Actions/main/Labfiles/Module-2-Action-Integration.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/GitHub-Actions/main/Labfiles/Module-1-Workflow-Setup.md",
         "Order": 3
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/GitHub-Actions/main/Labfiles/Module-3-Best-Practices-and-Security.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/GitHub-Actions/main/Labfiles/Module-2-Action-Integration.md",
         "Order": 4
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/GitHub-Actions/main/Labfiles/Module-4-Advanced-Usage-and-Integration.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/GitHub-Actions/main/Labfiles/Module-3-Best-Practices-and-Security.md",
         "Order": 5
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/GitHub-Actions/main/Labfiles/Module-4-Advanced-Usage-and-Integration.md",
+        "Order": 6
       }
     ]
   }
