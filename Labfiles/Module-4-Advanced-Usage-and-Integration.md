@@ -18,7 +18,7 @@ OpenID Connect (OIDC) allows your GitHub Actions workflows to access resources i
 
 4. Navigate to **Environment Details** **(1)**, click on **Service Principal Details** **(2)** and copy the **Subscription ID**, **Tenant Id (Directory ID)**, **Application Id(Client Id)** and **Secret Key (Client Secret)**.
 
-   ![](media/ex2-t4-8.png)
+   ![](../media/ex2-t4-8.png)
    
    - Replace the values that you copied in below Json. You will be using them in this step.
    
