@@ -11,6 +11,7 @@
       {
         "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/GitHub-Actions/main/Labfiles/Module-1-Workflow-Setup.md",
         "Order": 2
+      },
       {
         "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/GitHub-Actions/main/Labfiles/Module-2-Action-Integration.md",
         "Order": 3
