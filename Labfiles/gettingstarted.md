@@ -40,10 +40,10 @@
 
    ![](../media/img10.png)
 
-1. In the **Resource groups**, click on **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** resource group.
+1. In the **Resource groups**, click on **github-action-<inject key="DeploymentID" enableCopy="false"/>** resource group.
 
    ![](../media/resource-group.png)
 
-1. In the **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** resource groups, verify the resources present in it.
+1. In the **github-action-<inject key="DeploymentID" enableCopy="false"/>** resource groups, verify the resources present in it.
 
    ![](../media/rgname.png)
