@@ -2,6 +2,7 @@
   {
     "Name": "Github Copilot Innovation Workshop",
     "Language": "English",
+    "BaseURL": "https://github.com/CloudLabsAI-Azure/GitHub-Actions/tree/main",
     "Files": [
        {
         "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/GitHub-Actions/main/README.md",
