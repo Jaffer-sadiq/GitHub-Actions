@@ -70,3 +70,35 @@ And that’s it, you’ve been through a GitHub flow cycle!
 
 6. **GitHub Issues:** Issues are a way to track enhancements, tasks, and bugs for your projects. They help you manage and prioritize work, discuss ideas, and keep track of tasks.
 
+### How does GitHub Actions automate development tasks?
+
+#### GitHub decreases time from idea to deployment
+
+GitHub is designed to help teams of developers and DevOps engineers build and deploy applications quickly. There are many features in GitHub that enable this, but they generally fall into one of two categories:
+
+- **Communication:** Consider all of the ways that GitHub makes it easy for a team of developers to communicate about the software development project: code reviews in pull requests, GitHub issues, project boards, wikis, notifications, and so on.
+  
+- **Automation:** GitHub Actions lets your team automate workflows at every step in the software-development process, from integration to delivery to deployment. It even lets you automate adding labels to pull requests and checking for stale issues and pull requests.
+
+#### Use workflow automation to decrease development time
+
+We'll focus on automation in this module, so let's take a moment to understand how teams can use automation to reduce the amount of time it takes to complete a typical development and deployment workflow.
+
+Consider all of the tasks that must happen after the code is written, but before you can reliably use the code for its intended purpose. Depending on your organization's goals, you'll likely need to perform one or more of the following tasks:
+
+- Ensure the code passes all unit tests
+- Perform code quality and compliance checks to make sure the source code meets the organization's standards
+- Check the code and its dependencies for known security issues
+- Build the code integrating new source from (potentially) multiple contributors
+- Ensure the software passes integration tests
+- Version the new build
+- Deliver the new binaries to the appropriate filesystem location
+- Deploy the new binaries to one or more servers
+- If any of these tasks don't pass, report the issue to the proper individual or team for resolution
+
+### What is GitHub Actions?
+
+GitHub Actions are packaged scripts designed to automate tasks within a software development workflow on GitHub. These actions can be configured to trigger complex workflows that meet your organization's specific needs. They can be set off whenever developers check new source code into a particular branch, at scheduled intervals, or manually. This results in a reliable and sustainable automated workflow, significantly reducing development time.
+
+These scripts follow a YAML data format. Each repository features an Actions tab, providing a straightforward way to set up your first script. If you find a workflow that seems like a good starting point, simply click the Configure button to add the script and start editing the YAML source.
+
