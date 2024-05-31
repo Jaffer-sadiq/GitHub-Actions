@@ -102,3 +102,4 @@ GitHub Actions are packaged scripts designed to automate tasks within a software
 
 These scripts follow a YAML data format. Each repository features an Actions tab, providing a straightforward way to set up your first script. If you find a workflow that seems like a good starting point, simply click the Configure button to add the script and start editing the YAML source.
 
+[Introduction to GitHub](https://learn.microsoft.com/en-us/training/modules/introduction-to-github/)
