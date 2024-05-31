@@ -348,6 +348,40 @@ Optimizing workflow performance by caching dependencies can significantly improv
 
     > Feel free to go through the workflow
 
+### Task 4: Code scanning and vulnerability detection
+
+1. Naviage back to `github-action` repo.
+
+1. Click on **Security** **(1)**, and click on **Enable vulnerability reporting** **(2)** next to the Private vulnerability reporting
+
+    ![](../media/security.png)
+
+1. Once naviagted to **Code security and analysis**, click on **Enable** button for Private vulnerability reporting, Dependabot alerts, Dependabot security updates, and Dependabot on Actions runners.
+
+    ![](../media/enable.png)
+
+1. Click on **Set up** **(1)** button to enable CodeQL analysis and select the **Advanced** **(2)** option for creating a CodeQL Analysis YAML file.
+
+   ![](../media/2dgn169.png)      
+
+1. Update the workflow name to **codeql-analysis.yml** ***(1)*** and review the yaml file. Select **Commit changes** ***(2)***, then select **Commit directly to the main branch** ***(3)*** and click on **Commit new file** ***(4)***.
+  
+   ![](../media/ex5-task1-step3a.png)
+
+   ![](../media/ex5-task1-step3b.png) 
+  
+1. Navigate to **Actions** ***(1)*** tab, You can review the **workflow** ***(2)*** run.
+    
+   ![](../media/ex5-codeql-actions.png) 
+  
+1. Navigate to **Security** ***(1)*** tab and click on **View alerts** ***(2)***.
+   
+   ![](../media/ex5-codescanning-viewalerts.png)
+  
+1. You will be navigated to **Code scanning** section. You'll be able to visualize that the **No code scanning alerts here!**.
+   
+   ![](../media/devops1.6.png)
+
 ### Summary
 
 In this, you learn how to securely store sensitive data such as API keys and passwords within a GitHub repository using secrets, ensuring that this data remains protected and separate from the codebase. The code details the process for creating and managing these secrets and how to reference them in workflows to maintain security. Matrix builds enhance workflows by allowing the same workflow to run across multiple configurations, such as different language versions or operating systems. The code demonstrates defining a configuration matrix to run jobs in parallel, which boosts testing efficiency and ensures compatibility across various environments. This comprehensive approach to handling secrets, matrix builds, and artifacts ensures robust security, efficient testing, and effective data management in GitHub workflows.
