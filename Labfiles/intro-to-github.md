@@ -103,3 +103,60 @@ GitHub Actions are packaged scripts designed to automate tasks within a software
 These scripts follow a YAML data format. Each repository features an Actions tab, providing a straightforward way to set up your first script. If you find a workflow that seems like a good starting point, simply click the Configure button to add the script and start editing the YAML source.
 
 [Introduction to GitHub](https://learn.microsoft.com/en-us/training/modules/introduction-to-github/)
+
+
+### Workflow syntax for GitHub Actions
+
+- **name**: The name of the workflow. GitHub displays the names of your workflows under your repository's "Actions" tab. If you omit name, GitHub displays the workflow file path relative to the root of the repository.
+
+- **run-name**: The name for workflow runs generated from the workflow. GitHub displays the workflow run name in the list of workflow runs on your repository's "Actions" tab. If run-name is omitted or is only whitespace, then the run name is set to event-specific information for the workflow run. For example, for a workflow triggered by a **push** or **pull_request** event, it is set as the commit message or the title of the pull request.
+
+  - This value can include expressions and can reference the github and inputs contexts.
+
+  - Example of run-name:
+  
+    ```
+    run-name: Deploy to ${{ inputs.deploy_target }} by @${{ github.actor }}
+    ```
+
+- **on**: To automatically trigger a workflow, use on to define which events can cause the workflow to run. For a list of available events, see "[Events that trigger workflows](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows)."
+
+  - You can define single or multiple events that can trigger a workflow, or set a time schedule. You can also restrict the execution of a workflow to only occur for specific files, tags, or branch changes. These options are described in the following sections.
+
+    - **Using a single event**: For example, a workflow with the following on value will run when a push is made to any branch in the workflow's repository:
+
+      ```
+      on: push
+      ```
+
+    - **Using multiple events**: You can specify a single event or multiple events. For example, a workflow with the following on value will run when a push is made to any branch in the repository or when someone forks the repository:
+
+      ```
+      on: [push, fork]
+      ```
+
+  - If you specify multiple events, only one of those events needs to occur to trigger your workflow. If multiple triggering events for your workflow occur at the same time, multiple workflow runs will be triggered.
+
+- **Using activity types**: Some events have activity types that give you more control over when your workflow should run. Use `on.<event_name>.types` to define the type of event activity that will trigger a workflow run.
+
+  - For example, the `issue_comment` event has the `created, edited, and deleted` activity types. If your workflow triggers on the `label` event, it will run whenever a label is created, edited, or deleted. If you specify the created activity type for the label event, your workflow will run when a label is created but not when a label is edited or deleted.
+
+    ```
+    on:
+      label:
+        types:
+          - created
+    ```
+  
+  - If you specify multiple activity types, only one of those event activity types needs to occur to trigger your workflow. If multiple triggering event activity types for your workflow occur at the same time, multiple workflow runs will be triggered. For example, the following workflow triggers when an issue is opened or labeled. If an issue with two labels is opened, three workflow runs will start: one for the issue opened event and two for the two issue labeled events.
+
+    ```
+    on:
+      issues:
+        types:
+          - opened
+          - labeled
+    ```
+
+
+For more information about actions, see [Action](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on).
