@@ -1,5 +1,10 @@
 # Lab 3: Advanced Workflows
 
+- **Reusing workflows**: Rather than copying and pasting from one workflow to another, you can make workflows reusable. You and anyone with access to the reusable workflow can then call the reusable workflow from another workflow.Reusing workflows avoids duplication. This makes workflows easier to maintain and allows you to create new workflows more quickly by building on the work of others, just as you do with actions. Workflow reuse also promotes best practice by helping you to use workflows that are well designed, have already been tested, and have been proven to be effective. Your organization can build up a library of reusable workflows that can be centrally maintained, for more infomation please go throught the given link [Reusing workflows](https://docs.github.com/en/actions/using-workflows/reusing-workflows).
+
+- **Custom actions**: A custom action is a reusable unit of code that performs a specific task. Custom actions can be written in JavaScript, Docker, or as composite actions that combine multiple other actions and commands. These actions can be shared and reused across multiple workflows and repositories.
+for more infomation please go throught the given link [Custom action](https://docs.github.com/en/actions/creating-actions/about-custom-actions).
+
 ### Task 1: Using Secrets and Environment Variables in Workflows
 
 Securing sensitive data like API keys and credentials is crucial to protect your workflows and prevent unauthorized access. This can be achieved by using secrets, which are encrypted variables that can be securely used in your workflows without exposing the actual values.
