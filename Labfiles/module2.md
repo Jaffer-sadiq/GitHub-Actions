@@ -17,20 +17,27 @@
     - **Registry Name**: Add **gacontainer<inject key="DeploymentID" enableCopy="false"/>** **(2)**
     - **Location**: Select the default **location** **(3)**
     - **Pricing Plan**: Choose **Standard** **(4)**
+    -  Click on **Review + Create** **(5)**
 
- Click on **Review + Create** **(5)**
-
+      ![](../media/container-registry.png)
+   
 1. Click on **Create**.
+
+   ![](../media/create.png)
 
 1. Once the deployment is complete, click on **Go to Resource**.
 
+   ![](../media/go-to-resource.png)
+
 1. Navigate to **Access Keys** **(1)** on the left pane under the **Settings** tab and copy the **Registry Name** **(2)** and **Login server** **(3)** into a notepad.
+
+   ![](../media/access-keys.png)
 
 1. Navigate to the **Code** **(1)**, click on **Add File** **(2)** and click on **+ Create new file** **(3)**.
     
     ![](../media/ex2-task2-step18.png)
     
-2. Provider file name as **Dockerfile** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
+1. Provider file name as **Dockerfile** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
 
     ```
     # Use an official Nginx runtime as a parent image
@@ -48,15 +55,15 @@
 
     ![](../media/ex2-task2-step18a.png)
 
-3. In the **Commit changes** pop-up, click on **Commit changes** button.
+1. In the **Commit changes** pop-up, click on **Commit changes** button.
 
     ![](../media/docker-commit.png)
 
-4. Now let's create a workflow to publish into Docker Hub using GitHub action. Navigate to the **Code** **(1)**, click on **Add File** **(2)** and click on **+ Create new file** **(3)**.
+1. Now let's create a workflow to publish into Docker Hub using GitHub action. Navigate to the **Code** **(1)**, click on **Add File** **(2)** and click on **+ Create new file** **(3)**.
     
     ![](../media/ex2-task2-step18.png)
 
-5. Provider file name as **index.html** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
+1. Provider file name as **index.html** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
 
     ```
     <!DOCTYPE html>
@@ -112,24 +119,19 @@
 
     ![](../media/newupdate.png)
 
-6. In the **Commit changes** pop-up, click on **Commit changes** button.
+1. In the **Commit changes** pop-up, click on **Commit changes** button.
 
     ![](../media/index-commit.png)
 
-7. Navigate to the **Code** **(1)** and click on **.github/workflows** **(2)** folder.
+1. Navigate to the **Code** **(1)** and click on **.github/workflows** **(2)** folder.
 
     ![](../media/editfolder.png)
 
-8. Navigate to the **Code** **(1)** and click on **.github/workflows** **(2)** folder.
-
-    ![](../media/editfolder.png)
-
-9. In the **.github/workflows** folder, click on **Add files** **(1)**, and click on **+ Create new file** **(2)**.
+1. In the **.github/workflows** folder, click on **Add files** **(1)**, and click on **+ Create new file** **(2)**.
 
     ![](../media/4th-oidc.png)
 
-
-10. In the editor update the code with the below-provided code, replace **{Login_server}** from line 30 and 40 with **Azure Container registry Login server**, and replace **{Registry name}** from line number **Azure Container registry Registry name**.
+1. In the editor update the code with the below-provided code, replace **{Login_server}** from line 30 and 40 with **Azure Container registry Login server**, and replace **{Registry name}** from line number **Azure Container registry Registry name**.
 
     ```
     name: Build and Push Docker Image to ACR
@@ -174,21 +176,24 @@
             docker push {Login_server}/my-app:latest
     ```
 
-    ![](../media/ex2-task2-step17.png)
+    ![](../media/workflow.png)
 
-11. Provider file name as **docker.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
+1. Provide the file name as **docker.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click on **commit changes** **(3)**.
 
-12. In the pop up windows of **Commit Changes** click on the **Commit changes**.
+   ![](../media/docker.png)
+   
+1. In the pop up window of **Commit Changes** click on the **Commit changes**.
 
-    ![](../media/commit-changes.png)
+    ![](../media/commit.png)
 
-13. Click on **Action** **(1)**, verify the workflow has been executed successfully once the workflow is succedded select the newly created workflow **updated cl.yml** **(2)**.
+1. Click on **Action** **(1)**, verify the workflow has been executed successfully once the workflow is succedded select the newly created workflow **updated cl.yml** **(2)**.
 
     ![](../media/ex1-task4-step6.png)
 
-14. Navigate back to the Docker Hub and click on **Repositories** and cross verify the Repositorie has been created **successfully**.
+1. Navigate back to the Docker Hub and click on **Repositories** and cross verify the Repositorie has been created **successfully**.
 
     ![](../media/ex2-task2-step25.png)
 
-15. 
-15. Click on **Next** button for next Lab.
+1. Navigate back to `potal.azure.com`, in the search bar search for **Container registries** **(1)** and verify the container registry has been created.
+
+1. Click on **Next** button for next Lab.
