@@ -98,43 +98,30 @@ OpenID Connect (OIDC) allows your GitHub Actions workflows to access resources i
 3. Provider file name as **deploy-to-azure.yml.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
 
     ```
-    name: Deploying Azure Webapp
-     
-    env:
-      OUTPUT_PATH: ${{ github.workspace }}
-      RESOURCE_GROUP_REGION: eastus
+    name: Debugging and Monitoring Workflow
     
-    on:
-      workflow_dispatch:
+    on: [push]
     
     jobs:
-          
-      # Deploying Azure Webapp
-      DeployVM:
-        runs-on: windows-latest
+      build:
+        runs-on: ubuntu-latest
     
         steps:
-        # Deploying Azure Webapp
-        - name: checkout repo
-          uses: actions/checkout@v1
+        - uses: actions/checkout@v2
     
-        - name: look for ps1 file
-          run: |
-            ls '${{ env.OUTPUT_PATH }}'
-        - name: Deploying Azure Webapp
-          run: >
-              powershell -command "& '${{ env.OUTPUT_PATH }}/deploy-webapp.ps1'"  
-              -resourceGroupNameRegion ${{ env.RESOURCE_GROUP_REGION }}
-              -deploymentid ${{ secret.DeploymentID }}
-              -Username ${{ secret.Username }}
-              -Password ${{ secret.Password }}
+        - name: Run missing script
+          run: bash ./missing-script.sh
     ```
 
-4. Click on **Action** **(1)**, verifiy the workflow has been Failed, and click on **Create issue-check-debug.yml** workflow
+4. In the pop up windows of **Commit Changes** click on the **Commit changes**.
 
-5. Click on **build** **(1)**, expend **Install Dependency** **(2)** and you see the error that `npm ERR! enoent ENOENT: no such file or directory, open 'Run bash ./missing-script.sh bash: ./missing-script.sh: No such file or directory` **(3)**.
+5. Click on **Action** **(1)**, verifiy the workflow has been Failed, and click on **Create issue-check-debug.yml** workflow
 
-6. Now we will solve dependnecy issues by creating dependent files, click on  Navigate to the **Code** **(1)**.
+   ![](../media/action-issue-check.png)
+
+6. Click on **build** **(1)**, expend **Install Dependency** **(2)** and you see the error that `npm ERR! enoent ENOENT: no such file or directory, open 'Run bash ./missing-script.sh bash: ./missing-script.sh: No such file or directory` **(3)**.
+
+   ![](../media/issue-file.png)
 
 7. Navigate to the **Code** **(1)**, click on **Add File** **(2)** and click on **+ Create new file** **(3)**.
     
@@ -147,7 +134,15 @@ OpenID Connect (OIDC) allows your GitHub Actions workflows to access resources i
     echo "This is a sample script."
     ```    
 
-9. Click on **Action** **(1)**, verifiy the workflow has been Succedded.
+9. In the pop up windows of **Commit Changes** click on the **Commit changes**.
+
+10. Click on **Action** **(1)**, verifiy the workflow **Create missing-script.sh** has been Succedded.
+
+    ![](../media/issue-fixed.png)
+
+11. Click on **build** **(1)**, expend **Install Dependency** **(2)**
+
+    ![](../media/issue-fixed-result.png)
 
 ### Task 3: Agent infrastructure [Read Only]
 
