@@ -85,7 +85,71 @@ OpenID Connect (OIDC) allows your GitHub Actions workflows to access resources i
 
    ![](../media/workflow-oidc.png)
 
-### Task 2: Agent infrastructure [Read Only]
+### Task 2: Debugging and monitoring workflow
+
+1. Navigate to the **Code** **(1)** and click on **.github/workflows** **(2)** folder.
+
+   ![](../media/4th-oidc-click.png)
+
+2. In the **.github/workflows** folder, click on **Add files** **(1)**, and click on **+ Create new file** **(2)**.
+
+   ![](../media/4th-oidc.png)
+
+3. Provider file name as **deploy-to-azure.yml.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
+
+    ```
+    name: Deploying Azure Webapp
+     
+    env:
+      OUTPUT_PATH: ${{ github.workspace }}
+      RESOURCE_GROUP_REGION: eastus
+    
+    on:
+      workflow_dispatch:
+    
+    jobs:
+          
+      # Deploying Azure Webapp
+      DeployVM:
+        runs-on: windows-latest
+    
+        steps:
+        # Deploying Azure Webapp
+        - name: checkout repo
+          uses: actions/checkout@v1
+    
+        - name: look for ps1 file
+          run: |
+            ls '${{ env.OUTPUT_PATH }}'
+        - name: Deploying Azure Webapp
+          run: >
+              powershell -command "& '${{ env.OUTPUT_PATH }}/deploy-webapp.ps1'"  
+              -resourceGroupNameRegion ${{ env.RESOURCE_GROUP_REGION }}
+              -deploymentid ${{ secret.DeploymentID }}
+              -Username ${{ secret.Username }}
+              -Password ${{ secret.Password }}
+    ```
+
+4. Click on **Action** **(1)**, verifiy the workflow has been Failed, and click on **Create issue-check-debug.yml** workflow
+
+5. Click on **build** **(1)**, expend **Install Dependency** **(2)** and you see the error that `npm ERR! enoent ENOENT: no such file or directory, open 'Run bash ./missing-script.sh bash: ./missing-script.sh: No such file or directory` **(3)**.
+
+6. Now we will solve dependnecy issues by creating dependent files, click on  Navigate to the **Code** **(1)**.
+
+7. Navigate to the **Code** **(1)**, click on **Add File** **(2)** and click on **+ Create new file** **(3)**.
+    
+    ![](../media/ex2-task2-step18.png)
+    
+8. Provider file name as **missing-script.sh** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
+
+    ```
+    #!/bin/bash
+    echo "This is a sample script."
+    ```    
+
+9. Click on **Action** **(1)**, verifiy the workflow has been Succedded.
+
+### Task 3: Agent infrastructure [Read Only]
 
 #### About self-hosted runners
 
