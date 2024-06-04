@@ -13,9 +13,9 @@
 1. On the **basics** tab, add the following details:
 
     - **Subscription**: Select the default subscription
-    - **Resource Group**: Select github-action-
-    - **Registry Name**: Add gacontainer
-    - **Location**: Select the default **location**
+    - **Resource Group**: Select **github-action-<inject key="DeploymentID" enableCopy="false"/>** **(1)**
+    - **Registry Name**: Add **gacontainer<inject key="DeploymentID" enableCopy="false"/>** **(2)**
+    - **Location**: Select the default **location** **(3)**
     - **Pricing Plan**: Choose **Standard** **(4)**
 
  Click on **Review + Create** **(5)**
