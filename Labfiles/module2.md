@@ -105,40 +105,49 @@
     ![](../media/4th-oidc.png)
 
 
-10. In the editor update the code with the below-provided code, replace **{DOCKERHUB_USERNAME}** **(2)** with you docker username in line number 17, replace **{DOCKERHUB_TOKEN}** **(3)** with Docker PAT line number 18, **{DOCKERHUB_USERNAME}** **(4)** with you docker username in line number 29 and click on **commit changes** **(5)**.
+10. .
 
     ```
-    name: ci
+    name: Build and Push Docker Image to ACR
     
     on:
       push:
         branches:
-          - "main"
+          - main
     
     jobs:
-      build:
+      build-and-push:
         runs-on: ubuntu-latest
+    
         steps:
-          -
-            name: Checkout
-            uses: actions/checkout@v4
-          -
-            name: Login to Docker Hub
-            uses: docker/login-action@v3
-            with:
-              username: "{DOCKERHUB_USERNAME}"
-              password: "{DOCKERHUB_TOKEN}"
-          -
-            name: Set up Docker Buildx
-            uses: docker/setup-buildx-action@v3
-          -
-            name: Build and push
-            uses: docker/build-push-action@v5
-            with:
-              context: .
-              file: ./docker
-              push: true
-              tags: {DOCKERHUB_USERNAME}/clockbox:latest
+        # Checkout the repository
+        - name: Checkout repository
+          uses: actions/checkout@v2
+    
+        # Log in to Azure
+        - name: Log in to Azure CLI
+          uses: azure/login@v1
+          with:
+            creds: ${{ secrets.AZURE_CREDENTIALS }}
+    
+        # List files in the current directory
+        - name: List files
+          run: ls -la
+    
+        # Build Docker image
+        - name: Build Docker image
+          run: |
+            docker buildx build . -t testcontinerinstanse.azurecr.io/my-app:latest
+    
+        # Log in to Azure Container Registry
+        - name: Log in to Azure Container Registry
+          run: |
+            az acr login --name testcontinerinstanse
+    
+        # Push Docker image to Azure Container Registry
+        - name: Push Docker image
+          run: |
+            docker push testcontinerinstanse.azurecr.io/my-app:latest
     ```
 
     ![](../media/ex2-task2-step17.png)
