@@ -186,13 +186,7 @@
 
     ![](../media/commit.png)
 
-1. Click on **Action** **(1)**, verify the workflow has been executed successfully once the workflow is succedded select the newly created workflow **updated cl.yml** **(2)**.
-
-    ![](../media/ex1-task4-step6.png)
-
-1. Navigate back to the Docker Hub and click on **Repositories** and cross verify the Repositorie has been created **successfully**.
-
-    ![](../media/ex2-task2-step25.png)
+1. Click on **Action** **(1)**, verify the workflow has been executed successfully once the workflow is succedded select the newly created workflow **updated docker.yml** **(2)**.
 
 1. Navigate back to `potal.azure.com`, in the search bar search for **Container registries** **(1)** and verify the container registry has been created.
 
