@@ -33,6 +33,40 @@
 
    ![](../media/access-keys.png)
 
+1. Navigate back to the `github-action` repo, from the GitHub repository, and select the **Settings** tab from the lab files repository.
+
+    ![](../media/github-action.png)
+
+1. Under **Security**, expand **Secrets and variables** **(1)** by clicking the drop-down and select **Actions** **(2)** blade from the left navigation bar.
+
+   ![](../media/add-sec1.png)
+
+1. Under **Actions Secrets/New secret page**, enter the below mentioned details and Click on **Add secret** **(3)**.
+
+   ![](../media/ex2-task2-step13.png)
+
+1. Navigate to **Environment Details** **(1)**, click on **Service Principal Details** **(2)** and copy the **Subscription ID**, **Tenant Id (Directory ID)**, **Application Id(Client Id)** and **Secret Key (Client Secret)**.
+
+   ![](../media/ex2-t4-8.png)
+   
+   - Replace the values that you copied in below Json. You will be using them in this step.
+   
+      ```json
+      {
+        "clientSecret": "******",
+        "subscriptionId": "******",
+        "tenantId": "******",
+        "clientId": "******"
+      }
+      ```
+
+1. Under Actions Secrets/New secret page, enter the below mentioned details and Click on Add secret (3).
+
+   - Name : Enter **AZURE_CREDENTIALS** (1)
+   - Value : Paste the service principal details in json format (2)
+
+     ![](../media/add-sec-oidc.png)
+
 1. Navigate to the **Code** **(1)**, click on **Add File** **(2)** and click on **+ Create new file** **(3)**.
     
     ![](../media/ex2-task2-step18.png)
