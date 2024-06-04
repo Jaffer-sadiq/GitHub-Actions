@@ -2,11 +2,35 @@
 
 ### Task 1: Using GitHub Actions with container registries
 
- 1. Navigate to the **Code** **(1)**, click on **Add File** **(2)** and click on **+ Create new file** **(3)**.
+1. Navigate to `potal.azure.com`, in the search bar search for **Container registries** **(1)** and select **Container registries** **(2)**.
+
+   ![](../media/search-continer.png)
+
+1. In the Container registries tab click on **+ Create** button.
+
+   ![](../media/create-continer.png)
+
+1. On the **basics** tab, add the following details:
+
+    - **Subscription**: Select the default subscription
+    - **Resource Group**: Select github-action-
+    - **Registry Name**: Add gacontainer
+    - **Location**: Select the default **location**
+    - **Pricing Plan**: Choose **Standard** **(4)**
+
+ Click on **Review + Create** **(5)**
+
+1. Click on **Create**.
+
+1. Once the deployment is complete, click on **Go to Resource**.
+
+1. Navigate to **Access Keys** **(1)** on the left pane under the **Settings** tab and copy the **Registry Name** **(2)** and **Login server** **(3)** into a notepad.
+
+1. Navigate to the **Code** **(1)**, click on **Add File** **(2)** and click on **+ Create new file** **(3)**.
     
     ![](../media/ex2-task2-step18.png)
     
- 2. Provider file name as **Dockerfile** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
+2. Provider file name as **Dockerfile** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
 
     ```
     # Use an official Nginx runtime as a parent image
@@ -105,7 +129,7 @@
     ![](../media/4th-oidc.png)
 
 
-10. .
+10. In the editor update the code with the below-provided code, replace **{Login_server}** from line 30 and 40 with **Azure Container registry Login server**, and replace **{Registry name}** from line number **Azure Container registry Registry name**.
 
     ```
     name: Build and Push Docker Image to ACR
@@ -137,17 +161,17 @@
         # Build Docker image
         - name: Build Docker image
           run: |
-            docker buildx build . -t testcontinerinstanse.azurecr.io/my-app:latest
+            docker buildx build . -t {Login_server}/my-app:latest
     
         # Log in to Azure Container Registry
         - name: Log in to Azure Container Registry
           run: |
-            az acr login --name testcontinerinstanse
+            az acr login --name {Registry name}
     
         # Push Docker image to Azure Container Registry
         - name: Push Docker image
           run: |
-            docker push testcontinerinstanse.azurecr.io/my-app:latest
+            docker push {Login_server}/my-app:latest
     ```
 
     ![](../media/ex2-task2-step17.png)
@@ -166,4 +190,5 @@
 
     ![](../media/ex2-task2-step25.png)
 
+15. 
 15. Click on **Next** button for next Lab.
