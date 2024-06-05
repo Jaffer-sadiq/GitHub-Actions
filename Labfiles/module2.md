@@ -1,6 +1,8 @@
 # Lab 2: Action Integration
 
-### Task 1: Using GitHub Actions with container registries
+### Task 1: Using GitHub Actions with Azure container registries with Secrets Variables in Workflows 
+
+Securing sensitive data like API keys and credentials is crucial to protect your workflows and prevent unauthorized access. This can be achieved by using secrets, which are encrypted variables that can be securely used in your workflows without exposing the actual values.
 
 1. Navigate to `potal.azure.com`, in the search bar search for **Container registries** **(1)** and select **Container registries** **(2)**.
 
