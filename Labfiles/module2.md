@@ -265,8 +265,16 @@ jobs:
       run: echo Hello again, world!
 ```
 
+![](../media/ifcondition-yml.png)
+
+1. In the **Commit changes** pop-up, click on **Commit changes** button.
+
+    ![](../media/save-ifcondtion.png)
+
 1. Click on **Action** **(1)**, verify the workflow has been executed successfully once the workflow is succedded select the newly created workflow **updated conditional.yml** **(2)**.
 
-1. 
+    ![](../media/ifcondtion-created.png)
+
+1. Go throught workflow.
 
 1. Click on **Next** button for next Lab.
