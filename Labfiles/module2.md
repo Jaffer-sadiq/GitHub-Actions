@@ -226,16 +226,19 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
 1. Navigate back to `potal.azure.com`, in the search bar search for **Container registries** **(1)** and verify the container registry has been created.
 
-1. Click on **Next** button for next Lab.
-
-
 ### Task 2: Conditional execution using if expressions.
 
 GitHub Actions is a powerful automation platform that allows you to define workflows to build, test, and deploy your code directly from your GitHub repository. One of the key features that makes GitHub Actions flexible and robust is the ability to conditionally execute steps within your workflows using if expressions.
 
 Conditional execution is essential when you want certain steps to run only under specific conditions, such as based on the branch name, the outcome of a previous step, or custom environment variables. This helps in creating more efficient and context-aware CI/CD pipelines, reducing unnecessary executions, and ensuring that the right actions are taken in the right scenarios.
 
-1.
+1. Navigate to the **Code** **(1)** and click on **.github/workflows** **(2)** folder.
+
+    ![](../media/editfolder.png)
+
+1. In the **.github/workflows** folder, click on **Add files** **(1)**, and click on **+ Create new file** **(2)**.
+
+1. Provider file name as **conditional.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
 
 ```
 name: Complex Workflow
@@ -261,3 +264,9 @@ jobs:
     - name: Run a different one-line script
       run: echo Hello again, world!
 ```
+
+1. Click on **Action** **(1)**, verify the workflow has been executed successfully once the workflow is succedded select the newly created workflow **updated conditional.yml** **(2)**.
+
+1. 
+
+1. Click on **Next** button for next Lab.
