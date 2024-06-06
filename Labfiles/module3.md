@@ -77,7 +77,7 @@ Parallelism allows you to run jobs or steps concurrently, reducing the total exe
 
     > Feel free to go through the workflow
 
-### Task 3: Using artifacts and dependencies in workflows
+### Task 2: Using artifacts and dependencies in workflows
 
 Optimizing workflow performance by caching dependencies can significantly improve the execution time of your workflows. By caching dependencies, you can avoid unnecessary downloads and installations, resulting in faster and more efficient workflows.
 
@@ -142,7 +142,7 @@ Optimizing workflow performance by caching dependencies can significantly improv
 
     > Feel free to go through the workflow
 
-### Task 4: Code scanning and vulnerability detection
+### Task 3: Code scanning and vulnerability detection
 
 1. Naviage back to `github-action` repo.
 
