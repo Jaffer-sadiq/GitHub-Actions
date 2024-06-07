@@ -77,7 +77,101 @@ Parallelism allows you to run jobs or steps concurrently, reducing the total exe
 
     > Feel free to go through the workflow
 
-### Task 2: Using artifacts and dependencies in workflows
+### Task 2: Matrix builds for testing across multiple environments.
+
+A matrix build is a CI/CD pipeline strategy that allows you to run tests across a variety of environments simultaneously. Each environment can vary by operating system, programming language version, dependency versions, and other factors. The matrix build configuration defines combinations of these variables, creating a grid (or matrix) of different test scenarios.
+
+- **Comprehensive Testing**: Ensures that your software works under different configurations, reducing the risk of environment-specific bugs.
+- **Parallel Execution**: Tests can run in parallel, speeding up the testing process and providing faster feedback.
+- **Consistency**: Helps maintain consistent behavior across different environments, which is crucial for cross-platform applications.
+
+1. Navigate back to the `github-action` repo, from the GitHub repository.
+
+2. Navigate to the **Code** **(1)**, Click on **Add File** **(2)** and click on **+ Create new file** **(3)**.
+
+3. Provider file name as **requirements.txt** (1), in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
+
+   ```
+   pytest
+   ```
+   
+4. In the pop up windows of Commit Changes click on the **Commit changes** button.
+
+5. Click on **Add File** **(2)** and click on **+ Create new file** **(3)**.   
+
+6. Provider file name as with folder creation **tests/test_sample.py** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
+
+    ```
+    def test_sample():
+        print("Running test_sample")
+        assert 1 + 1 == 2
+        print("Completed test_sample successfully")
+    ```
+
+7. In the pop up windows of Commit Changes click on the **Commit changes** button.
+
+8. Navigate to the **Code** **(1)** and click on **.github/workflows** **(2)** folder.
+
+   ![](../media/4th-oidc-click.png)
+
+9. In the **.github/workflows** folder, click on **Add files** **(1)**, and click on **+ Create new file** **(2)**.
+
+   ![](../media/4th-oidc.png)   
+
+10. Provider file name as **matrix.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
+
+    ```
+    name: CI
+    
+    on:
+      push:
+        branches:
+          - main
+      pull_request:
+        branches:
+          - main
+    
+    jobs:
+      build:
+        runs-on: ubuntu-latest
+        
+        strategy:
+          matrix:
+            python-version: [3.12]
+            os: [ubuntu-latest, windows-latest, macos-latest]
+    
+        environment: action-environment
+    
+        steps:
+          - name: Checkout repository
+            uses: actions/checkout@v2
+    
+          - name: Set up Python ${{ matrix.python-version }}
+            uses: actions/setup-python@v2
+            with:
+              python-version: ${{ matrix.python-version }}
+    
+          - name: Install dependencies
+            run: |
+              python -m pip install --upgrade pip
+              pip install -r requirements.txt
+    
+          - name: Run tests
+            run: |
+              pytest
+    ```
+
+    > **Note**: This CI configuration uses GitHub Actions to run tests on multiple OS (Ubuntu, Windows, macOS) with Python 3.12. It triggers on pushes and pull requests to the main branch, checks out the code, sets up Python, installs dependencies, and runs tests with pytest, ensuring cross-platform compatibility.
+
+12. In the pop up windows of Commit Changes click on the **Commit changes** button.
+
+13. Click on **Action** **(1)**, verifiy the **Create matrix.yml** workflow has been executed successfully.
+
+14. Click on **Create matrix.yml** action, This configuration allows you to ensure your project is tested on multiple operating systems using Python 3.12, ensuring broader compatibility and catching environment-specific issues early.
+
+    ![](../media/matrix-output.png)
+
+### Task 3: Using artifacts and dependencies in workflows
 
 Optimizing workflow performance by caching dependencies can significantly improve the execution time of your workflows. By caching dependencies, you can avoid unnecessary downloads and installations, resulting in faster and more efficient workflows.
 
@@ -142,7 +236,7 @@ Optimizing workflow performance by caching dependencies can significantly improv
 
     > Feel free to go through the workflow
 
-### Task 3: Code scanning and vulnerability detection
+### Task 4: Code scanning and vulnerability detection
 
 1. Naviage back to `github-action` repo.
 
