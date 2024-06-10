@@ -276,13 +276,21 @@ Optimizing workflow performance by caching dependencies can significantly improv
 
 1. Once again, go to your profile, which is at the top of your right hand, and then select **Settings**.
 
-1.  Go to **Developer settings** -> **Personal access tokens (1)** -> **Tokens (classic) (2)**, and then click on **Generate new token (3)** at the top. Now select **Generate new token (classic) (4)**.
+   ![Picture1](../media/profilesetting.png)
+
+1. Go to **Developer settings** -> **Personal access tokens (1)** -> **Tokens (classic) (2)**, and then click on **Generate new token (3)** at the top. Now select **Generate new token (classic) (4)**.
+
+    ![Picture1](../media/developersetting.png)
 
 1. From here, give your secret a name, **secret2**, set the **Expiration** to **_"Custom..."_** and select the next calendar day. By default, no permissions are granted, so it is safe to scroll to the bottom and click on **Generate token**.
 
+   ![](../media/PATtoken.png)
+
 1. Once you've generated the token, click on the **"Copy"** icon to the right of the secret value.
 
-1.  
+   ![](../media/token.png)
+
+1. Navigate to **Code** from the top navigation pane.
 
 ### Summary
 
