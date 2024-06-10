@@ -83,6 +83,7 @@ In this exercise, You'll learn how to set up environments with protection rules,
     
     jobs:
       build-and-push:
+        environment: action-environment
         runs-on: ubuntu-latest
     
         steps:
@@ -103,23 +104,23 @@ In this exercise, You'll learn how to set up environments with protection rules,
         # Build Docker image
         - name: Build Docker image
           env: 
-            LOGIN_SERVER: ${{ env.LOGIN_SERVER }}
+            LOGIN_SERVER: ${{ vars.LOGIN_SERVER }}
           run: |
-            docker buildx build . -t {Login_server}/my-app:latest
+            docker buildx build . -t $LOGIN_SERVER/my-app:latest
     
         # Log in to Azure Container Registry
         - name: Log in to Azure Container Registry
           env:
-            REGISTRY_NAME: ${{ env.REGISTRY_NAME }}
+            REGISTRY_NAME: ${{ vars.REGISTRY_NAME }}
           run: |
-            az acr login --name {Registry name}
+            az acr login --name $REGISTRY_NAME
     
         # Push Docker image to Azure Container Registry
         - name: Push Docker image
           env:
-            LOGIN_SERVER: ${{ env.LOGIN_SERVER }}
+            LOGIN_SERVER: ${{ vars.LOGIN_SERVER }}
           run: |
-            docker push {Login_server}/my-app:latest
+            docker push $LOGIN_SERVER/my-app:latest
     ```
 
    ![](../media/env14.png)
