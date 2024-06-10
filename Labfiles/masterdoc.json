@@ -29,12 +29,16 @@
         "Order": 6
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/GitHub-Actions/main/Labfiles/Module-4-Advanced-Usage-and-Integration.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/GitHub-Actions/main/Labfiles/create-environment.md",
         "Order": 7
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/GitHub-Actions/main/Labfiles/Integrating-with-Azure-DevOps.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/GitHub-Actions/main/Labfiles/Module-4-Advanced-Usage-and-Integration.md",
         "Order": 8
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/GitHub-Actions/main/Labfiles/Integrating-with-Azure-DevOps.md",
+        "Order": 9
       }
     ]
   }

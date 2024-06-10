@@ -1,8 +1,8 @@
-# GitHub Environment
+# Lab 4: GitHub Environment
 
 In this exercise, You'll learn how to set up environments with protection rules, wait timers, environment secrets and vairables. A workflow job that references an environment must adhere to these protection rules before it can run or access the environment's secrets.
 
-## set up Environment
+## Task 1: Set up Environment
 
 1. From GitHub, navigate to **Settings (1)** tab, select **Envrionments (2)**, and click on **New Environment (3)**.
 
