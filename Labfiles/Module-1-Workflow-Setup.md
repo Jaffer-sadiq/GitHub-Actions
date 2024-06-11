@@ -56,99 +56,77 @@ In this task, you will create an account in [GitHub](https://github.com) and use
 
    ![The `New Repository` creation form in GitHub.](../media/2dg123.png "New Repository Creation Form")
 
-### Task 2: Introduction to GitHub Actions and workflow files.
+### Task 2: Introduction to GitHub Actions
 
 GitHub Actions is a powerful automation tool provided by GitHub, allowing you to automate your software development workflows directly within your GitHub repository. With GitHub Actions, you can build, test, and deploy your code without leaving GitHub, saving time and improving collaboration among your team members.
 
-1. Navigate to the **Action** **(1)** directory in your repository, in `Get started with GitHub Actions` click on **set up a workflow yourself** **(2)**.
+1. Navigate to the **Action** directory in your repository.
 
-    ![](../media/cl-action.png)
+    ![](../media/env16.png)
 
-1. In the workspace rename the file it to **hello-action.yml** **(1)**, paste the below code in the **edit** **(2)**, and click on **commit changes** **(3)**.
+1. In `Get started with GitHub Actions` page, click on **Configure** **(2)** button on the Simple Workflow.
 
-    ```yaml
-    name: My First Workflow
+    ![](../media/env15.png)
 
-    on: [push]
+1. You'll be able to see a very simple workflow which prints few text sentences as output.    
 
-    jobs:
-        build:
-            runs-on: ubuntu-latest
+    ![](../media/env17.png)
 
-            steps:
-            - name: Print a greeting
-              run: echo "Hello, GitHub Actions!"
-    ```
+   This workflow provides a basic template for setting up CI with GitHub Actions. It checks out the repository code, runs a simple one-line script, and then runs a multi-line script. You can expand this workflow by adding more steps to build, test, and deploy your project. Here's the complete explanation of the workflow file.
 
-    ![](../media/hello-action.png) 
+   - **Workflow Name**: The workflow is named "CI", which stands for Continuous Integration.
+When the Workflow Runs:
+
+    - **The workflow is triggered by specific events**:
+      
+      *Push*: The workflow runs whenever changes are pushed to the main branch.
+
+      *Pull Request*: The workflow runs whenever a pull request is made to the main branch.
+
+      *Manual Trigger*: The workflow can also be manually triggered from the Actions tab in the GitHub repository (using workflow_dispatch).
+
+    - **Jobs**:A workflow is made up of one or more jobs. In this case, there is a single job called "build".
+
+    - **Runner**: The job runs on a virtual machine (runner) provided by GitHub. Here, it uses the latest version of Ubuntu (ubuntu-latest).
+
+    - **Steps**: The job contains a sequence of steps, each representing a task to be executed.
+
+    - **Checkout Repository**:
+
+      *uses*: actions/checkout@v4: This step checks out the repository, making the code available to the workflow.
+
+    - **Run a One-Line Script**:
+
+      *run*: echo Hello, world!: This step runs a simple command in the runner's shell, which prints "Hello, world!" to the console.
+
+    - **Run a Multi-Line Script**:
+
+      *run*: |:
+      This step runs multiple commands. The | character allows you to write multiple lines of script. The commands in this step print two lines:
+
+      "Add other actions to build,"
+
+      "test, and deploy your project."  
+
+   For more informaton, read [GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions) documentation.
+
+1. In the workspace rename the file it to **hello-action.yml** **(1)** and click on **commit changes** **(2)**.
+
+    ![](../media/env18.png)
 
 1. In the pop up windows of **Commit Changes** click on the **Commit changes**.
 
-   ![](../media/hello-action-commit.png)
+    ![](../media/env18.png)
 
 1. Click on **Action** **(1)**, once the workflow got succedded click on Workflow **hello-action.yml** **(2)**.
 
    ![](../media/hello-action-trigger.png)
 
-1. In the `hello-action.yml` workflow, click on **build** **(1)**, expand the **Print the greeting** and view the result. 
+1. Click on the action and select **Build**. You can see the steps and output.
 
-   ![](../media/hello-action-result.png)
+    ![](../media/env22.png)
 
-### Task 3: Triggering workflows with events like pushes and pull requests.
-
-GitHub Actions workflows can be triggered by various events occurring within your GitHub repository. These events include pushes to branches, pull requests, issue comments, repository dispatch events, and more. By defining the events that trigger your workflows, you can automate specific actions to run at the right time, optimizing your development process and enhancing collaboration. Let's explore how to trigger workflows with events like pushes and pull requests:
-
-**Triggering Workflows with Push Events:** Push events occur when changes are pushed to a branch in your GitHub repository. You can specify which branches trigger your workflows based on specific criteria, such as pushes to all branches or only certain branches. Here's how you can configure a workflow to trigger on push events
-
-**Triggering Workflows with Pull Request Events:** Pull request events occur when pull requests are opened, synchronized (updated), closed, or labeled. You can configure workflows to trigger based on pull request events to perform tasks such as code review, testing, and deployment. Here's how you can configure a workflow to trigger on pull request events 
-
-1. Navigate to the **Code** **(1)** and click on **.github/workflows** **(2)** folder.
-
-    ![](../media/editfolder.png)
-
-1. In the **.github/workflows** folder, click on **Add files** **(1)**, and click on **+ Create new file** **(2)**.
-
-    ![](../media/4th-oidc.png)
-
-1. Provider file name as **cl.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
-
-   ```
-   name: My Workflow
-   on:
-     push:
-       branches:
-         - main
-     pull_request:
-       branches:
-         - main
-   jobs:
-     build:
-       runs-on: ubuntu-latest
-       steps:
-         - name: Checkout code
-           uses: actions/checkout@v2
-
-         - name: Run a script
-           run: echo "Hello, again!"   
-   ```
-
-   ![](../media/cl-action1.png)
-
-1. In the pop up windows of **Commit Changes** click on the **Commit changes**.
-
-   ![](../media/cl-action-commit.png)
-
-    - You can customize the events and branches for triggering the workflow according to your project's requirements. For example, you might want to trigger the workflow only on pushes to the `main` branch or on pull requests targeting the `main` branch.
-
-    - You can also add more jobs and steps to perform tasks like building, testing, deploying, or any other actions you need your workflow to perform.
-
-    - For more details on GitHub Actions syntax and available events, refer to the official documentation: [GitHub Actions - Workflow syntax for GitHub Actions](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions).
-
-1. Click on **Action** **(1)**, verifiy the workflow has been executed successfully.
-
-   ![](../media/cl-action-trigger.png)
-
-### Task 4: Defining jobs and steps within workflows
+### Task 3: Defining jobs and steps within workflows
 
 In GitHub Actions workflows, you define jobs and steps to orchestrate the tasks you want to automate. Jobs represent the individual units of work that can run in parallel or sequentially, while steps are the individual tasks performed within a job. Let's dive deeper into defining jobs and steps within workflows:
 
