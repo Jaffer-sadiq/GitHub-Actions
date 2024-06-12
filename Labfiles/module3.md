@@ -2,10 +2,76 @@
 
 - **Reusing workflows**: Rather than copying and pasting from one workflow to another, you can make workflows reusable. You and anyone with access to the reusable workflow can then call the reusable workflow from another workflow.Reusing workflows avoids duplication. This makes workflows easier to maintain and allows you to create new workflows more quickly by building on the work of others, just as you do with actions. Workflow reuse also promotes best practice by helping you to use workflows that are well designed, have already been tested, and have been proven to be effective. Your organization can build up a library of reusable workflows that can be centrally maintained, for more infomation please go throught the given link [Reusing workflows](https://docs.github.com/en/actions/using-workflows/reusing-workflows).
 
-- **Custom actions**: A custom action is a reusable unit of code that performs a specific task. Custom actions can be written in JavaScript, Docker, or as composite actions that combine multiple other actions and commands. These actions can be shared and reused across multiple workflows and repositories.
-for more infomation please go throught the given link [Custom action](https://docs.github.com/en/actions/creating-actions/about-custom-actions).
 
-### Task 1: Explanation and usage of Matrix builds
+## Task 1: Using Reusable Workflow
+
+1. From the GitHub, navigate to `.github/workflows` and Click on **ellipse button (2)** select **+ create new file (3)**.
+
+   ![](../media/env23.png)
+
+1. Copy the code given below, paste it in the window, and name the file as **reusable-print-message.yml**
+
+   ```
+   name: Reusable Print Message
+
+   on:
+     workflow_call:
+       inputs:
+         message:
+           required: true
+           type: string
+
+   jobs:
+     print-message:
+       runs-on: ubuntu-latest
+
+       steps:
+         - name: Print message
+           run: echo "Hi, this message is from primary workflow" 
+   ```
+
+   ![](../media/env24.png)
+
+1. Click on **Commit changes (1)** button and click on **Commit changes (2)** in the pop window.
+
+   ![](../media/env25.png)
+
+1. Again, navigate to `.github/workflows`, Click on **Add file (2)** dropdown, and select **+ create new file (3)**.
+
+   ![](../media/env26.png)
+
+1. Copy the code given below, paste it in the window, and name the file as **caller-workflows.yml**
+
+   ```
+   name: Caller Workflow
+
+   on:
+     push:
+       branches: [ "main" ]
+     workflow_dispatch:
+
+   jobs:
+     call-reusable-workflow:
+       uses: ./.github/workflows/reusable-print-message.yml
+       with:
+         message: "Hello from the caller workflow!"
+    ```
+
+   ![](../media/env28.png)   
+
+1. Click on **Commit changes (1)** button and click on **Commit changes (2)** in the pop window.
+
+   ![](../media/env27.png)
+
+1. Now, navigate to **Actions (1)** tab and select **Create caller-workflow.yml (2)**. 
+
+   ![](../media/env29.png)
+
+1. Select the **print-message (1)** job from the side-blade and **expand (2)** the same job in the output window. You'll see that the message from reusable-print-message.yml is fetched by the caller workflow. Hence, this is how the concept of reusable wokflows in GitHub action works.
+
+   ![](../media/env30.png)
+
+### Task 2: Explanation and usage of Matrix builds
 
 Matrix builds and parallelism are advanced features in GitHub Actions that allow you to run multiple jobs concurrently.
 
@@ -77,7 +143,7 @@ Parallelism allows you to run jobs or steps concurrently, reducing the total exe
 
     > Feel free to go through the workflow
 
-### Task 2: Matrix builds for testing across multiple environments.
+### Task 3: Matrix builds for testing across multiple environments.
 
 A matrix build is a CI/CD pipeline strategy that allows you to run tests across a variety of environments simultaneously. Each environment can vary by operating system, programming language version, dependency versions, and other factors. The matrix build configuration defines combinations of these variables, creating a grid (or matrix) of different test scenarios.
 
