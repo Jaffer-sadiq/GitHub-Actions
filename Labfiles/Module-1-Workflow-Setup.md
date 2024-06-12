@@ -1,6 +1,6 @@
 # Lab 1: Workflow Setup 
 
-### Task 1: Create the Project Repo
+## Task 1: Create the Project Repo
 
 In this task, you'll access the GitHub enterprise account and create a new repository to store the infrastructure.
 
@@ -56,7 +56,7 @@ In this task, you will create an account in [GitHub](https://github.com) and use
 
    ![The `New Repository` creation form in GitHub.](../media/2dg123.png "New Repository Creation Form")
 
-### Task 2: Introduction to GitHub Actions
+## Task 2: Introduction to GitHub Actions
 
 GitHub Actions is a powerful automation tool provided by GitHub, allowing you to automate your software development workflows directly within your GitHub repository. With GitHub Actions, you can build, test, and deploy your code without leaving GitHub, saving time and improving collaboration among your team members.
 
@@ -126,7 +126,7 @@ When the Workflow Runs:
 
     ![](../media/env22.png)
 
-### Task 3: Defining jobs and steps within workflows
+## Task 3: Create a Custom workflow with multiple Jobs
 
 In GitHub Actions workflows, you define jobs and steps to orchestrate the tasks you want to automate. Jobs represent the individual units of work that can run in parallel or sequentially, while steps are the individual tasks performed within a job. Let's dive deeper into defining jobs and steps within workflows:
 
@@ -198,6 +198,6 @@ In GitHub Actions workflows, you define jobs and steps to orchestrate the tasks 
 
 1. Click on **Next** button for next Lab.
 
-### Summary
+## Summary
 
 In this lab, you have successfully set up our workflow. You have created and executed a workflow, verified its successful execution, and familiarized ourselves with the jobs within it. This foundational knowledge will be instrumental as we progress through the subsequent labs.
