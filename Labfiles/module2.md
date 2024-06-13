@@ -89,7 +89,7 @@ Securing sensitive data like API keys and credentials is crucial to protect your
     CMD ["nginx", "-g", "daemon off;"]
     ```
 
-    ![](../media/ex2-task2-step18a.png)
+    ![](../media/Docker_file_1.png)
 
 1. In the **Commit changes** pop-up, click on **Commit changes** button.
 
@@ -167,7 +167,9 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
     ![](../media/4th-oidc.png)
 
-1. In the editor update the code with the below-provided code, replace **{Login_server}** from line 30 and 40 with **Azure Container registry Login server**, and replace **{Registry name}** from line number **Azure Container registry Registry name**.
+1. In the editor update the code with the below-provided code, replace **{Login_server}** from line 30 and 40 with **Azure Container registry Login server**, and replace **{Registry name}** with **Azure Container registry Registry name**.
+
+>**Note**: Paste the value you copied in Task 1, Step 6 for the **Login_server** and **Registry name.**
 
     ```
     name: Build and Push Docker Image to ACR
