@@ -353,11 +353,73 @@ Optimizing workflow performance by caching dependencies can significantly improv
 
    ![](../media/PATtoken.png)
 
-1. Once you've generated the token, click on the **"Copy"** icon to the right of the secret value.
+1. Once you've generated the token, click on the **"Copy"** icon to the right of the secret value in the notepad.
 
    ![](../media/token.png)
 
-1. Navigate to **Code** from the top navigation pane.
+1. Navigate to **Code** **(1)** from the top navigation pane, click on **code** **(2)** drop-down, click on **local** **(3)**, and copy the **Repo URL** **(4)** in the notepad.
+
+   ![](../media/repo-url.png)
+
+1. From the repo URL select the username as shown in the image below.
+
+   ![](../media/user-name.png)
+
+1. Click on **Add file** **(1)**  and click on **+ Create new file** **(2)**.
+
+   ![](../media/ex2-task2-step18.png)
+
+1. Provider file name as **ExampleScript.ps1** **(1)**, in the editor **copy and paste** **(2)** the below script, replace **YOUR_GITHUB_PAT** **(3)** with PAT you coped, **YOUR_GITHUB_USERNAME** **(4)** with GitHub username and **YOUR_GITHUB_REPO** **(4)**, and click on **commit changes** **(5)**.
+
+   ```
+   # Set the GitHub PAT
+   $token = "YOUR_GITHUB_PAT"
+   
+   # Set the repository details
+   $owner = "YOUR_GITHUB_USERNAME"
+   $repo = "YOUR_GITHUB_REPO"
+   
+   # Set the file path and content
+   $file = "path/to/file.txt"
+   $content = "Hello, world!"
+   
+   # Create a new file in the repository
+   $base64Content = [System.Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($content))
+   $body = @{
+       message = "Create new file"
+       content = $base64Content
+   } | ConvertTo-Json
+   
+   $uri = "https://api.github.com/repos/$owner/$repo/contents/$file"
+   $headers = @{
+       Authorization = "Bearer $token"
+       Accept = "application/vnd.github.v3+json"
+   }
+   
+   $response = Invoke-RestMethod -Uri $uri -Method Put -Headers $headers -Body $body
+   
+   if ($response.content.sha) {
+       Write-Host "File created successfully."
+   } else {
+       Write-Host "Failed to create file."
+   }
+   ```
+
+   ![](../media/ExampleScript.png)
+
+1. In the **Commit** changes pop-up, click on **Commit changes** button.
+
+   ![](../media/ExampleScript-commit.png)
+
+1. A pop-up will come with warining, **Secret scanning found a GitHub Personal Access Token secret on line 2.**, select **It's used in tests** **(1)** option and click on **Allow Secreat** **(2)**.
+
+   ![](../media/ExampleScript-commit-risk.png)
+
+1. **Secret allowed. You can now commit these changes**. Editor window click on **commit changes**.
+
+1. In the **Commit** changes pop-up, click on **Commit changes** button.
+
+   ![](../media/ExampleScript-commit.png)
 
 ### Summary
 
