@@ -117,7 +117,7 @@ OpenID Connect (OIDC) allows your GitHub Actions workflows to access resources i
 
 5. Click on **Action** **(1)**, verifiy the workflow has been Failed, and click on **Create issue-check-debug.yml** workflow
 
-   ![](../media/action-issue-check.png)
+   ![](../media/action-issue-check_1.png)
 
 6. Click on **build** **(1)**, expend **Install Dependency** **(2)** and you see the error that `npm ERR! enoent ENOENT: no such file or directory, open 'Run bash ./missing-script.sh bash: ./missing-script.sh: No such file or directory` **(3)**.
 
