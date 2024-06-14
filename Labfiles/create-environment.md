@@ -17,6 +17,7 @@ In this exercise, You'll learn how to set up environments with protection rules,
 
 **Wait Timer**
    - Enable **Wait timer** option and set it to 2 minutes.
+
      ![](../media/env2.png)
 
    - Now, scroll down to **Environment Secrets** and click on **Add environment secret**.
