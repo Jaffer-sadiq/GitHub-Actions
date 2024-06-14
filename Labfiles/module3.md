@@ -334,9 +334,11 @@ Optimizing workflow performance by caching dependencies can significantly improv
   
 1. You will be navigated to **Code scanning** section. You'll be able to visualize that the **No code scanning alerts here!**.
    
-   ![](../media/devops1.6.png)
-
 1. Go to **Settings** -> **Code security and analysis** -> scroll down to **Push protection** and click **Enable**.
+
+   ![Picture1](../media/code_security_1.png)
+
+   ![Picture1](../media/push_1.png)
 
 1. After this is enabled, we are going to go back through the process of creating a secret and pasting it into the codebase. Once again, go to your profile and then **Settings** -> **Developer settings** -> **Personal access tokens** -> **Tokens (classic)**. Click on **Generate new token** at the top and select **Generate new token (classic)**.
 
@@ -346,7 +348,7 @@ Optimizing workflow performance by caching dependencies can significantly improv
 
 1. Go to **Developer settings** -> **Personal access tokens (1)** -> **Tokens (classic) (2)**, and then click on **Generate new token (3)** at the top. Now select **Generate new token (classic) (4)**.
 
-    ![Picture1](../media/developersetting.png)
+    ![Picture1](../media/generate_new.png)
 
 1. From here, give your secret a name, **secret2**, set the **Expiration** to **_"Custom..."_** and select the next calendar day. By default, no permissions are granted, so it is safe to scroll to the bottom and click on **Generate token**.
 
