@@ -90,12 +90,16 @@ In this task, you will connect your Azure DevOps project's board to your GitHub 
    ![](../media/ex4-kc-install&auth.png)
     
  >**Note**: If you see the message **You’ve already purchased this on all of your GitHub accounts** this indicates Azure Boards integration is already used in your account, follow the below steps.
+
+   - On the Azure Boards Marketplace page, Click the ellipsis in the upper right corner and Select the **Username**.
+
+      ![](../media/image_1.png)
    
    - Scroll to the top of the Azure Boards Marketplace page and select **grant this app access to your GitHub account**.
    
        ![](../media/2dg51.png)
    
-   - Select the lab files repository `aiw-devops-with-github-lab-files` which you created earlier and click on **Install & Authorize**.
+   - Select the lab files repository `github-action` which you created earlier and click on **Install & Authorize**.
 
        ![](../media/ex4-kc-install&auth.png)
 
