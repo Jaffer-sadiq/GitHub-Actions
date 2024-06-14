@@ -340,13 +340,12 @@ Optimizing workflow performance by caching dependencies can significantly improv
 
    ![Picture1](../media/push_1.png)
 
-1. After this is enabled, we are going to go back through the process of creating a secret and pasting it into the codebase. Once again, go to your profile and then **Settings** -> **Developer settings** -> **Personal access tokens** -> **Tokens (classic)**. Click on **Generate new token** at the top and select **Generate new token (classic)**.
 
 1. Once again, go to your profile, which is at the top of your right hand, and then select **Settings**.
 
    ![Picture1](../media/profilesetting.png)
 
-1. Go to **Developer settings** -> **Personal access tokens (1)** -> **Tokens (classic) (2)**, and then click on **Generate new token (3)** at the top. Now select **Generate new token (classic) (4)**.
+1. Go to **Developer settings** -> **Personal access tokens** -> **Tokens (classic)**, and then click on **Generate new token (1)** at the top. Now select **Generate new token (classic) (2)**.
 
     ![Picture1](../media/generate_new.png)
 
