@@ -91,9 +91,9 @@ In this task, you will connect your Azure DevOps project's board to your GitHub 
     
      > **Note**: If you see the message **You’ve already purchased this on all of your GitHub accounts** this indicates Azure Boards integration is already used in your account, follow the below steps.
 
-   - On the Azure Boards Marketplace page, Click the ellipsis in the upper right corner and Select the **Username**.
+   - On the **Azure Boards Marketplace** page, Click the **ellipsis** in the upper right corner and Select the **Username**.
 
-     ![](../media/image_1.png)
+     ![](../media/image_3.png)
    
    - In Edit your plan window,  select **grant this app access**.
    
