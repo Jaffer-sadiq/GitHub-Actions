@@ -8,7 +8,7 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
    ![](../media/search-continer.png)
 
-1. In the Container registries tab click on **+ Create** button.
+1. In the Container registries tab click on the **+ Create** button.
 
    ![](../media/create-continer.png)
 
@@ -16,7 +16,7 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
     - **Subscription**: Select the default subscription
     - **Resource Group**: Select **github-action-<inject key="DeploymentID" enableCopy="false"/>** **(1)**
-    - **Registry Name**: Add **gacontainer<inject key="DeploymentID" enableCopy="false"/>** **(2)**
+    - **Registry Name**: Enter **gacontainer<inject key="DeploymentID" enableCopy="false"/>** **(2)**
     - **Location**: Select the default **location** **(3)**
     - **Pricing Plan**: Choose **Standard** **(4)**
     -  Click on **Review + Create** **(5)**
@@ -35,7 +35,7 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
    ![](../media/access-keys.png)
 
-1. Navigate back to the `github-action` repo, from the GitHub repository, and select the **Settings** tab from the lab files repository.
+1. Navigate back to the `GitHub-action` repo, from the GitHub repository, and select the **Settings** tab from the lab files repository.
 
     ![](../media/github-action.png)
 
@@ -51,7 +51,7 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
    ![](../media/ex2-t4-8.png)
    
-   - Replace the values that you copied in below Json. You will be using them in this step.
+   - Replace the values that you copied in the below JSON. You will be using them in this step.
    
       ```json
       {
@@ -64,8 +64,8 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
 1. Under Actions Secrets/New secret page, enter the below mentioned details and Click on Add secret (3).
 
-   - Name : Enter **AZURE_CREDENTIALS** (1)
-   - Value : Paste the service principal details in json format (2)
+   - Name: Enter **AZURE_CREDENTIALS** (1)
+   - Value: Paste the service principal details in JSON format (2)
 
      ![](../media/add-sec-oidc.png)
 
@@ -99,7 +99,7 @@ Securing sensitive data like API keys and credentials is crucial to protect your
     
     ![](../media/ex2-task2-step18.png)
 
-1. Provider file name as **index.html** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
+1. Provider file name as **index.html** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **Commit changes** **(3)**.
 
     ```
     <!DOCTYPE html>
@@ -142,7 +142,7 @@ Securing sensitive data like API keys and credentials is crucial to protect your
         <p>In this module 1, you'll learn the fundamentals of GitHub Actions and workflow files. We'll cover how to trigger workflows with events like pushes and pull requests, define jobs and steps within workflows, and set up a basic CI workflow for testing code on every push.</p>
 
         <h2 id="action-integration">Action Integration</h2>
-        <p>In Module 2 focuses on incorporating pre-built actions from the GitHub Marketplace and creating custom actions for reusable tasks. You'll learn how to leverage third-party actions to streamline your workflows, with a practical example of deploying a Docker container to a cloud platform.</p>
+        <p> Module 2 focuses on incorporating pre-built actions from the GitHub Marketplace and creating custom actions for reusable tasks. You'll learn how to leverage third-party actions to streamline your workflows, with a practical example of deploying a Docker container to a cloud platform.</p>
 
         <h2 id="best-practices-and-security">Best Practices and Security</h2>
         <p>In Module 3, we'll discuss guidelines for writing efficient and maintainable workflows, as well as securing sensitive data like API keys and credentials. You'll explore examples of optimizing workflow performance by caching dependencies to ensure smooth operations.</p>
@@ -167,7 +167,7 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
     ![](../media/4th-oidc.png)
 
-1. In the editor update the code with the below-provided code, replace **{Login_server}** from line 30 and 40 with **Azure Container registry Login server**, and replace **{Registry name}** with **Azure Container registry Registry name**.
+1. In the editor update the code with the below-provided code, replace **{Login_server}** from lines 30 and 40 with **Azure Container registry Login server**, and replace **{Registry name}** with **Azure Container registry Registry name**.
 
    >**Note**: Paste the value you copied in Task 1, Step 6 for the **Login_server** and **Registry name.**
 
@@ -216,7 +216,7 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
     ![](../media/workflow.png)
 
-1. Provide the file name as **docker.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click on **commit changes** **(3)**.
+1. Provide the file name as **docker.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click on **Commit changes** **(3)**.
 
    ![](../media/docker.png)
    
@@ -230,7 +230,7 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
 ### Task 2: Conditional execution using if expressions.
 
-GitHub Actions is a powerful automation platform that allows you to define workflows to build, test, and deploy your code directly from your GitHub repository. One of the key features that makes GitHub Actions flexible and robust is the ability to conditionally execute steps within your workflows using if expressions.
+GitHub Actions is a powerful automation platform that allows you to define workflows to build, test, and deploy your code directly from your GitHub repository. One of the key features that make GitHub Actions flexible and robust is the ability to conditionally execute steps within your workflows using if expressions.
 
 Conditional execution is essential when you want certain steps to run only under specific conditions, such as based on the branch name, the outcome of a previous step, or custom environment variables. This helps in creating more efficient and context-aware CI/CD pipelines, reducing unnecessary executions, and ensuring that the right actions are taken in the right scenarios.
 
@@ -277,6 +277,6 @@ jobs:
 
     ![](../media/ifcondtion-created.png)
 
-1. Go throught workflow.
+1. Go through workflow.
 
 1. Click on **Next** button for next Lab.
