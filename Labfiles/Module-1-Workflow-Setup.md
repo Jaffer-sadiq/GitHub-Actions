@@ -60,11 +60,11 @@ In this task, you will create an account in [GitHub](https://github.com) and use
 
 GitHub Actions is a powerful automation tool provided by GitHub, allowing you to automate your software development workflows directly within your GitHub repository. With GitHub Actions, you can build, test, and deploy your code without leaving GitHub, saving time and improving collaboration among your team members.
 
-1. Navigate to the **Action** directory in your repository.
+1. Navigate to the **Actions** directory in your repository.
 
     ![](../media/env16.png)
 
-1. In the `Get started with GitHub Actions` page, click on the **Configure** **(2)** button on the Simple Workflow.
+1. In the `Get started with GitHub Actions` page, click on the **Configure** button on the Simple Workflow.
 
     ![](../media/env15.png)
 
@@ -110,15 +110,15 @@ When the Workflow Runs:
 
    For more information, read [GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions) documentation.
 
-1. In the workspace rename the file it to **hello-action.yml** **(1)** and click on **commit changes** **(2)**.
+1. In the workspace rename the file it to **hello-action.yml** **(1)** and click on **Commit changes** **(2)**.
 
     ![](../media/env18.png)
 
 1. In the pop up windows of **Commit Changes** click on the **Commit changes**.
 
-    ![](../media/env18.png)
+    ![](../media/17-06-2024(2).png)
 
-1. Click on **Action** **(1)**, once the workflow got succedded click on Workflow **hello-action.yml** **(2)**.
+1. Click on **Actions** **(1)**, once the workflow got succedded click on Workflow **hello-action.yml** **(2)**.
 
    ![](../media/hello-action-trigger.png)
 
@@ -188,7 +188,7 @@ In GitHub Actions workflows, you define jobs and steps to orchestrate the tasks 
 
     - For more details on GitHub Actions syntax and available events, refer to the official documentation: [GitHub Actions - Workflow syntax for GitHub Actions](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions).
 
-1. Click on **Action** **(1)**, verify the workflow has been executed successfully once the workflow is succedded select the newly created workflow **updated cl.yml** **(2)**.
+1. Click on **Actions** **(1)**, verify the workflow has been executed successfully once the workflow is succedded select the newly created workflow **updated cl.yml** **(2)**.
 
    ![](../media/jobs-action-action.png)
 
