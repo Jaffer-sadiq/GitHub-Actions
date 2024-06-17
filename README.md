@@ -23,4 +23,4 @@ In this topics like coding standards, secure coding practices, code review proce
 
 ## Security and Best practices
 
-In this, lab introduces OpenID Connect (OIDC), a protocol that allows GitHub Actions workflows to securely access Azure resources without storing Azure credentials as long-lived GitHub secrets. The document guides the user through the process of configuring Azure to trust GitHub's OIDC as a federated identity.
+In this, the lab introduces OpenID Connect (OIDC), a protocol that allows GitHub Actions workflows to securely access Azure resources without storing Azure credentials as long-lived GitHub secrets. The document guides the user through the process of configuring Azure to trust GitHub's OIDC as a federated identity.
