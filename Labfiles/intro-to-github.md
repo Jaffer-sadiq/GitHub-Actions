@@ -4,7 +4,7 @@
 
 **GitHub** is a cloud-based platform that uses Git, a distributed version control system, at its core. The GitHub platform simplifies the process of collaborating on projects and provides a website, command-line tools, and overall flow that allows developers and users to work together.
 
-As we learned earlier GitHub provides an AI powered developer platform to build, scale, and deliver secure software. Let’s break down each one of the core pillars of the GitHub Enterprise platform, AI, Collaboration, Productivity, Security and Scale.
+As we learned earlier GitHub provides an AI-powered developer platform to build, scale, and deliver secure software. Let’s break down each one of the core pillars of the GitHub Enterprise platform, AI, Collaboration, Productivity, Security and Scale.
 
 ### Benefits of Using GitHub
 
@@ -37,7 +37,7 @@ As we learned earlier GitHub provides an AI powered developer platform to build,
      - Within a git repository, a file can exist in several valid states as it goes through the version control process:
      - The primary states for a file in a Git repository are:
      - **Untracked**: An initial state of a file when it isn't yet part of the Git repository. Git is unaware of its existence.
-     - **Tracked**: A tracked file is one that Git is actively monitoring. It can be in one of the following substates:
+     - **Tracked**: A tracked file is one that Git is actively monitoring. It can be in one of the following substrates:
      - **Unmodified**: The file is tracked, but it hasn't been modified since the last commit.
      - **Modified**: The file has been changed since the last commit, but these changes aren't yet staged for the next commit.
      - **Staged**: The file has been modified, and the changes have been added to the staging area (also known as the index). These changes are ready to be committed.
@@ -55,7 +55,7 @@ These states and substates are important to collaborating with your team to know
    
      ![](../media/2-branching.png)
 
-     - The GitHub flow can be defined as a lightweight workflow that allows for safe experimentation. You can test new ideas and collaboration with your team by using branching, pull requests, and merging.Now that we know the basics of GitHub we can walk through the GitHub flow and its components.
+     - The GitHub flow can be defined as a lightweight workflow that allows for safe experimentation. You can test new ideas and collaborate with your team by using branching, pull requests, and merging. Now that we know the basics of GitHub we can walk through the GitHub flow and its components.
 
      i. The first step of the GitHub flow is creating a branch so that the changes, features, and fixes you create don't affect the main branch. <br/>
      ii. The second step is to make your changes. We recommend deploying changes to your feature branch before merging into the main branch. Doing so ensures the changes are valid in a production environment. <br/>
@@ -70,15 +70,15 @@ And that’s it, you’ve been through a GitHub flow cycle!
 
 6. **GitHub Issues:** Issues are a way to track enhancements, tasks, and bugs for your projects. They help you manage and prioritize work, discuss ideas, and keep track of tasks.
 
-### How does GitHub Actions automate development tasks?
+### How do GitHub Actions automate development tasks?
 
-#### GitHub decreases time from idea to deployment
+#### GitHub decreases the time from idea to deployment
 
 GitHub is designed to help teams of developers and DevOps engineers build and deploy applications quickly. There are many features in GitHub that enable this, but they generally fall into one of two categories:
 
 - **Communication:** Consider all of the ways that GitHub makes it easy for a team of developers to communicate about the software development project: code reviews in pull requests, GitHub issues, project boards, wikis, notifications, and so on.
   
-- **Automation:** GitHub Actions lets your team automate workflows at every step in the software-development process, from integration to delivery to deployment. It even lets you automate adding labels to pull requests and checking for stale issues and pull requests.
+- **Automation:** GitHub Actions lets your team automate workflows at every step in the software development process, from integration to delivery to deployment. It even lets you automate adding labels to pull requests and checking for stale issues and pull requests.
 
 #### Use workflow automation to decrease development time
 
@@ -89,14 +89,14 @@ Consider all of the tasks that must happen after the code is written, but before
 - Ensure the code passes all unit tests
 - Perform code quality and compliance checks to make sure the source code meets the organization's standards
 - Check the code and its dependencies for known security issues
-- Build the code integrating new source from (potentially) multiple contributors
+- Build the code integrating new sources from (potentially) multiple contributors
 - Ensure the software passes integration tests
 - Version the new build
 - Deliver the new binaries to the appropriate filesystem location
 - Deploy the new binaries to one or more servers
 - If any of these tasks don't pass, report the issue to the proper individual or team for resolution
 
-### What is GitHub Actions?
+### What are GitHub Actions?
 
 GitHub Actions are packaged scripts designed to automate tasks within a software development workflow on GitHub. These actions can be configured to trigger complex workflows that meet your organization's specific needs. They can be set off whenever developers check new source code into a particular branch, at scheduled intervals, or manually. This results in a reliable and sustainable automated workflow, significantly reducing development time.
 
@@ -107,9 +107,9 @@ These scripts follow a YAML data format. Each repository features an Actions tab
 
 ### Workflow syntax for GitHub Actions
 
-- **name**: The name of the workflow. GitHub displays the names of your workflows under your repository's "Actions" tab. If you omit name, GitHub displays the workflow file path relative to the root of the repository.
+- **name**: The name of the workflow. GitHub displays the names of your workflows under your repository's "Actions" tab. If you omit the name, GitHub displays the workflow file path relative to the root of the repository.
 
-- **run-name**: The name for workflow runs generated from the workflow. GitHub displays the workflow run name in the list of workflow runs on your repository's "Actions" tab. If run-name is omitted or is only whitespace, then the run name is set to event-specific information for the workflow run. For example, for a workflow triggered by a **push** or **pull_request** event, it is set as the commit message or the title of the pull request.
+- **run-name**: The name for workflow runs generated from the workflow. GitHub displays the workflow run name in the list of workflow runs on your repository's "Actions" tab. If run name is omitted or is only whitespace, then the run name is set to event-specific information for the workflow run. For example, for a workflow triggered by a **push** or **pull_request** event, it is set as the commit message or the title of the pull request.
 
   - This value can include expressions and can reference the github and inputs contexts.
 
@@ -129,7 +129,7 @@ These scripts follow a YAML data format. Each repository features an Actions tab
       on: push
       ```
 
-    - **Using multiple events**: You can specify a single event or multiple events. For example, a workflow with the following on value will run when a push is made to any branch in the repository or when someone forks the repository:
+    - **Using multiple events**: You can specify a single event or multiple events. For example, a workflow with the following value will run when a push is made to any branch in the repository or when someone forks the repository:
 
       ```
       on: [push, fork]
@@ -190,7 +190,7 @@ Workflow events are occurrences within the workflow that may cause a change in t
    - Events that occur when the status of an item changes (e.g., from "pending" to "approved").
 
 3. **Conditional Events**:
-   - Actions taken when certain conditions within the workflow are met (e.g., approval is granted if a request is below a certain amount).
+   - Actions are taken when certain conditions within the workflow are met (e.g., approval is granted if a request is below a certain amount).
 
 4. **Notification Events**:
    - Events that send notifications or alerts to users or systems (e.g., email notifications, SMS alerts).
