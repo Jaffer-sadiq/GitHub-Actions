@@ -26,7 +26,7 @@ In this task, you will create an account in [GitHub](https://github.com) and use
 
    ![The `New Repository` creation form in GitHub.](../media/2dgn91.png "New Repository Creation Form")
    
-   > **Note**: If you observe any repository existing with the same name, please make sure you delete the Repo and create a new one. Please follow the step 6 to step 10. Else, skip to Task 2.
+   > **Note**: If you observe any repository existing with the same name, please make sure you delete the Repo and create a new one. Please follow step 6 to step 12. Else, skip to Task 2.
 
 1. In the upper-right corner, navigate to the user menu and select **Your repositories** ***(1)***.
    
@@ -64,11 +64,11 @@ GitHub Actions is a powerful automation tool provided by GitHub, allowing you to
 
     ![](../media/env16.png)
 
-1. In `Get started with GitHub Actions` page, click on **Configure** **(2)** button on the Simple Workflow.
+1. In the `Get started with GitHub Actions` page, click on the **Configure** **(2)** button on the Simple Workflow.
 
     ![](../media/env15.png)
 
-1. You'll be able to see a very simple workflow which prints few text sentences as output.    
+1. You'll be able to see a very simple workflow which prints a few text sentences as output.    
 
     ![](../media/env17.png)
 
@@ -108,7 +108,7 @@ When the Workflow Runs:
 
       "test, and deploy your project."  
 
-   For more informaton, read [GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions) documentation.
+   For more information, read [GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions) documentation.
 
 1. In the workspace rename the file it to **hello-action.yml** **(1)** and click on **commit changes** **(2)**.
 
@@ -200,4 +200,4 @@ In GitHub Actions workflows, you define jobs and steps to orchestrate the tasks 
 
 ## Summary
 
-In this lab, you have successfully set up our workflow. You have created and executed a workflow, verified its successful execution, and familiarized ourselves with the jobs within it. This foundational knowledge will be instrumental as we progress through the subsequent labs.
+In this lab, you have successfully set up our workflow. You have created and executed a workflow, verified its successful execution, and familiarized yourself with the jobs within it. This foundational knowledge will be instrumental as we progress through the subsequent labs.
