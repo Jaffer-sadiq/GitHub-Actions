@@ -6,7 +6,7 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
 1. Navigate to `potal.azure.com`, in the search bar search for **Container registries** **(1)** and select **Container registries** **(2)**.
 
-   ![](../media/search-continer.png)
+   ![](../media/17-06-2024(1).png)
 
 1. In the Container registries tab click on the **+ Create** button.
 
@@ -21,7 +21,7 @@ Securing sensitive data like API keys and credentials is crucial to protect your
     - **Pricing Plan**: Choose **Standard** **(4)**
     -  Click on **Review + Create** **(5)**
 
-      ![](../media/container-registry.png)
+       ![](../media/container-registry.png)
    
 1. Click on **Create**.
 
@@ -64,8 +64,8 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
 1. Under Actions Secrets/New secret page, enter the below mentioned details and Click on Add secret (3).
 
-   - Name: Enter **AZURE_CREDENTIALS** (1)
-   - Value: Paste the service principal details in JSON format (2)
+   - Name: Enter **AZURE_CREDENTIALS** **(1)**
+   - Value: Paste the service principal details in JSON format **(2)**
 
      ![](../media/add-sec-oidc.png)
 
@@ -73,7 +73,7 @@ Securing sensitive data like API keys and credentials is crucial to protect your
     
     ![](../media/ex2-task2-step18.png)
     
-1. Provider file name as **Dockerfile** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
+1. Provider file name as **Dockerfile** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **Commit changes** **(3)**.
 
     ```
     # Use an official Nginx runtime as a parent image
@@ -93,7 +93,7 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
 1. In the **Commit changes** pop-up, click on **Commit changes** button.
 
-    ![](../media/docker-commit.png)
+    ![](../media/17-06-2024(3).png)
 
 1. Now let's create a workflow to publish into Docker Hub using GitHub action. Navigate to the **Code** **(1)**, click on **Add File** **(2)** and click on **+ Create new file** **(3)**.
     
@@ -157,7 +157,7 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
 1. In the **Commit changes** pop-up, click on **Commit changes** button.
 
-    ![](../media/index-commit.png)
+    ![](../media/17-06-2024(4).png)
 
 1. Navigate to the **Code** **(1)** and click on **.github/workflows** **(2)** folder.
 
@@ -224,9 +224,9 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
     ![](../media/commit.png)
 
-1. Click on **Action** **(1)**, verify the workflow has been executed successfully once the workflow is succedded select the newly created workflow **updated docker.yml** **(2)**.
+1. Click on **Actions** **(1)**, verify the workflow has been executed successfully once the workflow is succedded select the newly created workflow **updated docker.yml** **(2)**.
 
-1. Navigate back to `potal.azure.com`, in the search bar search for **Container registries** **(1)** and verify the container registry has been created.
+1. Navigate back to `potal.azure.com`, in the search bar search for **Container registries** and verify the container registry has been created.
 
 ### Task 2: Conditional execution using if expressions.
 
@@ -242,38 +242,38 @@ Conditional execution is essential when you want certain steps to run only under
 
 1. Provider file name as **conditional.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
 
-```
-name: Complex Workflow
+    ```
+    name: Complex Workflow
 
-on: [push, pull_request]
+    on: [push, pull_request]
 
-jobs:
-  job1:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-    - name: Run a one-line script
-      run: echo Hello, world!
+    jobs:
+      job1:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Checkout
+          uses: actions/checkout@v2
+        - name: Run a one-line script
+          run: echo Hello, world!
 
-  job2:
-    needs: job1
-    runs-on: ubuntu-latest
-    if: github.event_name == 'push' && success()
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-    - name: Run a different one-line script
-      run: echo Hello again, world!
-```
+      job2:
+        needs: job1
+        runs-on: ubuntu-latest
+        if: github.event_name == 'push' && success()
+        steps:
+        - name: Checkout
+          uses: actions/checkout@v2
+        - name: Run a different one-line script
+          run: echo Hello again, world!
+    ```
 
-![](../media/ifcondition-yml.png)
+    ![](../media/ifcondition-yml.png)
 
 1. In the **Commit changes** pop-up, click on **Commit changes** button.
 
     ![](../media/save-ifcondtion.png)
 
-1. Click on **Action** **(1)**, verify the workflow has been executed successfully once the workflow is succedded select the newly created workflow **updated conditional.yml** **(2)**.
+1. Click on **Actions** **(1)**, verify the workflow has been executed successfully once the workflow is succedded select the newly created workflow **Create conditional.yml** **(2)**.
 
     ![](../media/ifcondtion-created.png)
 
