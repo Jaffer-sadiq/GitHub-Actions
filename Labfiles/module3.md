@@ -1,11 +1,11 @@
 # Lab 3: Advanced Workflows
 
-- **Reusing workflows**: Rather than copying and pasting from one workflow to another, you can make workflows reusable. You and anyone with access to the reusable workflow can then call the reusable workflow from another workflow.Reusing workflows avoids duplication. This makes workflows easier to maintain and allows you to create new workflows more quickly by building on the work of others, just as you do with actions. Workflow reuse also promotes best practice by helping you to use workflows that are well designed, have already been tested, and have been proven to be effective. Your organization can build up a library of reusable workflows that can be centrally maintained, for more infomation please go throught the given link [Reusing workflows](https://docs.github.com/en/actions/using-workflows/reusing-workflows).
+- **Reusing workflows**: Rather than copying and pasting from one workflow to another, you can make workflows reusable. You and anyone with access to the reusable workflow can then call the reusable workflow from another workflow. Reusing workflows avoids duplication. This makes workflows easier to maintain and allows you to create new workflows more quickly by building on the work of others, just as you do with actions. Workflow reuse also promotes best practices by helping you to use workflows that are well-designed, have already been tested, and have been proven to be effective. Your organization can build up a library of reusable workflows that can be centrally maintained, for more information please go through the given link [Reusing workflows](https://docs.github.com/en/actions/using-workflows/reusing-workflows).
 
 
 ## Task 1: Using Reusable Workflow
 
-1. From the GitHub, navigate to `.github/workflows` and Click on **ellipse button (2)** select **+ create new file (3)**.
+1. From GitHub, navigate to `.github/workflows` and Click on the **ellipse button (2)** select **+ create new file (3)**.
 
    ![](../media/env23.png)
 
@@ -36,11 +36,11 @@
 
    ![](../media/env25.png)
 
-1. Again, navigate to `.github/workflows`, Click on **Add file (2)** dropdown, and select **+ create new file (3)**.
+1. Again, navigate to `.github/workflows`, Click on the **Add file (2)** dropdown, and select **+ create new file (3)**.
 
    ![](../media/env26.png)
 
-1. Copy the code given below, paste it in the window, and name the file as **caller-workflows.yml**
+1. Copy the code given below, paste it into the window, and name the file as **caller-workflows.yml**
 
    ```
    name: Caller Workflow
@@ -67,13 +67,13 @@
 
    ![](../media/env29.png)
 
-1. Select the **print-message (1)** job from the side-blade and **expand (2)** the same job in the output window. You'll see that the message from reusable-print-message.yml is fetched by the caller workflow. Hence, this is how the concept of reusable wokflows in GitHub action works.
+1. Select the **print-message (1)** job from the side-blade and **expand (2)** the same job in the output window. You'll see that the message from reusable-print-message.yml is fetched by the caller workflow. Hence, this is how the concept of reusable workflows in GitHub action works.
 
    ![](../media/env30.png)
 
 ### Task 2: Explanation and usage of Matrix builds
 
-Matrix builds and parallelism are advanced features in GitHub Actions that allow you to run multiple jobs concurrently.
+Matrix builds and parallelism is advanced features in GitHub Actions that allow you to run multiple jobs concurrently.
 
 Matrix builds let you test your code across multiple environments by creating a job matrix. This is a set of keys and values that create a combination of conditions and run a job for each one.
 
@@ -81,8 +81,7 @@ Parallelism allows you to run jobs or steps concurrently, reducing the total exe
 
 1. Naviagte to the [sample-node-project](https://github.com/acemilyalcin/sample-node-project) repo and click on **Fork** **(2)**.
 
-
-2. Navigate to the **Action** **(1)** directory in your repository, in `Get started with GitHub Actions` click on set up a workflow yourself (2).
+2. Navigate to the **Action** **(1)** directory in your repository, in `Get started with GitHub Actions` click on Set up a workflow yourself (2).
 
     ![](../media/newaction.png)
 
@@ -161,11 +160,11 @@ A matrix build is a CI/CD pipeline strategy that allows you to run tests across 
    pytest
    ```
    
-4. In the pop up windows of Commit Changes click on the **Commit changes** button.
+4. In the pop-up windows of Commit Changes click on the **Commit changes** button.
 
 5. Click on **Add File** **(2)** and click on **+ Create new file** **(3)**.   
 
-6. Provider file name as with folder creation **tests/test_sample.py** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
+6. Provider file name as with folder creation **tests/test_sample.py** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **Commit changes** **(3)**.
 
     ```
     def test_sample():
@@ -174,7 +173,7 @@ A matrix build is a CI/CD pipeline strategy that allows you to run tests across 
         print("Completed test_sample successfully")
     ```
 
-7. In the pop up windows of Commit Changes click on the **Commit changes** button.
+7. In the pop-up windows of Commit Changes click on the **Commit changes** button.
 
 8. Navigate to the **Code** **(1)** and click on **.github/workflows** **(2)** folder.
 
@@ -227,13 +226,13 @@ A matrix build is a CI/CD pipeline strategy that allows you to run tests across 
               pytest
     ```
 
-    > **Note**: This CI configuration uses GitHub Actions to run tests on multiple OS (Ubuntu, Windows, macOS) with Python 3.12. It triggers on pushes and pull requests to the main branch, checks out the code, sets up Python, installs dependencies, and runs tests with pytest, ensuring cross-platform compatibility.
+    > **Note**: This CI configuration uses GitHub Actions to run tests on multiple OS (Ubuntu, Windows, macOS) with Python 3.12. It triggers push and pull requests to the main branch, checks out the code, sets up Python, installs dependencies, and runs tests with pytest, ensuring cross-platform compatibility.
 
 12. In the pop up windows of Commit Changes click on the **Commit changes** button.
 
 13. Click on **Action** **(1)**, verifiy the **Create matrix.yml** workflow has been executed successfully.
 
-14. Click on **Create matrix.yml** action, This configuration allows you to ensure your project is tested on multiple operating systems using Python 3.12, ensuring broader compatibility and catching environment-specific issues early.
+14. Click on the **Create matrix.yml** action, This configuration allows you to ensure your project is tested on multiple operating systems using Python 3.12, ensuring broader compatibility and catching environment-specific issues early.
 
     ![](../media/matrix-output.png)
 
@@ -304,13 +303,13 @@ Optimizing workflow performance by caching dependencies can significantly improv
 
 ### Task 4: Code scanning and vulnerability detection
 
-1. Naviage back to `github-action` repo.
+1. Navigate back to `github-action` repo.
 
 1. Click on **Security** **(1)**, and click on **Enable vulnerability reporting** **(2)** next to the Private vulnerability reporting
 
     ![](../media/security.png)
 
-1. Once naviagted to **Code security and analysis**, click on **Enable** button for Private vulnerability reporting, Dependabot alerts, Dependabot security updates, and Dependabot on Actions runners.
+1. Once navigated to **Code security and analysis**, click on the **Enable** button for Private vulnerability reporting, Dependabot alerts, Dependabot security updates, and Dependabot on Actions runners.
 
     ![](../media/enable.png)
 
@@ -332,14 +331,13 @@ Optimizing workflow performance by caching dependencies can significantly improv
    
    ![](../media/ex5-codescanning-viewalerts.png)
   
-1. You will be navigated to **Code scanning** section. You'll be able to visualize that the **No code scanning alerts here!**.
+1. You will be navigated to the **Code scanning** section. You'll be able to visualize the **No code scanning alerts here!**.
    
 1. Go to **Settings** -> **Code security and analysis** -> scroll down to **Push protection** and click **Enable**.
 
    ![Picture1](../media/code_security_1.png)
 
    ![Picture1](../media/push_1.png)
-
 
 1. Once again, go to your profile, which is at the top of your right hand, and then select **Settings**.
 
@@ -411,11 +409,11 @@ Optimizing workflow performance by caching dependencies can significantly improv
 
    ![](../media/ExampleScript-commit.png)
 
-1. A pop-up will come with warining, **Secret scanning found a GitHub Personal Access Token secret on line 2.**, select **It's used in tests** **(1)** option and click on **Allow Secreat** **(2)**.
+1. A pop-up will come with a warning, **Secret scanning found a GitHub Personal Access Token secret on line 2.**, select **It's used in tests** **(1)** option and click on **Allow Secreat** **(2)**.
 
    ![](../media/ExampleScript-commit-risk.png)
 
-1. **Secret allowed. You can now commit these changes**. Editor window click on **commit changes**.
+1. **Secret allowed. You can now commit these changes**. Editor window click on **Commit changes**.
 
 1. In the **Commit** changes pop-up, click on **Commit changes** button.
 
@@ -423,4 +421,4 @@ Optimizing workflow performance by caching dependencies can significantly improv
 
 ### Summary
 
-In this, you learn how to securely store sensitive data such as API keys and passwords within a GitHub repository using secrets, ensuring that this data remains protected and separate from the codebase. The code details the process for creating and managing these secrets and how to reference them in workflows to maintain security. Matrix builds enhance workflows by allowing the same workflow to run across multiple configurations, such as different language versions or operating systems. The code demonstrates defining a configuration matrix to run jobs in parallel, which boosts testing efficiency and ensures compatibility across various environments. This comprehensive approach to handling secrets, matrix builds, and artifacts ensures robust security, efficient testing, and effective data management in GitHub workflows.
+In this, you learn how to securely store sensitive data such as API keys and passwords within a GitHub repository using secrets, ensuring that this data remains protected and separate from the codebase. The code details the process for creating and managing these secrets and how to reference them in workflows to maintain security. Matrix builds enhance workflows by allowing the same workflow to run across multiple configurations, such as different language versions or operating systems. The code demonstrates defining a configuration matrix to run jobs in parallel, which boosts testing efficiency and ensures compatibility across various environments. This comprehensive approach to handling secrets, matrix builds, and artifacts ensure robust security, efficient testing, and effective data management in GitHub workflows.
