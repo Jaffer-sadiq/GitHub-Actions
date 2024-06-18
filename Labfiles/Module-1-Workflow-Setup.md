@@ -27,35 +27,35 @@ In this task, you will create an account in [GitHub](https://github.com) and use
 
    ![The `New Repository` creation form in GitHub.](../media/2dgn91.png "New Repository Creation Form")
    
-   #### > **Note**: If you observe any repository existing with the same name, please make sure you delete the Repo and create a new one. Please follow step 6 to step 12. Else, skip to Task 2.
+   #### > **Note:** If you come across a repository with the same name already existing, please delete it before proceeding to create a new one. Follow the steps provided below for this procedure. If there isn't any repository with the same name, you can move on to Task 2 directly.
 
-1. In the upper-right corner, navigate to the user menu and select **Your repositories** ***(1)***.
+   - In the upper-right corner, navigate to the user menu and select **Your repositories** ***(1)***.
    
-   ![The `New Repository` creation form in GitHub.](../media/my_repos.png "New Repository Creation Form")
+      ![The `New Repository` creation form in GitHub.](../media/my_repos.png "New Repository Creation Form")
 
-1. Using the search bar, search for ```github-action``` **(1)** and select to open it.
+   - Using the search bar, search for ```github-action``` **(1)** and select to open it.
 
-   ![The `New Repository` creation form in GitHub.](../media/2dg118.png "New Repository Creation Form")
+      ![The `New Repository` creation form in GitHub.](../media/2dg118.png "New Repository Creation Form")
 
-1. From the GitHub repository, click on the **Settings** tab.
+   - From the GitHub repository, click on the **Settings** tab.
 
-   ![The `New Repository` creation form in GitHub.](../media/2dg119.png "New Repository Creation Form")
+      ![The `New Repository` creation form in GitHub.](../media/2dg119.png "New Repository Creation Form")
 
-1. In the settings page, scroll to the bottom of the page and select **Delete this repository**.
+   - In the settings page, scroll to the bottom of the page and select **Delete this repository**.
 
-   ![The `New Repository` creation form in GitHub.](../media/2dg120.png "New Repository Creation Form")
+      ![The `New Repository` creation form in GitHub.](../media/2dg120.png "New Repository Creation Form")
 
-1. In the pop of delete `{github-username}/github-action` click on **I want to delete this repository**.
+   - In the pop of delete `{github-username}/github-action` click on **I want to delete this repository**.
 
-   ![The `New Repository` creation form in GitHub.](../media/2dg121.png "New Repository Creation Form")
+      ![The `New Repository` creation form in GitHub.](../media/2dg121.png "New Repository Creation Form")
 
-1. In the pop of delete `{github-username}/github-action` click on **I have read and understand these effects**.
+   - In the pop of delete `{github-username}/github-action` click on **I have read and understand these effects**.
 
-   ![The `New Repository` creation form in GitHub.](../media/2dg122.png "New Repository Creation Form")
+      ![The `New Repository` creation form in GitHub.](../media/2dg122.png "New Repository Creation Form")
 
-1. In the pop of delete `{github-username}/github-action` to conform, Copy the **repository name** **(1)**, paste it in the **box** **(2)**, and click on I understand the consequences, **Delete this repository** **(3)**.
+   - In the pop of delete `{github-username}/github-action` to conform, Copy the **repository name** **(1)**, paste it in the **box** **(2)**, and click on I understand the consequences, **Delete this repository** **(3)**.
 
-   ![The `New Repository` creation form in GitHub.](../media/2dg123.png "New Repository Creation Form")
+      ![The `New Repository` creation form in GitHub.](../media/2dg123.png "New Repository Creation Form")
 
 ## Task 2: Introduction to GitHub Actions
 
