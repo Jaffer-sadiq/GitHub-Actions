@@ -6,14 +6,15 @@ In this task, you'll access the GitHub enterprise account and create a new repos
 
 In this task, you will create an account in [GitHub](https://github.com) and use `git` to add lab files to a new repository.
 
-1. In a new browser tab open ```https://www.github.com/login```. From Environment details page ***(1)***, navigate to **License** ***(2)*** tab and **copy** ***(3)*** the credentials. Use the same username and password to login into GitHub.
+1. In the labvm-<inject key="DeploymentID" enableCopy="false"/>, open a new browser tab and navigate to the GitHub login page at```https://www.github.com/login```. From Environment details page ***(1)***, navigate to **License** ***(2)*** tab and **copy** ***(3)*** the credentials. Use the same username and password to login into GitHub.
 
    ![](../media/dev2.png) 
-   
-1. For **Device Verification Code**, use the same credentials as in the previous step, open `http://outlook.office.com/` in a private window, and enter the same username and password used for the GitHub Account login. Copy the verification code and Paste code it in Device verification.
+
+1. To retrieve the **Device Verification Code**, use your existing credentials as before. Begin by opening a private browsing window and navigating to http://outlook.office.com/. Enter the same username and password used to log into your GitHub account. Once logged in, locate the verification code displayed on the screen. Copy this code and then paste it into the Device Verification section where prompted. This ensures you can securely complete the device verification process using the credentials associated with your GitHub account.
 
    ![](../media/2dgn154.png) 
-    
+
+
 1. In the upper-right corner, navigate to the user menu and select **Your repositories** ***(1)***.
 
    ![The `New Repository` creation form in GitHub.](../media/my_repos.png "New Repository Creation Form")
@@ -26,7 +27,7 @@ In this task, you will create an account in [GitHub](https://github.com) and use
 
    ![The `New Repository` creation form in GitHub.](../media/2dgn91.png "New Repository Creation Form")
    
-   > **Note**: If you observe any repository existing with the same name, please make sure you delete the Repo and create a new one. Please follow step 6 to step 12. Else, skip to Task 2.
+   #### > **Note**: If you observe any repository existing with the same name, please make sure you delete the Repo and create a new one. Please follow step 6 to step 12. Else, skip to Task 2.
 
 1. In the upper-right corner, navigate to the user menu and select **Your repositories** ***(1)***.
    
