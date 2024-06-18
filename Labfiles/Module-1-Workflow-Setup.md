@@ -143,7 +143,7 @@ In GitHub Actions workflows, you define jobs and steps to orchestrate the tasks 
 
     ![](../media/4th-oidc.png)
 
-1. Provider file name as **jobs.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
+1. Provider file name as **jobs.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **Commit changes** **(3)**.
 
    ```
    name: My Workflow
@@ -179,7 +179,7 @@ In GitHub Actions workflows, you define jobs and steps to orchestrate the tasks 
 
    ![](../media/jobs-action.png)
 
-1. In the pop up windows of **Commit changes** click on the **Commit changes**.
+1. In the pop up windows of **Commit changes** click on the **Commit changes (1)**.
 
    ![](../media/jobs-action-commit.png)
 

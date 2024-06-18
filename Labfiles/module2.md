@@ -27,7 +27,7 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
    ![](../media/create.png)
 
-1. Once the deployment is complete, click on **Go to Resource**.
+1. Once the deployment is complete, click on **Go to resource**.
 
    ![](../media/go-to-resource.png)
 
@@ -43,9 +43,9 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
    ![](../media/add-sec1.png)
 
-1. Under **Actions Secrets/New secret page**, enter the below mentioned details and Click on **Add secret** **(3)**.
+1. Click on **New repository secret** under the Repository secrets.
 
-   ![](../media/ex2-task2-step13.png)
+    ![](../media/17-06-2024(6).png)
 
 1. Navigate to **Environment Details** **(1)**, click on **Service Principal Details** **(2)** and copy the **Subscription ID**, **Tenant Id (Directory ID)**, **Application Id(Client Id)** and **Secret Key (Client Secret)**.
 
@@ -62,18 +62,18 @@ Securing sensitive data like API keys and credentials is crucial to protect your
       }
       ```
 
-1. Under Actions Secrets/New secret page, enter the below mentioned details and Click on Add secret (3).
+1. Under Actions Secrets/New secret page, enter the below mentioned details and Click on **Add secret (3)**.
 
    - Name: Enter **AZURE_CREDENTIALS** **(1)**
    - Value: Paste the service principal details in JSON format **(2)**
 
      ![](../media/add-sec-oidc.png)
 
-1. Navigate to the **Code** **(1)**, click on **Add File** **(2)** and click on **+ Create new file** **(3)**.
+1. Navigate to the **Code** **(1)**, click on **Add file** **(2)** and click on **+ Create new file** **(3)**.
     
     ![](../media/ex2-task2-step18.png)
     
-1. Provider file name as **Dockerfile** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **Commit changes** **(3)**.
+1. Provide the file name as **Dockerfile (1)**. In the editor, **copy and paste (2)** the script below, then click **Commit changes (3)**.
 
     ```
     # Use an official Nginx runtime as a parent image
@@ -95,11 +95,11 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
     ![](../media/17-06-2024(3).png)
 
-1. Now let's create a workflow to publish into Docker Hub using GitHub action. Navigate to the **Code** **(1)**, click on **Add File** **(2)** and click on **+ Create new file** **(3)**.
+1. Now let's create a workflow to publish into Docker Hub using GitHub action. Navigate to the **Code** **(1)**, click on **Add file** **(2)** and click on **+ Create new file** **(3)**.
     
     ![](../media/ex2-task2-step18.png)
 
-1. Provider file name as **index.html** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **Commit changes** **(3)**.
+1. Provide the file name as **index.html (1)**. In the editor, **copy and paste (2)** the script below, then click **Commit changes (3)**.
 
     ```
     <!DOCTYPE html>
@@ -153,7 +153,7 @@ Securing sensitive data like API keys and credentials is crucial to protect your
     </html>
     ```
 
-    ![](../media/newupdate.png)
+    ![](../media/17-06-2024(7).png)
 
 1. In the **Commit changes** pop-up, click on **Commit changes** button.
 
@@ -163,7 +163,7 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
     ![](../media/editfolder.png)
 
-1. In the **.github/workflows** folder, click on **Add files** **(1)**, and click on **+ Create new file** **(2)**.
+1. In the **.github/workflows** folder, click on **Add file** **(1)**, and click on **+ Create new file** **(2)**.
 
     ![](../media/4th-oidc.png)
 
@@ -216,17 +216,15 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
     ![](../media/workflow.png)
 
-1. Provide the file name as **docker.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click on **Commit changes** **(3)**.
+1. Provide the file name as **docker.yml (1)**. In the editor, **copy and paste (2)** the script below, then click **Commit changes (3)**
 
    ![](../media/docker.png)
    
-1. In the pop up window of **Commit Changes** click on the **Commit changes**.
+1. In the pop up window of **Commit changes** click on the **Commit changes**.
 
     ![](../media/commit.png)
 
-1. Click on **Actions** **(1)**, verify the workflow has been executed successfully once the workflow is succedded select the newly created workflow **updated docker.yml** **(2)**.
-
-1. Navigate back to `potal.azure.com`, in the search bar search for **Container registries** and verify the container registry has been created.
+1. Click on **Actions** **(1)**, verify the workflow has been executed successfully once the workflow is succedded.
 
 ### Task 2: Conditional execution using if expressions.
 
@@ -240,7 +238,9 @@ Conditional execution is essential when you want certain steps to run only under
 
 1. In the **.github/workflows** folder, click on **Add files** **(1)**, and click on **+ Create new file** **(2)**.
 
-1. Provider file name as **conditional.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
+    ![](../media/4th-oidc.png)
+
+1. Provide the file name as **conditional.yml (1)**. In the editor, **copy and paste (2)** the script below, then click **Commit changes (3)**
 
     ```
     name: Complex Workflow
@@ -276,7 +276,5 @@ Conditional execution is essential when you want certain steps to run only under
 1. Click on **Actions** **(1)**, verify the workflow has been executed successfully once the workflow is succedded select the newly created workflow **Create conditional.yml** **(2)**.
 
     ![](../media/ifcondtion-created.png)
-
-1. Go through workflow.
 
 1. Click on **Next** button for next Lab.
