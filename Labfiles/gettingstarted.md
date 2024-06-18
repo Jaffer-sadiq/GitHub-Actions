@@ -38,7 +38,7 @@
    
 1. Now that you will see the Azure Portal Dashboard, click on **Resource groups** from the Navigate panel to see the resource groups.
 
-   ![](../media/img10.png)
+   ![](../media/17-06-2024(5).png)
 
 1. In the **Resource groups**, click on **github-action-<inject key="DeploymentID" enableCopy="false"/>** resource group.
 
