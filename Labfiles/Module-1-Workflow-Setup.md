@@ -123,7 +123,7 @@ When the Workflow Runs:
 
    ![](../media/hello-action-trigger.png)
 
-1. Click on the action and select **Build**. You can see the steps and output.
+1. Click on the action and select **build**. You can see the steps and output.
 
     ![](../media/env22.png)
 
@@ -179,7 +179,7 @@ In GitHub Actions workflows, you define jobs and steps to orchestrate the tasks 
 
    ![](../media/jobs-action.png)
 
-1. In the pop up windows of **Commit Changes** click on the **Commit changes**.
+1. In the pop up windows of **Commit changes** click on the **Commit changes**.
 
    ![](../media/jobs-action-commit.png)
 
@@ -189,7 +189,7 @@ In GitHub Actions workflows, you define jobs and steps to orchestrate the tasks 
 
     - For more details on GitHub Actions syntax and available events, refer to the official documentation: [GitHub Actions - Workflow syntax for GitHub Actions](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions).
 
-1. Click on **Actions** **(1)**, verify the workflow has been executed successfully once the workflow is succedded select the newly created workflow **updated cl.yml** **(2)**.
+1. Click on **Actions** **(1)**, verify the workflow has been executed successfully once the workflow is succedded select the newly created workflow **Create jobs.yml** **(2)**.
 
    ![](../media/jobs-action-action.png)
 
