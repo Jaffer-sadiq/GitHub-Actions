@@ -14,7 +14,6 @@ In this task, you will create an account in [GitHub](https://github.com) and use
 
    ![](../media/2dgn154.png) 
 
-
 1. In the upper-right corner, navigate to the user menu and select **Your repositories** ***(1)***.
 
    ![The `New Repository` creation form in GitHub.](../media/my_repos.png "New Repository Creation Form")
