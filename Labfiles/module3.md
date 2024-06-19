@@ -5,9 +5,9 @@
 
 ## Task 1: Using Reusable Workflow
 
-1. From GitHub, navigate to `.github/workflows` and Click on the **ellipse button (2)** select **+ create new file (3)**.
+1. From GitHub, navigate to the **.github/workflows** folder, click on **Add files** **(1)**, and click on **+ Create new file** **(2)**.
 
-   ![](../media/env23.png)
+    ![](../media/4th-oidc.png)
 
 1. Copy the code given below, paste it in the window, and name the file as **reusable-print-message.yml**
 
