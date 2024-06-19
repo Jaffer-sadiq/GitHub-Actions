@@ -6,7 +6,7 @@ In this task, you'll access the GitHub enterprise account and create a new repos
 
 In this task, you will create an account in [GitHub](https://github.com) and use `git` to add lab files to a new repository.
 
-1. In the labvm-<inject key="DeploymentID" enableCopy="false"/>, open a new browser tab and navigate to the GitHub login page at```https://www.github.com/login```. From Environment details page ***(1)***, navigate to **License** ***(2)*** tab and **copy** ***(3)*** the credentials. Use the same username and password to login into GitHub.
+1. In the labvm-<inject key="DeploymentID" enableCopy="false"/>, open a new browser tab and navigate to the GitHub login page at ```https://www.github.com/login```. From Environment details page ***(1)***, navigate to **License** ***(2)*** tab and **copy** ***(3)*** the credentials. Use the same username and password to login into GitHub.
 
    ![](../media/dev2.png) 
 
@@ -26,7 +26,9 @@ In this task, you will create an account in [GitHub](https://github.com) and use
 
    ![The `New Repository` creation form in GitHub.](../media/2dgn91.png "New Repository Creation Form")
    
-   #### > **Note:** If you come across a repository with the same name already existing, please delete it before proceeding to create a new one. Follow the steps provided below for this procedure. If there isn't any repository with the same name, you can move on to Task 2 directly.
+   >**Note:** If you encounter an error like **The repository github-action already exists on this account**, please delete it before creating a new one. Follow the steps below to do this. If there is no repository with the same name, proceed directly to Task 2.
+
+      ![The `New Repository` creation form in GitHub.](../media/17-06-2024(8).png "New Repository Creation Form")
 
    - In the upper-right corner, navigate to the user menu and select **Your repositories** ***(1)***.
    
@@ -85,7 +87,7 @@ When the Workflow Runs:
 
       *Manual Trigger*: The workflow can also be manually triggered from the Actions tab in the GitHub repository (using workflow_dispatch).
 
-    - **Jobs**:A workflow is made up of one or more jobs. In this case, there is a single job called "build".
+    - **Jobs**:A workflow is made up of one or more jobs. In this case, there is a single job called "build". In the next task, you will create an workflow with mutliple jobs and learn about it in detail.
 
     - **Runner**: The job runs on a virtual machine (runner) provided by GitHub. Here, it uses the latest version of Ubuntu (ubuntu-latest).
 

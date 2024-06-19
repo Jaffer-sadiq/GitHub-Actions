@@ -113,8 +113,6 @@ Consider all of the tasks that must happen after the code is written, but before
 
 GitHub Actions are packaged scripts designed to automate tasks within a software development workflow on GitHub. These actions can be configured to trigger complex workflows that meet your organization's specific needs. They can be set off whenever developers check new source code into a particular branch, at scheduled intervals, or manually. This results in a reliable and sustainable automated workflow, significantly reducing development time.
 
-Each script uses the **YAML format**. In every repository, there's an **Actions tab** that makes it easy to set up your first script. If you find a workflow that looks useful, just click the **Configure button** to add the script and start editing the YAML code.
-
 For more details, you can visit this link: [Introduction to GitHub](https://learn.microsoft.com/en-us/training/modules/introduction-to-github/)
 
 
