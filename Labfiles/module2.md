@@ -47,11 +47,7 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
     ![](../media/17-06-2024(6).png)
 
-1. Navigate to **Environment Details** **(1)**, click on **Service Principal Details** **(2)** and copy the **Subscription ID**, **Tenant Id (Directory ID)**, **Application Id(Client Id)** and **Secret Key (Client Secret)**.
-
-   ![](../media/ex2-t4-8.png)
-   
-   - Replace the values that you copied in the below JSON. You will be using them in this step.
+1. Copy and paste the code below.
    
       ```json
       {
@@ -61,14 +57,17 @@ Securing sensitive data like API keys and credentials is crucial to protect your
         "clientId": "******"
       }
       ```
+1. Navigate to **Environment Details** **(1)**, click on **Service Principal Details** **(2)** and copy the **Subscription ID**, **Tenant Id (Directory ID)**, **Application Id(Client Id)** and **Secret Key (Client Secret)**.
 
-1. Under Actions Secrets/New secret page, enter the below mentioned details and Click on **Add secret (3)**.
+   ![](../media/ex2-t4-8.png)
+
+1. Under **Actions Secrets/New secret** page, enter the below mentioned details and Click on **Add secret (3)**.
 
    - Name: Enter **AZURE_CREDENTIALS** **(1)**
    - Value: Paste the service principal details in JSON format **(2)**
 
      ![](../media/add-sec-oidc.png)
-
+   
 1. Navigate to the **Code** **(1)**, click on **Add file** **(2)** and click on **+ Create new file** **(3)**.
     
     ![](../media/ex2-task2-step18.png)
@@ -167,51 +166,51 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
     ![](../media/4th-oidc.png)
 
-1. In the editor update the code with the below-provided code, replace **{Login_server}** from lines 30 and 40 with **Azure Container registry Login server**, and replace **{Registry name}** with **Azure Container registry Registry name**.
+1. In the editor update the code with the below-provided code, replace **{Login_server}** from lines 30 and 40 with **Azure Container registry Login server**, and replace **{Registry name}** from line 35 with **Azure Container registry Registry name**.
 
    >**Note**: Paste the value you copied in Task 1, Step 6 for the **Login_server** and **Registry name.**
 
     ```
-    name: Build and Push Docker Image to ACR
-    
+    name: Build and Push Docker Image to ACR  # Name of the workflow
+
     on:
-      push:
+      push:  # Trigger the workflow on push events
         branches:
-          - main
-    
+          - main  # Only trigger on pushes to the main branch
+
     jobs:
       build-and-push:
-        runs-on: ubuntu-latest
-    
+        runs-on: ubuntu-latest  # Specify the OS for the job
+
         steps:
         # Checkout the repository
-        - name: Checkout repository
-          uses: actions/checkout@v2
-    
+        - name: Checkout repository  # Step to check out the code from the repository
+          uses: actions/checkout@v2  # Use the checkout action
+
         # Log in to Azure
-        - name: Log in to Azure CLI
-          uses: azure/login@v1
+        - name: Log in to Azure CLI  # Step to log in to Azure CLI
+          uses: azure/login@v1  # Use the Azure login action
           with:
-            creds: ${{ secrets.AZURE_CREDENTIALS }}
-    
+            creds: ${{ secrets.AZURE_CREDENTIALS }}  # Use Azure credentials stored in GitHub secrets
+
         # List files in the current directory
-        - name: List files
-          run: ls -la
-    
+        - name: List files  # Step to list files in the current directory
+          run: ls -la  # Command to list files
+
         # Build Docker image
-        - name: Build Docker image
+        - name: Build Docker image  # Step to build the Docker image
           run: |
-            docker buildx build . -t {Login_server}/my-app:latest
-    
+            docker buildx build . -t {Login_server}/my-app:latest  # Build the Docker image and tag it
+
         # Log in to Azure Container Registry
-        - name: Log in to Azure Container Registry
+        - name: Log in to Azure Container Registry  # Step to log in to ACR
           run: |
-            az acr login --name {Registry name}
-    
+            az acr login --name {Registry name}  # Log in to Azure Container Registry
+
         # Push Docker image to Azure Container Registry
-        - name: Push Docker image
+        - name: Push Docker image  # Step to push the Docker image to ACR
           run: |
-            docker push {Login_server}/my-app:latest
+            docker push {Login_server}/my-app:latest  # Push the Docker image to ACR
     ```
 
     ![](../media/workflow.png)
@@ -224,7 +223,7 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
     ![](../media/commit.png)
 
-1. Click on **Actions** **(1)**, verify the workflow has been executed successfully once the workflow is succedded.
+1. Click on **Actions**, verify the workflow has been executed successfully once the workflow is succedded.
 
 ### Task 2: Conditional execution using if expressions.
 
@@ -243,28 +242,23 @@ Conditional execution is essential when you want certain steps to run only under
 1. Provide the file name as **conditional.yml (1)**. In the editor, **copy and paste (2)** the script below, then click **Commit changes (3)**
 
     ```
-    name: Complex Workflow
+    name: Reusable Print Message  # Name of the reusable workflow
 
-    on: [push, pull_request]
+    on:
+      workflow_call:  # Define the workflow as reusable
+        inputs:  # Inputs that can be passed to the workflow
+          message:  # Define an input parameter named 'message'
+            required: true  # The 'message' input is required
+            type: string  # The 'message' input should be of type string
 
     jobs:
-      job1:
-        runs-on: ubuntu-latest
-        steps:
-        - name: Checkout
-          uses: actions/checkout@v2
-        - name: Run a one-line script
-          run: echo Hello, world!
+      print-message:
+        runs-on: ubuntu-latest  # Specify the OS for the job
 
-      job2:
-        needs: job1
-        runs-on: ubuntu-latest
-        if: github.event_name == 'push' && success()
         steps:
-        - name: Checkout
-          uses: actions/checkout@v2
-        - name: Run a different one-line script
-          run: echo Hello again, world!
+        # Step to print the message passed to the workflow
+          - name: Print message  
+            run: echo "Hi, this message is from primary workflow"  # Command to print the message
     ```
 
     ![](../media/ifcondition-yml.png)
