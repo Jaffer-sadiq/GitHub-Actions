@@ -155,15 +155,15 @@ In GitHub Actions workflows, you define jobs and steps to orchestrate the tasks 
    push:
       # Only trigger on pushes to the main branch
       branches:
-      - main
+         - main
    # Trigger the workflow on pull request events
    pull_request:
       # Only trigger on pull requests to the main branch
       branches:
-      - main
+         - main
 
    jobs:
-   job1:
+     job1:
       # Specify the OS for the job
       runs-on: ubuntu-latest
       steps:
@@ -192,6 +192,7 @@ In GitHub Actions workflows, you define jobs and steps to orchestrate the tasks 
          - name: Run another script
          # The script to run, which prints "Hello, again!"
          run: echo "Hello, again!"
+
    ```
 
    ![](../media/jobs-action.png)
