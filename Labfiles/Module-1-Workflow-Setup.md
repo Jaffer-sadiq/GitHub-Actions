@@ -147,35 +147,51 @@ In GitHub Actions workflows, you define jobs and steps to orchestrate the tasks 
 1. Provider file name as **jobs.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **Commit changes** **(3)**.
 
    ```
-   name: My Workflow  # Name of the workflow
+   # Name of the workflow
+   name: My Workflow
 
    on:
-      push:  # Trigger the workflow on push events
-         branches:
-         - main  # Only trigger on pushes to the main branch
-      pull_request:  # Trigger the workflow on pull request events
-         branches:
-         - main  # Only trigger on pull requests to the main branch
+   # Trigger the workflow on push events
+   push:
+      # Only trigger on pushes to the main branch
+      branches:
+      - main
+   # Trigger the workflow on pull request events
+   pull_request:
+      # Only trigger on pull requests to the main branch
+      branches:
+      - main
 
    jobs:
-      job1:
-         runs-on: ubuntu-latest  # Specify the OS for the job
-         steps:
-         - name: Checkout code  # Step to check out the code from the repository
-            uses: actions/checkout@v2  # Use the checkout action
+   job1:
+      # Specify the OS for the job
+      runs-on: ubuntu-latest
+      steps:
+         # Step to check out the code from the repository
+         - name: Checkout code
+         # Use the checkout action from the marketplace
+         uses: actions/checkout@v2
 
-         - name: Run a script  # Step to run a script
-            run: echo "Hello, world!"  # The script to run
+         # Step to run a script
+         - name: Run a script
+         # The script to run, which prints "Hello, world!"
+         run: echo "Hello, world!"
 
-      job2:
-         runs-on: ubuntu-latest  # Specify the OS for the job
-         needs: job1  # This job depends on the successful completion of job1
-         steps:
-         - name: Checkout code  # Step to check out the code from the repository
-            uses: actions/checkout@v2  # Use the checkout action
+   job2:
+      # Specify the OS for the job
+      runs-on: ubuntu-latest
+      # This job depends on the successful completion of job1
+      needs: job1
+      steps:
+         # Step to check out the code from the repository
+         - name: Checkout code
+         # Use the checkout action from the marketplace
+         uses: actions/checkout@v2
 
-         - name: Run another script  # Step to run another script
-            run: echo "Hello, again!"  # The script to run
+         # Step to run another script
+         - name: Run another script
+         # The script to run, which prints "Hello, again!"
+         run: echo "Hello, again!"
    ```
 
    ![](../media/jobs-action.png)
