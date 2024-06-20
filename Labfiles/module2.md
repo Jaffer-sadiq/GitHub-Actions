@@ -171,46 +171,57 @@ Securing sensitive data like API keys and credentials is crucial to protect your
    >**Note**: Paste the value you copied in Task 1, Step 6 for the **Login_server** and **Registry name.**
 
     ```
-    name: Build and Push Docker Image to ACR  # Name of the workflow
+    # Name of the workflow
+    name: Build and Push Docker Image to ACR
 
     on:
-      push:  # Trigger the workflow on push events
+      # Trigger the workflow on push events
+      push:
+        # Only trigger on pushes to the main branch
         branches:
-          - main  # Only trigger on pushes to the main branch
+        - main
 
     jobs:
       build-and-push:
-        runs-on: ubuntu-latest  # Specify the OS for the job
+        # Specify the OS for the job
+        runs-on: ubuntu-latest
 
         steps:
-        # Checkout the repository
-        - name: Checkout repository  # Step to check out the code from the repository
-          uses: actions/checkout@v2  # Use the checkout action
+          # Step to check out the code from the repository
+          - name: Checkout repository
+            # Use the checkout action
+            uses: actions/checkout@v2
 
-        # Log in to Azure
-        - name: Log in to Azure CLI  # Step to log in to Azure CLI
-          uses: azure/login@v1  # Use the Azure login action
-          with:
-            creds: ${{ secrets.AZURE_CREDENTIALS }}  # Use Azure credentials stored in GitHub secrets
+          # Step to log in to Azure CLI
+          - name: Log in to Azure CLI
+            # Use the Azure login action
+            uses: azure/login@v1
+            with:
+              # Use Azure credentials stored in GitHub secrets
+              creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-        # List files in the current directory
-        - name: List files  # Step to list files in the current directory
-          run: ls -la  # Command to list files
+          # Step to list files in the current directory
+          - name: List files
+            # Command to list files
+            run: ls -la
 
-        # Build Docker image
-        - name: Build Docker image  # Step to build the Docker image
-          run: |
-            docker buildx build . -t {Login_server}/my-app:latest  # Build the Docker image and tag it
+          # Step to build the Docker image
+          - name: Build Docker image
+            run: |
+              # Build the Docker image and tag it
+              docker buildx build . -t {Login_server}/my-app:latest
 
-        # Log in to Azure Container Registry
-        - name: Log in to Azure Container Registry  # Step to log in to ACR
-          run: |
-            az acr login --name {Registry name}  # Log in to Azure Container Registry
+          # Step to log in to Azure Container Registry
+          - name: Log in to Azure Container Registry
+            run: |
+              # Log in to Azure Container Registry
+              az acr login --name {Registry name}
 
-        # Push Docker image to Azure Container Registry
-        - name: Push Docker image  # Step to push the Docker image to ACR
-          run: |
-            docker push {Login_server}/my-app:latest  # Push the Docker image to ACR
+          # Step to push the Docker image to ACR
+          - name: Push Docker image
+            run: |
+              # Push the Docker image to ACR
+              docker push {Login_server}/my-app:latest
     ```
 
     ![](../media/workflow.png)
@@ -242,23 +253,31 @@ Conditional execution is essential when you want certain steps to run only under
 1. Provide the file name as **conditional.yml (1)**. In the editor, **copy and paste (2)** the script below, then click **Commit changes (3)**
 
     ```
-    name: Reusable Print Message  # Name of the reusable workflow
+    # Name of the reusable workflow
+    name: Reusable Print Message
 
     on:
-      workflow_call:  # Define the workflow as reusable
-        inputs:  # Inputs that can be passed to the workflow
-          message:  # Define an input parameter named 'message'
-            required: true  # The 'message' input is required
-            type: string  # The 'message' input should be of type string
+      # Define the workflow as reusable
+      workflow_call:
+        # Inputs that can be passed to the workflow
+        inputs:
+          # Define an input parameter named 'message'
+          message:
+            # The 'message' input is required
+            required: true
+            # The 'message' input should be of type string
+            type: string
 
     jobs:
       print-message:
-        runs-on: ubuntu-latest  # Specify the OS for the job
+        # Specify the OS for the job
+        runs-on: ubuntu-latest
 
         steps:
-        # Step to print the message passed to the workflow
-          - name: Print message  
-            run: echo "Hi, this message is from primary workflow"  # Command to print the message
+          # Step to print the message passed to the workflow
+          - name: Print message
+            # Command to print the message
+            run: echo "Hi, this message is from primary workflow"
     ```
 
     ![](../media/ifcondition-yml.png)
