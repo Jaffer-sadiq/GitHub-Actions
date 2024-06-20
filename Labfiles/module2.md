@@ -94,7 +94,7 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
     ![](../media/17-06-2024(3).png)
 
-1. Now let's create a workflow to publish into Docker Hub using GitHub action. Navigate to the **Code** **(1)**, click on **Add file** **(2)** and click on **+ Create new file** **(3)**.
+1. Again from **Code** **(1)** tab in GitHub, click on **Add file** **(2)** and click on **+ Create new file** **(3)**.
     
     ![](../media/ex2-task2-step18.png)
 
