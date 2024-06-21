@@ -153,6 +153,8 @@ When the Workflow Runs:
 
    ![](../media/env18.png)
 
+   >**Note:** This GitHub Actions workflow, named "CI", triggers on pushes to the main branch affecting .github/workflows/hello-action.yml, pull requests to main with changes to the same file, and can be manually triggered (workflow_dispatch). It features a single job (build) running on Ubuntu, utilizing actions/checkout@v4 to fetch the repository. The job executes a one-line script printing "Hello, world!" and a multi-line script for additional build, test, and deployment actions.
+
 1. In the pop up windows of **Commit Changes** click on the **Commit changes**.
 
     ![](../media/17-06-2024(2).png)
