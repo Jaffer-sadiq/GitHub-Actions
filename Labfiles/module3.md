@@ -397,7 +397,7 @@ Optimizing workflow performance by caching dependencies can significantly improv
 
    ![](../media/2dgn169.png)      
 
-1. Update the workflow name to **codeql-analysis.yml** ***(1)*** and review the yaml file. Select **Commit changes** ***(2)***.
+1. Update the workflow name to **codeql-analysis.yml** **(1)** and review the yaml file. Select **Commit changes** **(2)**.
    ![](../media/ex5-task1-step3a.png)
 
 1. In the pop up windows of Commit Changes click on the **Commit changes** button.
@@ -438,11 +438,19 @@ Optimizing workflow performance by caching dependencies can significantly improv
 
    ![](../media/token.png)
 
-1. Navigate to **Code** **(1)** from the top navigation pane, click on **code** **(2)** drop-down, click on **local** **(3)**, and copy the **Repo URL** **(4)** in the notepad.
+1. Search **Notepad (1)** using the search box and select the same from suggestions **(2)**.
+
+   ![](../media/21-06-2024(5).png)
+
+1. Paste the PAT token which you copied in step no 14.
+
+   ![](../media/21-06-2024(6).png)
+
+1. Navigate to **Code** **(1)** from the top navigation pane, click on **code** **(2)** drop-down, click on **local** **(3)**, and copy the **Repo URL** **(4)** in the **notepad**.
 
    ![](../media/repo-url.png)
 
-1. From the repo URL select the username as shown in the image below.
+1. From the repo URL select the username as shown in the image below and paste it in **notepad**.
 
    ![](../media/user-name.png)
 
@@ -450,7 +458,7 @@ Optimizing workflow performance by caching dependencies can significantly improv
 
    ![](../media/ex2-task2-step18.png)
 
-1. Provider file name as **ExampleScript.ps1** **(1)**, in the editor **copy and paste** **(2)** the below script, replace **YOUR_GITHUB_PAT** **(3)** with PAT you coped, **YOUR_GITHUB_USERNAME** **(4)** with GitHub username and **YOUR_GITHUB_REPO** **(4)**, and click on **commit changes** **(5)**.
+1. Provider file name as **ExampleScript.ps1** **(1)**, in the editor **copy and paste** **(2)** the below script, replace **YOUR_GITHUB_PAT** **(3)** with PAT you coped, **YOUR_GITHUB_USERNAME** **(4)** with GitHub username and **YOUR_GITHUB_REPO** **(4)**, and click on **Commit changes** **(5)**.
 
    ```
    # Set the GitHub PAT
