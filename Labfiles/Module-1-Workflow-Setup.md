@@ -120,35 +120,35 @@ When the Workflow Runs:
    name: CI
 
    on:
-   push:
-      branches:
+     push:
+       branches:
          - main
-      paths:
+       paths:
          - '.github/workflows/hello-action.yml'
-   pull_request:
-      branches:
+     pull_request:
+       branches:
          - main
-      paths:
+       paths:
          - '.github/workflows/hello-action.yml'
-   workflow_dispatch:
+     workflow_dispatch:
 
    # A workflow run is made up of one or more jobs that can run sequentially or in parallel
    jobs:
    # This workflow contains a single job called "build"
-   build:
-      runs-on: ubuntu-latest
-      steps:
+     build:
+       runs-on: ubuntu-latest
+       steps:
          - uses: actions/checkout@v4
 
          # Runs a single command using the runners shell
          - name: Run a one-line script
-         run: echo Hello, world!
+           run: echo Hello, world!
 
          # Runs a set of commands using the runners shell
          - name: Run a multi-line script
-         run: |
-            echo Add other actions to build,
-            echo test, and deploy your project.
+           run: |
+             echo Add other actions to build,
+             echo test, and deploy your project.
    ```
 
    ![](../media/env18.png)
