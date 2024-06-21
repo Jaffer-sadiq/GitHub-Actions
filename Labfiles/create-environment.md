@@ -8,10 +8,10 @@ In this exercise, You'll learn how to set up environments with protection rules,
 
    ![](../media/env1.png) 
 
-1. Follow the below steps and create the enviornment. 
+1. Follow the below steps and create the environment. 
 
 **Required Reviewers**
-   - Provide name as **action environment** and click on **configure environment**.
+   - Provide name as **action-environment** and click on **configure environment**.
 
    - In the Deployment protection rules section, check **Required reviewers** option, search the GitHub username and add the user. You can find the username in the GitHub homepage.
 
@@ -59,11 +59,11 @@ In this exercise, You'll learn how to set up environments with protection rules,
    
      ![](../media/env11.png)
 
-   - Provide name as **registryName (1)**,paste the **value** which you copied from in earlier steps, and click on **Add Variable**.
+   - Provide name as **registryName (1)**, paste the **value** you copied from in earlier steps, and click on **Add Variable**.
 
      ![](../media/env12.png)
 
-   - Similarly, click again on **Add environment variable**.
+   - Similarly, click again on **Add environment variable**. Provide name as **login
 
      ![](../media/env13.png)
 
@@ -72,7 +72,7 @@ In this exercise, You'll learn how to set up environments with protection rules,
 
 **Creating Workflow with Environment**
 
-1. From GitHub home page, navigate to `.github/workflows/jobs.yml` file and update the script as below.
+1. From the GitHub home page, navigate to `.github/workflows/jobs.yml` file and update the script as below.
 
     ```
     name: Build and Push Docker Image to ACR
