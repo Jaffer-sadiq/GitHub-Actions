@@ -116,38 +116,39 @@ When the Workflow Runs:
 
    ```
    # This is a basic workflow to help you get started with Actions
+
    name: CI
-   
+
    on:
-     push:
-       branches:
+   push:
+      branches:
          - main
-       paths:
+      paths:
          - '.github/workflows/hello-action.yml'
-     pull_request:
-       branches:
+   pull_request:
+      branches:
          - main
-       paths:
+      paths:
          - '.github/workflows/hello-action.yml'
-     workflow_dispatch:
-   
+   workflow_dispatch:
+
    # A workflow run is made up of one or more jobs that can run sequentially or in parallel
    jobs:
-     # This workflow contains a single job called "build"
-     build:
-       runs-on: ubuntu-latest
-       steps:
+   # This workflow contains a single job called "build"
+   build:
+      runs-on: ubuntu-latest
+      steps:
          - uses: actions/checkout@v4
-   
+
          # Runs a single command using the runners shell
          - name: Run a one-line script
-           run: echo Hello, world!
-   
+         run: echo Hello, world!
+
          # Runs a set of commands using the runners shell
          - name: Run a multi-line script
-           run: |
-             echo Add other actions to build,
-             echo test, and deploy your project.
+         run: |
+            echo Add other actions to build,
+            echo test, and deploy your project.
    ```
 
    ![](../media/env18.png)
@@ -183,47 +184,40 @@ In GitHub Actions workflows, you define jobs and steps to orchestrate the tasks 
 1. Provider file name as **jobs.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **Commit changes** **(3)**.
 
    ```
-   name: My Workflow
+   # This is a basic workflow to help you get started with Actions
+
+   name: CI
 
    on:
-    push:
+   push:
       branches:
-        - main
-    pull_request:
+         - main
+      paths:
+         - '.github/workflows/hello-action.yml'
+   pull_request:
       branches:
-        - main
+         - main
+      paths:
+         - '.github/workflows/hello-action.yml'
+   workflow_dispatch:
 
+   # A workflow run is made up of one or more jobs that can run sequentially or in parallel
    jobs:
-     job1:
-      # Specify the OS for the job
+   # This workflow contains a single job called "build"
+   build:
       runs-on: ubuntu-latest
       steps:
-         # Step to check out the code from the repository
-         - name: Checkout code
-         # Use the checkout action from the marketplace
-         uses: actions/checkout@v2
+         - uses: actions/checkout@v4
 
-         # Step to run a script
-         - name: Run a script
-         # The script to run, which prints "Hello, world!"
-         run: echo "Hello, world!"
+         # Runs a single command using the runners shell
+         - name: Run a one-line script
+         run: echo Hello, world!
 
-   job2:
-      # Specify the OS for the job
-      runs-on: ubuntu-latest
-      # This job depends on the successful completion of job1
-      needs: job1
-      steps:
-         # Step to check out the code from the repository
-         - name: Checkout code
-         # Use the checkout action from the marketplace
-         uses: actions/checkout@v2
-
-         # Step to run another script
-         - name: Run another script
-         # The script to run, which prints "Hello, again!"
-         run: echo "Hello, again!"
-
+         # Runs a set of commands using the runners shell
+         - name: Run a multi-line script
+         run: |
+            echo Add other actions to build,
+            echo test, and deploy your project.
    ```
 
    ![](../media/jobs-action.png)
