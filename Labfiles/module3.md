@@ -381,8 +381,6 @@ Optimizing workflow performance by caching dependencies can significantly improv
 
     ![](../media/optimize4.png)
 
-    > Feel free to go through the workflow
-
 ### Task 5: Code scanning and vulnerability detection
 
 1. Navigate back to the `github-action` repo, from the GitHub repository.
