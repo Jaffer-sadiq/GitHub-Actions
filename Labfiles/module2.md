@@ -21,7 +21,7 @@ Securing sensitive data like API keys and credentials is crucial to protect your
     - **Pricing Plan**: Choose **Standard** **(4)**
     -  Click on **Review + Create** **(5)**
 
-    ![](../media/container-registry.png)
+       ![](../media/container-registry.png)
    
 1. Click on **Create**.
 
@@ -171,57 +171,56 @@ Securing sensitive data like API keys and credentials is crucial to protect your
    >**Note**: Paste the value you copied in Task 1, Step 6 for the **Login_server** and **Registry name.**
 
     ```
-    # Name of the workflow
+    # This is the configuration for our GitHub Actions workflow to build and push a Docker image to Azure Container Registry (ACR).
+    # The workflow is triggered on push events targeting the main branch.
     name: Build and Push Docker Image to ACR
 
     on:
-      # Trigger the workflow on push events
       push:
-        # Only trigger on pushes to the main branch
         branches:
-        - main
+          - main
+        paths:
+          - '.github/workflows/jobs.yml'
+      pull_request:
+        branches:
+          - main
+        paths:
+          - '.github/workflows/jobs.yml'
+      workflow_dispatch:
 
     jobs:
       build-and-push:
-        # Specify the OS for the job
         runs-on: ubuntu-latest
 
         steps:
-          # Step to check out the code from the repository
-          - name: Checkout repository
-            # Use the checkout action
-            uses: actions/checkout@v2
+        # Step to checkout the repository
+        - name: Checkout repository
+          uses: actions/checkout@v2
 
-          # Step to log in to Azure CLI
-          - name: Log in to Azure CLI
-            # Use the Azure login action
-            uses: azure/login@v1
-            with:
-              # Use Azure credentials stored in GitHub secrets
-              creds: ${{ secrets.AZURE_CREDENTIALS }}
+        # Step to log in to Azure using the Azure CLI GitHub Action
+        - name: Log in to Azure CLI
+          uses: azure/login@v1
+          with:
+            creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-          # Step to list files in the current directory
-          - name: List files
-            # Command to list files
-            run: ls -la
+        # Step to list files in the current directory
+        - name: List files
+          run: ls -la
 
-          # Step to build the Docker image
-          - name: Build Docker image
-            run: |
-              # Build the Docker image and tag it
-              docker buildx build . -t {Login_server}/my-app:latest
+        # Step to build the Docker image
+        - name: Build Docker image
+          run: |
+            docker buildx build . -t {Login_server}/my-app:latest
 
-          # Step to log in to Azure Container Registry
-          - name: Log in to Azure Container Registry
-            run: |
-              # Log in to Azure Container Registry
-              az acr login --name {Registry name}
+        # Step to log in to Azure Container Registry
+        - name: Log in to Azure Container Registry
+          run: |
+            az acr login --name {Registry name}
 
-          # Step to push the Docker image to ACR
-          - name: Push Docker image
-            run: |
-              # Push the Docker image to ACR
-              docker push {Login_server}/my-app:latest
+        # Step to push the Docker image to Azure Container Registry
+        - name: Push Docker image
+          run: |
+            docker push {Login_server}/my-app:latest  
     ```
 
     ![](../media/workflow.png)
