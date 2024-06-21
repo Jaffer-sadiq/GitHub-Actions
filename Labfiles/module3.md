@@ -156,7 +156,7 @@ Parallelism allows you to run jobs or steps concurrently, reducing the total exe
 
     ![](../media/optimize4.png)
 
-    > Feel free to go through the workflow
+    > **Note:** This GitHub Actions workflow, named "Node.js CI", is triggered by pushes to the main branch affecting the **.github/workflows/nodejs_ci.yml** file. It sets up a job that runs on an Ubuntu environment and utilizes a matrix strategy to specify Node.js version 18.x. The workflow includes steps to check out the repository, cache Node.js dependencies to optimize workflow performance, and set up the specified Node.js version using the actions/setup-node action.
 
 ### Task 3: Matrix builds for testing across multiple environments.
 
