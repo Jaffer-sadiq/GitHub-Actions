@@ -406,11 +406,11 @@ Optimizing workflow performance by caching dependencies can significantly improv
   
    ![](../media/ex5-task1-step3b.png) 
   
-1. Navigate to **Actions** ***(1)*** tab, You can review the **workflow** ***(2)*** run.
+1. Navigate to **Actions** **(1)** tab, You can review the **workflow** **(2)** run.
     
    ![](../media/ex5-codeql-actions.png) 
   
-1. Navigate to **Security** ***(1)*** tab and click on **View alerts** ***(2)***.
+1. Navigate to **Security** **(1)** tab and click on **View alerts** **(2)**.
    
    ![](../media/ex5-codescanning-viewalerts.png)
   
