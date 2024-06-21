@@ -6,7 +6,7 @@ In this task, you'll access the GitHub enterprise account and create a new repos
 
 In this task, you will create an account in [GitHub](https://github.com) and use `git` to add lab files to a new repository.
 
-1. In the labvm-<inject key="DeploymentID" enableCopy="false"/>, open a new browser tab and navigate to the GitHub login page at ```https://www.github.com/login```. From Environment details page ***(1)***, navigate to **License** ***(2)*** tab and **copy** ***(3)*** the credentials. Use the same username and password to login into GitHub.
+1. In the labvm-<inject key="DeploymentID" enableCopy="false"/>, open a new browser tab and navigate to the GitHub login page at ```https://www.github.com/login```. From **Environment Details** page **(1)**, navigate to **License** **(2)** tab and **copy** **(3)** the credentials. Use the same username and password to login into GitHub.
 
    ![](../media/dev2.png) 
 
@@ -22,7 +22,7 @@ In this task, you will create an account in [GitHub](https://github.com) and use
 
    ![The `New Repository` creation form in GitHub.](../media/ex2-t3-3-git.png "New Repository Creation Form")
 
-1. On the **Create a new repository** screen, name the repository ```github-action``` ***(1)***, select **Public** ***(2)*** and click on **Create repository** ***(3)***  button.
+1. On the **Create a new repository** screen, name the repository ```github-action``` **(1)**, select **Public** **(2)** and click on **Create repository** **(3)**  button.
 
    ![The `New Repository` creation form in GitHub.](../media/2dgn91.png "New Repository Creation Form")
    
@@ -30,11 +30,11 @@ In this task, you will create an account in [GitHub](https://github.com) and use
 
       ![The `New Repository` creation form in GitHub.](../media/17-06-2024(8).png "New Repository Creation Form")
 
-   - In the upper-right corner, navigate to the user menu and select **Your repositories** ***(1)***.
+   - In the upper-right corner, navigate to the user menu and select **Your repositories** **(1)**.
    
       ![The `New Repository` creation form in GitHub.](../media/my_repos.png "New Repository Creation Form")
 
-   - Using the search bar, search for ```github-action``` **(1)** and select to open it.
+   - Using the search bar, search for ```github-action``` **(1)** and select to open it **(2)**.
 
       ![The `New Repository` creation form in GitHub.](../media/2dg118.png "New Repository Creation Form")
 
@@ -72,7 +72,7 @@ GitHub Actions is a powerful automation tool provided by GitHub, allowing you to
 
 1. You'll be able to see a very simple workflow which prints a few text sentences as output.    
 
-    ![](../media/env17.png)
+    ![](../media/21-06-2024(8).png)
 
    This workflow provides a basic template for setting up CI with GitHub Actions. It checks out the repository code, runs a simple one-line script, and then runs a multi-line script. You can expand this workflow by adding more steps to build, test, and deploy your project. Here's the complete explanation of the workflow file.
 
@@ -151,7 +151,7 @@ When the Workflow Runs:
              echo test, and deploy your project.
    ```
 
-   ![](../media/env18.png)
+   ![](../media/21-06-2024(7).png)
 
 1. In the pop up windows of **Commit Changes** click on the **Commit changes**.
 
@@ -226,7 +226,7 @@ In GitHub Actions workflows, you define jobs and steps to orchestrate the tasks 
            - name: Run another script
              run: echo "Hello, again!"
    ```
-    ![](../media/jobs-action.png)
+    ![](../media/21-06-2024(9).png)
    
  1. In the pop up windows of **Commit changes** click on the **Commit changes (1)**.
 
