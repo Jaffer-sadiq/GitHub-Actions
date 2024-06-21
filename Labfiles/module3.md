@@ -312,10 +312,13 @@ A matrix build is a CI/CD pipeline strategy that allows you to run tests across 
                       pytest
 
     ```
+    ![](../media/21-06-2024(19).png)
 
     > **Note**: This CI configuration uses GitHub Actions to run tests on multiple OS (Ubuntu, Windows, macOS) with Python 3.12. It triggers push and pull requests to the main branch, checks out the code, sets up Python, installs dependencies, and runs tests with pytest, ensuring cross-platform compatibility.
 
 12. In the pop up windows of Commit Changes click on the **Commit changes** button.
+
+    ![](../media/21-06-2024(20).png)
 
 13. Click on **Actions** **(1)**, verifiy the **Create matrix.yml** workflow has been executed successfully.
 
@@ -379,13 +382,13 @@ Optimizing workflow performance by caching dependencies can significantly improv
                       node-version: 18.x
     ```
     
-    ![](../media/optimize3.png)
+    ![](../media/21-06-2024(21).png)
 
 4. In the pop up windows of **Commit Changes** click on the **Commit changes**.
 
     ![](../media/newcommit.png)
 
-5. Click on **Action** **(1)**, verify the workflow has been executed successfully once the workflow is succedded select the newly created workflow **Update nodejs_ci.yml** **(2)**.
+5. Click on **Actions** **(1)**, verify the workflow has been executed successfully once the workflow is succedded select the newly created workflow **Update nodejs_ci.yml** **(2)**.
 
     ![](../media/optimize4.png)
 
@@ -416,11 +419,13 @@ Optimizing workflow performance by caching dependencies can significantly improv
     
    ![](../media/ex5-codeql-actions.png) 
   
-1. Navigate to **Security** **(1)** tab and click on **View alerts** **(2)**.
+1. Navigate to **Security (1)** tab and click on **View alerts (2)**.
    
-   ![](../media/ex5-codescanning-viewalerts.png)
+   ![](../media/21-06-2024(23).png)
   
 1. You will be navigated to the **Code scanning** section. You'll be able to visualize the **No code scanning alerts here!**.
+
+   ![](../media/21-06-2024(24).png)
    
 1. Go to **Settings** -> **Code security and analysis** -> scroll down to **Push protection** and click **Enable**.
 
@@ -438,7 +443,7 @@ Optimizing workflow performance by caching dependencies can significantly improv
 
     ![Picture1](../media/generate_new_2.png)
 
-1. From here, give your secret a name as **Secret scanning**, **secret2**, set the **Expiration** to **_"Custom..."_** and select the next calendar day. By default, no permissions are granted, so it is safe to scroll to the bottom and click on **Generate token**.
+1. From here, give your secret a name as **Secret scanning**, set the **Expiration** to **_"Custom..."_** and select the next calendar day. By default, no permissions are granted, so it is safe to scroll to the bottom and click on **Generate token**.
 
    ![](../media/PATtoken.png)
 
@@ -450,19 +455,19 @@ Optimizing workflow performance by caching dependencies can significantly improv
 
    ![](../media/21-06-2024(5).png)
 
-1. Paste the PAT token which you copied in step no 14.
+1. Paste the **PAT token** which you copied in step number 14.
 
    ![](../media/21-06-2024(6).png)
 
-1. Navigate to **Code** **(1)** from the top navigation pane, click on **code** **(2)** drop-down, click on **local** **(3)**, and copy the **Repo URL** **(4)** in the **notepad**.
+1. Navigate to **Code** **(1)** from the top navigation pane, click on **Code** **(2)** drop-down, click on **Local** **(3)**, and copy the **Repo URL** **(4)**.
 
-   ![](../media/repo-url.png)
+   ![](../media/21-06-2024(25).png)
 
-1. From the repo URL select the username as shown in the image below and paste it in **notepad**.
+1. From the repo URL select the username as shown in the image below and paste it in **Notepad**.
 
    ![](../media/user-name.png)
 
-1. Click on **Add file** **(1)**  and click on **+ Create new file** **(2)**.
+1. Click on **Code (1)**, Select **Add file** **(2)**  and click on **+ Create new file** **(3)**.
 
    ![](../media/ex2-task2-step18.png)
 
