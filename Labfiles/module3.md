@@ -90,13 +90,9 @@ Parallelism allows you to run jobs or steps concurrently, reducing the total exe
 
 1. Naviagte to the [sample-node-project](https://github.com/acemilyalcin/sample-node-project) repo and click on **Fork** **(2)**.
 
-2. Navigate to the **Action** **(1)** directory in your repository, in `Get started with GitHub Actions` click on Set up a workflow yourself (2).
+2. Navigate to the **Action** **(1)** directory in your repository, in `Get started with GitHub Actions` click on **Set up a workflow yourself (2)**.
 
     ![](../media/newaction.png)
-
-3. Navigate to the **Code** **(1)** and click on **.github/workflows** **(2)** folder.
-
-    ![](../media/optimize1.png)
 
 4. Provider file name as **nodejs_ci.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
 
@@ -111,8 +107,9 @@ Parallelism allows you to run jobs or steps concurrently, reducing the total exe
     on:
       push:
         branches:
-          - master
-          - dev
+          - main
+        paths:
+          - '.github/workflows/nodejs_ci.yml'
     
     jobs:
       build:
