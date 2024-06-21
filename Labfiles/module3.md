@@ -53,7 +53,10 @@
 
    on:
      push:
-       branches: [ "main" ]
+       branches:
+         - main
+       paths:
+         - '.github/workflows/caller-workflows.yml'
      workflow_dispatch:
 
    jobs:
