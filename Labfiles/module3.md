@@ -114,7 +114,7 @@ Parallelism allows you to run jobs or steps concurrently, reducing the total exe
     on:
       push:
         branches:
-          - main
+          - master
         paths:
           - '.github/workflows/nodejs_ci.yml'
 
