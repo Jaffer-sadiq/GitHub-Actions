@@ -216,43 +216,93 @@ A matrix build is a CI/CD pipeline strategy that allows you to run tests across 
 
     ```
     name: CI
-    
+
     on:
-      push:
-        branches:
-          - main
-      pull_request:
-        branches:
-          - main
-    
+        push:
+            branches:
+                - master
+            paths:
+                - '.github/workflows/matrix.yml'
+        pull_request:
+            branches:
+                - master
+            paths:
+                - '.github/workflows/matrix.yml'
+      
     jobs:
-      build:
-        runs-on: ubuntu-latest
-        
-        strategy:
-          matrix:
-            python-version: [3.12]
-            os: [ubuntu-latest, windows-latest, macos-latest]
-    
-        environment: action-environment
-    
-        steps:
-          - name: Checkout repository
-            uses: actions/checkout@v2
-    
-          - name: Set up Python ${{ matrix.python-version }}
-            uses: actions/setup-python@v2
-            with:
-              python-version: ${{ matrix.python-version }}
-    
-          - name: Install dependencies
-            run: |
-              python -m pip install --upgrade pip
-              pip install -r requirements.txt
-    
-          - name: Run tests
-            run: |
-              pytest
+        build-ubuntu:
+            runs-on: ubuntu-latest
+            strategy:
+                matrix:
+                    python-version: [3.12]
+            steps:
+                - name: Checkout repository
+                  uses: actions/checkout@v2
+
+                - name: Set up Python ${{ matrix.python-version }}
+                  uses: actions/setup-python@v2
+                  with:
+                      python-version: ${{ matrix.python-version }}
+
+                - name: Install dependencies
+                  run: |
+                      python -m pip install --upgrade pip
+                      pip install -r requirements.txt
+
+                - name: Run tests
+                  run: |
+                      pytest
+
+        build-windows:
+            runs-on: windows-latest
+            strategy:
+                matrix:
+                    python-version: [3.12]
+            steps:
+                - name: Checkout repository
+                  uses: actions/checkout@v2
+
+                - name: Set up Python ${{ matrix.python-version }}
+                  uses: actions/setup-python@v2
+                  with:
+                      python-version: ${{ matrix.python-version }}
+
+                - name: Install dependencies
+                  run: |
+                      python -m pip install --upgrade pip
+                      pip install -r requirements.txt
+                      # Ensure the Python Scripts directory is in the PATH
+                      $env:Path += ";$env:USERPROFILE\AppData\Local\Programs\Python\Python${{ matrix.python-version }}\Scripts"
+                      pip install pytest
+
+                - name: Run tests
+                  run: |
+                      pytest
+                  shell: pwsh
+
+        build-macos:
+            runs-on: macos-latest
+            strategy:
+                matrix:
+                    python-version: [3.12]
+            steps:
+                - name: Checkout repository
+                  uses: actions/checkout@v2
+
+                - name: Set up Python ${{ matrix.python-version }}
+                  uses: actions/setup-python@v2
+                  with:
+                      python-version: ${{ matrix.python-version }}
+
+                - name: Install dependencies
+                  run: |
+                      python -m pip install --upgrade pip
+                      pip install -r requirements.txt
+
+                - name: Run tests
+                  run: |
+                      pytest
+
     ```
 
     > **Note**: This CI configuration uses GitHub Actions to run tests on multiple OS (Ubuntu, Windows, macOS) with Python 3.12. It triggers push and pull requests to the main branch, checks out the code, sets up Python, installs dependencies, and runs tests with pytest, ensuring cross-platform compatibility.
