@@ -60,9 +60,12 @@
      workflow_dispatch:
 
    jobs:
+     # Job to call the reusable workflow
      call-reusable-workflow:
+       # Specifies the path to the reusable workflow
        uses: ./.github/workflows/reusable-print-message.yml
        with:
+         # Passes the message to the reusable workflow
          message: "Hello from the caller workflow!"
     ```
 
