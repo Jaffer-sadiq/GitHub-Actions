@@ -90,6 +90,8 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
     ![](../media/Docker_file_1.png)
 
+    >**Note:** This Dockerfile utilizes the latest official Nginx image as its base. It copies an **index.html** file into the Nginx container's default web root directory. Port 80 is exposed to allow external access to the container, and the container launches Nginx with the command **nginx -g 'daemon off;'** to keep it running in the foreground.
+
 1. In the **Commit changes** pop-up, click on **Commit changes** button.
 
     ![](../media/17-06-2024(3).png)
@@ -224,6 +226,8 @@ Securing sensitive data like API keys and credentials is crucial to protect your
     ```
 
     ![](../media/workflow.png)
+
+    >**Note:** This GitHub Actions workflow, named "Build and Push Docker Image to ACR", automates the process of building and pushing a Docker image to Azure Container Registry (ACR) when triggered by pushes or pull requests to the main branch, or manually **(`workflow_dispatch`)**. It runs on an Ubuntu environment and includes steps to checkout the repository, authenticate with Azure using stored credentials, list files, build a Docker image tagged as **`{Login_server}/my-app:latest`**, log in to Azure Container Registry, and finally push the built Docker image to the registry.
 
 1. Provide the file name as **docker.yml (1)**. In the editor, **copy and paste (2)** the script below, then click **Commit changes (3)**
 
