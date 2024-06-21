@@ -184,42 +184,46 @@ In GitHub Actions workflows, you define jobs and steps to orchestrate the tasks 
 1. Provider file name as **jobs.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **Commit changes** **(3)**.
 
    ```
-   # This is a basic workflow to help you get started with Actions
-
-   name: CI
+   # This is the configuration for our GitHub Actions workflow.
+   # The workflow is triggered on push and pull request events targeting the main branch.
+   name: My Workflow
 
    on:
      push:
        branches:
          - main
        paths:
-         - '.github/workflows/hello-action.yml'
+         - '.github/workflows/jobs.yml'
      pull_request:
        branches:
          - main
        paths:
-         - '.github/workflows/hello-action.yml'
+         - '.github/workflows/jobs.yml'
      workflow_dispatch:
 
-    # A workflow run is made up of one or more jobs that can run sequentially or in parallel
-    jobs:
-      # This workflow contains a single job called "build"
-      build:
-        runs-on: ubuntu-latest
-        steps:
-          - uses: actions/checkout@v4
-
-          # Runs a single command using the runners shell
-          - name: Run a one-line script
-            run: echo Hello, world!
-
-          # Runs a set of commands using the runners shell
-          - name: Run a multi-line script
-            run: |
-              echo Add other actions to build,
-              echo test, and deploy your project.
-    ```
-
+   jobs:
+       # Job 1 runs first
+       job1:
+           runs-on: ubuntu-latest
+           steps:
+           # Step to checkout the code from the repository
+           - name: Checkout code
+             uses: actions/checkout@v2
+           # Step to run a simple script
+           - name: Run a script
+             run: echo "Hello, world!"
+       # Job 2 depends on the successful completion of Job 1
+       job2:
+           runs-on: ubuntu-latest
+           needs: job1
+           steps:
+           # Step to checkout the code from the repository
+           - name: Checkout code
+             uses: actions/checkout@v2
+           # Step to run another simple script
+           - name: Run another script
+             run: echo "Hello, again!"
+   ```
     ![](../media/jobs-action.png)
    
  1. In the pop up windows of **Commit changes** click on the **Commit changes (1)**.
