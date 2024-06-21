@@ -64,6 +64,7 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 1. Under **Actions Secrets/New secret** page, enter the below mentioned details and Click on **Add secret (3)**.
 
    - Name: Enter **AZURE_CREDENTIALS** **(1)**
+
    - Value: Paste the service principal details in JSON format **(2)**
 
      ![](../media/add-sec-oidc.png)
@@ -90,11 +91,11 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
     ![](../media/Docker_file_1.png)
 
-    >**Note:** This Dockerfile utilizes the latest official Nginx image as its base. It copies an **index.html** file into the Nginx container's default web root directory. Port 80 is exposed to allow external access to the container, and the container launches Nginx with the command **nginx -g 'daemon off;'** to keep it running in the foreground.
-
 1. In the **Commit changes** pop-up, click on **Commit changes** button.
 
     ![](../media/17-06-2024(3).png)
+
+    >**Note:** This Dockerfile utilizes the latest official Nginx image as its base. It copies an **index.html** file into the Nginx container's default web root directory. Port 80 is exposed to allow external access to the container, and the container launches Nginx with the command **nginx -g 'daemon off;'** to keep it running in the foreground.
 
 1. Again from **Code** **(1)** tab in GitHub, click on **Add file** **(2)** and click on **+ Create new file** **(3)**.
     
@@ -227,8 +228,6 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
     ![](../media/workflow.png)
 
-    >**Note:** This GitHub Actions workflow, named "Build and Push Docker Image to ACR", automates the process of building and pushing a Docker image to Azure Container Registry (ACR) when triggered by pushes or pull requests to the main branch, or manually **(`workflow_dispatch`)**. It runs on an Ubuntu environment and includes steps to checkout the repository, authenticate with Azure using stored credentials, list files, build a Docker image tagged as **`{Login_server}/my-app:latest`**, log in to Azure Container Registry, and finally push the built Docker image to the registry.
-
 1. Provide the file name as **docker.yml (1)**. In the editor, **copy and paste (2)** the script below, then click **Commit changes (3)**
 
    ![](../media/docker.png)
@@ -237,11 +236,11 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
     ![](../media/commit.png)
 
-1. Click on **Actions**, Select the **Create docker.yml** action and verify the workflow has been executed successfully once the workflow is succedded.
+1. Click on **Actions**, Select the **Create docker.yml** action and verify the workflow has been executed successfully once the workflow has succeeded.
 
    ![](../media/env38.png)
 
-   >**Note**: This action builds and pushes a Docker image to Azure Container Registry (ACR) using the environment secret AZURE_CREDENTIALS.
+   >**Note:** This GitHub Actions workflow, named "Build and Push Docker Image to ACR", automates the process of building and pushing a Docker image to Azure Container Registry (ACR) when triggered by pushes or pull requests to the main branch, or manually **(`workflow_dispatch`)**. It runs on an Ubuntu environment and includes steps to checkout the repository, authenticate with Azure using stored credentials, list files, build a Docker image tagged as **`{Login_server}/my-app:latest`**, log in to Azure Container Registry, and finally push the built Docker image to the registry.
 
 ### Task 2: Conditional execution using if expressions.
 
@@ -310,10 +309,10 @@ Conditional execution is essential when you want certain steps to run only under
 
     ![](../media/save-ifcondtion.png)
 
-1. Click on **Actions** **(1)**, verify the workflow has been executed successfully once the workflow is succedded select the newly created workflow **Create conditional.yml** **(2)**.
+1. Click on **Actions** **(1)**, and verify the workflow has been executed successfully once the workflow is succeeded select the newly created workflow **Create conditional.yml** **(2)**.
 
     ![](../media/ifcondtion-created.png)
    
-   >**Note**: This GitHub Actions workflow, named "Complex Workflow," triggers on push and pull request events to the main branch when the .github/workflows/conditional.yml file is modified. It includes two jobs: job1, which checks out the repository and runs a simple script, and job2, which runs only if job1 is successful and the event is a push, checking out the repository again and running a different script.
+   >**Note**: This GitHub Actions workflow, named "Complex Workflow," triggers push and pull request events to the main branch when the .github/workflows/conditional.yml file is modified. It includes two jobs: job1, which checks out the repository and runs a simple script, and job2, which runs only if job1 is successful and the event is a push, checking out the repository again and running a different script.
 
 1. Click on **Next** button for next Lab.
