@@ -180,12 +180,12 @@ Securing sensitive data like API keys and credentials is crucial to protect your
         branches:
           - main
         paths:
-          - '.github/workflows/jobs.yml'
+          - '.github/workflows/docker.yml'
       pull_request:
         branches:
           - main
         paths:
-          - '.github/workflows/jobs.yml'
+          - '.github/workflows/docker.yml'
       workflow_dispatch:
 
     jobs:
