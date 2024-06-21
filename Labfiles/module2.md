@@ -265,12 +265,12 @@ Conditional execution is essential when you want certain steps to run only under
        branches:
          - main
        paths:
-         - '.github/workflows/jobs.yml'
+         - '.github/workflows/conditional.yml'
      pull_request:
        branches:
          - main
        paths:
-         - '.github/workflows/jobs.yml'
+         - '.github/workflows/conditional.yml'
      workflow_dispatch:
 
     jobs:
