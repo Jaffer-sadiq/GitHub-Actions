@@ -315,7 +315,6 @@ A matrix build is a CI/CD pipeline strategy that allows you to run tests across 
 
     ![](../media/matrix-output.png)
 
-
 ### Task 4: Using artifacts and dependencies in workflows
 
 Optimizing workflow performance by caching dependencies can significantly improve the execution time of your workflows. By caching dependencies, you can avoid unnecessary downloads and installations, resulting in faster and more efficient workflows.
@@ -378,7 +377,7 @@ Optimizing workflow performance by caching dependencies can significantly improv
 
     ![](../media/newcommit.png)
 
-5. Click on **Action** **(1)**, verify the workflow has been executed successfully once the workflow is succedded select the newly created workflow **Create nodejs_ci.yml** **(2)**.
+5. Click on **Action** **(1)**, verify the workflow has been executed successfully once the workflow is succedded select the newly created workflow **Update nodejs_ci.yml** **(2)**.
 
     ![](../media/optimize4.png)
 
@@ -386,7 +385,9 @@ Optimizing workflow performance by caching dependencies can significantly improv
 
 ### Task 5: Code scanning and vulnerability detection
 
-1. In the `github-action` repo, click on **Security** **(1)**, and click on **Enable vulnerability reporting** **(2)** next to the Private vulnerability reporting.
+1. Navigate back to the `github-action` repo, from the GitHub repository.
+
+1. Click on **Security** **(1)**, and click on **Enable vulnerability reporting** **(2)** next to the Private vulnerability reporting.
 
     ![](../media/security.png)
 
@@ -398,10 +399,11 @@ Optimizing workflow performance by caching dependencies can significantly improv
 
    ![](../media/2dgn169.png)      
 
-1. Update the workflow name to **codeql-analysis.yml** ***(1)*** and review the yaml file. Select **Commit changes** ***(2)***, then select **Commit directly to the main branch** ***(3)*** and click on **Commit new file** ***(4)***.
-  
+1. Update the workflow name to **codeql-analysis.yml** ***(1)*** and review the yaml file. Select **Commit changes** ***(2)***.
    ![](../media/ex5-task1-step3a.png)
 
+1. In the pop up windows of Commit Changes click on the **Commit changes** button.
+  
    ![](../media/ex5-task1-step3b.png) 
   
 1. Navigate to **Actions** ***(1)*** tab, You can review the **workflow** ***(2)*** run.
