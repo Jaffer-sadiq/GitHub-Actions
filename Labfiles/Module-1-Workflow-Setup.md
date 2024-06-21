@@ -112,9 +112,46 @@ When the Workflow Runs:
 
    For more information, read [GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions) documentation.
 
-1. In the workspace rename the file it to **hello-action.yml** **(1)** and click on **Commit changes** **(2)**.
+1. Provider file name as **hello-action.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **Commit changes** **(3)**.
 
-    ![](../media/env18.png)
+   ```
+   # This is a basic workflow to help you get started with Actions
+
+   name: CI
+
+   on:
+   push:
+      branches:
+         - main
+      paths:
+         - '.github/workflows/hello-action.yml'
+   pull_request:
+      branches:
+         - main
+      paths:
+         - '.github/workflows/hello-action.yml'
+   workflow_dispatch:
+
+   # A workflow run is made up of one or more jobs that can run sequentially or in parallel
+   jobs:
+   # This workflow contains a single job called "build"
+   build:
+      runs-on: ubuntu-latest
+      steps:
+         - uses: actions/checkout@v4
+
+         # Runs a single command using the runners shell
+         - name: Run a one-line script
+         run: echo Hello, world!
+
+         # Runs a set of commands using the runners shell
+         - name: Run a multi-line script
+         run: |
+            echo Add other actions to build,
+            echo test, and deploy your project.
+   ```
+
+   ![](../media/env18.png)
 
 1. In the pop up windows of **Commit Changes** click on the **Commit changes**.
 
@@ -147,20 +184,15 @@ In GitHub Actions workflows, you define jobs and steps to orchestrate the tasks 
 1. Provider file name as **jobs.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **Commit changes** **(3)**.
 
    ```
-   # Name of the workflow
    name: My Workflow
 
    on:
-   # Trigger the workflow on push events
-   push:
-      # Only trigger on pushes to the main branch
+    push:
       branches:
-         - main
-   # Trigger the workflow on pull request events
-   pull_request:
-      # Only trigger on pull requests to the main branch
+        - main
+    pull_request:
       branches:
-         - main
+        - main
 
    jobs:
      job1:
