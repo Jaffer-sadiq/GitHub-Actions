@@ -36,7 +36,7 @@
            run: echo "Hi, this message is from primary workflow"
    ```
 
-   ![](../media/env24.png)
+   ![](../media/21-06-2024(13).png)
 
 1. Click on **Commit changes (1)** button and click on **Commit changes (2)** in the pop window.
 
@@ -44,7 +44,7 @@
 
    > **Note:** This GitHub Actions workflow template, named "Reusable Print Message", is designed to be a reusable component triggered by another workflow using **workflow_call**. It requires a string input parameter **message**. The workflow runs a job called **print-message** on an Ubuntu environment, which includes a step to print the received message to the workflow log.
 
-1. Again, navigate to `.github/workflows`, Click on the **Add file (2)** dropdown, and select **+ Create new file (3)**.
+1. Again, navigate to `.github/workflows`, Click on the **Add file (1)** dropdown, and select **+ Create new file (2)**.
 
    ![](../media/env26.png)
 
@@ -71,7 +71,7 @@
          message: "Hello from the caller workflow!"
     ```
 
-   ![](../media/env28.png)   
+   ![](../media/21-06-2024(14).png)   
 
 1. Click on **Commit changes (1)** button and click on **Commit changes (2)** in the pop window.
 
@@ -108,7 +108,7 @@ Parallelism allows you to run jobs or steps concurrently, reducing the total exe
 
     ![](../media/newaction.png)
 
-4. Provider file name as **nodejs_ci.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
+4. Provider file name as **nodejs_ci.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **Commit changes** **(3)**.
 
     ![](../media/optimize2.png)
 
@@ -153,7 +153,7 @@ Parallelism allows you to run jobs or steps concurrently, reducing the total exe
               node-version: ${{ matrix. Node-version }}
     ```
 
-    ![](../media/new-workflow.png)
+    ![](../media/21-06-2024(15).png)
 
 5. In the pop up windows of **Commit Changes** click on the **Commit changes**.
 
@@ -170,7 +170,9 @@ Parallelism allows you to run jobs or steps concurrently, reducing the total exe
 A matrix build is a CI/CD pipeline strategy that allows you to run tests across a variety of environments simultaneously. Each environment can vary by operating system, programming language version, dependency versions, and other factors. The matrix build configuration defines combinations of these variables, creating a grid (or matrix) of different test scenarios.
 
 - **Comprehensive Testing**: Ensures that your software works under different configurations, reducing the risk of environment-specific bugs.
+
 - **Parallel Execution**: Tests can run in parallel, speeding up the testing process and providing faster feedback.
+
 - **Consistency**: Helps maintain consistent behavior across different environments, which is crucial for cross-platform applications.
 
 1. Navigate back to the `github-action` repo, from the GitHub repository.
@@ -184,8 +186,12 @@ A matrix build is a CI/CD pipeline strategy that allows you to run tests across 
    ```
    pytest
    ```
+
+   ![](../media/21-06-2024(16).png)
    
 4. In the pop-up windows of Commit Changes click on the **Commit changes** button.
+
+   ![](../media/21-06-2024(17).png)
 
 5. Click on **Add File** **(1)** and click on **+ Create new file** **(2)**.
 
@@ -199,6 +205,8 @@ A matrix build is a CI/CD pipeline strategy that allows you to run tests across 
         assert 1 + 1 == 2
         print("Completed test_sample successfully")
     ```
+
+    ![](../media/21-06-2024(18).png)
 
 7. In the pop-up windows of Commit Changes click on the **Commit changes** button.
 
