@@ -103,28 +103,30 @@ Parallelism allows you to run jobs or steps concurrently, reducing the total exe
 
     ```
     name: Node.js CI
-    
+
     env:
       OUTPUT_PATH: ${{ github.workspace }}
-    
+
     on:
       push:
         branches:
           - main
         paths:
           - '.github/workflows/nodejs_ci.yml'
-    
+
     jobs:
       build:
         runs-on: ubuntu-latest
-    
+
         strategy:
           matrix:
             node-version: [18.x]
-    
+
         steps:
+          # Step to checkout the repository
           - uses: actions/checkout@v3
-    
+
+          # Step to cache Node.js dependencies
           - name: Cache Node.js dependencies
             uses: actions/cache@v2
             with:
@@ -132,11 +134,12 @@ Parallelism allows you to run jobs or steps concurrently, reducing the total exe
               key: ${{ runner.os }}-node-${{ matrix.node-version }}-${{ hashFiles('${{ env.OUTPUT_PATH }}/package-lock.json') }}
               restore-keys: |
                 ${{ runner.os }}-node-${{ matrix.node-version }}-
-    
+
+          # Step to set up the specified version of Node.js
           - name: Use Node.js ${{ matrix.node-version }}
             uses: actions/setup-node@v3
             with:
-              node-version: ${{ matrix.node-version }}
+              node-version: ${{ matrix. Node-version }}
     ```
 
     ![](../media/new-workflow.png)
