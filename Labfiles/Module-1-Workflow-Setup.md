@@ -189,42 +189,42 @@ In GitHub Actions workflows, you define jobs and steps to orchestrate the tasks 
    name: CI
 
    on:
-   push:
-      branches:
+     push:
+       branches:
          - main
-      paths:
+       paths:
          - '.github/workflows/hello-action.yml'
-   pull_request:
-      branches:
+     pull_request:
+       branches:
          - main
-      paths:
+       paths:
          - '.github/workflows/hello-action.yml'
-   workflow_dispatch:
+     workflow_dispatch:
 
-   # A workflow run is made up of one or more jobs that can run sequentially or in parallel
-   jobs:
-   # This workflow contains a single job called "build"
-   build:
-      runs-on: ubuntu-latest
-      steps:
-         - uses: actions/checkout@v4
+    # A workflow run is made up of one or more jobs that can run sequentially or in parallel
+    jobs:
+      # This workflow contains a single job called "build"
+      build:
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v4
 
-         # Runs a single command using the runners shell
-         - name: Run a one-line script
-         run: echo Hello, world!
+          # Runs a single command using the runners shell
+          - name: Run a one-line script
+            run: echo Hello, world!
 
-         # Runs a set of commands using the runners shell
-         - name: Run a multi-line script
-         run: |
-            echo Add other actions to build,
-            echo test, and deploy your project.
-   ```
+          # Runs a set of commands using the runners shell
+          - name: Run a multi-line script
+            run: |
+              echo Add other actions to build,
+              echo test, and deploy your project.
+    ```
 
-   ![](../media/jobs-action.png)
+    ![](../media/jobs-action.png)
+   
+ 1. In the pop up windows of **Commit changes** click on the **Commit changes (1)**.
 
-1. In the pop up windows of **Commit changes** click on the **Commit changes (1)**.
-
-   ![](../media/jobs-action-commit.png)
+    ![](../media/jobs-action-commit.png)
 
     - You can customize the events and branches for triggering the workflow according to your project's requirements. For example, you might want to trigger the workflow only on pushes to the `main` branch or on pull requests targeting the `main` branch.
 
