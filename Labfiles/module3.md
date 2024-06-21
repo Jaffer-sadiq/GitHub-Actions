@@ -422,15 +422,17 @@ Optimizing workflow performance by caching dependencies can significantly improv
 
    ![Picture1](../media/push_1.png)
 
+   > **Note:** If the Push protection is already enabled, please skip this step.
+
 1. Once again, go to your profile, which is at the top of your right hand, and then select **Settings**.
 
    ![Picture1](../media/profilesetting.png)
 
-1. Go to **Developer settings** -> **Personal access tokens** -> **Tokens (classic)(1)**, and then click on **Generate new token (2)** at the top. Now select **Generate new token (classic) (3)**.
+1. Go to **Developer settings** -> **Personal access tokens** -> **Tokens (classic) (1)**, and then click on **Generate new token (2)** at the top. Now select **Generate new token (classic) (3)**.
 
     ![Picture1](../media/generate_new_2.png)
 
-1. From here, give your secret a name, **secret2**, set the **Expiration** to **_"Custom..."_** and select the next calendar day. By default, no permissions are granted, so it is safe to scroll to the bottom and click on **Generate token**.
+1. From here, give your secret a name as **Secret scanning**, **secret2**, set the **Expiration** to **_"Custom..."_** and select the next calendar day. By default, no permissions are granted, so it is safe to scroll to the bottom and click on **Generate token**.
 
    ![](../media/PATtoken.png)
 
