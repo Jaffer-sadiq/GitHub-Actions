@@ -256,31 +256,48 @@ Conditional execution is essential when you want certain steps to run only under
 1. Provide the file name as **conditional.yml (1)**. In the editor, **copy and paste (2)** the script below, then click **Commit changes (3)**
 
     ```
-    # Name of the reusable workflow
-    name: Reusable Print Message
+    # This is the configuration for our GitHub Actions workflow named "Complex Workflow".
+    # The workflow is triggered on both push and pull request events.
+    name: Complex Workflow
 
     on:
-      # Define the workflow as reusable
-      workflow_call:
-        # Inputs that can be passed to the workflow
-        inputs:
-          # Define an input parameter named 'message'
-          message:
-            # The 'message' input is required
-            required: true
-            # The 'message' input should be of type string
-            type: string
+     push:
+       branches:
+         - main
+       paths:
+         - '.github/workflows/jobs.yml'
+     pull_request:
+       branches:
+         - main
+       paths:
+         - '.github/workflows/jobs.yml'
+     workflow_dispatch:
 
     jobs:
-      print-message:
-        # Specify the OS for the job
+      # Job 1 runs on an Ubuntu machine
+      job1:
         runs-on: ubuntu-latest
-
         steps:
-          # Step to print the message passed to the workflow
-          - name: Print message
-            # Command to print the message
-            run: echo "Hi, this message is from primary workflow"
+        # Step to checkout the repository
+        - name: Checkout
+          uses: actions/checkout@v2
+        # Step to run a one-line script
+        - name: Run a one-line script
+          run: echo Hello, world!
+
+      # Job 2 depends on the successful completion of Job 1
+      job2:
+        needs: job1
+        runs-on: ubuntu-latest
+        # Job 2 only runs on push events and if Job 1 was successful
+        if: github.event_name == 'push' && success()
+        steps:
+        # Step to checkout the repository
+        - name: Checkout
+          uses: actions/checkout@v2
+        # Step to run a different one-line script
+        - name: Run a different one-line script
+          run: echo Hello again, world!
     ```
 
     ![](../media/ifcondition-yml.png)
