@@ -42,7 +42,9 @@
 
    ![](../media/env25.png)
 
-1. Again, navigate to `.github/workflows`, Click on the **Add file (2)** dropdown, and select **+ create new file (3)**.
+   > **Note:** This GitHub Actions workflow template, named "Reusable Print Message", is designed to be a reusable component triggered by another workflow using **workflow_call**. It requires a string input parameter **message**. The workflow runs a job called **print-message** on an Ubuntu environment, which includes a step to print the received message to the workflow log.
+
+1. Again, navigate to `.github/workflows`, Click on the **Add file (2)** dropdown, and select **+ Create new file (3)**.
 
    ![](../media/env26.png)
 
@@ -82,6 +84,8 @@
 1. Select the **print-message (1)** job from the side-blade and **expand (2)** the same job in the output window. You'll see that the message from reusable-print-message.yml is fetched by the caller workflow. Hence, this is how the concept of reusable workflows in GitHub action works.
 
    ![](../media/env30.png)
+
+   > **Note:** This GitHub Actions workflow named "Caller Workflow" triggers on pushes to the main branch and manual dispatch for changes to the **.github/workflows/caller-workflows.yml** file. It calls a reusable workflow defined in **reusable-print-message.yml**, passing the message "Hello from the caller workflow!".
 
 ### Task 2: Explanation and usage of Matrix builds
 
@@ -148,7 +152,7 @@ Parallelism allows you to run jobs or steps concurrently, reducing the total exe
 
     ![](../media/newcommit.png)
 
-6. Click on **Action** **(1)**, verify the workflow has been executed successfully once the workflow is succedded select the newly created workflow **Create nodejs_ci.yml** **(2)**.
+6. Click on **Actions** **(1)**, verify the workflow has been executed successfully once the workflow is succedded select the newly created workflow **Create nodejs_ci.yml** **(2)**.
 
     ![](../media/optimize4.png)
 
