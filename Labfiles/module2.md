@@ -21,7 +21,7 @@ Securing sensitive data like API keys and credentials is crucial to protect your
     - **Pricing Plan**: Choose **Standard** **(4)**
     -  Click on **Review + Create** **(5)**
 
-       ![](../media/container-registry.png)
+    ![](../media/container-registry.png)
    
 1. Click on **Create**.
 
@@ -158,7 +158,7 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
     ![](../media/17-06-2024(4).png)
 
-1. Navigate to the **Code** **(1)** and click on **.github/workflows** **(2)** folder.
+1. From GitHub **Code** **(1)** tab, navigate to **.github/workflows** **(2)** folder.
 
     ![](../media/editfolder.png)
 
@@ -234,7 +234,11 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
     ![](../media/commit.png)
 
-1. Click on **Actions**, verify the workflow has been executed successfully once the workflow is succedded.
+1. Click on **Actions**, Select the **Create docker.yml** action and verify the workflow has been executed successfully once the workflow is succedded.
+
+   ![](../media/env38.png)
+
+   >**Note**: This action builds and pushes a Docker image to Azure Container Registry (ACR) using the environment secret AZURE_CREDENTIALS.
 
 ### Task 2: Conditional execution using if expressions.
 
@@ -289,5 +293,7 @@ Conditional execution is essential when you want certain steps to run only under
 1. Click on **Actions** **(1)**, verify the workflow has been executed successfully once the workflow is succedded select the newly created workflow **Create conditional.yml** **(2)**.
 
     ![](../media/ifcondtion-created.png)
+   
+   >**Note**: This GitHub Actions workflow, named "Complex Workflow," triggers on push and pull request events to the main branch when the .github/workflows/conditional.yml file is modified. It includes two jobs: job1, which checks out the repository and runs a simple script, and job2, which runs only if job1 is successful and the event is a push, checking out the repository again and running a different script.
 
 1. Click on **Next** button for next Lab.
