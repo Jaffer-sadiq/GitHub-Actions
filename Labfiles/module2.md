@@ -169,7 +169,7 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
     ![](../media/4th-oidc.png)
 
-1. In the editor update the code with the below-provided code, replace **{Login_server}** from lines 30 and 40 with **Azure Container registry Login server**, and replace **{Registry name}** from line 35 with **Azure Container registry Registry name**.
+1. In the editor update the code with the below-provided code, replace **{Login_server}** from lines 40 and 50 with **Azure Container registry Login server**, and replace **{Registry name}** from line 45 with **Azure Container registry Registry name**.
 
    >**Note**: Paste the value you copied in Task 1, Step 6 for the **Login_server** and **Registry name.**
 
@@ -226,11 +226,11 @@ Securing sensitive data like API keys and credentials is crucial to protect your
             docker push {Login_server}/my-app:latest  
     ```
 
-    ![](../media/workflow.png)
+    ![](../media/21-06-2024(10).png)
 
 1. Provide the file name as **docker.yml (1)**. In the editor, **copy and paste (2)** the script below, then click **Commit changes (3)**
 
-   ![](../media/docker.png)
+   ![](../media/21-06-2024(11).png)
    
 1. In the pop up window of **Commit changes** click on the **Commit changes**.
 
@@ -303,7 +303,7 @@ Conditional execution is essential when you want certain steps to run only under
           run: echo Hello again, world!
     ```
 
-    ![](../media/ifcondition-yml.png)
+    ![](../media/21-06-2024(12).png)
 
 1. In the **Commit changes** pop-up, click on **Commit changes** button.
 
