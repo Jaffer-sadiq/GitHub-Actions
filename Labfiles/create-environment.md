@@ -21,15 +21,18 @@ In this exercise, You'll learn how to set up environments with protection rules,
      ![](../media/env2.png)
 
    - Now, scroll down to **Environment Secrets** and click on **Add environment secret**.
+
      ![](../media/env9.png)
+
+   - Click on **Save protection rules** to save the rules.
+
+     ![](../media/env39.png)
 
    **Environment Secrets**
 
-   - Navigate to **Environment Details** **(1)**, click on **Service Principal Details** **(2)** and copy the **Subscription ID**, **Tenant Id (Directory ID)**, **Application Id(Client Id)** and **Secret Key (Client Secret)**.
+   - Under **Actions Secrets/New secret** page, enter the below mentioned details and Click on **Add secret (3)**.
 
-     ![](../media/ex2-t4-8.png)
-   
-   - Replace the values that you copied in below Json. You will be using them in this step.
+   - Copy and paste the code below in the value section.
    
       ```json
       {
@@ -40,10 +43,12 @@ In this exercise, You'll learn how to set up environments with protection rules,
       }
       ```
 
-   - Under Actions Secrets/New secret page, enter the below mentioned details and Click on Add secret (3).
+   - Navigate to **Environment Details** **(1)**, click on **Service Principal Details** **(2)** and copy the **Subscription ID**, **Tenant Id (Directory ID)**, **Application Id(Client Id)** and **Secret Key (Client Secret)**.
+
+     ![](../media/ex2-t4-8.png)
 
    - Name : Enter **AZURE_CREDENTIALS** (1)
-   - Value : Paste the service principal details in json format (2)
+   - Value : Paste the service principal details in json format (2). Click on **Add secret**.
 
      ![](../media/env10.png)
 
@@ -59,20 +64,19 @@ In this exercise, You'll learn how to set up environments with protection rules,
    
      ![](../media/env11.png)
 
-   - Provide name as **registryName (1)**, paste the **value** you copied from in earlier steps, and click on **Add Variable**.
+   - Provide name as **REGISTRY_NAME (1)**, paste the **value** you copied from in earlier steps, and click on **Add Variable**.
 
-     ![](../media/env12.png)
+     ![](../media/env40.png)
 
-   - Similarly, click again on **Add environment variable**. Provide name as **login
+   - Similarly, click again on **Add environment variable**. Provide name as **LOGIN_SERVER** and paste the login server value copied in earlier steps.
 
-     ![](../media/env13.png)
+     ![](../media/env41.png)
 
-   - Click on **Save protection rules** and save the environment.
-   ![](../media/env3.png)
+   - Please make sure that you have completed all the steps of creating an GitHub Environment. 
 
 **Creating Workflow with Environment**
 
-1. From the GitHub home page, navigate to `.github/workflows/jobs.yml` file and update the script as below.
+1. Navigate to GitHub home page, navigate to `.github/workflows/jobs.yml` file and update the script as below.
 
     ```
     name: Build and Push Docker Image to ACR
