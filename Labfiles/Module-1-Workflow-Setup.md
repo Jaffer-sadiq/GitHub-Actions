@@ -165,7 +165,7 @@ When the Workflow Runs:
 
     ![](../media/env22.png)
 
-   >**Note:** This GitHub Actions workflow, named "CI", triggers on pushes to the main branch affecting **.github/workflows/hello-action.yml**, pull requests to main with changes to the same file, and can be manually triggered **(workflow_dispatch)**. It features a single job **(build)** running on Ubuntu, utilizing **actions/checkout@v4** to fetch the repository. The job executes a one-line script printing "Hello, world!" and a multi-line script for additional build, test, and deployment actions.
+   > **Note:** This GitHub Actions workflow, named "CI", triggers on pushes to the main branch affecting **.github/workflows/hello-action.yml**, pull requests to main with changes to the same file, and can be manually triggered **(workflow_dispatch)**. It features a single job **(build)** running on Ubuntu, utilizing **actions/checkout@v4** to fetch the repository. The job executes a one-line script printing "Hello, world!" and a multi-line script for additional build, test, and deployment actions.
 
 ## Task 3: Create a Custom workflow with multiple Jobs
 
@@ -238,7 +238,7 @@ In GitHub Actions workflows, you define jobs and steps to orchestrate the tasks 
 
     - For more details on GitHub Actions syntax and available events, refer to the official documentation: [GitHub Actions - Workflow syntax for GitHub Actions](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions).
 
-1. Click on **Actions** **(1)**, verify the workflow has been executed successfully once the workflow is succedded select the newly created workflow **Create jobs.yml** **(2)**.
+1. Click on **Actions** **(1)**, verify the workflow has been executed successfully once the workflow is succeeded select the newly created workflow **Create jobs.yml** **(2)**.
 
    ![](../media/jobs-action-action.png)
 
@@ -246,7 +246,7 @@ In GitHub Actions workflows, you define jobs and steps to orchestrate the tasks 
 
    ![](../media/ex1-task4-step7.png)
 
-    >**Note:** This GitHub Actions workflow named "My Workflow" triggers on pushes and pull requests to the main branch, specifically for changes to the **.github/workflows/jobs.yml** file, and can also be manually triggered **(workflow_dispatch)**. It consists of two jobs: **job1**, which checks out the repository and runs a script printing "Hello, world!", and **job2**, dependent on **job1**, which checks out the repository again and runs another script printing "Hello, again!" sequentially on an Ubuntu environment.
+    > **Note:** This GitHub Actions workflow named "My Workflow" triggers on pushes and pull requests to the main branch, specifically for changes to the **.github/workflows/jobs.yml** file, and can also be manually triggered **(workflow_dispatch)**. It consists of two jobs: **job1**, which checks out the repository and runs a script printing "Hello, world!", and **job2**, dependent on **job1**, which checks out the repository again and runs another script printing "Hello, again!" sequentially on an Ubuntu environment.
 
 1. Click on **Next** button for next Lab.
 
