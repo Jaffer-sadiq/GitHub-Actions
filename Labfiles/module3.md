@@ -177,7 +177,9 @@ A matrix build is a CI/CD pipeline strategy that allows you to run tests across 
 
 2. Navigate to the **Code** **(1)**, Click on **Add File** **(2)** and click on **+ Create new file** **(3)**.
 
-3. Provider file name as **requirements.txt** (1), in the editor **copy and paste** **(2)** the below script, and click in **commit changes** **(3)**.
+    ![](../media/ex2-task2-step18.png)
+
+3. Provider file name as **requirements.txt** (1), in the editor **copy and paste** **(2)** the below script, and click in **Commit changes** **(3)**.
 
    ```
    pytest
@@ -185,7 +187,9 @@ A matrix build is a CI/CD pipeline strategy that allows you to run tests across 
    
 4. In the pop-up windows of Commit Changes click on the **Commit changes** button.
 
-5. Click on **Add File** **(2)** and click on **+ Create new file** **(3)**.   
+5. Click on **Add File** **(1)** and click on **+ Create new file** **(2)**.
+
+   ![](../media/21-06-2024(3).png)
 
 6. Provider file name as with folder creation **tests/test_sample.py** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **Commit changes** **(3)**.
 
@@ -197,6 +201,8 @@ A matrix build is a CI/CD pipeline strategy that allows you to run tests across 
     ```
 
 7. In the pop-up windows of Commit Changes click on the **Commit changes** button.
+
+   ![](../media/21-06-2024(4).png)
 
 8. Navigate to the **Code** **(1)** and click on **.github/workflows** **(2)** folder.
 
