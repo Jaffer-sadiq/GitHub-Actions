@@ -1,15 +1,16 @@
 # Lab 3: Advanced Workflows
 
-- **Reusing workflows**: Rather than copying and pasting from one workflow to another, you can make workflows reusable. You and anyone with access to the reusable workflow can then call the reusable workflow from another workflow. Reusing workflows avoids duplication. This makes workflows easier to maintain and allows you to create new workflows more quickly by building on the work of others, just as you do with actions. Workflow reuse also promotes best practices by helping you to use workflows that are well-designed, have already been tested, and have been proven to be effective. Your organization can build up a library of reusable workflows that can be centrally maintained, for more information please go through the given link [Reusing workflows](https://docs.github.com/en/actions/using-workflows/reusing-workflows).
-
+In this lab, you'll learn about Reusable workflows and Matrix builds.
 
 ## Task 1: Using Reusable Workflow
+
+Rather than copying and pasting from one workflow to another, you can make workflows reusable. You and anyone with access to the reusable workflow can then call the reusable workflow from another workflow. Reusing workflows avoids duplication. This makes workflows easier to maintain and allows you to create new workflows more quickly by building on the work of others, just as you do with actions. Workflow reuse also promotes best practices by helping you to use workflows that are well-designed, have already been tested, and have been proven to be effective. Your organization can build up a library of reusable workflows that can be centrally maintained, for more information please go through the given link [Reusing workflows](https://docs.github.com/en/actions/using-workflows/reusing-workflows).
 
 1. From GitHub, navigate to the **.github/workflows** folder, click on **Add files** **(1)**, and click on **+ Create new file** **(2)**.
 
     ![](../media/4th-oidc.png)
 
-1. Copy the code given below, paste it in the window, and name the file as **reusable-print-message.yml**
+1. Copy the code given below, paste it in the window, and name the file as **reusable-print-message.yml**.
 
    ```
    # This GitHub Actions workflow template is designed as a reusable component for printing a message.
@@ -48,7 +49,7 @@
 
    ![](../media/env26.png)
 
-1. Copy the code given below, paste it into the window, and name the file as **caller-workflows.yml**
+1. Copy the code given below, paste it into the window, and name the file as **caller-workflows.yml**.
 
    ```
    name: Caller Workflow
@@ -99,16 +100,37 @@ Parallelism allows you to run jobs or steps concurrently, reducing the total exe
 
    ![](../media/21-06-2024(1).png)
 
+   >**Note**: In if a fork already exists, follow the below steps to delete the repository.
+
+   - In the upper-right corner, navigate to the user menu and select **Your repositories** **(1)**.
+   
+     ![The `New Repository` creation form in GitHub.](../media/my_repos.png "New Repository Creation Form")
+
+   - Select ```sample-node-project``` **(1)** from the list and select to open it **(2)**.
+    
+     ![](../media/env46.png)
+
+   - Click on **Settings** tab from the GitHub homepage.
+
+     ![](../media/env47.png)
+
+   - In the settings page, scroll to the bottom of the page and select **Delete this repository**.
+
+     ![The `New Repository` creation form in GitHub.](../media/2dg120.png "New Repository Creation Form")
+
+   - Accept all the warning prompts. In the pop of delete `{github-username}/sample-node-project` to conform, Copy the **repository name** **(1)**, paste it in the **box** **(2)**, and click on I understand the consequences, **Delete this repository** **(3)**.
+
+     ![](../media/env47.png)
 
 1. On the **Create a new fork** page, click on **Create fork**.
 
    ![](../media/21-06-2024(2).png)
 
-2. Navigate to the **Actions** **(1)** directory in your repository, in `Get started with GitHub Actions` click on **Set up a workflow yourself (2)**.
+1. Navigate to the **Actions** **(1)** directory in your repository, in `Get started with GitHub Actions` click on **Set up a workflow yourself (2)**.
 
-    ![](../media/newaction.png)
+   ![](../media/newaction.png)
 
-4. Provider file name as **nodejs_ci.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **Commit changes** **(3)**.
+1. Provider file name as **nodejs_ci.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **Commit changes** **(3)**.
 
     ![](../media/optimize2.png)
 
@@ -155,11 +177,11 @@ Parallelism allows you to run jobs or steps concurrently, reducing the total exe
 
     ![](../media/21-06-2024(15).png)
 
-5. In the pop up windows of **Commit Changes** click on the **Commit changes**.
+1. In the pop up windows of **Commit Changes** click on the **Commit changes**.
 
     ![](../media/newcommit.png)
 
-6. Click on **Actions** **(1)**, verify the workflow has been executed successfully once the workflow is succedded select the newly created workflow **nodejs_ci.yml** **(2)**.
+1. Click on **Actions** **(1)**, verify the workflow has been executed successfully once the workflow is succedded select the newly created workflow **nodejs_ci.yml** **(2)**.
 
     ![](../media/optimize4.png)
 
