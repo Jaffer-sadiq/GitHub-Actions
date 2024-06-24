@@ -96,6 +96,8 @@ Matrix builds let you test your code across multiple environments by creating a 
 
 Parallelism allows you to run jobs or steps concurrently, reducing the total execution time.
 
+In this task, you'll fork a public repository and create a GitHub action using Matrix build.
+
 1. Naviagte to the [sample-node-project](https://github.com/acemilyalcin/sample-node-project) repo and click on **Fork** **(2)**.
 
    ![](../media/21-06-2024(1).png)
@@ -121,6 +123,8 @@ Parallelism allows you to run jobs or steps concurrently, reducing the total exe
    - Accept all the warning prompts. In the pop of delete `{github-username}/sample-node-project` to conform, Copy the **repository name** **(1)**, paste it in the **box** **(2)**, and click on I understand the consequences, **Delete this repository** **(3)**.
 
      ![](../media/env47.png)
+
+   - Navigate back to step 1 and try to fork the repository again. 
 
 1. On the **Create a new fork** page, click on **Create fork**.
 
@@ -197,6 +201,8 @@ A matrix build is a CI/CD pipeline strategy that allows you to run tests across 
 
 - **Consistency**: Helps maintain consistent behavior across different environments, which is crucial for cross-platform applications.
 
+In this task, you'll set-up a GitHub action using Matrix strategy to run the build across multiple OS simultaneously.
+
 1. Navigate back to the `github-action` repo, from the GitHub repository.
 
 2. Navigate to the **Code** **(1)**, Click on **Add File** **(2)** and click on **+ Create new file** **(3)**.
@@ -234,7 +240,7 @@ A matrix build is a CI/CD pipeline strategy that allows you to run tests across 
 
    ![](../media/21-06-2024(4).png)
 
-8. Navigate to the **Code** **(1)** and click on **.github/workflows** **(2)** folder.
+8. Navigate to **Code** **(1)** and click on **.github/workflows** **(2)** folder.
 
    ![](../media/4th-oidc-click.png)
 
@@ -250,12 +256,12 @@ A matrix build is a CI/CD pipeline strategy that allows you to run tests across 
     on:
         push:
             branches:
-                - master
+                - main
             paths:
                 - '.github/workflows/matrix.yml'
         pull_request:
             branches:
-                - master
+                - main
             paths:
                 - '.github/workflows/matrix.yml'
       
