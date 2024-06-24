@@ -2,6 +2,8 @@
 
 Integrating Azure with GitHub Actions provides a seamless and efficient way to automate your workflows and deploy applications directly to Azure from your GitHub repository. GitHub Actions, a powerful automation tool, enables continuous integration and continuous deployment (CI/CD) pipelines, allowing you to build, test, and deploy your code with ease.
 
+>**Note**: For the purpose of this demo, we are using the main branch directly. However, it is important to follow best practices in a production environment by not committing changes directly to the main branch.
+
 ### Task 1: Using GitHub Actions with Azure container registries with Secrets Variables in Workflows 
 
 Securing sensitive data like API keys and credentials is crucial to protect your workflows and prevent unauthorized access. This can be achieved by using secrets, which are encrypted variables that can be securely used in your workflows without exposing the actual values. In this task, you'll create an action to build and push a docker image to Azure container registry.

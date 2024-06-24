@@ -553,4 +553,4 @@ Optimizing workflow performance by caching dependencies can significantly improv
 
 ### Summary
 
-In this, you learn how to securely store sensitive data such as API keys and passwords within a GitHub repository using secrets, ensuring that this data remains protected and separate from the codebase. The code details the process for creating and managing these secrets and how to reference them in workflows to maintain security. Matrix builds enhance workflows by allowing the same workflow to run across multiple configurations, such as different language versions or operating systems. The code demonstrates defining a configuration matrix to run jobs in parallel, which boosts testing efficiency and ensures compatibility across various environments. This comprehensive approach to handling secrets, matrix builds, and artifacts ensure robust security, efficient testing, and effective data management in GitHub workflows.
+In this lab, you learnt about Reusable workflows and Matrix builds.
