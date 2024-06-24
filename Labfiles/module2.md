@@ -250,15 +250,15 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
 1. Select **gacontainer<inject key="DeploymentID" enableCopy="false"/>** from the list.
 
-   ![](env43.png)
+   ![](../media/env43.png)
 
 1. Select **Repositories (1)** from services and you should be able to see an image named **my-app (2)**. This confirms that the image is pushed using the GitHub Actions.
 
-   ![](env44.png)
+   ![](../media/env44.png)
 
 1. In the **my-app** repository, you'll be able to see the image version, last modified details, and much more.
 
-   ![](env45.png)
+   ![](../media/env45.png)
 
 ### Task 2: Conditional execution using if expressions.
 
