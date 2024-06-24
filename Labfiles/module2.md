@@ -262,17 +262,15 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
 ### Task 2: Conditional execution using if expressions.
 
-GitHub Actions is a powerful automation platform that allows you to define workflows to build, test, and deploy your code directly from your GitHub repository. One of the key features that make GitHub Actions flexible and robust is the ability to conditionally execute steps within your workflows using if expressions.
+One of the key features that make GitHub Actions flexible and robust is the ability to conditionally execute steps within your workflows using if expressions. Conditional execution is essential when you want certain steps to run only under specific conditions, such as based on the branch name, the outcome of a previous step, or custom environment variables. This helps in creating more efficient and context-aware CI/CD pipelines, reducing unnecessary executions, and ensuring that the right actions are taken in the right scenarios.
 
-Conditional execution is essential when you want certain steps to run only under specific conditions, such as based on the branch name, the outcome of a previous step, or custom environment variables. This helps in creating more efficient and context-aware CI/CD pipelines, reducing unnecessary executions, and ensuring that the right actions are taken in the right scenarios.
+1. Navigate to the **GitHub** homepage. From the  **Code** **(1)** tab, click on **.github/workflows** **(2)** folder.
 
-1. Navigate to the **Code** **(1)** and click on **.github/workflows** **(2)** folder.
-
-    ![](../media/editfolder.png)
+   ![](../media/editfolder.png)
 
 1. In the **.github/workflows** folder, click on **Add files** **(1)**, and click on **+ Create new file** **(2)**.
 
-    ![](../media/4th-oidc.png)
+   ![](../media/4th-oidc.png)
 
 1. Provide the file name as **conditional.yml (1)**. In the editor, **copy and paste (2)** the script below, then click **Commit changes (3)**
 
@@ -334,3 +332,7 @@ Conditional execution is essential when you want certain steps to run only under
    >**Note**: This GitHub Actions workflow, named "Complex Workflow," triggers push and pull request events to the main branch when the .github/workflows/conditional.yml file is modified. It includes two jobs: job1, which checks out the repository and runs a simple script, and job2, which runs only if job1 is successful and the event is a push, checking out the repository again and running a different script.
 
 1. Click on **Next** button for next Lab.
+
+### Summary
+
+In this lab, you learned about integrating Azure with GitHub actions and using if expressions in GitHub actions.
