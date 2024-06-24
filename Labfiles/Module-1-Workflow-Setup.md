@@ -2,9 +2,9 @@
 
 ## Task 1: Create the Project Repo
 
-In this task, you'll access the GitHub enterprise account and create a new repository to store the infrastructure.
+A GitHub repository (repo) is a central location where the files for a project are stored and managed using Git, a version control system. A repository contains all the project's files, including code, documentation, and other assets, along with a history of all changes made to those files.
 
-In this task, you will create an account in [GitHub](https://github.com) and use `git` to add lab files to a new repository.
+In this task, you'll learn to create a GitHub repository.
 
 1. In the labvm-<inject key="DeploymentID" enableCopy="false"/>, open a new browser tab and navigate to the GitHub login page at ```https://www.github.com/login```. From **Environment Details** page **(1)**, navigate to **Licenses** **(2)** tab and **copy** **(3)** the credentials. Use the same username and password to login into GitHub.
 
@@ -58,23 +58,27 @@ In this task, you will create an account in [GitHub](https://github.com) and use
 
       ![The `New Repository` creation form in GitHub.](../media/2dg123.png "New Repository Creation Form")
 
+   - Navigate back to step 3 and create the repository as instructed. 
+
 ## Task 2: Introduction to GitHub Actions
 
 GitHub Actions is a powerful automation tool provided by GitHub, allowing you to automate your software development workflows directly within your GitHub repository. With GitHub Actions, you can build, test, and deploy your code without leaving GitHub, saving time and improving collaboration among your team members.
 
-1. Navigate to the **Actions** directory in your repository.
+In this task, you'll create a simple GitHub Action and understand the components of a workflow file.
 
-    ![](../media/env16.png)
+1. Navigate to the **Actions** directory in the newly created repository.
+
+   ![](../media/env16.png)
 
 1. In the `Get started with GitHub Actions` page, click on the **Configure** button on the Simple Workflow.
 
-    ![](../media/env15.png)
+   ![](../media/env15.png)
 
 1. You'll be able to see a very simple workflow which prints a few text sentences as output.    
 
-    ![](../media/21-06-2024(8).png)
+   ![](../media/21-06-2024(8).png)
 
-   This workflow provides a basic template for setting up CI with GitHub Actions. It checks out the repository code, runs a simple one-line script, and then runs a multi-line script. You can expand this workflow by adding more steps to build, test, and deploy your project. Here's the complete explanation of the workflow file.
+   **Note**: This workflow provides a basic template for setting up CI with GitHub Actions. It checks out the repository code, runs a simple one-line script, and then runs a multi-line script. You can expand this workflow by adding more steps to build, test, and deploy your project. Here's the complete explanation of the workflow file.
 
    - **Workflow Name**: The workflow is named "CI", which stands for Continuous Integration.
 When the Workflow Runs:
@@ -155,7 +159,7 @@ When the Workflow Runs:
 
 1. In the pop up windows of **Commit Changes** click on the **Commit changes**.
 
-    ![](../media/17-06-2024(2).png)
+    ![](../media/env42.png)
 
 1. Click on **Actions** **(1)**, once the workflow got succedded click on Workflow **hello-action.yml** **(2)**.
 

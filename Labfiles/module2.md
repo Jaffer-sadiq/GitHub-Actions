@@ -1,8 +1,10 @@
 # Lab 2: Action Integration
 
+Integrating Azure with GitHub Actions provides a seamless and efficient way to automate your workflows and deploy applications directly to Azure from your GitHub repository. GitHub Actions, a powerful automation tool, enables continuous integration and continuous deployment (CI/CD) pipelines, allowing you to build, test, and deploy your code with ease.
+
 ### Task 1: Using GitHub Actions with Azure container registries with Secrets Variables in Workflows 
 
-Securing sensitive data like API keys and credentials is crucial to protect your workflows and prevent unauthorized access. This can be achieved by using secrets, which are encrypted variables that can be securely used in your workflows without exposing the actual values.
+Securing sensitive data like API keys and credentials is crucial to protect your workflows and prevent unauthorized access. This can be achieved by using secrets, which are encrypted variables that can be securely used in your workflows without exposing the actual values. In this task, you'll create an action to build and push a docker image to Azure container registry.
 
 1. Navigate to `potal.azure.com`, in the search bar search for **Container registries** **(1)** and select **Container registries** **(2)**.
 
@@ -47,7 +49,7 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
     ![](../media/17-06-2024(6).png)
 
-1. Copy and paste the code below.
+1. Copy and paste the code in the secret.
    
       ```json
       {
@@ -241,6 +243,22 @@ Securing sensitive data like API keys and credentials is crucial to protect your
    ![](../media/env38.png)
 
    >**Note:** This GitHub Actions workflow, named "Build and Push Docker Image to ACR", automates the process of building and pushing a Docker image to Azure Container Registry (ACR) when triggered by pushes or pull requests to the main branch, or manually **(`workflow_dispatch`)**. It runs on an Ubuntu environment and includes steps to checkout the repository, authenticate with Azure using stored credentials, list files, build a Docker image tagged as **`{Login_server}/my-app:latest`**, log in to Azure Container Registry, and finally push the built Docker image to the registry.
+
+1. Once the execution is completed, navigate to `potal.azure.com`, in the search bar search for **Container registries** **(1)** and select **Container registries** **(2)**.
+
+   ![](../media/17-06-2024(1).png)
+
+1. Select **gacontainer<inject key="DeploymentID" enableCopy="false"/>** from the list.
+
+   ![](env43.png)
+
+1. Select **Repositories (1)** from services and you should be able to see an image named **my-app (2)**. This confirms that the image is pushed using the GitHub Actions.
+
+   ![](env44.png)
+
+1. In the **my-app** repository, you'll be able to see the image version, last modified details, and much more.
+
+   ![](env45.png)
 
 ### Task 2: Conditional execution using if expressions.
 
