@@ -65,6 +65,10 @@ This GitHub Actions workflow demonstrates the best practice of securely using Az
 
 ### Task 2: Debugging and monitoring workflow
 
+Debugging and monitoring workflows in GitHub Actions involve using detailed logging, GitHub's job status and logs, and notifications for failures to identify and resolve issues. Integrating external logging services and setting up metrics and alerts can further enhance visibility and proactive issue management, ensuring more reliable and efficient development cycles.
+
+In this task, you will analyse and resolve an error with the worflow.
+
 1. Navigate to the **Code** **(1)** and click on **.github/workflows** **(2)** folder.
 
    ![](../media/4th-oidc-click.png)
@@ -121,6 +125,8 @@ This GitHub Actions workflow demonstrates the best practice of securely using Az
 11. Click on **build** **(1)**, expend **Install Dependency** **(2)**
 
     ![](../media/issue-fixed-result.png)
+
+    >**Note**: you just resolved an issue by creating the missing powershell script and triggered the workflow.e
 
 ### Task 3: Agent infrastructure [Read Only]
 
