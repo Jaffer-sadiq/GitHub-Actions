@@ -26,28 +26,38 @@ In this task, you will connect your Azure DevOps project's board to your GitHub 
 
 1. Log in using the credentials.
 
+   - **Email/Username**: **<inject key="AzureAdUserEmail"></inject>**
+
+   - **Password**: **<inject key="AzureAdUserPassword"></inject>**
+
    ![](../media/login_page.png)
 
    ![](../media/sign_2.png)
+
+   - In case, if you handle up in Get started with Azure DevOps page, leave options to default and Click on **Continue**.
+
+   ![](../media/env49.png)
    
 1. In the **Create a project to get started**, enter the Project name as **Azure DevOps** **(1)**, Select **Public** **(2)** as visibility and click on **+ Create project** **(3)**.
 
-    ![](../media/create-devops-project.png)
+   ![](../media/create-devops-project.png)
 
    >**Note**: If you cannot select public visibility, please follow the steps below..
 
    - Click on **Organization policies**.
   
-      ![](../media/create_1.png)
+     ![](../media/create_1.png)
 
-   - In the Organization Settings, go to **Policies (1)** under **Security**, enable the **Allow public projects (2)** option , and click **Save**. Then, select the public 
-      visibility setting.
+   - In the Organization Settings, go to **Policies (1)** under **Security**, enable the **Allow public projects (2)** option , and click **Save**. Then, select the public visibility setting.
      
-      ![](../media/policy_1_1.png)
+     ![](../media/env50.png)
 
-      ![](../media/allow_public.png)
+     ![](../media/env51.png)
+
+   - Click on the **Azure DevOps** icon to navigate back to home page and follow step 1 again.
+
+     ![](../media/env52.png)
       
-
 1. In the Azure DevOps page click on the **User settings** **(1)** from the top right corner of the page and click on **Preview features** **(2)**.
 
    ![](../media/preview-features.png)
