@@ -97,9 +97,9 @@ In this task, you will connect your Azure DevOps project's board to your GitHub 
 
 1. Select the lab files repository `github-action` which you created earlier and click on **Install & Authorize**.
 
-     ![](../media/ex4-kc-install&auth.png)
+   ![](../media/ex4-kc-install&auth.png)
     
-     > **Note**: If you see the message **You’ve already purchased this on all of your GitHub accounts** this indicates Azure Boards integration is already used in your account, follow the below steps.
+   > **Note**: If you see the message **You’ve already purchased this on all of your GitHub accounts** this indicates Azure Boards integration is already used in your account, follow the below steps.
 
    - On the **Azure Boards Marketplace** page, Click the **ellipsis** in the upper right corner and Select the **Username**.
 
@@ -107,7 +107,7 @@ In this task, you will connect your Azure DevOps project's board to your GitHub 
    
    - In Edit your plan window,  select **grant this app access**.
    
-       ![](../media/2dg51.png)
+     ![](../media/2dg51.png)
    
    - Select the lab files repository `github-action` which you created earlier and click on **Install & Authorize**.
 
@@ -167,7 +167,7 @@ In this task, you'll make changes in GitHub link a PR to Azure boards using synt
 
      ![](../media/ex4-kc-todo-new1.png)
    
-1. Select the **Code** **(1)** tab in your GitHub repository, navigate to **.github/workflows/** **(2)** and select **any of the workflow you crated** **(3)** file.
+1. Select the **Code** **(1)** tab in your GitHub repository, navigate to **.github/workflows/** **(2)** and select **any of the workflow you created** **(3)** file.
 
      ![](../media/2dgn140.png)
    

@@ -1,10 +1,10 @@
-# Getting Started with GitHub
+# Getting Started with GitHub (Optional - Read Only)
 
-### What is GitHub?
+### What is GitHub? 
 
 **GitHub** is a cloud-based platform that uses Git, a distributed version control system, at its core. The GitHub platform simplifies the process of collaborating on projects and provides a website, command-line tools, and overall flow that allows developers and users to work together.
 
-As we learned earlier GitHub provides an AI-powered developer platform to build, scale, and deliver secure software. Let’s break down each one of the core pillars of the GitHub Enterprise platform, AI, Collaboration, Productivity, Security and Scale.
+As you learned earlier GitHub provides an AI-powered developer platform to build, scale, and deliver secure software. Let’s break down each one of the core pillars of the GitHub Enterprise platform, AI, Collaboration, Productivity, Security and Scale.
 
 ### Benefits of Using GitHub
 
