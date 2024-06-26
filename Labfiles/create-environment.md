@@ -80,7 +80,7 @@ In this task, you'll set up GitHub environment and use it a GitHub Action.
 
 **Creating Workflow with Environment**
 
-1. Navigate to GitHub home page, navigate to `.github/workflows/jobs.yml` file and update the script as below.
+1. Navigate to GitHub home page, navigate to `.github/workflows/docker.yml` file and update the script as below.
 
     ```
     name: Build and Push Docker Image to ACR
@@ -132,19 +132,17 @@ In this task, you'll set up GitHub environment and use it a GitHub Action.
             docker push $LOGIN_SERVER/my-app:latest
     ```
 
-   ![](../media/env14.png)
-
 1. Once you have updated the workflow file, commit the changes.
 
-   ![](../media/env4.png)
+   ![](../media/env53.png)
 
-1. Navigate to Actions tab and select the **update jobs.yml** action.
+1. Navigate to Actions tab and select the **update docker.yml** action.
 
-   ![](../media/env5.png)
+   ![](../media/env54.png)
 
 1. You'll be able to see a request for approval as the github username was added in the previous steps. Click on **Review deployments**.
 
-   ![](../media/env6.png)
+   ![](../media/env55.png)
 
 1. In the Review pending deployments pop window, select the **action-environment** and click on **Approve and deploy**.
 
@@ -152,7 +150,7 @@ In this task, you'll set up GitHub environment and use it a GitHub Action.
 
 1. You will also be able to see the **wait timer** status that job1 waited for 2 minutes before starting the execution.
 
-   ![](../media/env8.png)
+   ![](../media/env56.png)
 
 1. You can also notice the environment variables and secret values defined the Environment are fetched and are used in the execution.
 
