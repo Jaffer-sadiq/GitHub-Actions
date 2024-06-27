@@ -95,7 +95,7 @@ Securing sensitive data like API keys and credentials is crucial to protect your
     CMD ["nginx", "-g", "daemon off;"]
     ```
 
-    ![](../media/Docker_file_1.png)
+    ![](../media/env57.png)
 
 1. In the **Commit changes** pop-up, click on **Commit changes** button.
 
