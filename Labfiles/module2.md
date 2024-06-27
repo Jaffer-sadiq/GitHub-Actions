@@ -79,6 +79,8 @@ Securing sensitive data like API keys and credentials is crucial to protect your
     
 1. Provide the file name as **Dockerfile (1)**. In the editor, **copy and paste (2)** the script below, then click **Commit changes (3)**.
 
+   >**Note**: Please make sure to name the file as **Dockerfile** only as its a standard convention used by Docker and widely followed in the Docker community.
+
     ```
     # Use an official Nginx runtime as a parent image
     FROM nginx:latest
