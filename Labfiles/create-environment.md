@@ -89,6 +89,14 @@ In this task, you'll set up GitHub environment and use it a GitHub Action.
       push:
         branches:
           - main
+        paths:
+          - '.github/workflows/docker.yml'
+      pull_request:
+        branches:
+          - main
+        paths:
+          - '.github/workflows/docker.yml'
+      workflow_dispatch:
     
     jobs:
       build-and-push:
