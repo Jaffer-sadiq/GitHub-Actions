@@ -58,7 +58,7 @@ In this task, you will connect your Azure DevOps project's board to your GitHub 
 
      ![](../media/env51.png)
 
-   - Click on the **Azure DevOps** icon to navigate back to home page and follow step 1 again.
+   - Click on the **Azure DevOps** icon to navigate back to home page and now you can able to select **Public** option and click on save project.
 
      ![](../media/env52.png)
       
