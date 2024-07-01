@@ -37,6 +37,10 @@ In this task, you will connect your Azure DevOps project's board to your GitHub 
    - In case, if you handle up in Get started with Azure DevOps page, leave options to default and Click on **Continue**.
 
    ![](../media/env49.png)
+
+  - After clicking on continue in Get started with azure DevOps page, you may see **Almost Done** page, leave options to default and carefully type the captha code given there.
+
+  ![](../media/updatess.png)
    
 1. In the **Create a project to get started**, enter the Project name as **Azure DevOps** **(1)**, Select **Public** **(2)** as visibility and click on **+ Create project** **(3)**.
 
