@@ -541,7 +541,7 @@ Optimizing workflow performance by caching dependencies can significantly improv
 
    ![](../media/ExampleScript-commit.png)
 
-1. You will get to see the following warning message on the screen: **Secret scanning found a GitHub Personal Access Token secret on line 2.** Select the **It's used in tests** **(1)** option and click on **Allow Secret** **(2)**.
+1. You'll get to see the following warning message on the screen: **Secret scanning found a GitHub Personal Access Token secret on line 2.** Select the **It's used in tests** **(1)** option and click on **Allow Secret** **(2)**.
 
    ![](../media/ExampleScript-commit-risk.png)
 
