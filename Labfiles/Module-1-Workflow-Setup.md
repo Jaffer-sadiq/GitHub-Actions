@@ -91,7 +91,7 @@ When the workflow runs:
 
       *Manual Trigger*: The workflow can also be manually triggered from the Actions tab in the GitHub repository (using workflow_dispatch).
 
-    - **Jobs**: A workflow is made up of one or more jobs. In this case, there is a single job called "build." In the next task, you will create a workflow with multiple jobs and learn about it in detail.
+    - **Jobs**: A workflow is made up of one or more jobs. In this case, there is a single job called "build." In the next task, you'll create a workflow with multiple jobs and learn about it in detail.
 
     - **Runner**: The job runs on a virtual machine (runner) provided by GitHub. Here, it uses the latest version of Ubuntu (ubuntu-latest).
 
