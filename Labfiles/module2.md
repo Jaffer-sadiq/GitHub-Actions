@@ -264,7 +264,7 @@ Securing sensitive data like API keys and credentials is crucial to protecting y
 
    ![](../media/env45.png)
 
-### Task 2: Conditional Execution Using If Expressions.
+### Task 2: Conditional Execution Using If Expressions
 
 One of the key features that make GitHub Actions flexible and robust is the ability to conditionally execute steps within your workflows using if expressions. Conditional execution is essential when you want certain steps to run only under specific conditions, such as based on the branch name, the outcome of a previous step, or custom environment variables. This helps in creating more efficient and context-aware CI/CD pipelines, reducing unnecessary executions, and ensuring that the right actions are taken in the right scenarios.
 
