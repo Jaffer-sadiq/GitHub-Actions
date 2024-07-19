@@ -104,7 +104,7 @@ Consider all of the tasks that must happen after the code is written but before 
 - Check the code and its dependencies for known security issues.
 - Build the code, integrating new sources from (potentially) multiple contributors.
 - Ensure the software passes integration tests.
-- Version the new build.
+- Use a version of the new build.
 - Deliver the new binaries to the appropriate filesystem location.
 - Deploy the new binaries to one or more servers.
 - If any of these tasks don't pass, report the issue to the proper individual or team for resolution.
