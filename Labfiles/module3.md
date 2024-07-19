@@ -82,7 +82,7 @@ Rather than copying and pasting from one workflow to another, you can make workf
 
    ![](../media/env29.png)
 
-1. Select the **print-message (1)** job from the side-blade and **expand (2)** the same job in the output window. You'll see that the message from `reusable-print-message.yml` is fetched by the caller workflow. This is how the concept of reusable workflows in GitHub Actions works.
+1. Select the **print-message (1)** option from the side-blade and **expand (2)** the same in the output window. You'll see that the message from `reusable-print-message.yml` is fetched by the caller workflow. This is how the concept of reusable workflows in GitHub Actions works.
 
    ![](../media/env30.png)
 
@@ -98,7 +98,7 @@ Parallelism allows you to run jobs or steps concurrently, reducing the total exe
 
 In this task, you'll fork a public repository and create a GitHub action using Matrix build.
 
-1. Navigate to the [sample-node-project](https://github.com/acemilyalcin/sample-node-project) repo and click on **Fork** **(2)**.
+1. Navigate to the [sample-node-project](https://github.com/acemilyalcin/sample-node-project) repo and click on **Fork**.
 
    ![](../media/21-06-2024(1).png)
 
@@ -108,7 +108,7 @@ In this task, you'll fork a public repository and create a GitHub action using M
    
      ![The `New Repository` creation form in GitHub.](../media/my_repos.png "New Repository Creation Form")
 
-   - Select ```sample-node-project``` **(1)** from the list and open it **(2)**.
+   - Select ```sample-node-project``` from the list.
     
      ![](../media/env46.png)
 
@@ -130,7 +130,7 @@ In this task, you'll fork a public repository and create a GitHub action using M
 
    ![](../media/21-06-2024(2).png)
 
-1. Navigate to the **Actions** **(1)** directory in your repository. in `Get started with GitHub Actions`, click on the **Set up a workflow yourself (2)** option.
+1. Navigate to the **Actions** **(1)** directory in your repository. In the `Get started with GitHub Actions` window, click on the **Set up a workflow yourself (2)** option.
 
    ![](../media/newaction.png)
 
@@ -244,7 +244,7 @@ In this task, you'll set up a GitHub action using the Matrix strategy to run the
 
    ![](../media/4th-oidc-click.png)
 
-9. In the **.github/workflows** folder, click on **Add files** **(1)**, and click on **+ Create new file** **(2)**.
+9. In the **.github/workflows** folder, click on **Add files** **(1)**, and select **+ Create new file** **(2)**.
 
    ![](../media/4th-oidc.png)   
 
@@ -350,7 +350,7 @@ In this task, you'll set up a GitHub action using the Matrix strategy to run the
 
 13. Click on the **Actions** **(1)** tab. Verify that the **Create matrix.yml** workflow has been executed successfully.
 
-14. Click on the **Create matrix.yml** action. This configuration allows you to ensure your project is tested on multiple operating systems using Python 3.12, ensuring broader compatibility and catching environment-specific issues early.
+14. Click on the **Create matrix.yml** action. This configuration allows you to ensure your project is tested on multiple operating systems using Python 3.12, ensuring broader compatibility and seamless identfication of environment-specific issues at an early stage.
 
     ![](../media/matrix-output.png)
 
@@ -428,18 +428,18 @@ Optimizing workflow performance by caching dependencies can significantly improv
 
     ![](../media/security.png)
 
-1. Once you've navigated to the **Code security and analysis** option, click on the **Enable** button for Private vulnerability reporting, Dependabot alerts, Dependabot security updates, and Dependabot on Actions runners.
+1. Once you've navigated to the **Code security and analysis** page, click on the **Enable** button for **Private vulnerability reporting**, **Dependabot alerts**, **Dependabot security updates**, and **Dependabot on Actions runners**.
 
     ![](../media/enable.png)
 
-1. Click on the **Set up** **(1)** button to enable CodeQL analysis, and select the **Advanced** **(2)** option for creating a **CodeQL Analysis YAML file**.
+1. Click on the **Set up** **(1)** button to enable **CodeQL analysis**, and select the **Advanced** **(2)** option for creating a **CodeQL Analysis YAML file**.
 
    ![](../media/2dgn169.png)      
 
 1. Update the workflow name to **codeql-analysis.yml** **(1)** and review the YAML file. Select **Commit changes** **(2)**.
    ![](../media/ex5-task1-step3a.png)
 
-1. In the Commit Changes pop-up window, click on the **Commit changes** button.
+1. In the **Commit changes** pop-up window, click on the **Commit changes** button.
   
    ![](../media/ex5-task1-step3b.png) 
   
@@ -451,7 +451,7 @@ Optimizing workflow performance by caching dependencies can significantly improv
    
    ![](../media/21-06-2024(23).png)
   
-1. You'll be navigated to the **Code scanning** section. Here, you'll be able to visualize the **No code scanning alerts here!**.
+1. You'll be navigated to the **Code scanning** section. Here, you'll be able to visualize the **No code scanning alerts here!** message.
 
    ![](../media/21-06-2024(24).png)
    
@@ -463,7 +463,7 @@ Optimizing workflow performance by caching dependencies can significantly improv
 
    > **Note:** If the Push protection is already enabled, please skip this step.
 
-1. Once again, go to your profile, which is at the top of your right hand, and then select **Settings**.
+1. Once again, go to your profile, which is at the top right hand side on the screen, and then select **Settings**.
 
    ![Picture1](../media/profilesetting.png)
 
@@ -487,7 +487,7 @@ Optimizing workflow performance by caching dependencies can significantly improv
 
    ![](../media/21-06-2024(6).png)
 
-1. Navigate to the **Code** **(1)** option from the top navigation pane, click on the drop-down **(2)**, select **Local** **(3)**, and copy the **Repo URL** **(4)**.
+1. Navigate to the **Code** **(1)** option from the top navigation pane, click on the **<> Code** drop-down **(2)**, select **Local** **(3)**, and copy the **Repo URL** **(4)**.
 
    ![](../media/21-06-2024(25).png)
 
@@ -541,7 +541,7 @@ Optimizing workflow performance by caching dependencies can significantly improv
 
    ![](../media/ExampleScript-commit.png)
 
-1. You will get to see the following warning message on the screen: **Secret scanning found a GitHub Personal Access Token secret on line 2.** Select the **It's used in tests** **(1)** option and click on **Allow Secreat** **(2)**.
+1. You will get to see the following warning message on the screen: **Secret scanning found a GitHub Personal Access Token secret on line 2.** Select the **It's used in tests** **(1)** option and click on **Allow Secret** **(2)**.
 
    ![](../media/ExampleScript-commit-risk.png)
 
