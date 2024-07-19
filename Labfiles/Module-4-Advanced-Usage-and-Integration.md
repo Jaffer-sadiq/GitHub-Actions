@@ -65,7 +65,7 @@ This GitHub Actions workflow demonstrates the best practice of securely using Az
 
 Debugging and monitoring workflows in GitHub Actions involve using detailed logging, GitHub's job status and logs, and notifications for failures to identify and resolve issues. Integrating external logging services and setting up metrics and alerts can further enhance visibility and proactive issue management, ensuring more reliable and efficient development cycles.
 
-In this task, you will analyze and resolve an error with the workflow.
+In this task, you'll analyze and resolve an error with the workflow.
 
 1. Navigate to the **Code** **(1)** option and click on the **.github/workflows** **(2)** folder.
 
@@ -99,7 +99,7 @@ In this task, you will analyze and resolve an error with the workflow.
 
    ![](../media/action-issue-check_1.png)
 
-6. Click on **build** **(1)**, expand **Install Dependency** **(2)**, and you will see the error that `npm ERR! enoent ENOENT: no such file or directory, open 'Run bash ./missing-script.sh bash: ./missing-script.sh: No such file or directory` **(3)**.
+6. Click on **build** **(1)**, expand **Install Dependency** **(2)**, and you'll see the error that `npm ERR! enoent ENOENT: no such file or directory, open 'Run bash ./missing-script.sh bash: ./missing-script.sh: No such file or directory` **(3)**.
 
    ![](../media/issue-file.png)
 
@@ -142,17 +142,17 @@ You can add self-hosted runners at various levels in the management hierarchy:
 
 | GitHub-hosted runners    | Self-hosted runners      | 
 | ------------------------ | ------------------------ |
-| Receive automatic updates for the operating system, preinstalled packages and tools, and the self-hosted runner application. | Receive automatic updates for the self-hosted runner application only, though you may disable automatic updates for the runner. For more information about controlling runner software updates on self-hosted runners, see [Autoscaling with self-hosted runners](https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/autoscaling-with-self-hosted-runners#controlling-runner-software-updates-on-self-hosted-runners). You are responsible for updating the operating system and all other software.|
+| Receive automatic updates for the operating system, preinstalled packages and tools, and the self-hosted runner application. | Receive automatic updates for the self-hosted runner application only, though you may disable automatic updates for the runner. For more information about controlling runner software updates on self-hosted runners, see [Autoscaling with self-hosted runners](https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/autoscaling-with-self-hosted-runners#controlling-runner-software-updates-on-self-hosted-runners). You're responsible for updating the operating system and all other software.|
 | Are managed and maintained by GitHub. | You can use cloud services or local machines that you already pay for. |
 | Provide a clean instance for every job execution. | Are customizable to your hardware, operating system, software, and security requirements. |
-| Use free minutes on your GitHub plan, with per-minute rates applied after surpassing the free minutes. | - Don't need to have a clean instance for every job execution. <br> - Are free to use with GitHub Actions, but you are responsible for the cost of maintaining your runner machines.|
+| Use free minutes on your GitHub plan, with per-minute rates applied after surpassing the free minutes. | - Don't need to have a clean instance for every job execution. <br> - Are free to use with GitHub Actions, but you're responsible for the cost of maintaining your runner machines.|
 
 **Usage limits**
 
 There are some limits on GitHub Actions usage when using self-hosted runners. These limits are subject to change.
 
 * **Job execution time** - Each job in a workflow can run for up to 5 days of execution time. If a job reaches this limit, the job is terminated and fails to complete.
-* **Workflow run time** - Each workflow run is limited to 35 days. If a workflow run reaches this limit, the workflow run is canceled. This period includes execution duration, time spent waiting and approval.
+* **Workflow run time** - Each workflow run is limited to 35 days. If a workflow run reaches this limit, the workflow run is canceled. This period includes execution duration, time spent waiting, and approval.
 * **Job queue time** - Each job for self-hosted runners that has been queued for at least 24 hours will be canceled. The actual time in the queue can reach up to 48 hours before cancellation occurs. If a self-hosted runner does not start executing the job within this limit, the job is terminated and fails to complete.
 * **API requests** - You can execute up to 1,000 requests to the GitHub API in an hour across all actions within a repository. If requests are exceeded, additional API calls will fail, which might cause jobs to fail.
 * **Job matrix** - A job matrix can generate a maximum of 256 jobs per workflow run. This limit applies to both GitHub-hosted and self-hosted runners.
