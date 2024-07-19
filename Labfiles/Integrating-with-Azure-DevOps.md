@@ -52,7 +52,7 @@ In this task, you'll connect your Azure DevOps project's board to your GitHub re
   
      ![](../media/create_1.png)
 
-   - In the **Organization Settings** page, go to **Policies (1)** option under **Security**, enable **Allow public projects (2)**, and click on **Save**. Then, select the public visibility setting.
+   - In the **Organization Settings** page, go to the **Policies (1)** option under **Security**, enable **Allow public projects (2)**, and click on **Save**. Then, select the public visibility setting.
      
      ![](../media/env50.png)
 
@@ -62,11 +62,11 @@ In this task, you'll connect your Azure DevOps project's board to your GitHub re
 
      ![](../media/env52.png)
       
-1. On the **Azure DevOps page** click on the **User settings** **(1)** from the top right corner of the page and click on **Preview features** **(2)**.
+1. On the **Azure DevOps page,** click on **User settings** **(1)** from the top right corner of the page and click on **Preview features** **(2)**.
 
    ![](../media/preview-features.png)
 
-    > **Note:** If you get a sign-in error, then click on **Sign out and sign in with a different account** link, and login with your ODL user's Azure credentials. On the next page, leave the details to default and proceed. You should be logged in to the Azure DevOps organization. 
+    > **Note:** If you get a sign-in error, then click on **Sign out, and sign in with a different account** link, and login with your ODL user's Azure credentials. On the next page, leave the details to default and proceed. You should be logged in to the Azure DevOps organization. 
 
 1. In the **Preview features** pop-up, ensure to set the toggle button to **off** for **New Boards Hubs** **(1)** and close the preview features by clicking on **X** **(2)**.
    
@@ -99,7 +99,7 @@ In this task, you'll connect your Azure DevOps project's board to your GitHub re
     
 1. On the next page, select **Complete order and begin installation**.
 
-1. Click on the **only select repositories (1)** option, select the lab files repository **(2)**, `github-action` **(3)**, which you created earlier, and click on **Install & Authorize (4)**.
+1. Click on the **only select repositories (1)** option, select the lab files repository **(2)**, `github-action` **(3)**, that you created earlier, and click on **Install & Authorize (4)**.
 
    ![](../media/ex4-kc-install&auth.png)
     
@@ -123,12 +123,12 @@ In this task, you'll connect your Azure DevOps project's board to your GitHub re
 
        ![](../media/img10.png).
     
-1. Select the **Azure DevOps organization (1)** and select the **Azure DevOps** **(2)** project, then click on **Continue (3)**.
+1. Select the **Azure DevOps organization (1)** and the **Azure DevOps** **(2)** project, then click on **Continue (3)**.
 
     ![](../media/azuredevops.png)
 
-    > **Note**: After suuccessfully logging in to the Azure DevOps portal, you will get to see the **Success!** pop-up window on your screen. Click on the **close** button to remove it.
-1. When the integration succeeds, you will be taken to the Azure DevOps Board. In the onboarding tutorial, click on **Create** to create an initial issue in the `To Do` Column.
+    > **Note**: After successfully logging in to the Azure DevOps portal, you will get to see the **Success!** pop-up window on your screen. Click on the **close** button to remove it.
+1. When the integration succeeds, you will be taken to the Azure DevOps Board. In the onboarding tutorial, click on **Create** to create an initial issue in the `To Do` column.
     >**Note**: Make sure to reduce the screen resolution in your browser window if you're not able to view the **Create** and **Create and link a pull request** options in the onboarding tutorial page.
 
    ![](../media/2dg55.png)
@@ -171,7 +171,7 @@ In this task, you'll make changes to the GitHub link, send a PR to Azure boards 
 
      ![](../media/ex4-kc-todo-new1.png)
    
-1. Select the **Code** **(1)** tab in your GitHub repository. Navigate to **.github/workflows/** **(2)** and select a file out of any of the workflows you had previpously created **(3)**.
+1. Select the **Code** **(1)** tab in your GitHub repository. Navigate to **.github/workflows/** **(2)** and select a file out of any of the workflows you had previously created **(3)**.
 
      ![](../media/2dgn140.png)
    
@@ -206,7 +206,7 @@ In this task, you'll make changes to the GitHub link, send a PR to Azure boards 
 
     ![](../media/ex4-github-pr.png)
    
-1. Open the PR created from **demo-Devops** branch and select **Merge pull request**.
+1. Open the PR created from the **demo-Devops** branch and select **Merge pull request**.
 
     ![](../media/ex4-mergepr.png)
    
