@@ -6,27 +6,27 @@ A GitHub repository (repo) is a central location where the files for a project a
 
 In this task, you'll learn to create a GitHub repository.
 
-1. In the labvm-<inject key="DeploymentID" enableCopy="false"/>, open a new browser tab and navigate to the GitHub login page at ```https://www.github.com/login```. From **Environment Details** page **(1)**, navigate to **Licenses** **(2)** tab and **copy** **(3)** the credentials. Use the same username and password to login into GitHub.
+1. In the labvm-<inject key="DeploymentID" enableCopy="false"/>, open a new browser tab and navigate to the GitHub login page at ```https://www.github.com/login```. From **Environment Details** page **(1)**, navigate to the **Licenses** **(2)** tab and **copy** **(3)** the credentials. Use the same username and password to log into GitHub.
 
    ![](../media/dev2.png) 
 
-1. To retrieve the **Device Verification Code**, use your existing credentials as before. Begin by opening a private browsing window and navigating to http://outlook.office.com/. Enter the same username and password used to log into your GitHub account. Once logged in, locate the verification code displayed on the screen. Copy this code and then paste it into the Device Verification section where prompted. This ensures you can securely complete the device verification process using the credentials associated with your GitHub account.
+1. To retrieve the **Device Verification Code**, use your existing credentials. Begin by opening a private browsing window and navigating to ```http://outlook.office.com/.``` Enter the same username and password you had used to log into your GitHub account. Once logged in, locate the **verification code** displayed on the screen. **Copy** this code and then **paste** it into the **Device Verification** section where prompted. This ensures you can securely complete the device verification process using the credentials associated with your GitHub account.
 
    ![](../media/2dgn154.png) 
 
-1. In the upper-right corner, navigate to the user menu and select **Your repositories** ***(1)***.
+1. In the upper-right corner, navigate to the user menu and select **Your repositories** **(1)**.
 
    ![The `New Repository` creation form in GitHub.](../media/my_repos.png "New Repository Creation Form")
 
-1. Next to the search criteria, locate and select the **New** button.
+1. Next to the search criteria, locate and select the **New** option.
 
    ![The `New Repository` creation form in GitHub.](../media/ex2-t3-3-git.png "New Repository Creation Form")
 
-1. On the **Create a new repository** screen, name the repository ```github-action``` **(1)**, select **Public** **(2)** and click on **Create repository** **(3)**  button.
+1. On the **Create a new repository** screen, name the repository ```github-action``` **(1)**, select **Public** **(2),** and click on the **Create repository** **(3)** button.
 
    ![The `New Repository` creation form in GitHub.](../media/2dgn91.png "New Repository Creation Form")
    
-   >**Note:** If you encounter an error like **The repository github-action already exists on this account**, please delete it before creating a new one. Follow the steps below to do this. If there is no repository with the same name, proceed directly to Task 2.
+   >**Note:** If you encounter an error like **The repository github-action already exists on this account**, please delete it before creating a new one. Follow the steps below to do so. If there is no repository with the same name, proceed directly to **Task 2.**
 
       ![The `New Repository` creation form in GitHub.](../media/17-06-2024(8).png "New Repository Creation Form")
 
@@ -34,7 +34,7 @@ In this task, you'll learn to create a GitHub repository.
    
       ![The `New Repository` creation form in GitHub.](../media/my_repos.png "New Repository Creation Form")
 
-   - Using the search bar, search for ```github-action``` **(1)** and select to open it **(2)**.
+   - Using the search bar, search for ```github-action``` **(1)** and open it **(2)**.
 
       ![The `New Repository` creation form in GitHub.](../media/2dg118.png "New Repository Creation Form")
 
@@ -42,19 +42,19 @@ In this task, you'll learn to create a GitHub repository.
 
       ![The `New Repository` creation form in GitHub.](../media/2dg119.png "New Repository Creation Form")
 
-   - In the settings page, scroll to the bottom of the page and select **Delete this repository**.
+   - Once in the **settings** page, scroll to the bottom and select **Delete this repository**.
 
       ![The `New Repository` creation form in GitHub.](../media/2dg120.png "New Repository Creation Form")
 
-   - In the pop of delete `{github-username}/github-action` click on **I want to delete this repository**.
+   - On the `{github-username}/github-action` delete pop-up click on the **I want to delete this repository** option.
 
       ![The `New Repository` creation form in GitHub.](../media/2dg121.png "New Repository Creation Form")
 
-   - In the pop of delete `{github-username}/github-action` click on **I have read and understand these effects**.
+   - Moving on, in the same `{github-username}/github-action` delete pop-up click on the **I have read and understand these effects** option.
 
       ![The `New Repository` creation form in GitHub.](../media/2dg122.png "New Repository Creation Form")
 
-   - In the pop of delete `{github-username}/github-action` to conform, Copy the **repository name** **(1)**, paste it in the **box** **(2)**, and click on I understand the consequences, **Delete this repository** **(3)**.
+   - To confirm your decision, copy the **repository name** **(1)** avialble in the `{github-username}/github-action` pop-up. Paste it in the **box** **(2)**, and click on I understand the consequences, **Delete this repository** **(3)** option.
 
       ![The `New Repository` creation form in GitHub.](../media/2dg123.png "New Repository Creation Form")
 
@@ -64,24 +64,24 @@ In this task, you'll learn to create a GitHub repository.
 
 GitHub Actions is a powerful automation tool provided by GitHub, allowing you to automate your software development workflows directly within your GitHub repository. With GitHub Actions, you can build, test, and deploy your code without leaving GitHub, saving time and improving collaboration among your team members.
 
-In this task, you'll create a simple GitHub Action and understand the components of a workflow file.
+In this task, you'll create a simple GitHub action and understand the components of a workflow file.
 
 1. Navigate to the **Actions** directory in the newly created repository.
 
    ![](../media/env16.png)
 
-1. In the `Get started with GitHub Actions` page, click on the **Configure** button on the Simple Workflow.
+1. In the `Get started with GitHub Actions` page, click on the **Configure** button available in the **Simple Workflow** section.
 
    ![](../media/env15.png)
 
-1. You'll be able to see a very simple workflow which prints a few text sentences as output.    
+1. You'll be able to see a very simple workflow that prints a few text sentences as output.    
 
    ![](../media/21-06-2024(8).png)
 
    **Note**: This workflow provides a basic template for setting up CI with GitHub Actions. It checks out the repository code, runs a simple one-line script, and then runs a multi-line script. You can expand this workflow by adding more steps to build, test, and deploy your project. Here's the complete explanation of the workflow file.
 
-   - **Workflow Name**: The workflow is named "CI", which stands for Continuous Integration.
-When the Workflow Runs:
+   - **Workflow Name**: The workflow is named **"CI,"** which stands for **Continuous Integration**.
+When the workflow runs:
 
     - **The workflow is triggered by specific events**:
       
@@ -91,7 +91,7 @@ When the Workflow Runs:
 
       *Manual Trigger*: The workflow can also be manually triggered from the Actions tab in the GitHub repository (using workflow_dispatch).
 
-    - **Jobs**:A workflow is made up of one or more jobs. In this case, there is a single job called "build". In the next task, you will create an workflow with mutliple jobs and learn about it in detail.
+    - **Jobs**: A workflow is made up of one or more jobs. In this case, there is a single job called "build." In the next task, you will create a workflow with multiple jobs and learn about it in detail.
 
     - **Runner**: The job runs on a virtual machine (runner) provided by GitHub. Here, it uses the latest version of Ubuntu (ubuntu-latest).
 
@@ -114,7 +114,7 @@ When the Workflow Runs:
 
       "test, and deploy your project."  
 
-   For more information, read [GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions) documentation.
+   For more information, read the [GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions) documentation.
 
 1. Provider file name as **hello-action.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **Commit changes** **(3)**.
 
