@@ -350,7 +350,7 @@ In this task, you'll set up a GitHub action using the Matrix strategy to run the
 
 13. Click on the **Actions** **(1)** tab. Verify that the **Create matrix.yml** workflow has been executed successfully.
 
-14. Click on the **Create matrix.yml** action. This configuration allows you to ensure your project is tested on multiple operating systems using Python 3.12, ensuring broader compatibility and seamless identfication of environment-specific issues at an early stage.
+14. Click on the **Create matrix.yml** action. This configuration allows you to ensure your project is tested on multiple operating systems using Python 3.12, ensuring broader compatibility and seamless identification of environment-specific issues at an early stage.
 
     ![](../media/matrix-output.png)
 
@@ -455,7 +455,7 @@ Optimizing workflow performance by caching dependencies can significantly improv
 
    ![](../media/21-06-2024(24).png)
    
-1. Go to **Settings** option. Click on the **Code security and analysis** button. Now, scroll down to **Push protection** and click on **Enable**.
+1. Go to the **Settings** option. Click on the **Code security and analysis** button. Now, scroll down to **Push protection** and click on **Enable**.
 
    ![Picture1](../media/code_security_1.png)
 
@@ -463,7 +463,7 @@ Optimizing workflow performance by caching dependencies can significantly improv
 
    > **Note:** If the Push protection is already enabled, please skip this step.
 
-1. Once again, go to your profile, which is at the top right hand side on the screen, and then select **Settings**.
+1. Once again, go to your profile, which is at the top right hand side of the screen, and then select **Settings**.
 
    ![Picture1](../media/profilesetting.png)
 
