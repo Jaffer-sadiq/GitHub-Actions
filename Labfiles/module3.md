@@ -39,7 +39,7 @@ Rather than copying and pasting from one workflow to another, you can make workf
 
    ![](../media/21-06-2024(13).png)
 
-1. In the **Commit changes (1)** pop up window click on **Commit changes (2)** option.
+1. In the **Commit changes (1)** pop-up window, click on the **Commit changes (2)** option.
 
    ![](../media/env25.png)
 
@@ -74,7 +74,7 @@ Rather than copying and pasting from one workflow to another, you can make workf
 
    ![](../media/21-06-2024(14).png)   
 
-1. On **Commit changes (1)** pop-up window click on the **Commit changes (2)** option.
+1. On the **Commit changes (1)** pop-up window, click on the **Commit changes (2)** option.
 
    ![](../media/env27.png)
 
@@ -90,7 +90,7 @@ Rather than copying and pasting from one workflow to another, you can make workf
 
 ### Task 2: Explanation and Usage of Matrix Builds
 
-Matrix builds and parallelism is advanced features in GitHub Actions that allow you to run multiple jobs concurrently.
+Matrix builds and parallelism are advanced features in GitHub Actions that allow you to run multiple jobs concurrently.
 
 Matrix builds let you test your code across multiple environments by creating a job matrix. This is a set of keys and values that create a combination of conditions and run a job for each one.
 
@@ -120,7 +120,7 @@ In this task, you'll fork a public repository and create a GitHub action using M
 
      ![The `New Repository` creation form in GitHub.](../media/2dg120.png "New Repository Creation Form")
 
-   - Accept all the warning prompts. In the delete `{github-username}/sample-node-project` pop-up, copy the **repository name** **(1)** and paste it in the **box** **(2)**, to confirm your decision. Finally, click on I understand the consequences, **Delete this repository** **(3)** option.
+   - Accept all the warning prompts. In the delete `{github-username}/sample-node-project` pop-up, copy the **repository name** **(1)** and paste it in the **box** **(2)** to confirm your decision. Finally, click on the I understand the consequences, **Delete this repository** **(3)** option.
 
      ![](../media/env47.png)
 
@@ -134,7 +134,7 @@ In this task, you'll fork a public repository and create a GitHub action using M
 
    ![](../media/newaction.png)
 
-1. Include the file name as **nodejs_ci.yml** **(1)**. In the editor **copy and paste** **(2)** the below script, and click on the **Commit changes** **(3)** option.
+1. Include the file name as **nodejs_ci.yml** **(1)**. In the editor, **copy and paste** **(2)** the below script, and click on the **Commit changes** **(3)** option.
 
     ![](../media/optimize2.png)
 
@@ -181,11 +181,11 @@ In this task, you'll fork a public repository and create a GitHub action using M
 
     ![](../media/21-06-2024(15).png)
 
-1. In the **Commit Changes** pop-up window, click on the **Commit changes** option.
+1. In the **Commit changes** pop-up window, click on the **Commit changes** option.
 
     ![](../media/newcommit.png)
 
-1. Click on the **Actions** **(1)** tab. Verify the workflow has been executed successfully by looking for the green badge. Select the newly created workflow **nodejs_ci.yml** **(2)**.
+1. Click on the **Actions** **(1)** tab. Verify the workflow has been executed successfully by looking for the green badge. Select the newly created workflow, **nodejs_ci.yml** **(2)**.
 
     ![](../media/optimize4.png)
 
@@ -209,7 +209,7 @@ In this task, you'll set up a GitHub action using the Matrix strategy to run the
 
     ![](../media/ex2-task2-step18.png)
 
-3. Provide file name as **requirements.txt (1)**. In the editor **copy and paste** **(2)** the below script, and click on the **Commit changes** **(3)** option.
+3. Provide the file name as **requirements.txt (1)**. In the editor, **copy and paste** **(2)** the below script, and click on the **Commit changes** **(3)** option.
 
    ```
    pytest
@@ -217,7 +217,7 @@ In this task, you'll set up a GitHub action using the Matrix strategy to run the
 
    ![](../media/21-06-2024(16).png)
    
-4. In the **Commit changes** pop-up window click on the **Commit changes** option.
+4. In the **Commit changes** pop-up window, click on the **Commit changes** option.
 
    ![](../media/21-06-2024(17).png)
 
@@ -225,7 +225,7 @@ In this task, you'll set up a GitHub action using the Matrix strategy to run the
 
    ![](../media/21-06-2024(3).png)
 
-6. Provide file name as **tests/test_sample.py** **(1)**. In the editor **copy and paste** **(2)** the below script, and click on the **Commit changes** **(3)** option.
+6. Provide the file name as **tests/test_sample.py** **(1)**. In the editor, **copy and paste** **(2)** the below script, and click on the **Commit changes** **(3)** option.
 
     ```
     def test_sample():
@@ -248,7 +248,7 @@ In this task, you'll set up a GitHub action using the Matrix strategy to run the
 
    ![](../media/4th-oidc.png)   
 
-10. Provide the file name as **matrix.yml** **(1)**. In the editor **copy and paste** **(2)** the following script, and click on the **commit changes** **(3)** option.
+10. Provide the file name as **matrix.yml** **(1)**. In the editor, **copy and paste** **(2)** the following script, and click on the **commit changes** **(3)** option.
 
     ```
     name: CI
@@ -348,7 +348,7 @@ In this task, you'll set up a GitHub action using the Matrix strategy to run the
 
     ![](../media/21-06-2024(20).png)
 
-13. Click on the **Actions** **(1)** tab, verifiy that the **Create matrix.yml** workflow has been executed successfully.
+13. Click on the **Actions** **(1)** tab. Verifiy that the **Create matrix.yml** workflow has been executed successfully.
 
 14. Click on the **Create matrix.yml** action. This configuration allows you to ensure your project is tested on multiple operating systems using Python 3.12, ensuring broader compatibility and catching environment-specific issues early.
 
@@ -416,7 +416,7 @@ Optimizing workflow performance by caching dependencies can significantly improv
 
     ![](../media/newcommit.png)
 
-5. Click on **Actions** **(1)** button. Verify the workflow has been executed successfully by spotting the green badge. Select the newly created workflow **Update nodejs_ci.yml** **(2)**.
+5. Click on the **Actions** **(1)** button. Verify the workflow has been executed successfully by spotting the green badge. Select the newly created workflow **Update nodejs_ci.yml** **(2)**.
 
     ![](../media/optimize4.png)
 
@@ -479,7 +479,7 @@ Optimizing workflow performance by caching dependencies can significantly improv
 
    ![](../media/token.png)
 
-1. Search **Notepad (1)** using the search box, and select the same from suggestions **(2)**.
+1. Search **Notepad (1)** using the search box, and select the same from the suggestions **(2)**.
 
    ![](../media/21-06-2024(5).png)
 
@@ -499,7 +499,7 @@ Optimizing workflow performance by caching dependencies can significantly improv
 
    ![](../media/ex2-task2-step18.png)
 
-1. Insert a file name as **ExampleScript.ps1** **(1)**. In the editor **copy and paste** **(2)** the below script, replace **YOUR_GITHUB_PAT** **(3)** with the PAT you copied, **YOUR_GITHUB_USERNAME** **(4)** with GitHub username, and **YOUR_GITHUB_REPO** **(4)**, and click on **Commit changes** **(5)**.
+1. Insert the file name **ExampleScript.ps1** **(1)**. In the editor, **copy and paste** **(2)** the below script, replace **YOUR_GITHUB_PAT** **(3)** with the PAT you copied, **YOUR_GITHUB_USERNAME** **(4)** with GitHub username, and **YOUR_GITHUB_REPO** **(4)**, and click on **Commit changes** **(5)**.
 
    ```
    # Set the GitHub PAT
@@ -541,11 +541,11 @@ Optimizing workflow performance by caching dependencies can significantly improv
 
    ![](../media/ExampleScript-commit.png)
 
-1. You will get to see the following warning message on the screen, **Secret scanning found a GitHub Personal Access Token secret on line 2.** Select the **It's used in tests** **(1)** option and click on **Allow Secreat** **(2)**.
+1. You will get to see the following warning message on the screen: **Secret scanning found a GitHub Personal Access Token secret on line 2.** Select the **It's used in tests** **(1)** option and click on **Allow Secreat** **(2)**.
 
    ![](../media/ExampleScript-commit-risk.png)
 
-1. **Secret allowed. You can now commit these changes**. On the editor window click on **Commit changes**.
+1. **Secret allowed. You can now commit these changes**. In the editor window, click on **Commit changes**.
 
 1. In the **Commit changes** pop-up window, click on the **Commit changes** button.
 
@@ -553,4 +553,4 @@ Optimizing workflow performance by caching dependencies can significantly improv
 
 ### Summary
 
-In this lab, you learnt about reusable workflows and matrix builds.
+In this lab, you learned about reusable workflows and matrix builds.
