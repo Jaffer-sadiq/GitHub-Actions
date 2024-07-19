@@ -58,7 +58,7 @@ In this task, you'll set up a GitHub environment and use it as a GitHub action.
 
 **Environment Variable**
 
-   - Navigate to the **Azure portal** and select your container instance **gacontiner<inject key="DeploymentID" enableCopy="false"/>**, which you deployed in the earlier exercise.
+   - Navigate to the **Azure portal** and select your container instance, **gacontiner<inject key="DeploymentID" enableCopy="false"/>**, which you deployed in the earlier exercise.
 
    - Click on **Access Keys** **(1)** on the left pane under the **Settings** tab and copy the **Registry name** **(2)** and **Login server** **(3)** initials into a notepad.
 
@@ -164,5 +164,5 @@ In this task, you'll set up a GitHub environment and use it as a GitHub action.
 
 ### Summary
 
-In this lab, you learned about setting up GitHub Environment and verified using Reviewer account, Wait timer, Environment variables, and secrets.
+In this lab, you learned about setting up a GitHub Environment and verified using a Reviewer account, a Wait timer, Environment variables, and secrets.
 
