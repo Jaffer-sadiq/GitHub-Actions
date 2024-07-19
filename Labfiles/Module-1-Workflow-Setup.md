@@ -10,7 +10,7 @@ In this task, you'll learn to create a GitHub repository.
 
    ![](../media/dev2.png) 
 
-1. To retrieve the **Device Verification Code**, use your existing credentials. Begin by opening a private browsing window and navigating to ```http://outlook.office.com/.``` Enter the same username and password you had used to log into your GitHub account. Once logged in, locate the **verification code** displayed on the screen. **Copy** this code and then **paste** it into the **Device Verification** section where prompted. This ensures you can securely complete the device verification process using the credentials associated with your GitHub account.
+1. To retrieve the **Device Verification Code**, use your existing credentials. Begin by opening a private browsing window and navigating to ```http://outlook.office.com/.``` Enter the same username and password you used to log into your GitHub account. Once logged in, locate the **verification code** displayed on the screen. **Copy** this code and then **paste** it into the **Device Verification** section where prompted. This ensures you can securely complete the device verification process using the credentials associated with your GitHub account.
 
    ![](../media/2dgn154.png) 
 
@@ -42,19 +42,19 @@ In this task, you'll learn to create a GitHub repository.
 
       ![The `New Repository` creation form in GitHub.](../media/2dg119.png "New Repository Creation Form")
 
-   - Once in the **settings** page, scroll to the bottom and select **Delete this repository**.
+   - Once on the **settings** page, scroll to the bottom and select **Delete this repository**.
 
       ![The `New Repository` creation form in GitHub.](../media/2dg120.png "New Repository Creation Form")
 
-   - On the `{github-username}/github-action` delete pop-up click on the **I want to delete this repository** option.
+   - On the `{github-username}/github-action` delete pop-up, click on the **I want to delete this repository** option.
 
       ![The `New Repository` creation form in GitHub.](../media/2dg121.png "New Repository Creation Form")
 
-   - Moving on, in the same `{github-username}/github-action` delete pop-up click on the **I have read and understand these effects** option.
+   - Moving on, in the same `{github-username}/github-action` delete pop-up, click on the **I have read and understand these effects** option.
 
       ![The `New Repository` creation form in GitHub.](../media/2dg122.png "New Repository Creation Form")
 
-   - To confirm your decision, copy the **repository name** **(1)** avialble in the `{github-username}/github-action` pop-up. Paste it in the **box** **(2)**, and click on I understand the consequences, **Delete this repository** **(3)** option.
+   - To confirm your decision, copy the **repository name** **(1)** available in the `{github-username}/github-action` pop-up. Paste it in the **box** **(2)**, and click on the I understand the consequences, **Delete this repository** **(3)** option.
 
       ![The `New Repository` creation form in GitHub.](../media/2dg123.png "New Repository Creation Form")
 
@@ -116,7 +116,7 @@ When the workflow runs:
 
    For more information, read the [GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions) documentation.
 
-1. Provider file name as **hello-action.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **Commit changes** **(3)**.
+1. Include file name as **hello-action.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click on the **Commit changes** **(3)** option.
 
    ```
    # This is a basic workflow to help you get started with Actions
@@ -157,7 +157,7 @@ When the workflow runs:
 
    ![](../media/21-06-2024(7).png)
 
-1. In the pop up windows of **Commit Changes** click on the **Commit changes**.
+1. In the **Commit Changes** pop-up window, click on the **Commit changes** option.
 
     ![](../media/env42.png)
 
@@ -169,9 +169,9 @@ When the workflow runs:
 
     ![](../media/env22.png)
 
-   > **Note:** This GitHub Actions workflow, named "CI", triggers on pushes to the main branch affecting **.github/workflows/hello-action.yml**, pull requests to main with changes to the same file, and can be manually triggered **(workflow_dispatch)**. It features a single job **(build)** running on Ubuntu, utilizing **actions/checkout@v4** to fetch the repository. The job executes a one-line script printing "Hello, world!" and a multi-line script for additional build, test, and deployment actions.
+   > **Note:** The GitHub Actions workflow, named "CI," triggers pushes to the main branch affecting **.github/workflows/hello-action.yml**, pull requests to main with changes to the same file, and can be manually triggered **(workflow_dispatch)**. It features a single job **(build)** running on Ubuntu, utilizing **actions/checkout@v4** to fetch the repository. The job executes a one-line script printing "Hello, world!" and a multi-line script for additional build, test, and deployment actions.
 
-## Task 3: Create a Custom workflow with multiple Jobs
+## Task 3: Create a Custom Workflow with Multiple Jobs
 
 In GitHub Actions workflows, you define jobs and steps to orchestrate the tasks you want to automate. Jobs represent the individual units of work that can run in parallel or sequentially, while steps are the individual tasks performed within a job. Let's dive deeper into defining jobs and steps within workflows:
 
@@ -179,15 +179,15 @@ In GitHub Actions workflows, you define jobs and steps to orchestrate the tasks 
    
 **Defining Steps**: Steps are the individual tasks performed within a job. Each step represents a specific action or command that GitHub Actions executes as part of the workflow. Steps can include checking out code, installing dependencies, running tests, deploying applications, and more. Here's how you define steps within a job:
 
-1. Navigate to the **Code** **(1)** and click on **.github/workflows** **(2)** folder.
+1. Navigate to the **Code** **(1)** tab and click on the **.github/workflows** **(2)** folder.
 
     ![](../media/editfolder.png)
 
-1. In the **.github/workflows** folder, click on **Add files** **(1)**, and click on **+ Create new file** **(2)**.
+1. In the **.github/workflows** folder, click on **Add files** **(1)**, and select the **+ Create new file** **(2)** option.
 
     ![](../media/4th-oidc.png)
 
-1. Provider file name as **jobs.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click in **Commit changes** **(3)**.
+1. Include the file name as **jobs.yml** **(1)**. In the editor, **copy and paste** **(2)** the script given below, and click on the **Commit changes** **(3)** option.
 
    ```
    # This is the configuration for our GitHub Actions workflow.
@@ -232,7 +232,7 @@ In GitHub Actions workflows, you define jobs and steps to orchestrate the tasks 
    ```
     ![](../media/21-06-2024(9).png)
    
- 1. In the pop up windows of **Commit changes** click on the **Commit changes (1)**.
+ 1. In the **Commit changes** pop-up window click on the **Commit changes (1)** option.
 
     ![](../media/jobs-action-commit.png)
 
@@ -242,18 +242,18 @@ In GitHub Actions workflows, you define jobs and steps to orchestrate the tasks 
 
     - For more details on GitHub Actions syntax and available events, refer to the official documentation: [GitHub Actions - Workflow syntax for GitHub Actions](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions).
 
-1. Click on **Actions** **(1)**, verify the workflow has been executed successfully once the workflow is succeeded select the newly created workflow **Create jobs.yml** **(2)**.
+1. Click on **Actions** **(1)**, and verify the workflow has been executed successfully. Once the workflow is succeeded select the newly created workflow **Create jobs.yml** **(2)**.
 
    ![](../media/jobs-action-action.png)
 
-1. Verify the jobs and feel free to go through the workflow.
+1. Verify the jobs, and feel free to go through the workflow.
 
    ![](../media/ex1-task4-step7.png)
 
     > **Note:** This GitHub Actions workflow named "My Workflow" triggers on pushes and pull requests to the main branch, specifically for changes to the **.github/workflows/jobs.yml** file, and can also be manually triggered **(workflow_dispatch)**. It consists of two jobs: **job1**, which checks out the repository and runs a script printing "Hello, world!", and **job2**, dependent on **job1**, which checks out the repository again and runs another script printing "Hello, again!" sequentially on an Ubuntu environment.
 
-1. Click on **Next** button for next Lab.
+1. Click on the **Next** button to proceed to the next lab.
 
 ## Summary
 
-In this lab, you have successfully set up our workflow. You have created and executed a workflow, verified its successful execution, and familiarized yourself with the jobs within it. This foundational knowledge will be instrumental as we progress through the subsequent labs.
+In this lab, you've successfully set up our workflow. You've also created and executed a workflow, verified its successful execution, and familiarized yourself with the jobs within it. This foundational knowledge will be instrumental as we progress through the subsequent labs.
