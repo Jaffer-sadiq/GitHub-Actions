@@ -329,7 +329,7 @@ One of the key features that make GitHub Actions flexible and robust is the abil
 
     ![](../media/save-ifcondtion.png)
 
-1. Click on **Actions** **(1)** and verify that the workflow has been executed successfully, by spotting the green badge. Moving on, select the newly created workflow **Create conditional.yml** **(2)**.
+1. Click on **Actions** **(1)** and verify that the workflow has been executed successfully by spotting the green badge. Moving on, select the newly created workflow **Create conditional.yml** **(2)**.
 
     ![](../media/ifcondtion-created.png)
    
