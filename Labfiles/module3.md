@@ -348,7 +348,7 @@ In this task, you'll set up a GitHub action using the Matrix strategy to run the
 
     ![](../media/21-06-2024(20).png)
 
-13. Click on the **Actions** **(1)** tab. Verifiy that the **Create matrix.yml** workflow has been executed successfully.
+13. Click on the **Actions** **(1)** tab. Verify that the **Create matrix.yml** workflow has been executed successfully.
 
 14. Click on the **Create matrix.yml** action. This configuration allows you to ensure your project is tested on multiple operating systems using Python 3.12, ensuring broader compatibility and catching environment-specific issues early.
 
@@ -499,7 +499,7 @@ Optimizing workflow performance by caching dependencies can significantly improv
 
    ![](../media/ex2-task2-step18.png)
 
-1. Insert the file name **ExampleScript.ps1** **(1)**. In the editor, **copy and paste** **(2)** the below script, replace **YOUR_GITHUB_PAT** **(3)** with the PAT you copied, **YOUR_GITHUB_USERNAME** **(4)** with GitHub username, and **YOUR_GITHUB_REPO** **(4)**, and click on **Commit changes** **(5)**.
+1. Insert the file name **ExampleScript.ps1** **(1)**. In the editor, **copy and paste** **(2)** the below script, replace **YOUR_GITHUB_PAT** **(3)** with the PAT you copied, **YOUR_GITHUB_USERNAME** **(4)** with a GitHub username, and **YOUR_GITHUB_REPO** **(4)**, and click on **Commit changes** **(5)**.
 
    ```
    # Set the GitHub PAT
