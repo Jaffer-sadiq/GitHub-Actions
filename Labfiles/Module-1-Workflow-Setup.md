@@ -112,11 +112,11 @@ When the workflow runs:
 
       "Add other actions to build,"
 
-      "test, and deploy your project."  
+      "Test and deploy your project."  
 
    For more information, read the [GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions) documentation.
 
-1. Include file name as **hello-action.yml** **(1)**, in the editor **copy and paste** **(2)** the below script, and click on the **Commit changes** **(3)** option.
+1. Include the file name as **hello-action.yml** **(1)**. In the editor, **copy and paste** **(2)** the below script, and click on the **Commit changes** **(3)** option.
 
    ```
    # This is a basic workflow to help you get started with Actions
@@ -183,7 +183,7 @@ In GitHub Actions workflows, you define jobs and steps to orchestrate the tasks 
 
     ![](../media/editfolder.png)
 
-1. In the **.github/workflows** folder, click on **Add files** **(1)**, and select the **+ Create new file** **(2)** option.
+1. In the **.github/workflows** folder, click on **Add files** **(1)** and select the **+ Create new file** **(2)** option.
 
     ![](../media/4th-oidc.png)
 
@@ -232,7 +232,7 @@ In GitHub Actions workflows, you define jobs and steps to orchestrate the tasks 
    ```
     ![](../media/21-06-2024(9).png)
    
- 1. In the **Commit changes** pop-up window click on the **Commit changes (1)** option.
+ 1. In the **Commit changes** pop-up window, click on the **Commit changes (1)** option.
 
     ![](../media/jobs-action-commit.png)
 
