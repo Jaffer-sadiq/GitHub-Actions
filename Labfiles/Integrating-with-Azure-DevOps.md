@@ -127,8 +127,8 @@ In this task, you'll connect your Azure DevOps project's board to your GitHub re
 
     ![](../media/azuredevops.png)
 
-    > **Note**: After successfully logging in to the Azure DevOps portal, you will get to see the **Success!** pop-up window on your screen. Click on the **close** button to remove it.
-1. When the integration succeeds, you will be taken to the Azure DevOps Board. In the onboarding tutorial, click on **Create** to create an initial issue in the `To Do` column.
+    > **Note**: After successfully logging in to the Azure DevOps portal, you'll get to see the **Success!** pop-up window on your screen. Click on the **close** button to remove it.
+1. When the integration succeeds, you'll be taken to the Azure DevOps Board. In the onboarding tutorial, click on **Create** to create an initial issue in the `To Do` column.
     >**Note**: Make sure to reduce the screen resolution in your browser window if you're not able to view the **Create** and **Create and link a pull request** options in the onboarding tutorial page.
 
    ![](../media/2dg55.png)
