@@ -55,7 +55,7 @@ These states and substates are important to collaborating with your team to know
 
 4. **What are pull requests?**
 
-   - A pull request is the mechanism used to signal that the commits from one branch are ready to be merged into another branch.The team member submitting the pull request requests one or more reviewers to verify the code and approve the merge. These reviewers have the opportunity to comment on changes, add their own, or use the pull request itself for further discussion. Once the changes have been approved (if approval is required), the pull request's source branch (the compare branch) is merged into the base branch.
+   - A pull request is a mechanism used to signal that the commits from one branch are ready to be merged into another branch.The team member submitting the pull request requests one or more reviewers to verify the code and approve the merge. These reviewers have the opportunity to comment on changes, add their own, or use the pull request itself for further discussion. Once the changes have been approved (if approval is required), the pull request's source branch (the compare branch) is merged into the base branch.
 
      ![](../media/2-pull-request.png)
 
@@ -150,7 +150,7 @@ For more details, you can visit this link: [Introduction to GitHub](https://lear
 
 - **Using activity types**: Some events have activity types that give you more control over when your workflow should run. Use `on.<event_name>.types` to define the type of event activity that will trigger a workflow run.
 
-  - For example, the `issue_comment` event has the `created, edited, and deleted` activity types. If your workflow triggers on the `label` event, it will run whenever a label is created, edited, or deleted. If you specify the created activity type for the label event, your workflow will run when a label is created but not when a label is edited or deleted.
+  - For example, the `issue_comment` event has the `created, edited, and deleted` activity types. If your workflow triggers the `label` event, it will run whenever a label is created, edited, or deleted. If you specify the created activity type for the label event, your workflow will run when a label is created but not when a label is edited or deleted.
 
     ```
     on:
