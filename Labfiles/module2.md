@@ -61,11 +61,11 @@ Securing sensitive data like API keys and credentials is crucial to protecting y
         "clientId": "******"
       }
       ```
-1. Navigate to the **Environment** **(1)** tab, click on the **Service Principal Details** **(2)** option, and copy the **Subscription ID**, **Tenant Id (Directory ID)**, **Application Id (Client Id)** and **Secret Key (Client Secret)**.
+1. Navigate to the **Environment** **(1)** tab, click on the **Service Principal Details** **(2)** option, and copy the **Subscription ID (4)**, **Tenant Id (Directory ID) (5)**, **Application Id (Client Id) (6)** and **Secret Key (Client Secret) (3)**.
 
    ![](../media/ex2-t4-8.png)
 
-1. Under the **Actions secrets/New secret** page, enter the below mentioned details and click on **Add secret (3)**.
+1. Under the **Actions secrets/New secret** page, enter the below-mentioned details and click on **Add secret (3)**.
 
    - Name: Enter **AZURE_CREDENTIALS** **(1)**
 
