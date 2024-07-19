@@ -76,7 +76,7 @@ In this task, you'll set up a GitHub environment and use it as a GitHub action.
 
      ![](../media/env41.png)
 
-   - Please make sure that you have completed all the steps for creating a GitHub Environment. 
+   - Please make sure that you've completed all the steps for creating a GitHub Environment. 
 
 **Creating Workflow with the Environment**
 
@@ -140,7 +140,7 @@ In this task, you'll set up a GitHub environment and use it as a GitHub action.
             docker push $LOGIN_SERVER/my-app:latest
     ```
 
-1. Once you have updated the workflow file, click on the **Commit changes** option.
+1. Once you've updated the workflow file, click on the **Commit changes** option.
 
    ![](../media/env53.png)
 
@@ -156,11 +156,11 @@ In this task, you'll set up a GitHub environment and use it as a GitHub action.
 
    ![](../media/env7.png)
 
-1. You will also be able to see the **wait timer** status, i.e., job1 waited for 2 minutes before starting the execution.
+1. You'll also be able to see the **wait timer** status, i.e., job1 waited for 2 minutes before starting the execution.
 
    ![](../media/env56.png)
 
-1. You can also notice the environment variables and secret values defined in the Environment are fetched and are used in the execution.
+1. You can also notice the environment variables and secret values defined in the Environment are fetched and used in the execution.
 
 ### Summary
 
