@@ -354,7 +354,7 @@ In this task, you'll set up a GitHub action using the Matrix strategy to run the
 
     ![](../media/matrix-output.png)
 
-### Task 4: Using artifacts and dependencies in workflows
+### Task 4: Using Artifacts and Dependencies in Workflows
 
 Optimizing workflow performance by caching dependencies can significantly improve the execution time of your workflows. By caching dependencies, you can avoid unnecessary downloads and installations, resulting in faster and more efficient workflows.
 
@@ -420,7 +420,7 @@ Optimizing workflow performance by caching dependencies can significantly improv
 
     ![](../media/optimize4.png)
 
-### Task 5: Code scanning and vulnerability detection
+### Task 5: Code Scanning and Vulnerability Detection
 
 1. Navigate back to the `github-action` repo from the GitHub repository.
 
