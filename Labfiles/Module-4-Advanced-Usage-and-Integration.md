@@ -1,6 +1,6 @@
 # Lab 5: Security and Best Practices
 
-### Task 1: OIDC to securely connect to the cloud
+### Task 1: OIDC to Securely Connect to the Cloud
 
 OpenID Connect (OIDC) allows your GitHub Actions workflows to access resources in Azure without needing to store the Azure credentials as long-lived GitHub secrets. This gives an overview of how to configure Azure to trust GitHub's OIDC as a federated identity and includes a workflow example for the Azure/Login action that uses tokens to authenticate to Azure and access resources.
 
@@ -61,7 +61,7 @@ OpenID Connect (OIDC) allows your GitHub Actions workflows to access resources i
    >**Note**: 
 This GitHub Actions workflow demonstrates the best practice of securely using Azure secrets by employing GitHub Secrets. The workflow, triggered on every push, runs on ubuntu-latest and performs several steps, including logging into Azure with a service principal secret, executing an Azure CLI script, and running an Azure PowerShell script.
 
-### Task 2: Debugging and monitoring workflow
+### Task 2: Debugging and Monitoring Workflow
 
 Debugging and monitoring workflows in GitHub Actions involve using detailed logging, GitHub's job status and logs, and notifications for failures to identify and resolve issues. Integrating external logging services and setting up metrics and alerts can further enhance visibility and proactive issue management, ensuring more reliable and efficient development cycles.
 
