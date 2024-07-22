@@ -38,7 +38,7 @@ In this task, you'll connect your Azure DevOps project's board to your GitHub re
 
    ![](../media/env49.png)
 
-  - After clicking on the **Continue** option in the **Get started with azure DevOps** page, you'll see the **Almost Done** page. Leave options to default and carefully type the Captcha Code provided.
+  - After clicking on the **Continue** option in the **Get started with Azure DevOps** page, you'll see the **Almost done** page. Leave options to default and carefully type the **Captcha Code** provided.
 
   ![](../media/updatedss.png)
    
@@ -103,7 +103,7 @@ In this task, you'll connect your Azure DevOps project's board to your GitHub re
 
    ![](../media/ex4-kc-install&auth.png)
     
-   > **Note**: If you see the message. **You’ve already purchased this on all of your GitHub accounts** this indicates Azure Boards integration is already used in your account. Follow the steps below.
+   > **Note**: If you see the message, **You’ve already purchased this on all of your GitHub accounts** this indicates Azure Boards integration is already used in your account. Follow the steps below.
 
    - On the **Azure Boards Marketplace** page, click the **ellipsis (1)** in the upper right corner and select the **Username (2)**.
 
@@ -113,7 +113,7 @@ In this task, you'll connect your Azure DevOps project's board to your GitHub re
    
      ![](../media/2dg51.png)
    
-   - Click on the **only select repositories (1)** option. Select the lab files repository **(2)** `github-action` **(3)** which you created earlier and click on **Install & Authorize (4)**.
+   - Click on the **only select repositories (1)** option. Select the lab files repository **(2)** `github-action` **(3)** that you created earlier and click on **Install & Authorize (4)**.
 
        ![](../media/ex4-kc-install&auth.png)
 
@@ -159,7 +159,7 @@ In this task, you'll connect your Azure DevOps project's board to your GitHub re
 
 1. You've successfully linked the GitHub account.
 
-### Task 2: Link GitHub Pull requests to Boards items
+### Task 2: Link GitHub Pull Requests to Boards Items
 
 In this task, you'll make changes to the GitHub link, send a PR to Azure boards using syntax, and monitor the work item.
 
