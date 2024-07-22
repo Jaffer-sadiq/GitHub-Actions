@@ -116,7 +116,7 @@ GitHub Actions are packaged scripts designed to automate tasks within a software
 For more details, you can visit this link: [Introduction to GitHub](https://learn.microsoft.com/en-us/training/modules/introduction-to-github/)
 
 
-### Workflow syntax for GitHub Actions
+### Workflow Syntax for GitHub Actions
 
 - **Name**: The name of the workflow. GitHub displays the names of your workflows under your repository's "Actions" tab. If you omit the name, GitHub displays the workflow file path relative to the root of the repository.
 
