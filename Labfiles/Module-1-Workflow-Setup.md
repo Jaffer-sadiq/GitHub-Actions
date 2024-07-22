@@ -240,7 +240,7 @@ In GitHub Actions workflows, you define jobs and steps to orchestrate the tasks 
 
     - You can also add more jobs and steps to perform tasks like building, testing, deploying, or any other actions you need your workflow to perform.
 
-    - For more details on GitHub Actions syntax and available events, refer to the official documentation: [GitHub Actions - Workflow syntax for GitHub Actions](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions).
+    - For more details on GitHub Actions Syntax and available events, refer to the official documentation: [GitHub Actions - Workflow Syntax for GitHub Actions](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions).
 
 1. Click on **Actions** **(1)**, and verify the workflow has been executed successfully. Once the workflow is succeeded select the newly created workflow **Create jobs.yml** **(2)**.
 
