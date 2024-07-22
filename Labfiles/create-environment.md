@@ -17,7 +17,7 @@ In this task, you'll set up a GitHub environment and use it as a GitHub action.
 **Required Reviewers**
    - Provide the name as **action-environment** and click on **configure environment**.
 
-   - In the Deployment protection rules section, check the **Required reviewers** option. Search for the **GitHub username**, and add the user. You can also find the username on the **GitHub homepage**.
+   - In the **Deployment protection rules** section, check the **Required reviewers** option. Search for the **GitHub username**, and add the user. You can also find the username on the **GitHub homepage**.
 
 **Wait Timer**
    - Select the **Wait timer (2)** check box and set it to 2 minutes.
@@ -47,7 +47,7 @@ In this task, you'll set up a GitHub environment and use it as a GitHub action.
       }
       ```
 
-   - Navigate to the **Environment** **(1)** tab. Click on **Service Principal Details** **(2)** and copy the **Subscription ID (4)**, **Tenant Id (Directory ID) (5)**, **Application Id (Client Id) (6)** and **Secret Key (Client Secret) (3)**.
+   - Navigate to the **Environment** **(1)** tab. Click on **Service Principal Details** **(2)** and copy the **Subscription ID (4)**, **Tenant Id (Directory ID) (5)**, **Application Id (Client Id) (6),** and **Secret Key (Client Secret) (3)**.
 
      ![](../media/ex2-t4-8.png)
 
@@ -160,7 +160,7 @@ In this task, you'll set up a GitHub environment and use it as a GitHub action.
 
    ![](../media/env56.png)
 
-1. You can also notice the environment variables and secret values defined in the Environment are fetched and used in the execution.
+1. You can also notice the environment variables and secret values defined in the environment are fetched and used in the execution.
 
 ### Summary
 
