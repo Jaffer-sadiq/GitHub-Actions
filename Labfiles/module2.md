@@ -39,7 +39,7 @@ Securing sensitive data like API keys and credentials is crucial to protecting y
 
    ![](../media/access-keys.png)
 
-1. Navigate back to the `GitHub-action` repo, from the GitHub repository, and select the **Settings** tab from the lab files repository.
+1. Navigate back to the `GitHub-action` repo from the GitHub repository, and select the **Settings** tab from the lab files repository.
 
     ![](../media/github-action.png)
 
@@ -61,7 +61,7 @@ Securing sensitive data like API keys and credentials is crucial to protecting y
         "clientId": "******"
       }
       ```
-1. Navigate to the **Environment** **(1)** tab, click on the **Service Principal Details** **(2)** option, and copy the **Subscription ID (4)**, **Tenant Id (Directory ID) (5)**, **Application Id (Client Id) (6)** and **Secret Key (Client Secret) (3)**.
+1. Navigate to the **Environment** **(1)** tab, click on the **Service Principal Details** **(2)** option, and copy the **Subscription ID (4)**, **Tenant Id (Directory ID) (5)**, **Application Id (Client Id) (6),** and **Secret Key (Client Secret) (3)**.
 
    ![](../media/ex2-t4-8.png)
 
@@ -339,4 +339,4 @@ One of the key features that make GitHub Actions flexible and robust is the abil
 
 ### Summary
 
-In this lab, you've learned about integrating Azure with GitHub Actions and using if expressions in GitHub Actions.
+In this lab, you've learned about integrating Azure with GitHub Actions and using "if expressions" in GitHub Actions.
