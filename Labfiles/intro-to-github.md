@@ -1,12 +1,12 @@
-# Getting Started with GitHub (Optional - Read Only)
+# Getting Started with GitHub (Optional: Read-Only)
 
 ### What is GitHub? 
 
 **GitHub** is a cloud-based platform that uses Git, a distributed version control system, at its core. The GitHub platform simplifies the process of collaborating on projects and provides a website, command-line tools, and overall flow that allows developers and users to work together.
 
-As you learned earlier GitHub provides an AI-powered developer platform to build, scale, and deliver secure software. Let’s break down each one of the core pillars of the GitHub Enterprise platform, AI, Collaboration, Productivity, Security and Scale.
+As you learned earlier, GitHub provides an AI-powered developer platform to build, scale, and deliver secure software. Let’s break down each one of the core pillars of the GitHub Enterprise platform: AI, Collaboration, Productivity, Security, and Scale.
 
-### Benefits of Using GitHub
+### Benefits of using GitHub
 
 1. **Collaboration:** GitHub makes it easy for multiple developers to work together on a project, regardless of their physical location. With features like branches, pull requests, and code reviews, teams can work in parallel without interfering with each other's work.
 
@@ -16,11 +16,11 @@ As you learned earlier GitHub provides an AI-powered developer platform to build
 
 4. **Integration:** GitHub integrates with numerous tools and services, from continuous integration and deployment (CI/CD) to project management and code review tools, streamlining the development workflow.
 
-## Key Features of GitHub
+## Key features of GitHub
 
 1. **What is a repository?**
     
-    - A repository contains all of your project's files and each file's revision history. It is one of the essential parts that helps you collaborate with people. You can use repositories to manage your work, track changes, store revision history and work with others. Before we dive too deep, let’s first start with how to create a repository.
+    - A repository contains all of your project's files and each file's revision history. It is one of the essential parts that helps you collaborate with people. You can use repositories to manage your work, track changes, store revision history, and work with others. Before we dive too deep, let’s first start with how to create a repository.
 
 2. **What are branches?**
    
@@ -32,7 +32,7 @@ As you learned earlier GitHub provides an AI-powered developer platform to build
 
       Provide a safe environment to make changes. Mistakes can be reverted or corrected without impacting the main branch.
 
-   -  **Merging to Production:**
+   -  **Merging into Production:**
 
       Changes in branches are merged into the default (main/production) branch only after being tested and verified. This ensures that the production code remains stable and reliable.
 
@@ -45,17 +45,17 @@ As you learned earlier GitHub provides an AI-powered developer platform to build
      - Within a git repository, a file can exist in several valid states as it goes through the version control process:
      - The primary states for a file in a Git repository are:
      - **Untracked**: An initial state of a file when it isn't yet part of the Git repository. Git is unaware of its existence.
-     - **Tracked**: A tracked file is one that Git is actively monitoring. It can be in one of the following substrates:
+     - **Tracked**: A tracked file is one that Git is actively monitoring. It can be on one of the following substrates:
      - **Unmodified**: The file is tracked, but it hasn't been modified since the last commit.
      - **Modified**: The file has been changed since the last commit, but these changes aren't yet staged for the next commit.
-     - **Staged**: The file has been modified, and the changes have been added to the staging area (also known as the index). These changes are ready to be committed.
+     - **Staged**: The file has been modified, and the changes have been added to the staging area (also known as the index). These changes are ready to be made (committed).
      - **Committed**: The file is in the repository's database. It represents the latest committed version of the file.
 
 These states and substates are important to collaborating with your team to know where each and every commit is in the process of your project.
 
 4. **What are pull requests?**
 
-   - A pull request is the mechanism used to signal that the commits from one branch are ready to be merged into another branch.The team member submitting the pull request requests one or more reviewers to verify the code and approve the merge. These reviewers have the opportunity to comment on changes, add their own, or use the pull request itself for further discussion. Once the changes have been approved (if approval is required), the pull request's source branch (the compare branch) is merged into the base branch.
+   - A pull request is a mechanism used to signal that the commits from one branch are ready to be merged into another branch.The team member submitting the pull request requests one or more reviewers to verify the code and approve the merge. These reviewers have the opportunity to comment on changes, add their own, or use the pull request itself for further discussion. Once the changes have been approved (if approval is required), the pull request's source branch (the compare branch) is merged into the base branch.
 
      ![](../media/2-pull-request.png)
 
@@ -63,21 +63,21 @@ These states and substates are important to collaborating with your team to know
    
      ![](../media/2-branching.png)
 
-     - The GitHub flow can be defined as a lightweight workflow that allows for safe experimentation. You can test new ideas and collaborate with your team by using branching, pull requests, and merging. Now that we know the basics of GitHub we can walk through the GitHub flow and its components.
+     - The GitHub flow can be defined as a lightweight workflow that allows for safe experimentation. You can test new ideas and collaborate with your team by using branching, pull requests, and merging. Now that we know the basics of GitHub, we can walk through the GitHub flow and its components.
 
      **i.** The first step of the GitHub flow is creating a branch so that the changes, features, and fixes you create don't affect the main branch. <br/>
 
      **ii.** The second step is to make your changes. We recommend deploying changes to your feature branch before merging into the main branch. Doing so ensures the changes are valid in a production environment. <br/>
      
-     **iii.** The third step is to create a pull request to ask collaborators for feedback. Pull request review is so valuable that some repositories require an approving review before pull requests can be merged. <br/>
+     **iii.** The third step is to create a pull request to ask collaborators for feedback. Pull request review is so valuable that some repositories require an approval review before pull requests can be merged. <br/>
      
      **iv.** Next is the fourth step of reviewing and implementing your feedback from your collaborators. <br/>
      
-     **v.** The fifth step, once you’re feeling great about your changes now it's time to get your pull request approved and merge it into the main branch. <br/>
+     **v.** The fifth step: once you’re feeling great about your changes, now it's time to get your pull request approved and merge it into the main branch. <br/>
      
-     **vi.** The sixth and final step is to delete your branch. Deleting your branch signals your work on the branch is completed and prevents you or others from accidentally using old branches. <br/>
+     **vi.** The sixth and final step is to delete your branch. Deleting your branch signals that your work on the branch is complete and prevents you or others from accidentally using old branches. <br/>
 
-And that’s it, you’ve been through a GitHub flow cycle!
+And that’s it; you’ve been through a GitHub flow cycle!
 
 5. **Forking:** Forking is copying a repository from one user’s account to another. It allows you to freely experiment with changes without affecting the original project.
 
@@ -85,7 +85,7 @@ And that’s it, you’ve been through a GitHub flow cycle!
 
 ### How do GitHub Actions automate development tasks?
 
-#### GitHub decreases the time from idea to deployment
+#### GitHub decreases the time from idea to deployment.
 
 GitHub is designed to help teams of developers and DevOps engineers build and deploy applications quickly. There are many features in GitHub that enable this, but they generally fall into one of two categories:
 
@@ -93,21 +93,21 @@ GitHub is designed to help teams of developers and DevOps engineers build and de
   
 - **Automation:** GitHub Actions lets your team automate workflows at every step in the software development process, from integration to delivery to deployment. It even lets you automate adding labels to pull requests and checking for stale issues and pull requests.
 
-#### Use workflow automation to decrease development time
+#### Use workflow automation to decrease development time.
 
 We'll focus on automation in this module, so let's take a moment to understand how teams can use automation to reduce the amount of time it takes to complete a typical development and deployment workflow.
 
-Consider all of the tasks that must happen after the code is written, but before you can reliably use the code for its intended purpose. Depending on your organization's goals, you'll likely need to perform one or more of the following tasks:
+Consider all of the tasks that must happen after the code is written but before you can reliably use the code for its intended purpose. Depending on your organization's goals, you'll likely need to perform one or more of the following tasks:
 
-- Ensure the code passes all unit tests
-- Perform code quality and compliance checks to make sure the source code meets the organization's standards
-- Check the code and its dependencies for known security issues
-- Build the code integrating new sources from (potentially) multiple contributors
-- Ensure the software passes integration tests
-- Version the new build
-- Deliver the new binaries to the appropriate filesystem location
-- Deploy the new binaries to one or more servers
-- If any of these tasks don't pass, report the issue to the proper individual or team for resolution
+- Ensure the code passes all unit tests.
+- Perform code quality and compliance checks to make sure the source code meets the organization's standards.
+- Check the code and its dependencies for known security issues.
+- Build the code, integrating new sources from (potentially) multiple contributors.
+- Ensure the software passes integration tests.
+- Use a version of the new build.
+- Deliver the new binaries to the appropriate filesystem location.
+- Deploy the new binaries to one or more servers.
+- If any of these tasks don't pass, report the issue to the proper individual or team for resolution.
 
 ### What are GitHub Actions?
 
@@ -116,13 +116,13 @@ GitHub Actions are packaged scripts designed to automate tasks within a software
 For more details, you can visit this link: [Introduction to GitHub](https://learn.microsoft.com/en-us/training/modules/introduction-to-github/)
 
 
-### Workflow syntax for GitHub Actions
+### Workflow Syntax for GitHub Actions
 
 - **Name**: The name of the workflow. GitHub displays the names of your workflows under your repository's "Actions" tab. If you omit the name, GitHub displays the workflow file path relative to the root of the repository.
 
-- **Run-Name**: The name for workflow runs generated from the workflow. GitHub displays the workflow run name in the list of workflow runs on your repository's "Actions" tab. If run name is omitted or is only whitespace, then the run name is set to event-specific information for the workflow run. For example, for a workflow triggered by a **push** or **pull_request** event, it is set as the commit message or the title of the pull request.
+- **Run-Name**: The name for workflow runs generated from the workflow. GitHub displays the workflow run name in the list of workflow runs on your repository's "Actions" tab. If the run name is omitted or is only whitespace, then the run name is set to event-specific information for the workflow run. For example, for a workflow triggered by a **push** or **pull_request** event, it is set as the commit message or the title of the pull request.
 
-  - This value can include expressions and can reference the github and inputs contexts.
+  - This value can include expressions and can reference the GitHub and input contexts.
 
   - Example of run-name:
   
@@ -132,9 +132,9 @@ For more details, you can visit this link: [Introduction to GitHub](https://lear
 
 - **On**: To automatically trigger a workflow, use on to define which events can cause the workflow to run. For a list of available events, see "[Events that trigger workflows](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows)."
 
-  - You can define single or multiple events that can trigger a workflow, or set a time schedule. You can also restrict the execution of a workflow to only occur for specific files, tags, or branch changes. These options are described in the following sections.
+  - You can define single or multiple events that can trigger a workflow or set a time schedule. You can also restrict the execution of a workflow to only occur for specific files, tags, or branch changes. These options are described in the following sections:
 
-    - **Using a single event**: For example, a workflow with the following on value will run when a push is made to any branch in the workflow's repository:
+    - **Using a single event**: For example, a workflow with the following on-value will run when a push is made to any branch in the workflow's repository:
 
       ```
       on: push
@@ -150,7 +150,7 @@ For more details, you can visit this link: [Introduction to GitHub](https://lear
 
 - **Using activity types**: Some events have activity types that give you more control over when your workflow should run. Use `on.<event_name>.types` to define the type of event activity that will trigger a workflow run.
 
-  - For example, the `issue_comment` event has the `created, edited, and deleted` activity types. If your workflow triggers on the `label` event, it will run whenever a label is created, edited, or deleted. If you specify the created activity type for the label event, your workflow will run when a label is created but not when a label is edited or deleted.
+  - For example, the `issue_comment` event has the `created, edited, and deleted` activity types. If your workflow triggers the `label` event, it will run whenever a label is created, edited, or deleted. If you specify the created activity type for the label event, your workflow will run when a label is created but not when a label is edited or deleted.
 
     ```
     on:
@@ -195,7 +195,7 @@ Workflow triggers are specific conditions or actions that initiate a workflow. T
 Workflow events are occurrences within the workflow that may cause a change in the state or progress of the workflow. They can be internal to the workflow or external inputs that influence the workflow’s path. Common types of workflow events include:
 
 1. **Task Completion**:
-   - Events triggered when a task is marked as complete, leading to the initiation of subsequent tasks.
+   - Events are triggered when a task is marked as complete, leading to the initiation of subsequent tasks.
 
 2. **Status Changes**:
    - Events that occur when the status of an item changes (e.g., from "pending" to "approved").
@@ -210,7 +210,7 @@ Workflow events are occurrences within the workflow that may cause a change in t
    - Triggers when an error occurs in the workflow, often leading to error handling procedures or notifications.
 
 6. **External Input Events**:
-   - Events caused by external inputs such as data received from an API or an external system interaction.
+   - Events caused by external inputs, such as data received from an API or an external system interaction.
 
 ### Example Workflow Scenario
 Consider a workflow for processing employee leave requests:

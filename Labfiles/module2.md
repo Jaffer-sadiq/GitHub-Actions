@@ -4,26 +4,26 @@ Integrating Azure with GitHub Actions provides a seamless and efficient way to a
 
 >**Note**: For the purpose of this demo, we are using the main branch directly. However, it is important to follow best practices in a production environment by not committing changes directly to the main branch.
 
-### Task 1: Using GitHub Actions with Azure container registries with Secrets Variables in Workflows 
+### Task 1: Using GitHub Actions with Azure Container Registries with Secret Variables in Workflows 
 
-Securing sensitive data like API keys and credentials is crucial to protect your workflows and prevent unauthorized access. This can be achieved by using secrets, which are encrypted variables that can be securely used in your workflows without exposing the actual values. In this task, you'll create an action to build and push a docker image to Azure container registry.
+Securing sensitive data like API keys and credentials is crucial to protecting your workflows and preventing unauthorized access. This can be achieved by using secrets, which are encrypted variables that can be securely used in your workflows without exposing the actual values. In this task, you'll create an action to build and push a Docker image to the Azure container registry.
 
-1. Navigate to `potal.azure.com`, in the search bar search for **Container registries** **(1)** and select **Container registries** **(2)**.
+1. Navigate to `potal.azure.com`. In the search bar, search for **Container registries** **(1)** and select **Container registries** **(2)**.
 
    ![](../media/17-06-2024(1).png)
 
-1. In the Container registries tab click on the **+ Create** button.
+1. In the **Container registries** tab, click on the **+ Create** button.
 
    ![](../media/create-continer.png)
 
-1. On the **basics** tab, add the following details:
+1. Under the **basics** tab, add the following details:
 
-    - **Subscription**: Select the default subscription
-    - **Resource Group**: Select **github-action-<inject key="DeploymentID" enableCopy="false"/>** **(1)**
-    - **Registry Name**: Enter **gacontainer<inject key="DeploymentID" enableCopy="false"/>** **(2)**
-    - **Location**: Select the default **location** **(3)**
+    - **Subscription**: Select the default subscription.
+    - **Resource Group**: Select **github-action-xxxx<inject key="DeploymentID" enableCopy="false"/>** **(1)**
+    - **Registry Name**: Enter **gacontiner<inject key="DeploymentID" enableCopy="false"/>** **(2)**
+    - **Location**: Select the default **location.** **(3)**
     - **Pricing Plan**: Choose **Standard** **(4)**
-    -  Click on **Review + Create** **(5)**
+    -  Click on the **Review + create** **(5)** option.
 
        ![](../media/container-registry.png)
    
@@ -35,19 +35,19 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
    ![](../media/go-to-resource.png)
 
-1. Navigate to **Access Keys** **(1)** on the left pane under the **Settings** tab and copy the **Registry Name** **(2)** and **Login server** **(3)** into a notepad.
+1. Navigate to **Access Keys** **(1)** on the left pane under the **Settings** tab and copy the **Registry name** **(2)** and **Login server** **(3)** into a notepad.
 
    ![](../media/access-keys.png)
 
-1. Navigate back to the `GitHub-action` repo, from the GitHub repository, and select the **Settings** tab from the lab files repository.
+1. Navigate back to the `GitHub-action` repo from the GitHub repository, and select the **Settings** tab from the lab files repository.
 
     ![](../media/github-action.png)
 
-1. Under **Security**, expand **Secrets and variables** **(1)** by clicking the drop-down and select **Actions** **(2)** blade from the left navigation bar.
+1. Under **Security**, expand **Secrets and variables** **(1)** by clicking on the drop-down arrow. Continue by selecting the **Actions** **(2)** option from the left navigation bar.
 
    ![](../media/add-sec1.png)
 
-1. Click on **New repository secret** under the Repository secrets.
+1. Click on the **New repository secret** option in the **Repository secrets** window.
 
     ![](../media/17-06-2024(6).png)
 
@@ -61,25 +61,25 @@ Securing sensitive data like API keys and credentials is crucial to protect your
         "clientId": "******"
       }
       ```
-1. Navigate to **Environment Details** **(1)**, click on **Service Principal Details** **(2)** and copy the **Subscription ID**, **Tenant Id (Directory ID)**, **Application Id(Client Id)** and **Secret Key (Client Secret)**.
+1. Navigate to the **Environment** **(1)** tab, click on the **Service Principal Details** **(2)** option, and copy the **Subscription ID (4)**, **Tenant Id (Directory ID) (5)**, **Application Id (Client Id) (6),** and **Secret Key (Client Secret) (3)**.
 
    ![](../media/ex2-t4-8.png)
 
-1. Under **Actions Secrets/New secret** page, enter the below mentioned details and Click on **Add secret (3)**.
+1. Under the **Actions secrets/New secret** page, enter the below-mentioned details and click on **Add secret (3)**.
 
    - Name: Enter **AZURE_CREDENTIALS** **(1)**
 
-   - Value: Paste the service principal details in JSON format **(2)**
+   - Value: Paste the service principal details in JSON format. **(2)**
 
      ![](../media/add-sec-oidc.png)
    
-1. Navigate to the **Code** **(1)**, click on **Add file** **(2)** and click on **+ Create new file** **(3)**.
+1. Navigate to the **Code** **(1)** tab, click on **Add file** **(2)**, and then select the **+ Create new file** **(3)** option.
     
     ![](../media/ex2-task2-step18.png)
     
-1. Provide the file name as **Dockerfile (1)**. In the editor, **copy and paste (2)** the script below, then click **Commit changes (3)**.
+1. Provide the file name as **Dockerfile (1)**. In the editor, **copy and paste (2)** the script below, then click on **Commit changes (3)**.
 
-   >**Note**: Please make sure to name the file as **Dockerfile** only as its a standard convention used by Docker and widely followed in the Docker community.
+   >**Note**: Please make sure to name the file as **Dockerfile** only, as it is a standard convention used by Docker and widely followed in the Docker community.
 
     ```
     # Use an official Nginx runtime as a parent image
@@ -97,17 +97,17 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
     ![](../media/env57.png)
 
-1. In the **Commit changes** pop-up, click on **Commit changes** button.
+1. In the **Commit changes** pop-up, click on the **Commit changes** button.
 
     ![](../media/17-06-2024(3).png)
 
     >**Note:** This Dockerfile utilizes the latest official Nginx image as its base. It copies an **index.html** file into the Nginx container's default web root directory. Port 80 is exposed to allow external access to the container, and the container launches Nginx with the command **nginx -g 'daemon off;'** to keep it running in the foreground.
 
-1. Again from **Code** **(1)** tab in GitHub, click on **Add file** **(2)** and click on **+ Create new file** **(3)**.
+1. Again, from the **Code** **(1)** tab in GitHub, click on **Add file** **(2)** and select the **+ Create new file** **(3)** option.
     
     ![](../media/ex2-task2-step18.png)
 
-1. Provide the file name as **index.html (1)**. In the editor, **copy and paste (2)** the script below, then click **Commit changes (3)**.
+1. Provide the file name as **index.html (1)**. In the editor, **copy and paste (2)** the script below, then click on **Commit changes (3)**.
 
     ```
     <!DOCTYPE html>
@@ -163,11 +163,11 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
     ![](../media/17-06-2024(7).png)
 
-1. In the **Commit changes** pop-up, click on **Commit changes** button.
+1. In the **Commit changes** pop-up, click on the **Commit changes** button.
 
     ![](../media/17-06-2024(4).png)
 
-1. From GitHub **Code** **(1)** tab, navigate to **.github/workflows** **(2)** folder.
+1. From the GitHub **Code** **(1)** tab, navigate to the **.github/workflows** **(2)** folder.
 
     ![](../media/editfolder.png)
 
@@ -175,9 +175,9 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
     ![](../media/4th-oidc.png)
 
-1. In the editor update the code with the below-provided code, replace **{Login_server}** from lines 40 and 50 with **Azure Container registry Login server**, and replace **{Registry name}** from line 45 with **Azure Container registry Registry name**.
+1. In the editor, update the code with the below-provided code, replace **{Login_server}** from lines 40 and 50 with **Azure Container registry Login server**, and replace **{Registry name}** from line 45 with **Azure Container registry Registry name**.
 
-   >**Note**: Paste the value you copied in Task 1, Step 6 for the **Login_server** and **Registry name.**
+   >**Note**: Paste the value you copied in **Task 1, Step 6,** for the **Login_server** and **Registry name.**
 
     ```
     # This is the configuration for our GitHub Actions workflow to build and push a Docker image to Azure Container Registry (ACR).
@@ -234,49 +234,49 @@ Securing sensitive data like API keys and credentials is crucial to protect your
 
     ![](../media/21-06-2024(10).png)
 
-1. Provide the file name as **docker.yml (1)**. In the editor, **copy and paste (2)** the script below, then click **Commit changes (3)**
+1. Provide the file name as **docker.yml (1)**. In the editor, **copy and paste (2)** the script below, then click on **Commit changes (3).**
 
    ![](../media/21-06-2024(11).png)
    
-1. In the pop up window of **Commit changes** click on the **Commit changes**.
+1. In the **Commit changes** pop-up window, click on the **Commit changes** option.
 
     ![](../media/commit.png)
 
-1. Click on **Actions**, Select the **Create docker.yml** action and verify the workflow has been executed successfully once the workflow has succeeded.
+1. Click on **Actions**, select the **Create docker.yml** action, and verify the workflow has been executed successfully.
 
    ![](../media/env38.png)
 
-   >**Note:** This GitHub Actions workflow, named "Build and Push Docker Image to ACR", automates the process of building and pushing a Docker image to Azure Container Registry (ACR) when triggered by pushes or pull requests to the main branch, or manually **(`workflow_dispatch`)**. It runs on an Ubuntu environment and includes steps to checkout the repository, authenticate with Azure using stored credentials, list files, build a Docker image tagged as **`{Login_server}/my-app:latest`**, log in to Azure Container Registry, and finally push the built Docker image to the registry.
+   >**Note:** This GitHub Actions workflow, named "Build and Push Docker Image to ACR," automates the process of building and pushing a Docker image to Azure Container Registry (ACR) when triggered by pushes or pull requests to the main branch, or manually **(`workflow_dispatch`)**. It runs on an Ubuntu environment and includes steps to checkout the repository, authenticate with Azure using stored credentials, list files, build a Docker image tagged as **`{Login_server}/my-app:latest`**, log in to the Azure Container Registry, and finally push the built Docker image to the registry.
 
-1. Once the execution is completed, navigate to `potal.azure.com`, in the search bar search for **Container registries** **(1)** and select **Container registries** **(2)**.
+1. Once the execution is complete, navigate to `potal.azure.com`. In the search bar, search for **Container registries** **(1)** and select **Container registries** **(2)**.
 
    ![](../media/17-06-2024(1).png)
 
-1. Select **gacontainer<inject key="DeploymentID" enableCopy="false"/>** from the list.
+1. Select **gacontainerxxxx<inject key="DeploymentID" enableCopy="false"/>** from the list.
 
    ![](../media/env43.png)
 
-1. Select **Repositories (1)** from services and you should be able to see an image named **my-app (2)**. This confirms that the image is pushed using the GitHub Actions.
+1. Select **Repositories (1)** from **Services**, and you should be able to see an image named **my-app (2)**. This confirms that the image was pushed using **GitHub Actions**.
 
    ![](../media/env44.png)
 
-1. In the **my-app** repository, you'll be able to see the image version, last modified details, and much more.
+1. In the **my-app** repository, you'll be able to see the image version, the last modified details, and much more.
 
    ![](../media/env45.png)
 
-### Task 2: Conditional execution using if expressions.
+### Task 2: Conditional Execution Using If Expressions
 
 One of the key features that make GitHub Actions flexible and robust is the ability to conditionally execute steps within your workflows using if expressions. Conditional execution is essential when you want certain steps to run only under specific conditions, such as based on the branch name, the outcome of a previous step, or custom environment variables. This helps in creating more efficient and context-aware CI/CD pipelines, reducing unnecessary executions, and ensuring that the right actions are taken in the right scenarios.
 
-1. Navigate to the **GitHub** homepage. From the  **Code** **(1)** tab, click on **.github/workflows** **(2)** folder.
+1. Navigate to the **GitHub** homepage. From the  **Code** **(1)** tab, click on the **.github/workflows** **(2)** folder.
 
    ![](../media/editfolder.png)
 
-1. In the **.github/workflows** folder, click on **Add files** **(1)**, and click on **+ Create new file** **(2)**.
+1. In the **.github/workflows** folder, click on **Add files** **(1)**, and select **+ Create new file** **(2)**.
 
    ![](../media/4th-oidc.png)
 
-1. Provide the file name as **conditional.yml (1)**. In the editor, **copy and paste (2)** the script below, then click **Commit changes (3)**
+1. Provide the file name as **conditional.yml (1)**. In the editor, **copy and paste (2)** the script below, then click on **Commit changes (3).**
 
     ```
     # This is the configuration for our GitHub Actions workflow named "Complex Workflow".
@@ -325,18 +325,18 @@ One of the key features that make GitHub Actions flexible and robust is the abil
 
     ![](../media/21-06-2024(12).png)
 
-1. In the **Commit changes** pop-up, click on **Commit changes** button.
+1. In the **Commit changes** pop-up, click on the **Commit changes** button.
 
     ![](../media/save-ifcondtion.png)
 
-1. Click on **Actions** **(1)**, and verify the workflow has been executed successfully once the workflow is succeeded select the newly created workflow **Create conditional.yml** **(2)**.
+1. Click on **Actions** **(1)** and verify that the workflow has been executed successfully by spotting the green badge. Moving on, select the newly created workflow **Create conditional.yml** **(2)**.
 
     ![](../media/ifcondtion-created.png)
    
    >**Note**: This GitHub Actions workflow, named "Complex Workflow," triggers push and pull request events to the main branch when the .github/workflows/conditional.yml file is modified. It includes two jobs: job1, which checks out the repository and runs a simple script, and job2, which runs only if job1 is successful and the event is a push, checking out the repository again and running a different script.
 
-1. Click on **Next** button for next Lab.
+1. Click on the **Next** button to proceed to the next lab.
 
 ### Summary
 
-In this lab, you learned about integrating Azure with GitHub actions and using if expressions in GitHub actions.
+In this lab, you've learned about integrating Azure with GitHub Actions and using "if expressions" in GitHub Actions.
