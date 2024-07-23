@@ -114,7 +114,7 @@ In this task, you'll fork a public repository and create a GitHub action using M
 
    - Click on the **Settings** tab from the GitHub homepage.
 
-     ![](../media/env47(1).png)
+     ![](../media/env47(2).png)
 
    - In the **Settings** page, scroll to the bottom and select **Delete this repository**.
 
@@ -466,7 +466,7 @@ Optimizing workflow performance by caching dependencies can significantly improv
 
 1. Go to **Developer settings** -> **Personal access tokens** -> **Tokens (classic) (1)**, and then click on **Generate new token (2)** option at the top. Now select **Generate new token (classic) (3)**.
 
-    ![Picture1](../media/generate_new_2(1).png)
+    ![Picture1](../media/generate_new_2(2).png)
 
 1. From here, give your secret a name, such as **Secret scanning**, set the **Expiration** to **_"Custom..."_** and select the next calendar day. By default, no permissions are granted, so it is safe to scroll to the bottom and click on **Generate token**.
 
