@@ -234,7 +234,7 @@ Securing sensitive data like API keys and credentials is crucial to protecting y
 
     ![](../media/21-06-2024(10).png)
 
-1. Provide the file name as **docker.yml (1)**. In the editor, **copy and paste (2)** the script below, then click on **Commit changes (3).**
+1. Provide the file name as **docker.yml (1)**. In the editor, **review(2)** the script present, then click on **Commit changes (3).**
 
    ![](../media/21-06-2024(11).png)
    
