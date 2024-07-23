@@ -23,7 +23,7 @@ In this task, you'll set up a GitHub environment and use it as a GitHub action.
 **Wait Timer**
    - Select the **Wait timer (2)** check box and set it to 2 minutes.
 
-     ![](../media/env2.png)
+     ![](../media/env2(1).png)
 
      - Click on **Save protection rules** to save the rules.
 
@@ -55,7 +55,7 @@ In this task, you'll set up a GitHub environment and use it as a GitHub action.
    - Name: Enter **AZURE_CREDENTIALS** **(1)**
    - Value: Paste the service principal details in **JSON format (2)**. Click on **Add secret (3)**.
 
-     ![](../media/env10.png)
+     ![](../media/env10(1).png)
 
 **Environment Variable**
 
@@ -161,7 +161,7 @@ In this task, you'll set up a GitHub environment and use it as a GitHub action.
 
    ![](../media/env56.png)
 
-1. You can also notice the environment variables and secret values defined in the environment are fetched and used in the execution.
+1. You can also notice the different variables and secret values defined in the Environment. These are fetched and used in the execution task. 
 
 ### Summary
 
