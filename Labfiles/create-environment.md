@@ -16,6 +16,7 @@ In this task, you'll set up a GitHub environment and use it as a GitHub action.
 
 **Required Reviewers**
    - Provide the name as **action-environment** and click on **configure environment**.
+     ![](../media/configure_env1.png) 
 
    - In the **Deployment protection rules** section, check the **Required reviewers** option. Search for the **GitHub username**, and add the user. You can also find the username on the **GitHub homepage**.
 
@@ -24,13 +25,13 @@ In this task, you'll set up a GitHub environment and use it as a GitHub action.
 
      ![](../media/env2.png)
 
+     - Click on **Save protection rules** to save the rules.
+
+     ![](../media/env39.png)
+
    - Now, scroll down to **Environment Secrets** and click on **Add environment secret**.
 
      ![](../media/env9.png)
-
-   - Click on **Save protection rules** to save the rules.
-
-     ![](../media/env39.png)
 
    **Environment Secrets**
 
